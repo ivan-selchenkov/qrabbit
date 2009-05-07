@@ -29,12 +29,21 @@ class FileManager: public QObject
 public:
     FileManager();
 private:
+    QDomDocument loadedDoc;
     QList<DirsTree> tree;
     QList<QDir> folders;
     void ScanFiles();
     void scan(DirsTree&);
     void SaveXML();
-    QDomElement fileDOM(QDomDocument&, QString);
+    //! Making QList of directories
+    QList<QDomElement> makeDOM(QDomDocument&);
+    //! Recursive function use for fill QDomElement el
+    void nodeDOM(QDomElement& el, QDomDocument& doc, DirsTree & dtree);
+    QDomElement fileDOM(QDomDocument&, FileInfo&);
+    QDomElement dirDOM(QDomDocument&, QString);
+    QDomElement rootDirDOM(QDomDocument&, QString name, QString path);
+    void traverseNode(const QDomNode& node, DirsTree & dtree, int level);
+    void LoadXML();
 };
 
 #endif // FILEMANAGER_H
