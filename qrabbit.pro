@@ -3,7 +3,7 @@
 # -------------------------------------------------
 QT += network \
     xml
-TARGET = dc_test1
+TARGET = qrabbit
 TEMPLATE = app
 SOURCES += main.cpp \
     mainwindow.cpp \

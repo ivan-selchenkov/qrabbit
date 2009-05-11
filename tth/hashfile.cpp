@@ -14,7 +14,7 @@ QString HashFile::Go(QString filename)
     qfile.setFileName(filename);
     qfile.open(QIODevice::ReadOnly);
 
-    qDebug() << filename;
+    //qDebug() << filename;
 
     if(!qfile.isOpen()) return QString();
 
@@ -22,6 +22,7 @@ QString HashFile::Go(QString filename)
 
     int blocks = (int) (size_to_read / BLOCK_SIZE);
     if(blocks * BLOCK_SIZE < size_to_read) blocks++;
+
     char* interleaves = new char[blocks * 24];
 
     int il_pos = 0;
@@ -38,7 +39,8 @@ QString HashFile::Go(QString filename)
         il_pos += 24;
         read_size = (size_to_read > BLOCK_SIZE) ? BLOCK_SIZE : size_to_read;
     }
-    HashInternals(interleaves, blocks * 24, result);
+    if(il_pos > 24) HashInternals(interleaves, blocks * 24, result);
+    else memcpy(result, interleaves, 24);
     delete[] buffer;
     hashdata = result;
     //hash_size = 24;
@@ -61,7 +63,8 @@ void HashFile::HashBlock(char* buffer, int size, char* result)
     char* result_leaves = new char[leaves_size];
 
     HashLeaves(buffer, size, result_leaves);
-    HashInternals(result_leaves, leaves_size, result);
+    if(leaves_size > 24) HashInternals(result_leaves, leaves_size, result);
+    else memcpy(result, result_leaves, 24);
 
     delete[] result_leaves;
 }
@@ -159,9 +162,10 @@ void HashFile::HashLeaves(char* hash, int size, char* result)
         {
             leave1[0] = 0x00;
             Tiger::hash(leave1, l1_size+1, ih);
-            //Tiger::hash(leave1, l1_size+1, &internal[1]);
-            //internal[0] = 0x01;
-            //Tiger::hash(internal, 25, ih);
+            /*Tiger::hash(leave1, l1_size+1, &internal[1]);
+            internal[0] = 0x01;
+            Tiger::hash(internal, 25, ih);
+            */
         }
         else break; // nothing to read
 

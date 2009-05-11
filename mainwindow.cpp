@@ -15,7 +15,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_btnStart_clicked()
 {
     FileManager* s = new FileManager();
-    HubConnection* hub;
+    /*HubConnection* hub;
     hub = new HubConnection(this, "dc.wideix.ru", 411); // dc.wideix.ru warez.gtk.su
     hub->slotConnect();
     connect(hub, SIGNAL(signalDisplayMessage(QString&)), this, SLOT(slotDisplayMessages(QString&)));
@@ -24,7 +24,7 @@ void MainWindow::on_btnStart_clicked()
     ui->tableView->setColumnWidth (1, 100 ); // Shara size
     ui->tableView->setColumnWidth (2, 200 ); // Desc size
 
-    hubs.append(hub);
+    hubs.append(hub);*/
 }
 void MainWindow::slotDisplayMessages(QString& str)
 {

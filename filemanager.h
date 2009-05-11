@@ -31,6 +31,7 @@ public:
 private:
     QDomDocument loadedDoc;
     QList<DirsTree> tree;
+    QList<DirsTree> loadedTree;
     QList<QDir> folders;
     void ScanFiles();
     void scan(DirsTree&);
@@ -42,7 +43,10 @@ private:
     QDomElement fileDOM(QDomDocument&, FileInfo&);
     QDomElement dirDOM(QDomDocument&, QString);
     QDomElement rootDirDOM(QDomDocument&, QString name, QString path);
-    void traverseNode(const QDomNode& node, DirsTree & dtree, int level);
+
+    //! Finding RootDirectory tags
+    void rootDirParse(const QDomNode& node);
+    void traverseNode(const QDomNode& node, DirsTree & dtree);
     void LoadXML();
 };
 

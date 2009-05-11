@@ -1,4 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FileListing>
- <File Name="XXX.exe" />
+ <RootDirectory Path="/home/ivan/Dropbox12" Name="Dropbox12" >
+ </RootDirectory>
+ <RootDirectory Path="/home/ivan/Dropbox" Name="Dropbox" >
+  <Directory Name="Lena" >
+   <File Size="2035" TTH="" Name="menu_test.html" />
+   <File Size="1627" TTH="" Name="test_menu.html" />
+  </Directory>
+  <Directory Name="Photos" >
+   <File Size="339773" TTH="" Name="Boston City Flow.jpg" />
+   <File Size="354633" TTH="" Name="Costa Rican Frog.jpg" />
+   <File Size="480098" TTH="" Name="Pensive Parakeet.jpg" />
+  </Directory>
+  <Directory Name="Public" >
+   <File Size="188" TTH="" Name="Top Secret.txt" />
+  </Directory>
+  <Directory Name="QT" >
+   <Directory Name="dc_test1" >
+    <Directory Name="tth" >
+     <File Size="4670" TTH="" Name="base32.cpp" />
+     <File Size="806" TTH="" Name="base32.h" />
+     <File Size="3125" TTH="" Name="byte_order.h" />
+     <File Size="321" TTH="" Name="hash.cpp" />
+     <File Size="192" TTH="" Name="hash.h" />
+     <File Size="5686" TTH="" Name="hashfile.cpp" />
+     <File Size="829" TTH="" Name="hashfile.h" />
+     <File Size="4633" TTH="" Name="tiger.c" />
+     <File Size="623" TTH="" Name="tiger.h" />
+     <File Size="36538" TTH="" Name="tiger_data.c" />
+    </Directory>
+    <File Size="1966203" TTH="" Name="dc_test1" />
+    <File Size="687" TTH="" Name="dc_test1.pro" />
+    <File Size="11594" TTH="" Name="dc_test1.pro.user" />
+    <File Size="3331" TTH="" Name="filemanager.cpp" />
+    <File Size="952" TTH="" Name="filemanager.h" />
+    <File Size="0" TTH="" Name="filenamager.cpp" />
+    <File Size="12288" TTH="" Name="files.xml" />
+    <File Size="77" TTH="" Name="global.h" />
+    <File Size="12854" TTH="" Name="hubconnection.cpp" />
+    <File Size="2677" TTH="" Name="hubconnection.h" />
+    <File Size="2773" TTH="" Name="hubnicklist.cpp" />
+    <File Size="1813" TTH="" Name="hubnicklist.h" />
+    <File Size="177" TTH="" Name="main.cpp" />
+    <File Size="1273" TTH="" Name="mainwindow.cpp" />
+    <File Size="539" TTH="" Name="mainwindow.h" />
+    <File Size="4494" TTH="" Name="mainwindow.ui" />
+    <File Size="10466" TTH="" Name="Makefile" />
+    <File Size="1635" TTH="" Name="tablemodel.cpp" />
+    <File Size="553" TTH="" Name="tablemodel.h" />
+   </Directory>
+   <Directory Name="dc_test1_old" >
+    <Directory Name="debug" >
+     <File Size="442296" TTH="" Name="filemanager.o" />
+     <File Size="655600" TTH="" Name="hubconnection.o" />
+     <File Size="505760" TTH="" Name="hubnicklist.o" />
+     <File Size="391784" TTH="" Name="main.o" />
+     <File Size="489552" TTH="" Name="mainwindow.o" />
+     <File Size="1815" TTH="" Name="moc_filemanager.cpp" />
+     <File Size="378568" TTH="" Name="moc_filemanager.o" />
+     <File Size="7050" TTH="" Name="moc_hubconnection.cpp" />
+     <File Size="423248" TTH="" Name="moc_hubconnection.o" />
+     <File Size="2895" TTH="" Name="moc_hubnicklist.cpp" />
+     <File Size="397856" TTH="" Name="moc_hubnicklist.o" />
+     <File Size="2498" TTH="" Name="moc_mainwindow.cpp" />
+     <File Size="409704" TTH="" Name="moc_mainwindow.o" />
+     <File Size="166576" TTH="" Name="nicklist.o" />
+     <File Size="436768" TTH="" Name="tablemodel.o" />
+     <File Size="3832" TTH="" Name="xxx.o" />
+    </Directory>
+    <Directory Name="qtc-gdbmacros" >
+     <Directory Name="debug" >
+      <File Size="801328" TTH="" Name="gdbmacros.o" />
+     </Directory>
+     <Directory Name="release" />
+     <File Size="79119" TTH="" Name="gdbmacros.cpp" />
+     <File Size="54" TTH="" Name="gdbmacros.pro" />
+     <File Size="534" TTH="" Name="LGPL_EXCEPTION.TXT" />
+     <File Size="462198" TTH="" Name="libgdbmacros.so" />
+     <File Size="462198" TTH="" Name="libgdbmacros.so.1" />
+     <File Size="462198" TTH="" Name="libgdbmacros.so.1.0" />
+     <File Size="462198" TTH="" Name="libgdbmacros.so.1.0.0" />
+     <File Size="26434" TTH="" Name="LICENSE.LGPL" />
+     <File Size="5992" TTH="" Name="Makefile" />
+     <File Size="5791" TTH="" Name="Makefile.Debug" />
+     <File Size="5847" TTH="" Name="Makefile.Release" />
+    </Directory>
+    <Directory Name="release" />
+    <File Size="1612031" TTH="" Name="dc_test1" />
+    <File Size="479" TTH="" Name="dc_test1.pro" />
+    <File Size="30231" TTH="" Name="dc_test1.pro.user" />
+    <File Size="1879" TTH="" Name="filemanager.cpp" />
+    <File Size="695" TTH="" Name="filemanager.h" />
+    <File Size="0" TTH="" Name="filenamager.cpp" />
+    <File Size="149" TTH="" Name="files.xml" />
+    <File Size="77" TTH="" Name="global.h" />
+    <File Size="12854" TTH="" Name="hubconnection.cpp" />
+    <File Size="2677" TTH="" Name="hubconnection.h" />
+    <File Size="2773" TTH="" Name="hubnicklist.cpp" />
+    <File Size="1813" TTH="" Name="hubnicklist.h" />
+    <File Size="177" TTH="" Name="main.cpp" />
+    <File Size="1269" TTH="" Name="mainwindow.cpp" />
+    <File Size="539" TTH="" Name="mainwindow.h" />
+    <File Size="4494" TTH="" Name="mainwindow.ui" />
+    <File Size="5814" TTH="" Name="Makefile" />
+    <File Size="8474" TTH="" Name="Makefile.Debug" />
+    <File Size="8644" TTH="" Name="Makefile.Release" />
+    <File Size="1635" TTH="" Name="tablemodel.cpp" />
+    <File Size="553" TTH="" Name="tablemodel.h" />
+    <File Size="5883" TTH="" Name="ui_mainwindow.h" />
+   </Directory>
+   <Directory Name="libhash_new" >
+    <Directory Name="debug" >
+     <File Size="240312" TTH="" Name="Base32.o" />
+     <File Size="234116" TTH="" Name="hash.o" />
+     <File Size="258392" TTH="" Name="hashfile.o" />
+     <File Size="256436" TTH="" Name="main.o" />
+    </Directory>
+    <Directory Name="qtc-gdbmacros" >
+     <Directory Name="debug" >
+      <File Size="560384" TTH="" Name="gdbmacros.o" />
+     </Directory>
+     <Directory Name="release" />
+     <File Size="79119" TTH="" Name="gdbmacros.cpp" />
+     <File Size="54" TTH="" Name="gdbmacros.pro" />
+     <File Size="534" TTH="" Name="LGPL_EXCEPTION.TXT" />
+     <File Size="448972" TTH="" Name="libgdbmacros.so" />
+     <File Size="448972" TTH="" Name="libgdbmacros.so.1" />
+     <File Size="448972" TTH="" Name="libgdbmacros.so.1.0" />
+     <File Size="448972" TTH="" Name="libgdbmacros.so.1.0.0" />
+     <File Size="26434" TTH="" Name="LICENSE.LGPL" />
+     <File Size="5343" TTH="" Name="Makefile" />
+     <File Size="5169" TTH="" Name="Makefile.Debug" />
+     <File Size="5225" TTH="" Name="Makefile.Release" />
+    </Directory>
+    <Directory Name="release" />
+    <File Size="1024" TTH="" Name="1024" />
+    <File Size="2048" TTH="" Name="2048" />
+    <File Size="3000" TTH="" Name="3000" />
+    <File Size="5000" TTH="" Name="5000" />
+    <File Size="4670" TTH="" Name="Base32.cpp" />
+    <File Size="806" TTH="" Name="Base32.h" />
+    <File Size="894" TTH="" Name="hash.cpp" />
+    <File Size="211" TTH="" Name="hash.h" />
+    <File Size="4295" TTH="" Name="hashfile.cpp" />
+    <File Size="407" TTH="" Name="hashfile.h" />
+    <File Size="516540" TTH="" Name="libhash_new" />
+    <File Size="385" TTH="" Name="libhash_new.pro" />
+    <File Size="19212" TTH="" Name="libhash_new.pro.user" />
+    <File Size="1453" TTH="" Name="main.cpp" />
+    <File Size="5167" TTH="" Name="Makefile" />
+    <File Size="5073" TTH="" Name="Makefile.Debug" />
+    <File Size="5148" TTH="" Name="Makefile.Release" />
+   </Directory>
+   <Directory Name="libhash_new_remix" >
+    <File Size="1024" TTH="" Name="1024" />
+    <File Size="2048" TTH="" Name="2048" />
+    <File Size="3000" TTH="" Name="3000" />
+    <File Size="5000" TTH="" Name="5000" />
+    <File Size="4670" TTH="" Name="Base32.cpp" />
+    <File Size="806" TTH="" Name="Base32.h" />
+    <File Size="3125" TTH="" Name="byte_order.h" />
+    <File Size="321" TTH="" Name="hash.cpp" />
+    <File Size="211" TTH="" Name="hash.h" />
+    <File Size="5381" TTH="" Name="hashfile.cpp" />
+    <File Size="561" TTH="" Name="hashfile.h" />
+    <File Size="38025" TTH="" Name="libhash_new_remix" />
+    <File Size="466" TTH="" Name="libhash_new_remix.pro" />
+    <File Size="16540" TTH="" Name="libhash_new_remix.pro.user" />
+    <File Size="1419" TTH="" Name="main.cpp" />
+    <File Size="5171" TTH="" Name="Makefile" />
+    <File Size="5489" TTH="" Name="Makefile.Debug" />
+    <File Size="5576" TTH="" Name="Makefile.Release" />
+    <File Size="4633" TTH="" Name="tiger.c" />
+    <File Size="623" TTH="" Name="tiger.h" />
+    <File Size="36538" TTH="" Name="tiger_data.c" />
+   </Directory>
+  </Directory>
+  <Directory Name="Словари" >
+   <Directory Name="New" >
+    <File Size="5120" TTH="" Name="clase.db" />
+    <File Size="3072" TTH="" Name="color.db" />
+    <File Size="3072" TTH="" Name="cuerpo.db" />
+    <File Size="3072" TTH="" Name="database.db" />
+    <File Size="10240" TTH="" Name="diferentes.db" />
+    <File Size="6144" TTH="" Name="discribir.db" />
+    <File Size="8192" TTH="" Name="habitación.db" />
+    <File Size="3072" TTH="" Name="parientes.db" />
+    <File Size="6144" TTH="" Name="position.db" />
+    <File Size="3072" TTH="" Name="profecion.db" />
+    <File Size="3072" TTH="" Name="ropa.db" />
+    <File Size="6144" TTH="" Name="transporte.db" />
+    <File Size="7168" TTH="" Name="verbes.db" />
+   </Directory>
+   <File Size="5120" TTH="" Name="clase.db" />
+   <File Size="3072" TTH="" Name="color.db" />
+   <File Size="3072" TTH="" Name="cuerpo.db" />
+   <File Size="3072" TTH="" Name="database.db" />
+   <File Size="10240" TTH="" Name="diferentes.db" />
+   <File Size="6144" TTH="" Name="discribir.db" />
+   <File Size="8192" TTH="" Name="habitación.db" />
+   <File Size="3072" TTH="" Name="parientes.db" />
+   <File Size="6144" TTH="" Name="position.db" />
+   <File Size="3072" TTH="" Name="profecion.db" />
+   <File Size="3072" TTH="" Name="ropa.db" />
+   <File Size="11264" TTH="" Name="transporte.db" />
+   <File Size="7168" TTH="" Name="verbes.db" />
+  </Directory>
+  <File Size="15244264" TTH="" Name="Linux Format May 2009.pdf" />
+  <File Size="4074" TTH="" Name="OpenSource041.zip" />
+  <File Size="4020" TTH="" Name="OpenSource042.zip" />
+  <File Size="3948" TTH="" Name="OpenSource043.zip" />
+  <File Size="1441" TTH="" Name="ssh.zip" />
+ </RootDirectory>
 </FileListing>

@@ -8,8 +8,8 @@ FileManager::FileManager()
 
     folders.append(QDir("/home/ivan/Dropbox/"));
 
-    //LoadXML();
-    ScanFiles();
+    LoadXML();
+    //ScanFiles();
 
 }
 void FileManager::ScanFiles()
@@ -144,7 +144,7 @@ QDomElement FileManager::fileDOM(QDomDocument& doc, FileInfo& fi)
     return element;
 }
 
-void  FileManager::traverseNode(const QDomNode& node, DirsTree & dtree, int level)
+void  FileManager::traverseNode(const QDomNode& node, DirsTree & dtree)
 {
     QDomNode domNode = node.firstChild();
     QString str;
@@ -156,7 +156,7 @@ void  FileManager::traverseNode(const QDomNode& node, DirsTree & dtree, int leve
                 qDebug() << "TagName: " << domElement.tagName() << "\tName: " << str;
             }
         }
-        traverseNode(domNode, dtree, 0);
+        traverseNode(domNode, dtree);
         domNode = domNode.nextSibling();
     }
 }
@@ -167,11 +167,33 @@ void FileManager::LoadXML()
     QFile file("files.xml");
     loadedDoc.clear();
 
+    // Setting up encoding to UTF8
     QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-8"));
-    if(file.open(QIODevice::ReadOnly)) {
-        if(loadedDoc.setContent(&file)) {
-            QDomElement domElement = loadedDoc.documentElement();
-            traverseNode(domElement, s, 0);
+
+    if(file.open(QIODevice::ReadOnly)) { // file is successfully opened
+        if(loadedDoc.setContent(&file)) { // XML content is parsed
+            QDomElement domElement = loadedDoc.documentElement(); // Main element
+            rootDirParse(domElement);
         }
+    }
+}
+void FileManager::rootDirParse(const QDomNode& node)
+{
+    QDomNode domNode = node.firstChild();
+
+    while(!domNode.isNull()) {
+        if(domNode.isElement()) {
+            QDomElement domElement = domNode.toElement();
+            if(!domElement.isNull()) {
+                if(domElement.tagName() == "RootDirectory") {                    
+                    qDebug() << "Name: " << domElement.attribute("Path");
+                    DirsTree _newTree;
+                    _newTree.current = QDir(domElement.attribute("Path"));
+                    traverseNode(domNode, _newTree);
+                    loadedTree.append(_newTree);
+                }
+            }
+        }
+        domNode = domNode.nextSibling();
     }
 }
