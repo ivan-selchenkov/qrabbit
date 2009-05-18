@@ -33,7 +33,7 @@ void FileManager::scan(DirsTree& node)
     QStringList listFiles = node.current.entryList(QDir::Files);
     foreach(QString file, listFiles)
     {
-        fi.Clear();
+        fi.clear();
         fi.filename = file;
         fi.dir = node.current;
         fi.size = QFileInfo(node.current.absoluteFilePath(file)).size();
@@ -148,15 +148,37 @@ void  FileManager::traverseNode(const QDomNode& node, DirsTree & dtree)
 {
     QDomNode domNode = node.firstChild();
     QString str;
-    while(!domNode.isNull()) {
+    FileInfo _file;
+    DirsTree _newDirTree;
+
+    while(!domNode.isNull()) { // parsing current node
         if(domNode.isElement()) {
             QDomElement domElement = domNode.toElement();
             if(!domElement.isNull()) {
-                str = domElement.attribute("Name");
+                if(domElement.tagName() == "Directory") // if this is directiry
+                {
+                    _newDirTree.clear();
+                    _newDirTree.current = dtree.current; // setting current dir
+                    _newDirTree.current.cd(domElement.attribute("Name")); // down to new dir
+                    traverseNode(domNode, _newDirTree);
+                    dtree.childDirs.append(_newDirTree);
+                }
+                else if(domElement.tagName() == "File")
+                {
+                    bool ok;
+                    _file.clear();
+                    _file.dir = dtree.current;
+                    _file.filename = domElement.attribute("Name");
+                    _file.size = domElement.attribute("Size").toULongLong(&ok);
+                    _file.TTH = domElement.attribute("TTH");
+
+                    if(ok)
+                        dtree.files.append(_file);
+                }
                 qDebug() << "TagName: " << domElement.tagName() << "\tName: " << str;
             }
         }
-        traverseNode(domNode, dtree);
+        //traverseNode(domNode, dtree);
         domNode = domNode.nextSibling();
     }
 }
@@ -180,17 +202,18 @@ void FileManager::LoadXML()
 void FileManager::rootDirParse(const QDomNode& node)
 {
     QDomNode domNode = node.firstChild();
+    DirsTree _newDirTree;
 
-    while(!domNode.isNull()) {
+    while(!domNode.isNull()) { // parsing RootDirectory only
         if(domNode.isElement()) {
             QDomElement domElement = domNode.toElement();
             if(!domElement.isNull()) {
                 if(domElement.tagName() == "RootDirectory") {                    
                     qDebug() << "Name: " << domElement.attribute("Path");
-                    DirsTree _newTree;
-                    _newTree.current = QDir(domElement.attribute("Path"));
-                    traverseNode(domNode, _newTree);
-                    loadedTree.append(_newTree);
+                    _newDirTree.clear();
+                    _newDirTree.current = QDir(domElement.attribute("Path"));
+                    traverseNode(domNode, _newDirTree);
+                    loadedTree.append(_newDirTree);
                 }
             }
         }

@@ -10,7 +10,7 @@ struct FileInfo
     QDir dir;
     QString filename;
     quint64 size;
-    void Clear()
+    void clear()
     {
         TTH.clear();
         interleaves.clear();
@@ -22,6 +22,11 @@ struct DirsTree {
     QDir current;
     QList<DirsTree> childDirs;
     QList<FileInfo> files;
+    void clear()
+    {
+        childDirs.clear();
+        files.clear();
+    }
 };
 class FileManager: public QObject
 {
