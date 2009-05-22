@@ -16,6 +16,12 @@ struct FileInfo
         interleaves.clear();
         size = 0;
     }
+    bool operator== (const FileInfo &other ) const {
+        if(other.dir == dir && other.filename == filename && other.size == size)
+            return true;
+        else
+            return false;
+    }
 };
 struct DirsTree;
 struct DirsTree {
@@ -26,6 +32,12 @@ struct DirsTree {
     {
         childDirs.clear();
         files.clear();
+    }    
+    bool operator== (const DirsTree &other ) const {
+        if(other.current == current)
+            return true;
+        else
+            return false;
     }
 };
 class FileManager: public QObject
@@ -51,8 +63,15 @@ private:
 
     //! Finding RootDirectory tags
     void rootDirParse(const QDomNode& node);
+    //! Parsing child directories
     void traverseNode(const QDomNode& node, DirsTree & dtree);
+    //! Loading XML Filelist
     void LoadXML();
+
+    //! Setting TTH value for early hashed files
+    void setTTH();
+    //! Recursive function to set TTH in directory
+    void setTTHDirectory(DirsTree & loadedTree, DirsTree & realTree);
 };
 
 #endif // FILEMANAGER_H

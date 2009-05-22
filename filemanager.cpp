@@ -3,14 +3,12 @@
 
 FileManager::FileManager()
 {
-    //HashFile hf;
-    //QString TTH = hf.Go("/home/ivan/Dropbox/QT/libhash_new/libhash_new.pro");
-
-    folders.append(QDir("/home/ivan/Dropbox/"));
+    folders.append(QDir("/home/share/"));
 
     LoadXML();
-    //ScanFiles();
-
+    ScanFiles();
+    setTTH();
+    SaveXML();
 }
 void FileManager::ScanFiles()
 {
@@ -23,12 +21,11 @@ void FileManager::ScanFiles()
         tree.append(dir);
     }
 
-    SaveXML();
+    //SaveXML();
 }
 void FileManager::scan(DirsTree& node)
 {
     FileInfo fi;
-    HashFile hf;
 
     QStringList listFiles = node.current.entryList(QDir::Files);
     foreach(QString file, listFiles)
@@ -37,7 +34,6 @@ void FileManager::scan(DirsTree& node)
         fi.filename = file;
         fi.dir = node.current;
         fi.size = QFileInfo(node.current.absoluteFilePath(file)).size();
-        //fi.TTH = hf.Go(node.current.absoluteFilePath(file));
         node.files.append(fi);
     }
     QStringList listDirs = node.current.entryList(QDir::Dirs);
@@ -220,3 +216,45 @@ void FileManager::rootDirParse(const QDomNode& node)
         domNode = domNode.nextSibling();
     }
 }
+
+void FileManager::setTTH()
+{
+    DirsTree loadedRootTree;
+    DirsTree realRootTree;
+    int index;
+    int i;
+    // going throw loadedTree and setting TTH in tree
+    foreach(loadedRootTree, loadedTree)
+    {
+        // finding roots  in tree
+        index = tree.indexOf(loadedRootTree);
+        if(index >= 0) {
+            setTTHDirectory(loadedRootTree, tree[index]);
+        }
+    }
+}
+void FileManager::setTTHDirectory(DirsTree &loadedTree, DirsTree &realTree)
+{
+    DirsTree loadedDir, realDir;
+    FileInfo loadedFi, realFi;
+    FileInfo current;
+    QFileInfo fileinfo;
+    int index;
+    HashFile hf;
+
+    foreach(loadedDir, loadedTree.childDirs) // comparing childDirs
+    {
+        index = realTree.childDirs.indexOf(loadedDir);
+        if(index >= 0) {
+            setTTHDirectory(loadedDir, realTree.childDirs[index]);
+        }
+    }
+
+    foreach(loadedFi, loadedTree.files)
+    {
+        index = realTree.files.indexOf(loadedFi);
+        if(index >= 0)
+                realTree.files[index].TTH = loadedFi.TTH;
+    }
+}
+
