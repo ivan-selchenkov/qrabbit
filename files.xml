@@ -1,215 +1,1175 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FileListing>
- <RootDirectory Path="/home/ivan/Dropbox12" Name="Dropbox12" >
- </RootDirectory>
- <RootDirectory Path="/home/ivan/Dropbox" Name="Dropbox" >
-  <Directory Name="Lena" >
-   <File Size="2035" TTH="" Name="menu_test.html" />
-   <File Size="1627" TTH="" Name="test_menu.html" />
-  </Directory>
-  <Directory Name="Photos" >
-   <File Size="339773" TTH="" Name="Boston City Flow.jpg" />
-   <File Size="354633" TTH="" Name="Costa Rican Frog.jpg" />
-   <File Size="480098" TTH="" Name="Pensive Parakeet.jpg" />
-  </Directory>
-  <Directory Name="Public" >
-   <File Size="188" TTH="" Name="Top Secret.txt" />
-  </Directory>
-  <Directory Name="QT" >
-   <Directory Name="dc_test1" >
-    <Directory Name="tth" >
-     <File Size="4670" TTH="" Name="base32.cpp" />
-     <File Size="806" TTH="" Name="base32.h" />
-     <File Size="3125" TTH="" Name="byte_order.h" />
-     <File Size="321" TTH="" Name="hash.cpp" />
-     <File Size="192" TTH="" Name="hash.h" />
-     <File Size="5686" TTH="" Name="hashfile.cpp" />
-     <File Size="829" TTH="" Name="hashfile.h" />
-     <File Size="4633" TTH="" Name="tiger.c" />
-     <File Size="623" TTH="" Name="tiger.h" />
-     <File Size="36538" TTH="" Name="tiger_data.c" />
-    </Directory>
-    <File Size="1966203" TTH="" Name="dc_test1" />
-    <File Size="687" TTH="" Name="dc_test1.pro" />
-    <File Size="11594" TTH="" Name="dc_test1.pro.user" />
-    <File Size="3331" TTH="" Name="filemanager.cpp" />
-    <File Size="952" TTH="" Name="filemanager.h" />
-    <File Size="0" TTH="" Name="filenamager.cpp" />
-    <File Size="12288" TTH="" Name="files.xml" />
-    <File Size="77" TTH="" Name="global.h" />
-    <File Size="12854" TTH="" Name="hubconnection.cpp" />
-    <File Size="2677" TTH="" Name="hubconnection.h" />
-    <File Size="2773" TTH="" Name="hubnicklist.cpp" />
-    <File Size="1813" TTH="" Name="hubnicklist.h" />
-    <File Size="177" TTH="" Name="main.cpp" />
-    <File Size="1273" TTH="" Name="mainwindow.cpp" />
-    <File Size="539" TTH="" Name="mainwindow.h" />
-    <File Size="4494" TTH="" Name="mainwindow.ui" />
-    <File Size="10466" TTH="" Name="Makefile" />
-    <File Size="1635" TTH="" Name="tablemodel.cpp" />
-    <File Size="553" TTH="" Name="tablemodel.h" />
+ <RootDirectory Path="/home/ivan/QT" Name="QT" >
+  <Directory Name="Calculator" >
+   <Directory Name="debug" >
+    <File Size="461392" TTH="JRF6ZP7I6DFSYL45VTM3KUXO2ZQFK5OVU2HF42A" Name="Calculator.o" />
+    <File Size="209856" TTH="UQZRCLDLIHDN4HFYYZDOWRHZRNTH3OXONBA7UYY" Name="main.o" />
+    <File Size="2076" TTH="KI3A2M2UCAFEZVOFZMEEXQQQTB2YESHN6SGWKSY" Name="moc_Calculator.cpp" />
+    <File Size="212960" TTH="3MITUH344TUTFWFMFULRCWC726JPZIBRRWVLMGA" Name="moc_Calculator.o" />
    </Directory>
-   <Directory Name="dc_test1_old" >
+   <Directory Name="qtc-gdbmacros" >
     <Directory Name="debug" >
-     <File Size="442296" TTH="" Name="filemanager.o" />
-     <File Size="655600" TTH="" Name="hubconnection.o" />
-     <File Size="505760" TTH="" Name="hubnicklist.o" />
-     <File Size="391784" TTH="" Name="main.o" />
-     <File Size="489552" TTH="" Name="mainwindow.o" />
-     <File Size="1815" TTH="" Name="moc_filemanager.cpp" />
-     <File Size="378568" TTH="" Name="moc_filemanager.o" />
-     <File Size="7050" TTH="" Name="moc_hubconnection.cpp" />
-     <File Size="423248" TTH="" Name="moc_hubconnection.o" />
-     <File Size="2895" TTH="" Name="moc_hubnicklist.cpp" />
-     <File Size="397856" TTH="" Name="moc_hubnicklist.o" />
-     <File Size="2498" TTH="" Name="moc_mainwindow.cpp" />
-     <File Size="409704" TTH="" Name="moc_mainwindow.o" />
-     <File Size="166576" TTH="" Name="nicklist.o" />
-     <File Size="436768" TTH="" Name="tablemodel.o" />
-     <File Size="3832" TTH="" Name="xxx.o" />
+     <File Size="801328" TTH="OU3TTVNENU5X6SWBVQ4IIDKHVQUIMJUPXGO6MJA" Name="gdbmacros.o" />
+    </Directory>
+    <Directory Name="release" />
+    <File Size="79119" TTH="VAKOTONWJVJ6YC2XR3AERIY4NVN5EMWKVRFW74Q" Name="gdbmacros.cpp" />
+    <File Size="54" TTH="P5CZ4E3FOKJQMQOE7C2FJWQGOQE7XMAIGQPXTGA" Name="gdbmacros.pro" />
+    <File Size="534" TTH="P2MT23CGPSXSAW3MUFWYRX2REGFXAJ2GRTYW4MI" Name="LGPL_EXCEPTION.TXT" />
+    <File Size="462214" TTH="IWX7N7BODFLS54MVZKK6I35KCT355LGVXPCFQFY" Name="libgdbmacros.so" />
+    <File Size="462214" TTH="IWX7N7BODFLS54MVZKK6I35KCT355LGVXPCFQFY" Name="libgdbmacros.so.1" />
+    <File Size="462214" TTH="IWX7N7BODFLS54MVZKK6I35KCT355LGVXPCFQFY" Name="libgdbmacros.so.1.0" />
+    <File Size="462214" TTH="IWX7N7BODFLS54MVZKK6I35KCT355LGVXPCFQFY" Name="libgdbmacros.so.1.0.0" />
+    <File Size="26434" TTH="CF64RRAJA7O7AFUWVBFBHPNEWZEMXWIBX3RDMGI" Name="LICENSE.LGPL" />
+    <File Size="5991" TTH="X2XI25H76RLMWSPMAQTLNDNYOQO42DDWK4TILJA" Name="Makefile" />
+    <File Size="5790" TTH="BTRSH3YEJKG53FAZFWJABJSVOH72226GZ32KYNY" Name="Makefile.Debug" />
+    <File Size="5846" TTH="SKKJZZS6LNKQYJZI6LSTAANYXRBVURTFZDEVYFA" Name="Makefile.Release" />
+   </Directory>
+   <Directory Name="release" />
+   <File Size="410284" TTH="3GY4IV5P2BTNCD5HYXISNISCRWID6IQIX4K6OFQ" Name="Calculator" />
+   <File Size="441640" TTH="UYQBP4VYZVC7GX6CNEQPKFXNCWD7CSWM5AMWW6Y" Name="Calculator-qdeveloptmp.o" />
+   <File Size="1180" TTH="XBDGVKWADECNHJFXHIB3JOG5RNUYRRS2R64A4DA" Name="Calculator.cpp" />
+   <File Size="400" TTH="FLQVI3INZCOASP35NUZ2WVNAJGIMOWCJLKB6X5I" Name="Calculator.h" />
+   <File Size="132" TTH="DJIRVNLYVIF7UWBHMDGRGYG4RX4O4CL42UJDSKA" Name="Calculator.pro" />
+   <File Size="18613" TTH="HGMKLJPGGRWS5LCRDZH5ODX6RTHQPCRNXZPW4MY" Name="Calculator.pro.user" />
+   <File Size="254" TTH="QCWBT7FIOOARNIVCARDK2PXQX6K6DI4A454FTMY" Name="main.cpp" />
+   <File Size="5639" TTH="SAN57LUVUBR4XJTUFBDZ5KW727ESZM5EZJ3VJ3A" Name="Makefile" />
+   <File Size="5669" TTH="MJXZ3PNGSSIZISLH4ZGKCX2JATKGS7XV3SAEBXQ" Name="Makefile.Debug" />
+   <File Size="5753" TTH="CJNGBKEHOTN7ZAO2BOUKQ3MMCH3M7UMSC364XRQ" Name="Makefile.Release" />
+   <File Size="16384" TTH="Y4KCC27I3HABMJH4N6CLNRRCY756EKCHFFR4ABI" Name="qdevelop-settings.db" />
+  </Directory>
+  <Directory Name="crisscross" >
+   <File Size="1551" TTH="GUUG7TESLSO3QAWD7HG35K4SUUPIFKAE3ZSLO7I" Name="core_io.h" />
+   <File Size="5191" TTH="UMSGKWN6MYZZUCPR5TUSJZAR42YKFIYKRUBDCQY" Name="core_io_reader.h" />
+   <File Size="1836" TTH="ICNXFHTDENJD4GEGNTX2B2XKLWGYP5DEJTLMXDI" Name="deprecate.h" />
+   <File Size="1999" TTH="KEMOBP7U7NQ5TUCYRI5SJGSMV7K3UFB6R7AGQ6A" Name="error.h" />
+   <File Size="0" TTH="XBB5FNQY2CGASEAAAAABCAAAADIO3GQJHTDQMCA" Name="main.cpp" />
+   <File Size="1236" TTH="JX72KL4R5JVKQDMXONHMKTBZ6RCNQDC4Q4AVMFQ" Name="mutex.h" />
+   <File Size="1247" TTH="Q4CYF73463TSV2FIVMHHH6B2B3FQQZ36PUTPXXI" Name="mutex.h~" />
+   <File Size="45525" TTH="ZDW45TKDPASMWIBMX5YGIIRAQSDKFHZSEZQKHDY" Name="tiger.cpp" />
+   <File Size="45558" TTH="JHD2B2SR7QRATWMUV7UGQBMG6MUVZ7S24NADKXA" Name="tiger.cpp~" />
+   <File Size="3366" TTH="5M2JNLSZFPROQEIUWCVVJCBTWHGZUGK7N5PCFFY" Name="tiger.h" />
+   <File Size="3377" TTH="435WAPEBP43MZBUL64ELO65SBQCYXD7N2NL4SGQ" Name="tiger.h~" />
+   <File Size="9649" TTH="2JSGD6UPQRWUC4LXTERRHOOKMNTEKVO53T7CL5I" Name="universal_include.h" />
+   <File Size="9658" TTH="IIREGRTUUS6KXXDMK6FDWWZ2X74AOHDV5RS7ZQQ" Name="universal_include.h~" />
+  </Directory>
+  <Directory Name="dc_test1_old" >
+   <Directory Name="debug" >
+    <File Size="240312" TTH="4UZIUOALAUCHYLTQ5SGL7M25PVCD3GXBMSUOYPI" Name="base32.o" />
+    <File Size="306244" TTH="VC3ZSTRJRUAOPIX65PNGIL4NZPBZX7BIQR2IOAQ" Name="filemanager.o" />
+    <File Size="231680" TTH="MEPJO2GIIYXAFNCS6QVNLUBEK3XY7MURT3SGIJY" Name="hash.o" />
+    <File Size="248496" TTH="LPGRZCJVDA2KWOCJMOJSDNQC3I5QJVM5HM255VI" Name="hashfile.o" />
+    <File Size="439556" TTH="QK3FBU7FW7U66TAGIYI2BYUGX7KR6L7LTH3ERIY" Name="hubconnection.o" />
+    <File Size="346432" TTH="I3BJNL33VNKPOCTUKPNIIOPPSENPGN6AJMAYPCY" Name="hubnicklist.o" />
+    <File Size="280752" TTH="HJNVA3Z2EV7DJZOVYRBPZQR42SLB5YJHBRUV73I" Name="main.o" />
+    <File Size="343056" TTH="SRHQMVURYTCOSP4DBLWEGZXWOEZQJZCA4BJ3S5Y" Name="mainwindow.o" />
+    <File Size="1815" TTH="HSC3TWGHO2IUVLK56SFC2B65O2UZ5HIXFXQ4WRQ" Name="moc_filemanager.cpp" />
+    <File Size="268492" TTH="5KYJH7OCS5RGPR5B5KLMFI5YT7PNBKBZVGFOHAY" Name="moc_filemanager.o" />
+    <File Size="7050" TTH="COKTOFQZ7OSOOITEKU2E7GFYMZGSW5XNA62MTYI" Name="moc_hubconnection.cpp" />
+    <File Size="298340" TTH="E66ZLFSCZ3ED3W4NSSB6NXYWM3ZF7EPB4S4H3JQ" Name="moc_hubconnection.o" />
+    <File Size="2895" TTH="IVLENOWXPU3PVJKC6K7N2UMN5U4BKG3LKROFK5I" Name="moc_hubnicklist.cpp" />
+    <File Size="282568" TTH="G4MN6HUIMS6RN3ZDCP6GDUI7DXTO4KW4HY7M6XI" Name="moc_hubnicklist.o" />
+    <File Size="2498" TTH="753VBVRKIBP6HWRWNOBELAKYMWVHPMY4XLMUV4Y" Name="moc_mainwindow.cpp" />
+    <File Size="293760" TTH="LFDUYBBNNYYGTAWPQVDW7BPLZP25IOLTZET56KA" Name="moc_mainwindow.o" />
+    <File Size="166576" TTH="ZUPSYD5LXCHB25PUXLHIN466E5BCGEIY3H6YEDA" Name="nicklist.o" />
+    <File Size="306568" TTH="GVGYJ7TOGOM3OVVAZNXDWCL33JL4QCG6Y2CXNDA" Name="tablemodel.o" />
+    <File Size="9752" TTH="SFHHJODL46NF65YGR4CYMFNMDDEOVTZ4PROQBBY" Name="tiger.o" />
+    <File Size="9980" TTH="RSZW5GXEQ6DMR624ZNN2TPWMZK4RXJVFPWBOLYI" Name="tiger_data.o" />
+    <File Size="3832" TTH="IMWWEB2EISTBWQFYMWAULNFXNPP6X45S7RJWCGA" Name="xxx.o" />
+   </Directory>
+   <Directory Name="qtc-gdbmacros" >
+    <Directory Name="debug" >
+     <File Size="560384" TTH="DLAAWWSHBWSIQ5LCE5VL3ELOZ3YZ6FUK56YKPMA" Name="gdbmacros.o" />
+    </Directory>
+    <Directory Name="release" />
+    <File Size="79119" TTH="VAKOTONWJVJ6YC2XR3AERIY4NVN5EMWKVRFW74Q" Name="gdbmacros.cpp" />
+    <File Size="54" TTH="P5CZ4E3FOKJQMQOE7C2FJWQGOQE7XMAIGQPXTGA" Name="gdbmacros.pro" />
+    <File Size="534" TTH="P2MT23CGPSXSAW3MUFWYRX2REGFXAJ2GRTYW4MI" Name="LGPL_EXCEPTION.TXT" />
+    <File Size="448972" TTH="DCL4PNHCJ5KBMEOYBHQCDUMPGWZW5WYHT4W4E5A" Name="libgdbmacros.so" />
+    <File Size="448972" TTH="DCL4PNHCJ5KBMEOYBHQCDUMPGWZW5WYHT4W4E5A" Name="libgdbmacros.so.1" />
+    <File Size="448972" TTH="DCL4PNHCJ5KBMEOYBHQCDUMPGWZW5WYHT4W4E5A" Name="libgdbmacros.so.1.0" />
+    <File Size="448972" TTH="DCL4PNHCJ5KBMEOYBHQCDUMPGWZW5WYHT4W4E5A" Name="libgdbmacros.so.1.0.0" />
+    <File Size="26434" TTH="CF64RRAJA7O7AFUWVBFBHPNEWZEMXWIBX3RDMGI" Name="LICENSE.LGPL" />
+    <File Size="5343" TTH="ZCYKLXM57JDTXH4IEHM5BD4YYUMHFKF6EBKDF3Y" Name="Makefile" />
+    <File Size="5169" TTH="QX7XBAKJJMXZ4G5BICPHMK6HJZG63LTLVI337XA" Name="Makefile.Debug" />
+    <File Size="5225" TTH="M5MVSRYWDF6N2SMJZ6WEIVBJHXONHF6WJGF5X2A" Name="Makefile.Release" />
+   </Directory>
+   <Directory Name="release" />
+   <Directory Name="tth" >
+    <File Size="4670" TTH="3L23T6KVTYVFKGPBQBYQTI56TIOZI7BU2TJIFMA" Name="base32.cpp" />
+    <File Size="806" TTH="DVSKJGEJWOLXCY2PEYYRSTCUM2WZUQL6YDBOCLA" Name="base32.h" />
+    <File Size="3125" TTH="4MMDYN4ICQGZR7UP7J7JWOA5S3XUNO4SX62C3EQ" Name="byte_order.h" />
+    <File Size="321" TTH="UJG7K3BL2PT5RJ4J7PA7EOJ7L4V2QUN2QCJMDSI" Name="hash.cpp" />
+    <File Size="211" TTH="Y6M5EZ7UB2U5BM2FSLJWGFEY4ANQDT2MRV4ICWI" Name="hash.h" />
+    <File Size="5381" TTH="LBEERA6KVBWV232OQS7LDRABEAGZ4PHYPSL7KWQ" Name="hashfile.cpp" />
+    <File Size="561" TTH="7YQ4BCAHJKPJ7BEDPMLYZHDROVZN4NOZICIWZVA" Name="hashfile.h" />
+    <File Size="4633" TTH="BVS37GIN4ZAVB6TMCTP27SGW6NOEWC3MVTEWL5A" Name="tiger.c" />
+    <File Size="623" TTH="H2QZEZK5UIQBFZR477Z3GAII3SKFH3VQTQJN5NQ" Name="tiger.h" />
+    <File Size="36538" TTH="V7KHMFKT4UMIQVKOA5BMTUA4GMHBSPJT6X5CXDA" Name="tiger_data.c" />
+   </Directory>
+   <File Size="1845037" TTH="LFFKLTHMHR2KI4UTEHDASQP3YF2WLZTV23Y5TEI" Name="dc_test1" />
+   <File Size="677" TTH="L47N7CKQOAP2N2KDYAWD7ICC2OC7HCRCFWA57UQ" Name="dc_test1.pro" />
+   <File Size="22186" TTH="WFDICORDMALO5BCXGLTCZF3NRWOTVL5NAWJ3FVY" Name="dc_test1.pro.user" />
+   <File Size="529" TTH="UP44ZEFT52YUXIWTUH2BI7KHTZLLOVJPQUHJXVA" Name="filemanager.cpp" />
+   <File Size="499" TTH="7EAAQF5RTIWZ7YXNBBSKKDAZZ2AAFLOYGFYRHMQ" Name="filemanager.h" />
+   <File Size="77" TTH="RIB26BWLGUX77CW2Y6G7LWTLERIFOUUY3TELG4I" Name="global.h" />
+   <File Size="12854" TTH="ZYJH4QGQ365WDGHQUKLN46UDLL5AGRGFXQMZMRA" Name="hubconnection.cpp" />
+   <File Size="2677" TTH="FOKKLVWCF6I2YE5ABOB2F4H6DEQGMJWA3XLOBDQ" Name="hubconnection.h" />
+   <File Size="2773" TTH="QEISESUOQA2F5D5YQL774J5AU6A7ZADSN7ANVUI" Name="hubnicklist.cpp" />
+   <File Size="1813" TTH="4PFAMJMQ2MQQDLLQB5GQVHCDYOIPLXZWNQMODTY" Name="hubnicklist.h" />
+   <File Size="177" TTH="YKEYOJCSC6TGEII24AHNIK4JV4FZJWQ3XSYNY4I" Name="main.cpp" />
+   <File Size="1269" TTH="KN233K6XAXH4YY7ZVQC4NAIWUXCA526I77CDTDY" Name="mainwindow.cpp" />
+   <File Size="539" TTH="7PKHMROOLZAQIKSUFNFWYML7YBVYMVOEJWYOSRQ" Name="mainwindow.h" />
+   <File Size="4494" TTH="FWYYE2JDM6Q3UHFLUN53QYGME3Z65KMFKS3FELQ" Name="mainwindow.ui" />
+   <File Size="5206" TTH="2YNVZKFHBJ7RZO5LU23M7W7EWFH7ZBCCAUJJRUY" Name="Makefile" />
+   <File Size="8687" TTH="P37YJYU2RQNXEBOS5TCZLG266225VAU2ZGPMQTY" Name="Makefile.Debug" />
+   <File Size="8886" TTH="E56RDAURXQFEBKAHPC4O6OBW6R325RXBIVUUTSY" Name="Makefile.Release" />
+   <File Size="1635" TTH="7CHVPQ6LCGMVSTEG22EWJHRRAMBGEQJZK63V4AQ" Name="tablemodel.cpp" />
+   <File Size="553" TTH="3VHXCVVYYNSSMDMQ42HJLARLT55HYVZTR6RADHY" Name="tablemodel.h" />
+   <File Size="5883" TTH="TC3G5MTQYJTDISRJJMSQ4C3EMBZOJH46O3YJKEA" Name="ui_mainwindow.h" />
+  </Directory>
+  <Directory Name="error" >
+   <File Size="9671" TTH="AFRPVT3KX5TMUY3D5ZZQDJQEQBNUL3NTAS5VUPA" Name="bug" />
+   <File Size="95" TTH="BDRAMJ3IQVMJL44WA5DVDYUR3GCBSE56A4XNEPA" Name="main.cpp" />
+   <File Size="0" TTH="XBB5FNSQG6NQSEAAAAACCAAAACRE35LMFPJ6PWA" Name="main.cpp~" />
+  </Directory>
+  <Directory Name="example1" >
+   <File Size="177" TTH="B6JY55N5HQLTHZJIRUPHTISCIUCFUIEVSBKISQI" Name="Counter.cpp" />
+   <File Size="250" TTH="XKLWK3WZ52E5UX4BIYZWKSTNKPRFVRUJZRP4D7I" Name="Counter.h" />
+   <File Size="1960" TTH="YVLH77ZUJFPD4YOABQQI2PV64GY6AN3V2LIELMQ" Name="Counter.o" />
+   <File Size="17668" TTH="DNMOKWDMM42FMBBVURWVSS6IVZCDCZVWSMWCISY" Name="example1" />
+   <File Size="332" TTH="OTHV5W22BJ3HTXXB3IIOKCI3ILFEUAGD4N3VBKA" Name="example1.pro" />
+   <File Size="453" TTH="NYQSJDAZJ6YO5RNMX6DIJIRQKE2AFCNJCHJ7YBI" Name="main.cpp" />
+   <File Size="3816" TTH="BNEPGYND764FWHFPFAVQRGX7NGP3GOQFKHV3EAQ" Name="main.o" />
+   <File Size="6936" TTH="XL5B7PKAJ2RIDULAXBU4X6OFD3LIIBBJ3PQAJSY" Name="Makefile" />
+   <File Size="2525" TTH="LIEO7XGSNLPFH37OAD3UM52RM6IV3FZLVPHK6YY" Name="moc_Counter.cpp" />
+   <File Size="6176" TTH="VJGC7CZNVLT5COC7CBM22INY7AE2OIVUNLPLKKA" Name="moc_Counter.o" />
+   <File Size="14336" TTH="BWEEGA3GE2WW3VAVEGEJYFLUUF4CTXZBSZ6HLMQ" Name="qdevelop-settings.db" />
+  </Directory>
+  <Directory Name="libhash" >
+   <Directory Name="debug" >
+    <File Size="338240" TTH="FXH5CMM5Y24XWJEGGBII6EFV77CVJBF6OVC3Z4I" Name="Base32.o" />
+    <File Size="334424" TTH="AA64KIR3VEL55PYH2L25A4GM2YNMSG6VIA2VGRQ" Name="hash.o" />
+    <File Size="394128" TTH="V4RJ7NS5MBOPXPQBJ2YIACPJPBRHDURADQPI5KY" Name="hashfile.o" />
+    <File Size="370000" TTH="XA2XDB6VNRVGHBBDD3NYOJPU26U2UOTEGMLYY6A" Name="main.o" />
+   </Directory>
+   <Directory Name="qtc-gdbmacros" >
+    <Directory Name="debug" >
+     <File Size="801328" TTH="TSFDVUHU4ABFQYHGLGDQPHGV7Y6D3E7ITWQSLSA" Name="gdbmacros.o" />
+    </Directory>
+    <Directory Name="release" >
+     <File Size="374416" TTH="MM6HC6CKNPUK6O2I3ZBGVUNPGXKLJJDKYMMEXBA" Name="gdbmacros.o" />
+    </Directory>
+    <File Size="79119" TTH="VAKOTONWJVJ6YC2XR3AERIY4NVN5EMWKVRFW74Q" Name="gdbmacros.cpp" />
+    <File Size="54" TTH="P5CZ4E3FOKJQMQOE7C2FJWQGOQE7XMAIGQPXTGA" Name="gdbmacros.pro" />
+    <File Size="534" TTH="P2MT23CGPSXSAW3MUFWYRX2REGFXAJ2GRTYW4MI" Name="LGPL_EXCEPTION.TXT" />
+    <File Size="462198" TTH="WEFFPZD7JI5VD7JYDWHDYWQMJSAGX4CVIB5IUHY" Name="libgdbmacros.so" />
+    <File Size="462198" TTH="WEFFPZD7JI5VD7JYDWHDYWQMJSAGX4CVIB5IUHY" Name="libgdbmacros.so.1" />
+    <File Size="462198" TTH="WEFFPZD7JI5VD7JYDWHDYWQMJSAGX4CVIB5IUHY" Name="libgdbmacros.so.1.0" />
+    <File Size="462198" TTH="WEFFPZD7JI5VD7JYDWHDYWQMJSAGX4CVIB5IUHY" Name="libgdbmacros.so.1.0.0" />
+    <File Size="26434" TTH="CF64RRAJA7O7AFUWVBFBHPNEWZEMXWIBX3RDMGI" Name="LICENSE.LGPL" />
+    <File Size="5992" TTH="K4WKYYHITOMTZC67T747BYTNNXIBZVBUVB72MBA" Name="Makefile" />
+    <File Size="5791" TTH="V6XHQQGHWZZL6UKOPCTMNZSCNVPWN6WNICWB6GI" Name="Makefile.Debug" />
+    <File Size="5847" TTH="PWIHFYVV22GNXQECMI6YONKIL7IAO3EV4O3AVII" Name="Makefile.Release" />
+   </Directory>
+   <Directory Name="release" >
+    <File Size="5448" TTH="GURSRVGGRB6HS7JWUZ3UWZKO3DGUIMWJ7MKMGHY" Name="Base32.o" />
+    <File Size="2656" TTH="GUNUI6HI6RUHHQSHOITTP2JOTXQPIFLVFOP5K7Y" Name="hash.o" />
+    <File Size="13688" TTH="NEZSIV47PODOWNXBPT55A4OWWL2KRNPYGL4TTVA" Name="hashfile.o" />
+    <File Size="8160" TTH="YNQBI6LVRAZE7SDW2EDCFKLSLKFCL73KSHNYJAI" Name="main.o" />
+   </Directory>
+   <File Size="0" TTH="XBB5FNRQMKNQSEAAAAAISAAAAAAQAAAAGYAAAAA" Name="0" />
+   <File Size="4671" TTH="QPZOJTTKQJBNR6AYKBXBBPKCTKESGMXCJBTBHNI" Name="Base32.cpp" />
+   <File Size="807" TTH="K7QSPPCJEIFNZZJ3WLBZOAUXKAY3B3WB6XX6DBY" Name="Base32.h" />
+   <File Size="1013" TTH="BVDR36NIC7KO4ES6HNEWBV65QL6POXRUA6RMU6I" Name="hash.cpp" />
+   <File Size="202" TTH="NWHMSFE7UJ7G4T5RWQCB75C3ZA6OCSDOGLKIS4A" Name="hash.h" />
+   <File Size="2245" TTH="ZJGDNW3TQBTDW2N2G4Y7JBF7G5IAJ4XOTM44J6Y" Name="hashfile.cpp" />
+   <File Size="304" TTH="ZCICEDNUUX6U5FRPVHKVGB736J2WLO7Y56RDKDI" Name="hashfile.h" />
+   <File Size="542313" TTH="IPYJFPQSJ6E4WV37MUOJFM3WRANWCUARUDB2K2Y" Name="libhash" />
+   <File Size="439" TTH="PUFXVBQWVTEZHVXC6JLNZDACG4R7R6CVQV5WQIQ" Name="libhash.pro" />
+   <File Size="30456" TTH="M7KRV4BJLPKJ6X37TF4XBWIZIBZ6ZWOQXYBYCZA" Name="libhash.pro.user" />
+   <File Size="1112" TTH="WSEVYWO3PO5MRDV4HU4IL27J7EFWQMLN6NPUAWI" Name="main.cpp" />
+   <File Size="5622" TTH="JL2R2MKJPEYTZUNYL4ATQFQ6NIEWJ43NRZRMA6Y" Name="Makefile" />
+   <File Size="5525" TTH="ZKMOSTTAJIXRQ6MQNNXTQOGOOFZ3H2ZV7AQD4XA" Name="Makefile.Debug" />
+   <File Size="5601" TTH="KDFXO52GWRH5OF5JB4DBI7LFDXC2CG3IZKGA7MY" Name="Makefile.Release" />
+  </Directory>
+  <Directory Name="libhash_new" >
+   <Directory Name="debug" >
+    <File Size="240312" TTH="M6HSJTLQC7NQKCQGQKDXAZFRPGGJULVTX56A44A" Name="Base32.o" />
+    <File Size="234116" TTH="SIWBWC2UFUSUJBZ4AGGEE3LRYGTUW2JN4VUQ6AI" Name="hash.o" />
+    <File Size="258392" TTH="L7CLGGTIRH6GSO7NX3ZCAGT47OJ5GO7ZOBNSH5I" Name="hashfile.o" />
+    <File Size="256436" TTH="DWFAP5QT27AUVMQP5XTLRGTWEP73AASBZ3QW37Q" Name="main.o" />
+   </Directory>
+   <Directory Name="qtc-gdbmacros" >
+    <Directory Name="debug" >
+     <File Size="560384" TTH="VOGYZHQT2ZJJMN6EEYP2LDIBEY4XIQ2FPTGJZSI" Name="gdbmacros.o" />
+    </Directory>
+    <Directory Name="release" />
+    <File Size="79119" TTH="VAKOTONWJVJ6YC2XR3AERIY4NVN5EMWKVRFW74Q" Name="gdbmacros.cpp" />
+    <File Size="54" TTH="P5CZ4E3FOKJQMQOE7C2FJWQGOQE7XMAIGQPXTGA" Name="gdbmacros.pro" />
+    <File Size="534" TTH="P2MT23CGPSXSAW3MUFWYRX2REGFXAJ2GRTYW4MI" Name="LGPL_EXCEPTION.TXT" />
+    <File Size="448972" TTH="C73MKEODHP7MW2WYZRHTJT5N7SMFJRVXB6VVNCQ" Name="libgdbmacros.so" />
+    <File Size="448972" TTH="C73MKEODHP7MW2WYZRHTJT5N7SMFJRVXB6VVNCQ" Name="libgdbmacros.so.1" />
+    <File Size="448972" TTH="C73MKEODHP7MW2WYZRHTJT5N7SMFJRVXB6VVNCQ" Name="libgdbmacros.so.1.0" />
+    <File Size="448972" TTH="C73MKEODHP7MW2WYZRHTJT5N7SMFJRVXB6VVNCQ" Name="libgdbmacros.so.1.0.0" />
+    <File Size="26434" TTH="CF64RRAJA7O7AFUWVBFBHPNEWZEMXWIBX3RDMGI" Name="LICENSE.LGPL" />
+    <File Size="5343" TTH="D3SY2GGHPHK77LOLTWALQQPVK2TONCLDO3WML5Q" Name="Makefile" />
+    <File Size="5169" TTH="MEMOPGAAD4J77PKL3E54XWCUGQSSODVWYH3GN4Q" Name="Makefile.Debug" />
+    <File Size="5225" TTH="LT7Z4FOAPAZYXCFB2BLLGQD5DOJVWYI2FYAOGXQ" Name="Makefile.Release" />
+   </Directory>
+   <Directory Name="release" />
+   <File Size="1024" TTH="Y43J4HTQSVQA2YYBZEJ4EMMMH5AZF5YNO6UNS7Y" Name="1024" />
+   <File Size="2048" TTH="A7XUHCLTJPVHYC5FQGSSDJXRMUFJLVCV3SUEFUI" Name="2048" />
+   <File Size="3000" TTH="V3LQSTFUDXJO4XWIEZKQFSQ5G5ADH23MMUQHWUI" Name="3000" />
+   <File Size="5000" TTH="MRPEHOP6K6YOPSUQOT26B5CRIGHQ7FJNVKKL26Q" Name="5000" />
+   <File Size="4670" TTH="OSRLEI7QT5KSYXPVVNFLWHFSJHQIE3LGM2QFZ7Y" Name="Base32.cpp" />
+   <File Size="806" TTH="DVSKJGEJWOLXCY2PEYYRSTCUM2WZUQL6YDBOCLA" Name="Base32.h" />
+   <File Size="894" TTH="TPR5QP2YS37H4WRNZFINF5I3JC3HRXZ7ZFIUDXQ" Name="hash.cpp" />
+   <File Size="211" TTH="Y6M5EZ7UB2U5BM2FSLJWGFEY4ANQDT2MRV4ICWI" Name="hash.h" />
+   <File Size="4295" TTH="HZLABPXMPCYVHKAO6UGIE4B2YLFWSMYRJZAK4UQ" Name="hashfile.cpp" />
+   <File Size="407" TTH="7ISI4NVH4TIUAX2JSMWAMRSJZ2MZX6NGSR7SGDY" Name="hashfile.h" />
+   <File Size="516540" TTH="6SYLS2JDNNPPVXQ4OACJ7AWY7S2H6ZB6GC3C5NQ" Name="libhash_new" />
+   <File Size="385" TTH="4TCUM4NKEGU64UC3Z4OZX2VBCOJZCPJMGGF2V5Q" Name="libhash_new.pro" />
+   <File Size="19212" TTH="6AFBPFV6UHWGG5ARJIFGR2IC2LZPNYHCZBJZRWQ" Name="libhash_new.pro.user" />
+   <File Size="1453" TTH="NK35NBKNJCLBHCLICPWV7RZED7X5EWYQDL42QNA" Name="main.cpp" />
+   <File Size="5167" TTH="UTCTMN6EUVP2VP4WPSYEQB77TJEEI767FYGUGVA" Name="Makefile" />
+   <File Size="5073" TTH="3W6S4GTDDS7M27UPSSWZ4AL2GDMWFIIEIUNKDYQ" Name="Makefile.Debug" />
+   <File Size="5148" TTH="U35SWLAWTQQ6IPYDW5IL6NNSNKJIXNP74UGYEUQ" Name="Makefile.Release" />
+  </Directory>
+  <Directory Name="libhash_new_remix" >
+   <Directory Name="debug" />
+   <Directory Name="release" />
+   <File Size="1024" TTH="Y43J4HTQSVQA2YYBZEJ4EMMMH5AZF5YNO6UNS7Y" Name="1024" />
+   <File Size="2048" TTH="A7XUHCLTJPVHYC5FQGSSDJXRMUFJLVCV3SUEFUI" Name="2048" />
+   <File Size="3000" TTH="V3LQSTFUDXJO4XWIEZKQFSQ5G5ADH23MMUQHWUI" Name="3000" />
+   <File Size="5000" TTH="MRPEHOP6K6YOPSUQOT26B5CRIGHQ7FJNVKKL26Q" Name="5000" />
+   <File Size="4670" TTH="OSRLEI7QT5KSYXPVVNFLWHFSJHQIE3LGM2QFZ7Y" Name="Base32.cpp" />
+   <File Size="806" TTH="DVSKJGEJWOLXCY2PEYYRSTCUM2WZUQL6YDBOCLA" Name="Base32.h" />
+   <File Size="6056" TTH="BX5PQ3BOC5JTCTDOJPHPH7BRL7PBPAPNG263MJY" Name="Base32.o" />
+   <File Size="3125" TTH="4MMDYN4ICQGZR7UP7J7JWOA5S3XUNO4SX62C3EQ" Name="byte_order.h" />
+   <File Size="321" TTH="UJG7K3BL2PT5RJ4J7PA7EOJ7L4V2QUN2QCJMDSI" Name="hash.cpp" />
+   <File Size="213" TTH="NI65SXLYQ45FOEQDJVJGTVQ4SJIKEVBRAUWX7CY" Name="hash.h" />
+   <File Size="1960" TTH="T5B2HKTUKFEY7J5QE7NYWM3Z6ZK23QA4QCVHGAQ" Name="hash.o" />
+   <File Size="5381" TTH="LBEERA6KVBWV232OQS7LDRABEAGZ4PHYPSL7KWQ" Name="hashfile.cpp" />
+   <File Size="561" TTH="Z7Q22OASILB4UC52RXWSKRHVNM6OMEJQD4K72FI" Name="hashfile.h" />
+   <File Size="13256" TTH="3NC5ZKJYRQCPMIZSVDGZPEOAQU43COAWIA2TNHA" Name="hashfile.o" />
+   <File Size="40215" TTH="FYOCXIJQX5NQRX4QY2SYEUQIB5ZFEAMZNZDYDLQ" Name="libhash_new_remix" />
+   <File Size="466" TTH="V5Z6RRCM3Q4V6TJL3YSJDMJWRQGR6DAJMQF24VI" Name="libhash_new_remix.pro" />
+   <File Size="15281" TTH="XUWMF6Y7CUQLI3K77T5GBYGDGGKKE2ZZPPIKO2Y" Name="libhash_new_remix.pro.user" />
+   <File Size="1420" TTH="HAUEBOACKCU4UHZTGTHQ5ZN3CNVYQM3XXQILMQI" Name="main.cpp" />
+   <File Size="7672" TTH="AKEUEUABMUVAARGNSERJG33LEO4NKNFOZFDRULQ" Name="main.o" />
+   <File Size="7389" TTH="Q37O34SWEOFAVOI56BFUTGDU5HVIUELK3MOO7EY" Name="Makefile" />
+   <File Size="5489" TTH="N6AFYNCGHOYZXBADB2NTASZLO37OBYE6R33GBFQ" Name="Makefile.Debug" />
+   <File Size="5576" TTH="6SWSDLPDMRTOHVXFI237SR3KTLVSTPKGUFKVAAQ" Name="Makefile.Release" />
+   <File Size="4633" TTH="BVS37GIN4ZAVB6TMCTP27SGW6NOEWC3MVTEWL5A" Name="tiger.c" />
+   <File Size="623" TTH="H2QZEZK5UIQBFZR477Z3GAII3SKFH3VQTQJN5NQ" Name="tiger.h" />
+   <File Size="5056" TTH="CZSLZJGDEHRAHHPD3VF4M6CZ5EPFDNYKSBGKTUQ" Name="tiger.o" />
+   <File Size="36538" TTH="V7KHMFKT4UMIQVKOA5BMTUA4GMHBSPJT6X5CXDA" Name="tiger_data.c" />
+   <File Size="8624" TTH="NQJJXM5BNFUBQ3OWV6QINN5U7KJ63MAIBJ5YWKA" Name="tiger_data.o" />
+  </Directory>
+  <Directory Name="librhash" >
+   <Directory Name="debug" >
+    <File Size="240312" TTH="VKRWU7K2QDB6ONVYADJEB4VKEYG2JTBT6S65STQ" Name="base32.o" />
+    <File Size="239844" TTH="EQSRORXNCBZS5X24QEONAXNPYXIYRORJUZKP54Q" Name="main.o" />
+    <File Size="9744" TTH="FXAZRNAD5PBEWO72LSH6VXOGQ2VQGBU52IJLSPQ" Name="tiger.o" />
+    <File Size="9972" TTH="TNFUSWBKQDKQBDJJMII7W7CNAHSBEZ63TFTLNXQ" Name="tiger_data.o" />
+    <File Size="6184" TTH="YGBWKH277PPHT72WEYMUJM2VF6SCPC2HIZBXAIY" Name="tth.o" />
+   </Directory>
+   <Directory Name="qtc-gdbmacros" >
+    <Directory Name="debug" >
+     <File Size="560384" TTH="C3GSXTR2MTYZBZPYOPRJDWSHINERIHN4Y2EVSVA" Name="gdbmacros.o" />
+    </Directory>
+    <Directory Name="release" />
+    <File Size="79119" TTH="VAKOTONWJVJ6YC2XR3AERIY4NVN5EMWKVRFW74Q" Name="gdbmacros.cpp" />
+    <File Size="54" TTH="P5CZ4E3FOKJQMQOE7C2FJWQGOQE7XMAIGQPXTGA" Name="gdbmacros.pro" />
+    <File Size="534" TTH="P2MT23CGPSXSAW3MUFWYRX2REGFXAJ2GRTYW4MI" Name="LGPL_EXCEPTION.TXT" />
+    <File Size="448972" TTH="XRTQUTQP3T6T36ARJB33TW2HC2YBQ35R5QD24IA" Name="libgdbmacros.so" />
+    <File Size="448972" TTH="XRTQUTQP3T6T36ARJB33TW2HC2YBQ35R5QD24IA" Name="libgdbmacros.so.1" />
+    <File Size="448972" TTH="XRTQUTQP3T6T36ARJB33TW2HC2YBQ35R5QD24IA" Name="libgdbmacros.so.1.0" />
+    <File Size="448972" TTH="XRTQUTQP3T6T36ARJB33TW2HC2YBQ35R5QD24IA" Name="libgdbmacros.so.1.0.0" />
+    <File Size="26434" TTH="CF64RRAJA7O7AFUWVBFBHPNEWZEMXWIBX3RDMGI" Name="LICENSE.LGPL" />
+    <File Size="5343" TTH="4MBZGHKCISSILAY4O7TKSUZNZ3S3RVWI2J3DCOA" Name="Makefile" />
+    <File Size="5169" TTH="MV6FQF4MUZOJK4PHLXLGLNYNRLO54A5T4JUWAEQ" Name="Makefile.Debug" />
+    <File Size="5225" TTH="CSLI47IGUQYCDTWJYEMEYXL5B5KEDN3N3VJWOJQ" Name="Makefile.Release" />
+   </Directory>
+   <Directory Name="release" />
+   <File Size="2048" TTH="A7XUHCLTJPVHYC5FQGSSDJXRMUFJLVCV3SUEFUI" Name="2048" />
+   <File Size="4671" TTH="3XIEBW7NU7B2CGQDUDNTASV4B2HEQ32UKGE7CBQ" Name="base32.cpp" />
+   <File Size="807" TTH="K7QSPPCJEIFNZZJ3WLBZOAUXKAY3B3WB6XX6DBY" Name="base32.h" />
+   <File Size="3125" TTH="4MMDYN4ICQGZR7UP7J7JWOA5S3XUNO4SX62C3EQ" Name="byte_order.h" />
+   <File Size="318759" TTH="NZ4IWKKQCTRA3NZ6Q2WYAUSHNMOEL6WI4AMFRZQ" Name="librhash" />
+   <File Size="427" TTH="7SG5SGPXWAMFELQCV7ZPO6NICMADN5P5FE22UGQ" Name="librhash.pro" />
+   <File Size="11363" TTH="Q52RQ32GJ35GSCYN5UE4EQTLXHQL4VF24B6ZU7I" Name="librhash.pro.user" />
+   <File Size="722" TTH="F3ETSR54GQ66LRB2D7P6MNPA3GLWZQ6MI3YKDLY" Name="main.cpp" />
+   <File Size="5149" TTH="5KZSELDCS5WYEIWAXBZHTNGAY4B3GTB3ANC6K3Q" Name="Makefile" />
+   <File Size="5138" TTH="WVU2K3GAWXWCGXXV33BPZEFWHZHNXAQELUC5WJA" Name="Makefile.Debug" />
+   <File Size="5219" TTH="3LAUXDERHRIQEILIENOC7TQ24J7UCLIM2SC6DGY" Name="Makefile.Release" />
+   <File Size="4633" TTH="BVS37GIN4ZAVB6TMCTP27SGW6NOEWC3MVTEWL5A" Name="tiger.c" />
+   <File Size="623" TTH="H2QZEZK5UIQBFZR477Z3GAII3SKFH3VQTQJN5NQ" Name="tiger.h" />
+   <File Size="36538" TTH="V7KHMFKT4UMIQVKOA5BMTUA4GMHBSPJT6X5CXDA" Name="tiger_data.c" />
+   <File Size="2489" TTH="PRFWJ53EQ5ZQOQM4NRES6VM5L277X6CH6C4LNKI" Name="tth.c" />
+   <File Size="454" TTH="3VLUCDE25HOTHW3PE4TTYHE2MP7TGCZIT2VHVVA" Name="tth.h" />
+  </Directory>
+  <Directory Name="new_tiger" >
+   <Directory Name="debug" >
+    <File Size="347456" TTH="TDTLFXCXBXQSKHJ3RZPDPFR5EAP63DLRDD5ZXQY" Name="main.o" />
+    <File Size="352792" TTH="B6ZRW6BNRHWLGZJM56TPTX2FTARDXGYGL3LFUKI" Name="tiger.o" />
+   </Directory>
+   <Directory Name="qtc-gdbmacros" >
+    <Directory Name="debug" >
+     <File Size="801328" TTH="WSEVC7JZTLN5HLJF422RSQNXDMFVDPFVDCD37XQ" Name="gdbmacros.o" />
+    </Directory>
+    <Directory Name="release" />
+    <File Size="79119" TTH="VAKOTONWJVJ6YC2XR3AERIY4NVN5EMWKVRFW74Q" Name="gdbmacros.cpp" />
+    <File Size="54" TTH="P5CZ4E3FOKJQMQOE7C2FJWQGOQE7XMAIGQPXTGA" Name="gdbmacros.pro" />
+    <File Size="534" TTH="P2MT23CGPSXSAW3MUFWYRX2REGFXAJ2GRTYW4MI" Name="LGPL_EXCEPTION.TXT" />
+    <File Size="462214" TTH="GIM2AQKPRAAJLW6VGOMUD4JP74RZPDPIUHVSFFY" Name="libgdbmacros.so" />
+    <File Size="462214" TTH="GIM2AQKPRAAJLW6VGOMUD4JP74RZPDPIUHVSFFY" Name="libgdbmacros.so.1" />
+    <File Size="462214" TTH="GIM2AQKPRAAJLW6VGOMUD4JP74RZPDPIUHVSFFY" Name="libgdbmacros.so.1.0" />
+    <File Size="462214" TTH="GIM2AQKPRAAJLW6VGOMUD4JP74RZPDPIUHVSFFY" Name="libgdbmacros.so.1.0.0" />
+    <File Size="26434" TTH="CF64RRAJA7O7AFUWVBFBHPNEWZEMXWIBX3RDMGI" Name="LICENSE.LGPL" />
+    <File Size="5992" TTH="FVYL3H4EH7D4RNUDSPQZQLIZM4JM4LX5AYYDVBQ" Name="Makefile" />
+    <File Size="5791" TTH="FSN4E4KQPFLWCB7OXEDKHQFJP45SGO4YGJYP5GQ" Name="Makefile.Debug" />
+    <File Size="5847" TTH="7RYP3NWWV6HQBTBGAW6G45LY2AP7EYIUWI3WG2Y" Name="Makefile.Release" />
+   </Directory>
+   <Directory Name="release" />
+   <File Size="176" TTH="LP6OHBXAHAXIQR7PV534CA2YCD4FGJMEAUXYJPY" Name="main.cpp" />
+   <File Size="5634" TTH="OVUGQ3ZHP6UPYGUJEJ3WGV4SWOSRMUJCKE7GMLI" Name="Makefile" />
+   <File Size="5185" TTH="6AKBCG4UKU2ZLJGFJHWTB3E74YVCW5VFTWFJJKQ" Name="Makefile.Debug" />
+   <File Size="5249" TTH="VXHLRJQBFWZDRGTE5CUNWAK7Y6EZ4GAJ4IUT6FY" Name="Makefile.Release" />
+   <File Size="324206" TTH="W7BENCDI2Q2DUVMISIEIRC43D6Q5RKNXM4DH2SY" Name="new_tiger" />
+   <File Size="328" TTH="6VQXQWD7U66SVTTERMEH56N2D4S2EGYPB2TYLEA" Name="new_tiger.pro" />
+   <File Size="14255" TTH="3OPZLLPBCJYS2DTHMFWYEO2YOSSHOX72ULRO6YQ" Name="new_tiger.pro.user" />
+   <File Size="50129" TTH="MLGT2NQSEJUH7WSWVAP43PZPNJCI4W2YUHFNDCI" Name="tiger.cpp" />
+   <File Size="3376" TTH="5YFWRYYSZ5VSIOMEB2TDCJ2DWIAZ6JLFDVJV5UQ" Name="tiger.h" />
+  </Directory>
+  <Directory Name="OLD" >
+   <Directory Name="QWord" >
+    <Directory Name="debug" >
+     <File Size="388528" TTH="O4643WU3J7OBJZXQXJWL5PSWUTNLLJ6X6HXFWTA" Name="adddialog.o" />
+     <File Size="186592" TTH="MZU45XAUBDAE2D6E6CXV2ESNEAJQN5KB2DEVYEI" Name="main.o" />
+     <File Size="643256" TTH="IBE73Y3QP2O324DAN4WYDLWB3U2WGZEMC5ONLMQ" Name="mainwindow.o" />
+     <File Size="3047" TTH="JBVTYGLRZG6AXHPD3KERXCODHG73I7ASDCMFH4Q" Name="moc_adddialog.cpp" />
+     <File Size="207160" TTH="BZHQVXKOLPRVTRPGALDENJ4OGQJ6V7EZZGMLSUI" Name="moc_adddialog.o" />
+     <File Size="3479" TTH="KMA6ND5CWVIX2QNLDC3JFCPYKUSHWYPYQELKY5I" Name="moc_mainwindow.cpp" />
+     <File Size="218664" TTH="HDNUMF6ZNG3DN5TRFUF7ZULT23WYWBM2ZBC453Y" Name="moc_mainwindow.o" />
+     <File Size="2682" TTH="HTVPBE7NPDWV24M5E73DHRNEL2Y3CWS6P2AD5XQ" Name="moc_showdialog.cpp" />
+     <File Size="196024" TTH="GJIYVJRFTMHMONJC24FNRDZMTNWGNBJ7CJUTQBI" Name="moc_showdialog.o" />
+     <File Size="473864" TTH="3DL7FEFZIFDMURB4KMNHRUAVZZTVFSWRGEKLSYI" Name="showdialog.o" />
+    </Directory>
+    <Directory Name="images" >
+     <File Size="5914" TTH="7JUV3ZHMOXCUE67C6ZBS6ALUZXDJOVNNBHXEFKQ" Name="1238844450_fileclose.png" />
+     <File Size="3245" TTH="5IWCSC4LWYDCU5YREYGJJMGVWUOWGNJNP6WQYKQ" Name="1238844468_next.png" />
+     <File Size="7839" TTH="2QHVZXCGYGD4LIQOJABOX553JR6YFC3D2245OZQ" Name="1238844490_1_folder_open.png" />
+     <File Size="4269" TTH="PUVRD6AGULSKG6HOTRUXKUTWEXGXV7JWLQNJSGI" Name="1238844505_exit.png" />
+     <File Size="5071" TTH="5RSWCO4BQAGE6FYTH2Y7HDVUE4NDDS7K2FRARWA" Name="1238867598_add_48.png" />
+     <File Size="10566" TTH="MOIMBVCMF7T62YEXPBFI3UMBZTPEOYBBDN6XP7A" Name="1239111434_folder_new.png" />
+     <File Size="735" TTH="H4V77PWD7OGG75AFDEOUHUHARRTPP46TJXSITOI" Name="logo.png" />
+     <File Size="4263" TTH="L5YY7LGBGZAS5S6U526NVIOQDBQVJCBY4FU3IRA" Name="logo.svg" />
     </Directory>
     <Directory Name="qtc-gdbmacros" >
      <Directory Name="debug" >
-      <File Size="801328" TTH="" Name="gdbmacros.o" />
+      <File Size="801320" TTH="6JYCOZQOTIKFLBMK6IUIADCAAWKBPFRWXU4HT4Q" Name="gdbmacros.o" />
      </Directory>
-     <Directory Name="release" />
-     <File Size="79119" TTH="" Name="gdbmacros.cpp" />
-     <File Size="54" TTH="" Name="gdbmacros.pro" />
-     <File Size="534" TTH="" Name="LGPL_EXCEPTION.TXT" />
-     <File Size="462198" TTH="" Name="libgdbmacros.so" />
-     <File Size="462198" TTH="" Name="libgdbmacros.so.1" />
-     <File Size="462198" TTH="" Name="libgdbmacros.so.1.0" />
-     <File Size="462198" TTH="" Name="libgdbmacros.so.1.0.0" />
-     <File Size="26434" TTH="" Name="LICENSE.LGPL" />
-     <File Size="5992" TTH="" Name="Makefile" />
-     <File Size="5791" TTH="" Name="Makefile.Debug" />
-     <File Size="5847" TTH="" Name="Makefile.Release" />
+     <Directory Name="release" >
+      <File Size="374416" TTH="MM6HC6CKNPUK6O2I3ZBGVUNPGXKLJJDKYMMEXBA" Name="gdbmacros.o" />
+     </Directory>
+     <File Size="79119" TTH="VAKOTONWJVJ6YC2XR3AERIY4NVN5EMWKVRFW74Q" Name="gdbmacros.cpp" />
+     <File Size="54" TTH="P5CZ4E3FOKJQMQOE7C2FJWQGOQE7XMAIGQPXTGA" Name="gdbmacros.pro" />
+     <File Size="534" TTH="P2MT23CGPSXSAW3MUFWYRX2REGFXAJ2GRTYW4MI" Name="LGPL_EXCEPTION.TXT" />
+     <File Size="260287" TTH="VWFEVLVNNLL5TZ6ZSGZVBDUVWOZIKR7ACMOM57I" Name="libgdbmacros.so" />
+     <File Size="260287" TTH="VWFEVLVNNLL5TZ6ZSGZVBDUVWOZIKR7ACMOM57I" Name="libgdbmacros.so.1" />
+     <File Size="260287" TTH="VWFEVLVNNLL5TZ6ZSGZVBDUVWOZIKR7ACMOM57I" Name="libgdbmacros.so.1.0" />
+     <File Size="260287" TTH="VWFEVLVNNLL5TZ6ZSGZVBDUVWOZIKR7ACMOM57I" Name="libgdbmacros.so.1.0.0" />
+     <File Size="26434" TTH="CF64RRAJA7O7AFUWVBFBHPNEWZEMXWIBX3RDMGI" Name="LICENSE.LGPL" />
+     <File Size="5958" TTH="GBIW7HZYX3RL2JOOVZRDXDJXZUCNKKO3YCRLXIQ" Name="Makefile" />
+     <File Size="5775" TTH="DB7D44F76UHFZDJVQFCILKQIAAUJ3EGTHMIIPXI" Name="Makefile.Debug" />
+     <File Size="5831" TTH="XEQAZBMWU5VE5R33KX4A4JXKZQTVPDCCZ5BO35Y" Name="Makefile.Release" />
     </Directory>
-    <Directory Name="release" />
-    <File Size="1612031" TTH="" Name="dc_test1" />
-    <File Size="479" TTH="" Name="dc_test1.pro" />
-    <File Size="30231" TTH="" Name="dc_test1.pro.user" />
-    <File Size="1879" TTH="" Name="filemanager.cpp" />
-    <File Size="695" TTH="" Name="filemanager.h" />
-    <File Size="0" TTH="" Name="filenamager.cpp" />
-    <File Size="149" TTH="" Name="files.xml" />
-    <File Size="77" TTH="" Name="global.h" />
-    <File Size="12854" TTH="" Name="hubconnection.cpp" />
-    <File Size="2677" TTH="" Name="hubconnection.h" />
-    <File Size="2773" TTH="" Name="hubnicklist.cpp" />
-    <File Size="1813" TTH="" Name="hubnicklist.h" />
-    <File Size="177" TTH="" Name="main.cpp" />
-    <File Size="1269" TTH="" Name="mainwindow.cpp" />
-    <File Size="539" TTH="" Name="mainwindow.h" />
-    <File Size="4494" TTH="" Name="mainwindow.ui" />
-    <File Size="5814" TTH="" Name="Makefile" />
-    <File Size="8474" TTH="" Name="Makefile.Debug" />
-    <File Size="8644" TTH="" Name="Makefile.Release" />
-    <File Size="1635" TTH="" Name="tablemodel.cpp" />
-    <File Size="553" TTH="" Name="tablemodel.h" />
-    <File Size="5883" TTH="" Name="ui_mainwindow.h" />
+    <Directory Name="release" >
+     <File Size="19896" TTH="5UDLZ7YMLFJVX44NO4GI6LFSHOSDDHT4JXY2ZOY" Name="adddialog.o" />
+     <File Size="2152" TTH="D3VDYQH6IXKOGCM3ZIYPRS73T32VCKIELJJSIAQ" Name="main.o" />
+     <File Size="67016" TTH="V5E5KVSUE5WRVDZICMJ72WISOZC3B5IZDFGJNOI" Name="mainwindow.o" />
+     <File Size="3047" TTH="JCJMTWFX2Z5L5GXZX3TLCWKRLYESR4ZNZ3USLUQ" Name="moc_adddialog.cpp" />
+     <File Size="11872" TTH="PHEIHACURA32UHVO4XFDOD6K45SXHRB4X4JPKBQ" Name="moc_adddialog.o" />
+     <File Size="3479" TTH="GYESELM2VTSDL4OPEIJSA6LW3VNXMKZLSJVEEMA" Name="moc_mainwindow.cpp" />
+     <File Size="12544" TTH="QS72BHHVBUYW4HLPICHUGIU3UBGISYTH75KTSTQ" Name="moc_mainwindow.o" />
+     <File Size="2682" TTH="MIBMHUMT3GVKZ5VHLVIU2X5MB657QULODPJX5VQ" Name="moc_showdialog.cpp" />
+     <File Size="10208" TTH="V64JRWDUCTRRWQFDPTNGBZSQLR43EV7HA5XRXWA" Name="moc_showdialog.o" />
+     <File Size="218815" TTH="P2BMRGJI4IMLJ42AU63NZTFHQUZKBSH6JKXZP3Q" Name="qrc_qword.cpp" />
+     <File Size="45768" TTH="V7GXDDLVEEAOUQTFLBGI44PD47RSCJBHN7SHGDY" Name="qrc_qword.o" />
+     <File Size="21360" TTH="6GXH2ZONZAVDQIDH5CAFEQGDTSP5RSMNQMLDV3I" Name="showdialog.o" />
+    </Directory>
+    <File Size="1229" TTH="3Q7QK7PVXFQGQ23NYS6MLJFVGRKNTLCT5HBIDCY" Name="adddialog.cpp" />
+    <File Size="693" TTH="PNKMX47P6UBCQ4IX25IXLORKT7SZEH5QXLFPCQY" Name="adddialog.h" />
+    <File Size="13784" TTH="74MGPC7JU6YRBAAB7CFHPEBG4XKWQIKCBWMZNZI" Name="adddialog.o" />
+    <File Size="2747" TTH="BMUXLIRHWOBDXK33RWPMRHDT57FIT6VVHMJBPHI" Name="adddialog.ui" />
+    <File Size="3072" TTH="AFZGJ2LAOQEGEUNJE7VIVAOMAA75VTLQ6N44LMY" Name="database.db" />
+    <File Size="177" TTH="YKEYOJCSC6TGEII24AHNIK4JV4FZJWQ3XSYNY4I" Name="main.cpp" />
+    <File Size="1548" TTH="A6QL327RZZDKHWTV3IXQK3YWFLC32QIOSNSTAPY" Name="main.o" />
+    <File Size="6896" TTH="ZQNTOUZI3OMQCJXB3CUAQKZ6JGFXZ3THFFZPLQY" Name="mainwindow.cpp" />
+    <File Size="1199" TTH="IU45KRM4XS2EBUXEM23IMDC3M2G2YWYBKA3GPZI" Name="mainwindow.h" />
+    <File Size="46820" TTH="2Q4B5KILZ4725HE3NYX7Z3673TFFV76ACB5A3UA" Name="mainwindow.o" />
+    <File Size="4511" TTH="5NDTIKAVLNTTZTX7ERBF3BS547QCC42XMO75DYQ" Name="mainwindow.ui" />
+    <File Size="8896" TTH="RAIBVNHLYSMYOH2C7JZADJOSUMTANK4SEEXDBTA" Name="Makefile" />
+    <File Size="8132" TTH="BII2RQET4PQUQIZ5GBOKUJRRQ47CIK6WJGZZYPA" Name="Makefile.Debug" />
+    <File Size="8292" TTH="IE4SD3JMRKKGRXTSTNYHFGEE4ABOB65M7NKENLI" Name="Makefile.Release" />
+    <File Size="3045" TTH="C2GQRNXB4GZ2UWSIO53B2KN3MWBDMY6R6HHKPGQ" Name="moc_adddialog.cpp" />
+    <File Size="8392" TTH="UIAEOISSN57S2WIKPHGL33VWXPTRBKVJEOKKNRQ" Name="moc_adddialog.o" />
+    <File Size="3477" TTH="4PXGJUTO23TPZZ725UIOVLVDY6CDVX4NPYNAJ2Q" Name="moc_mainwindow.cpp" />
+    <File Size="9032" TTH="IRZ77DABYM72WAO2MJIFBCKEBYIVPHRATPYR6XY" Name="moc_mainwindow.o" />
+    <File Size="2680" TTH="MCXTDAO4VFUC2ZQW76GMT5IOHDH24KRQMDX73NA" Name="moc_showdialog.cpp" />
+    <File Size="7268" TTH="LW4F66CVHAG32ZZIIZZHY6KP7IWSVMZVR6KMAEQ" Name="moc_showdialog.o" />
+    <File Size="3072" TTH="QAKNAZRZEHKAISJIT7EFXOMBMNUJ23UFYJQ3Y7I" Name="position.db" />
+    <File Size="218776" TTH="JZ5A5ZV2R2SJADDSKN7SSLLOKFKCZI5BW6BT2GA" Name="qrc_qword.cpp" />
+    <File Size="44780" TTH="4CDML4F7AJ5TI56DSAAA4OVYPGT6JCKYTBOSYUA" Name="qrc_qword.o" />
+    <File Size="132748" TTH="NPSKMO3TVRWOP6OYXHZ7S4ABCVTZKO5VQ7AQZ3Q" Name="QWord" />
+    <File Size="439" TTH="DSWNYAHE6EJLASBQQG4RWOUOLBPFIKBTISLMAIY" Name="QWord.pro" />
+    <File Size="26464" TTH="KLHFMW55NU44EHW23PEZMJDX2YWVQ5I3RYC5EHY" Name="QWord.pro.user" />
+    <File Size="442" TTH="AKDV7VPK5JEFXVQR5W45MJHGVI6CW3NWLNKDDNA" Name="qword.qrc" />
+    <File Size="1266" TTH="BYZN27WLPNCQD2AKYDXRZELTUNAZSVTS7WHDBEQ" Name="showdialog.cpp" />
+    <File Size="574" TTH="CP26XJLH4S3RLGVVCBTIETSZRIRZTSLFQV3PLAA" Name="showdialog.h" />
+    <File Size="15120" TTH="N2CQKNGWMIJ74NKYVCIDP2YUYXKVRZOZZL2SSDY" Name="showdialog.o" />
+    <File Size="1934" TTH="XDWP26KBVHY5Z5PFTNS75TWTH2SYQD2IET52IKI" Name="showdialog.ui" />
+    <File Size="5039" TTH="U6TMMZBNHZJTY7K5VMPPEEGY3BPGIMHDISF2UAQ" Name="ui_adddialog.h" />
+    <File Size="7352" TTH="N2CC2DTHOOJEWQ2CZD5UVOIBMR4RVHDY7Z4S3FA" Name="ui_mainwindow.h" />
+    <File Size="3200" TTH="D4ILI2UMLB3TFK4Q7Q7XLWXDILEIKAUECQ4Q7HA" Name="ui_showdialog.h" />
    </Directory>
-   <Directory Name="libhash_new" >
+   <Directory Name="QWordArchiv" >
+    <Directory Name="images" >
+     <File Size="5914" TTH="7JUV3ZHMOXCUE67C6ZBS6ALUZXDJOVNNBHXEFKQ" Name="1238844450_fileclose.png" />
+     <File Size="3245" TTH="5IWCSC4LWYDCU5YREYGJJMGVWUOWGNJNP6WQYKQ" Name="1238844468_next.png" />
+     <File Size="7839" TTH="2QHVZXCGYGD4LIQOJABOX553JR6YFC3D2245OZQ" Name="1238844490_1_folder_open.png" />
+     <File Size="4269" TTH="PUVRD6AGULSKG6HOTRUXKUTWEXGXV7JWLQNJSGI" Name="1238844505_exit.png" />
+     <File Size="5071" TTH="5RSWCO4BQAGE6FYTH2Y7HDVUE4NDDS7K2FRARWA" Name="1238867598_add_48.png" />
+     <File Size="10566" TTH="MOIMBVCMF7T62YEXPBFI3UMBZTPEOYBBDN6XP7A" Name="1239111434_folder_new.png" />
+     <File Size="735" TTH="H4V77PWD7OGG75AFDEOUHUHARRTPP46TJXSITOI" Name="logo.png" />
+     <File Size="4263" TTH="L5YY7LGBGZAS5S6U526NVIOQDBQVJCBY4FU3IRA" Name="logo.svg" />
+    </Directory>
+    <File Size="1229" TTH="3Q7QK7PVXFQGQ23NYS6MLJFVGRKNTLCT5HBIDCY" Name="adddialog.cpp" />
+    <File Size="693" TTH="PNKMX47P6UBCQ4IX25IXLORKT7SZEH5QXLFPCQY" Name="adddialog.h" />
+    <File Size="2747" TTH="BMUXLIRHWOBDXK33RWPMRHDT57FIT6VVHMJBPHI" Name="adddialog.ui" />
+    <File Size="3072" TTH="AFZGJ2LAOQEGEUNJE7VIVAOMAA75VTLQ6N44LMY" Name="database.db" />
+    <File Size="177" TTH="YKEYOJCSC6TGEII24AHNIK4JV4FZJWQ3XSYNY4I" Name="main.cpp" />
+    <File Size="6896" TTH="ZQNTOUZI3OMQCJXB3CUAQKZ6JGFXZ3THFFZPLQY" Name="mainwindow.cpp" />
+    <File Size="1199" TTH="IU45KRM4XS2EBUXEM23IMDC3M2G2YWYBKA3GPZI" Name="mainwindow.h" />
+    <File Size="4511" TTH="5NDTIKAVLNTTZTX7ERBF3BS547QCC42XMO75DYQ" Name="mainwindow.ui" />
+    <File Size="3072" TTH="QAKNAZRZEHKAISJIT7EFXOMBMNUJ23UFYJQ3Y7I" Name="position.db" />
+    <File Size="439" TTH="DSWNYAHE6EJLASBQQG4RWOUOLBPFIKBTISLMAIY" Name="QWord.pro" />
+    <File Size="442" TTH="AKDV7VPK5JEFXVQR5W45MJHGVI6CW3NWLNKDDNA" Name="qword.qrc" />
+    <File Size="1266" TTH="BYZN27WLPNCQD2AKYDXRZELTUNAZSVTS7WHDBEQ" Name="showdialog.cpp" />
+    <File Size="574" TTH="CP26XJLH4S3RLGVVCBTIETSZRIRZTSLFQV3PLAA" Name="showdialog.h" />
+    <File Size="1934" TTH="XDWP26KBVHY5Z5PFTNS75TWTH2SYQD2IET52IKI" Name="showdialog.ui" />
+   </Directory>
+   <Directory Name="QWordSVNOLD" >
     <Directory Name="debug" >
-     <File Size="240312" TTH="" Name="Base32.o" />
-     <File Size="234116" TTH="" Name="hash.o" />
-     <File Size="258392" TTH="" Name="hashfile.o" />
-     <File Size="256436" TTH="" Name="main.o" />
+     <File Size="272528" TTH="H4FLBTYAZREILGTRF5A5R7KPSBMTQZ2NT4LWAHQ" Name="adddialog.o" />
+     <File Size="233640" TTH="2UG7HOX6YMOJNVO7337T5RZWDTH5HT4XRJZB2QA" Name="main.o" />
+     <File Size="440068" TTH="7MOQI6WZPGYO2RBXFNLHTSBSCYDZVTQLWUOAZFQ" Name="mainwindow.o" />
+     <File Size="3047" TTH="H22GZEYWORPKIVFGTCTNGVVJZXZFHPQIM6GURAY" Name="moc_adddialog.cpp" />
+     <File Size="148496" TTH="ITOXF4DDPTZNH7PFOP5YSQLLENNOCMVTIWPLKRQ" Name="moc_adddialog.o" />
+     <File Size="3479" TTH="DFHXK7FPDMGUPJIRHP2XMBW6YVAVW7OZ7Q5V24A" Name="moc_mainwindow.cpp" />
+     <File Size="156872" TTH="OTIS5UJVKN32X5EOUEIQCL3BX6STZOS562FWYYA" Name="moc_mainwindow.o" />
+     <File Size="2682" TTH="7DQANRXCCO5H3V4DS2IPSIAKEQ7ZQUZ65PCGSYI" Name="moc_showdialog.cpp" />
+     <File Size="142060" TTH="6AUIKLSS72ZMCRLGR74PM5R5RQWAFYFNAEFMECQ" Name="moc_showdialog.o" />
+     <File Size="218815" TTH="UN2NE74UUMBRR6RLZIZ6RC245EZZHQ5QAU6OXRQ" Name="qrc_qword.cpp" />
+     <File Size="49804" TTH="DYC7G7DKNM3XCBJB7IWQEOW4MZHZEFNAW2M6USQ" Name="qrc_qword.o" />
+     <File Size="328968" TTH="57VLZPRCX2TFVJD3G2ECKNVGOOCE4R4QHJWIN4A" Name="showdialog.o" />
+    </Directory>
+    <Directory Name="images" >
+     <File Size="5914" TTH="7JUV3ZHMOXCUE67C6ZBS6ALUZXDJOVNNBHXEFKQ" Name="1238844450_fileclose.png" />
+     <File Size="3245" TTH="5IWCSC4LWYDCU5YREYGJJMGVWUOWGNJNP6WQYKQ" Name="1238844468_next.png" />
+     <File Size="7839" TTH="2QHVZXCGYGD4LIQOJABOX553JR6YFC3D2245OZQ" Name="1238844490_1_folder_open.png" />
+     <File Size="4269" TTH="PUVRD6AGULSKG6HOTRUXKUTWEXGXV7JWLQNJSGI" Name="1238844505_exit.png" />
+     <File Size="5071" TTH="5RSWCO4BQAGE6FYTH2Y7HDVUE4NDDS7K2FRARWA" Name="1238867598_add_48.png" />
+     <File Size="10566" TTH="MOIMBVCMF7T62YEXPBFI3UMBZTPEOYBBDN6XP7A" Name="1239111434_folder_new.png" />
+     <File Size="735" TTH="H4V77PWD7OGG75AFDEOUHUHARRTPP46TJXSITOI" Name="logo.png" />
+     <File Size="4263" TTH="L5YY7LGBGZAS5S6U526NVIOQDBQVJCBY4FU3IRA" Name="logo.svg" />
     </Directory>
     <Directory Name="qtc-gdbmacros" >
      <Directory Name="debug" >
-      <File Size="560384" TTH="" Name="gdbmacros.o" />
+      <File Size="560204" TTH="763PTKPUQSQ2ILGGZELAU6OX2GPEANJVH5ALAZQ" Name="gdbmacros.o" />
      </Directory>
      <Directory Name="release" />
-     <File Size="79119" TTH="" Name="gdbmacros.cpp" />
-     <File Size="54" TTH="" Name="gdbmacros.pro" />
-     <File Size="534" TTH="" Name="LGPL_EXCEPTION.TXT" />
-     <File Size="448972" TTH="" Name="libgdbmacros.so" />
-     <File Size="448972" TTH="" Name="libgdbmacros.so.1" />
-     <File Size="448972" TTH="" Name="libgdbmacros.so.1.0" />
-     <File Size="448972" TTH="" Name="libgdbmacros.so.1.0.0" />
-     <File Size="26434" TTH="" Name="LICENSE.LGPL" />
-     <File Size="5343" TTH="" Name="Makefile" />
-     <File Size="5169" TTH="" Name="Makefile.Debug" />
-     <File Size="5225" TTH="" Name="Makefile.Release" />
+     <File Size="79119" TTH="VAKOTONWJVJ6YC2XR3AERIY4NVN5EMWKVRFW74Q" Name="gdbmacros.cpp" />
+     <File Size="54" TTH="P5CZ4E3FOKJQMQOE7C2FJWQGOQE7XMAIGQPXTGA" Name="gdbmacros.pro" />
+     <File Size="534" TTH="P2MT23CGPSXSAW3MUFWYRX2REGFXAJ2GRTYW4MI" Name="LGPL_EXCEPTION.TXT" />
+     <File Size="449162" TTH="QY3KBBDSQBRK236XMTMZ7SM2FPIZI6B2WNJUZ4Y" Name="libgdbmacros.so" />
+     <File Size="449162" TTH="QY3KBBDSQBRK236XMTMZ7SM2FPIZI6B2WNJUZ4Y" Name="libgdbmacros.so.1" />
+     <File Size="449162" TTH="QY3KBBDSQBRK236XMTMZ7SM2FPIZI6B2WNJUZ4Y" Name="libgdbmacros.so.1.0" />
+     <File Size="449162" TTH="QY3KBBDSQBRK236XMTMZ7SM2FPIZI6B2WNJUZ4Y" Name="libgdbmacros.so.1.0.0" />
+     <File Size="26434" TTH="CF64RRAJA7O7AFUWVBFBHPNEWZEMXWIBX3RDMGI" Name="LICENSE.LGPL" />
+     <File Size="5978" TTH="CL5BGDTTP7HRBPVB3IXQOWKTQ64BD7HMFV3OPHQ" Name="Makefile" />
+     <File Size="5766" TTH="PCSWVSWIKN3SR3A7DPRJZIGVDHNKRFBHOTVNE7Q" Name="Makefile.Debug" />
+     <File Size="5822" TTH="KOGJQBNJZ5POLVANLGY5ZMR3372UCD3AGR5BV7A" Name="Makefile.Release" />
     </Directory>
     <Directory Name="release" />
-    <File Size="1024" TTH="" Name="1024" />
-    <File Size="2048" TTH="" Name="2048" />
-    <File Size="3000" TTH="" Name="3000" />
-    <File Size="5000" TTH="" Name="5000" />
-    <File Size="4670" TTH="" Name="Base32.cpp" />
-    <File Size="806" TTH="" Name="Base32.h" />
-    <File Size="894" TTH="" Name="hash.cpp" />
-    <File Size="211" TTH="" Name="hash.h" />
-    <File Size="4295" TTH="" Name="hashfile.cpp" />
-    <File Size="407" TTH="" Name="hashfile.h" />
-    <File Size="516540" TTH="" Name="libhash_new" />
-    <File Size="385" TTH="" Name="libhash_new.pro" />
-    <File Size="19212" TTH="" Name="libhash_new.pro.user" />
-    <File Size="1453" TTH="" Name="main.cpp" />
-    <File Size="5167" TTH="" Name="Makefile" />
-    <File Size="5073" TTH="" Name="Makefile.Debug" />
-    <File Size="5148" TTH="" Name="Makefile.Release" />
-   </Directory>
-   <Directory Name="libhash_new_remix" >
-    <File Size="1024" TTH="" Name="1024" />
-    <File Size="2048" TTH="" Name="2048" />
-    <File Size="3000" TTH="" Name="3000" />
-    <File Size="5000" TTH="" Name="5000" />
-    <File Size="4670" TTH="" Name="Base32.cpp" />
-    <File Size="806" TTH="" Name="Base32.h" />
-    <File Size="3125" TTH="" Name="byte_order.h" />
-    <File Size="321" TTH="" Name="hash.cpp" />
-    <File Size="211" TTH="" Name="hash.h" />
-    <File Size="5381" TTH="" Name="hashfile.cpp" />
-    <File Size="561" TTH="" Name="hashfile.h" />
-    <File Size="38025" TTH="" Name="libhash_new_remix" />
-    <File Size="466" TTH="" Name="libhash_new_remix.pro" />
-    <File Size="16540" TTH="" Name="libhash_new_remix.pro.user" />
-    <File Size="1419" TTH="" Name="main.cpp" />
-    <File Size="5171" TTH="" Name="Makefile" />
-    <File Size="5489" TTH="" Name="Makefile.Debug" />
-    <File Size="5576" TTH="" Name="Makefile.Release" />
-    <File Size="4633" TTH="" Name="tiger.c" />
-    <File Size="623" TTH="" Name="tiger.h" />
-    <File Size="36538" TTH="" Name="tiger_data.c" />
+    <File Size="1258" TTH="JUM4436JDKDE6KWB4Q5MTHLQ2V55HREFXPVF53I" Name="adddialog.cpp" />
+    <File Size="693" TTH="PNKMX47P6UBCQ4IX25IXLORKT7SZEH5QXLFPCQY" Name="adddialog.h" />
+    <File Size="20760" TTH="WXOZN76CJ7B5GOPBSAH26FKKFB65KZTL744RXSA" Name="adddialog.o" />
+    <File Size="2852" TTH="4Y4T474K7BLZJ3E3NICKQOWW2XN3NPKD3XZSAQA" Name="adddialog.ui" />
+    <File Size="5120" TTH="H6R5ZRIRAYZTR2LNUD445SQDE232FRLLVJVOPTI" Name="clase.db" />
+    <File Size="3072" TTH="AFZGJ2LAOQEGEUNJE7VIVAOMAA75VTLQ6N44LMY" Name="database.db" />
+    <File Size="199" TTH="VEBIRCIAXNA6YTQYUQUWCUHKZY63HMTQSLA4I5Y" Name="main.cpp" />
+    <File Size="2152" TTH="D3VDYQH6IXKOGCM3ZIYPRS73T32VCKIELJJSIAQ" Name="main.o" />
+    <File Size="6017" TTH="GDEP2FCEHDAGHIZMKQ2RMPL7POQ3WOCUTN4SHRQ" Name="main_ru.ts" />
+    <File Size="6990" TTH="QHM56HDWRUVLJ2LPYSQRQN6TIJHODGNNRVR3IFA" Name="mainwindow.cpp" />
+    <File Size="1199" TTH="IU45KRM4XS2EBUXEM23IMDC3M2G2YWYBKA3GPZI" Name="mainwindow.h" />
+    <File Size="67328" TTH="YCV4IEIMREGUEQUSMPUHE6FHTYPPS5JFKZYBRFQ" Name="mainwindow.o" />
+    <File Size="4511" TTH="5NDTIKAVLNTTZTX7ERBF3BS547QCC42XMO75DYQ" Name="mainwindow.ui" />
+    <File Size="9169" TTH="T7B2IFKZ5TTLRX32Z5KRPFTXYDKMSSNBBKNGYSY" Name="Makefile" />
+    <File Size="8178" TTH="5CSRK725PWNR3TLPXN5QFZ254FSYBYHP3YRIJJY" Name="Makefile.Debug" />
+    <File Size="8340" TTH="VDI4QDHK6LDX645P7VUSNLCQRP2BND2KPHSUXKY" Name="Makefile.Release" />
+    <File Size="3044" TTH="3YI3F34EY3FMG4F7J3DMEU74FAGE4XH32L33S3Q" Name="moc_adddialog.cpp" />
+    <File Size="11872" TTH="PHEIHACURA32UHVO4XFDOD6K45SXHRB4X4JPKBQ" Name="moc_adddialog.o" />
+    <File Size="3476" TTH="RWU577EOTVXBJTQZHTHUJT7NX4Z7H2LEOHHH4MQ" Name="moc_mainwindow.cpp" />
+    <File Size="12544" TTH="QS72BHHVBUYW4HLPICHUGIU3UBGISYTH75KTSTQ" Name="moc_mainwindow.o" />
+    <File Size="2679" TTH="ODVYGD3B7Q5HPM2HGXBI3OTPB72BOKWVSI3LCZQ" Name="moc_showdialog.cpp" />
+    <File Size="10208" TTH="V64JRWDUCTRRWQFDPTNGBZSQLR43EV7HA5XRXWA" Name="moc_showdialog.o" />
+    <File Size="3072" TTH="QAKNAZRZEHKAISJIT7EFXOMBMNUJ23UFYJQ3Y7I" Name="position.db" />
+    <File Size="218791" TTH="GGVBPBLVRAINPX6MOHCVTHCFFNRRUMMK3SHZWNQ" Name="qrc_qword.cpp" />
+    <File Size="45768" TTH="V7GXDDLVEEAOUQTFLBGI44PD47RSCJBHN7SHGDY" Name="qrc_qword.o" />
+    <File Size="146096" TTH="7LICP2734V4CPOFVDUVPZDWZUIWEUZ6W7L2OCYA" Name="QWord" />
+    <File Size="476" TTH="3YLWWKWU4URORAMWBRQXZQGFYP75BBU7EKQXW6I" Name="QWord.pro" />
+    <File Size="26907" TTH="M3R7SUBISFZG6SQUVHOO5U2VBJ77K6OTSEWS5DQ" Name="QWord.pro.user" />
+    <File Size="442" TTH="AKDV7VPK5JEFXVQR5W45MJHGVI6CW3NWLNKDDNA" Name="qword.qrc" />
+    <File Size="1266" TTH="BYZN27WLPNCQD2AKYDXRZELTUNAZSVTS7WHDBEQ" Name="showdialog.cpp" />
+    <File Size="574" TTH="CP26XJLH4S3RLGVVCBTIETSZRIRZTSLFQV3PLAA" Name="showdialog.h" />
+    <File Size="22440" TTH="FNAPDJPMXFKSPRXU5OMDHRRQGM4T4WCO3BXVIXA" Name="showdialog.o" />
+    <File Size="2141" TTH="W3RUOZNADXWNAD4PST7DH6TQ3NEZI3GYZHB5ROI" Name="showdialog.ui" />
+    <File Size="4922" TTH="PU6CMGQX7VQUAUCACCAFIQJ4ZSNUALLC73RNESI" Name="ui_adddialog.h" />
+    <File Size="7352" TTH="FG5DKPJJECMYL266UYCDNTQP7EYIZHTCD6Z6MVQ" Name="ui_mainwindow.h" />
+    <File Size="3370" TTH="EP6FTF5FGBFR3NIVD7UQLM7X4PZLO6TWTFZPAUI" Name="ui_showdialog.h" />
+    <File Size="6144" TTH="UUBTAFQ53EQHPN6A6HSLH4LNNTOV4J4AMT3G6MY" Name="одежда_цвета.db" />
    </Directory>
   </Directory>
-  <Directory Name="Словари" >
-   <Directory Name="New" >
-    <File Size="5120" TTH="" Name="clase.db" />
-    <File Size="3072" TTH="" Name="color.db" />
-    <File Size="3072" TTH="" Name="cuerpo.db" />
-    <File Size="3072" TTH="" Name="database.db" />
-    <File Size="10240" TTH="" Name="diferentes.db" />
-    <File Size="6144" TTH="" Name="discribir.db" />
-    <File Size="8192" TTH="" Name="habitación.db" />
-    <File Size="3072" TTH="" Name="parientes.db" />
-    <File Size="6144" TTH="" Name="position.db" />
-    <File Size="3072" TTH="" Name="profecion.db" />
-    <File Size="3072" TTH="" Name="ropa.db" />
-    <File Size="6144" TTH="" Name="transporte.db" />
-    <File Size="7168" TTH="" Name="verbes.db" />
-   </Directory>
-   <File Size="5120" TTH="" Name="clase.db" />
-   <File Size="3072" TTH="" Name="color.db" />
-   <File Size="3072" TTH="" Name="cuerpo.db" />
-   <File Size="3072" TTH="" Name="database.db" />
-   <File Size="10240" TTH="" Name="diferentes.db" />
-   <File Size="6144" TTH="" Name="discribir.db" />
-   <File Size="8192" TTH="" Name="habitación.db" />
-   <File Size="3072" TTH="" Name="parientes.db" />
-   <File Size="6144" TTH="" Name="position.db" />
-   <File Size="3072" TTH="" Name="profecion.db" />
-   <File Size="3072" TTH="" Name="ropa.db" />
-   <File Size="11264" TTH="" Name="transporte.db" />
-   <File Size="7168" TTH="" Name="verbes.db" />
+  <Directory Name="opengl" >
+   <File Size="196" TTH="CS45FTTQY57NJ2PPPP3QMY6J6Z2L4CX5JYTJ3TI" Name="main.cpp" />
+   <File Size="2400" TTH="E2J5BYLS6THZRSLJHRNHVD5GOLVO5KJNPGAAR4I" Name="main.o" />
+   <File Size="6999" TTH="2Q2AU3IRB44A35QYQRYSZA6SFYAI6V44G2HV7BY" Name="Makefile" />
+   <File Size="646" TTH="DJ5XDXZNL35FNSSOSO4GMMKUB2VFPT3DMALGTCQ" Name="OGLQuad.cpp" />
+   <File Size="315" TTH="QJKW3KOBFEJB4M7ZF7UEYFMR3YNLTHOYDAHDQ2I" Name="OGLQuad.h" />
+   <File Size="12720" TTH="W5SHUL7MROH6VGTD66HVEXKPUNQA5P4OAKNJJ2Q" Name="OGLQuad.o" />
+   <File Size="27025" TTH="AHPC5DGPIMZYA7VAVIL5IA2KWVWSMBJOBHFG5MQ" Name="opengl" />
+   <File Size="123" TTH="E5TCEZNDSUQBJAV226YROZ5LWOJKGT5KKUEHLBI" Name="opengl.pro" />
+   <File Size="14336" TTH="K3X43H77KXUX35BLPZI5JRWFDDPZTL5SQ6GFSYA" Name="qdevelop-settings.db" />
+   <File Size="105514" TTH="QD25Z5QCB4DRGTPAXRFJ4LEUZSOZA6SSEG32WCI" Name="s.jpg" />
   </Directory>
-  <File Size="15244264" TTH="" Name="Linux Format May 2009.pdf" />
-  <File Size="4074" TTH="" Name="OpenSource041.zip" />
-  <File Size="4020" TTH="" Name="OpenSource042.zip" />
-  <File Size="3948" TTH="" Name="OpenSource043.zip" />
-  <File Size="1441" TTH="" Name="ssh.zip" />
+  <Directory Name="QBoxLayout" >
+   <File Size="587" TTH="QXTOFWEDH7P7IPNTUAZOLLHS2SCX47QFDQV3CZI" Name="main.cpp" />
+   <File Size="4680" TTH="74J3ET3ZHDPLLQHTDD2KAJ7ORNFGMLXB62ZVDGY" Name="main.o" />
+   <File Size="6478" TTH="7LAPH4MJQ4ANGU4VGDAAZFZT67SENLDSDQQNQ3A" Name="Makefile" />
+   <File Size="13089" TTH="C63PDBO3MPPSEK2P3M45MVKLRZ5NK6WN5KJLZZQ" Name="QBoxLayout" />
+   <File Size="299" TTH="TIT4EKQR37ICYMKCFRC2KARW5CBZ2T5EN5YNSTI" Name="QBoxLayout.pro" />
+   <File Size="10240" TTH="ICTNNSBDJ6KR5TO5I4R6K6WQ3QLC4PSRVDRGPHY" Name="qdevelop-settings.db" />
+  </Directory>
+  <Directory Name="QPixmap" >
+   <File Size="787510" TTH="FXONRB2D77YKSLDD67CEVSD5255ICSBQILVXYPA" Name="hor1_16.bmp" />
+   <File Size="693" TTH="SARAJW36AHK4RJCJ4TKDPK2DOT3BTUZJNA7HUZQ" Name="main.cpp" />
+   <File Size="16224" TTH="WTOVYRIEAJ7JHRO7QJRXMYWBA3BWEE2KTCJOJ6Q" Name="main.o" />
+   <File Size="6418" TTH="FBGBEWWE6QZXX3SKDJZGOZQTHP5353GB57GOJUA" Name="Makefile" />
+   <File Size="16384" TTH="2H2BOTYVDHFZBLHLHTLEHDWBVFV2ETVPWDZFY6A" Name="qdevelop-settings.db" />
+   <File Size="29404" TTH="LY54RM5B4BFA3YTX4HILZQY7SEDOZOZWJLSHNVA" Name="QPixmap" />
+   <File Size="299" TTH="VZGHHLJJRJLFAHSAAM7NKIOKDFEMB7DOT3NOUKY" Name="QPixmap.pro" />
+   <File Size="46176" TTH="NHQLI4KRAFD5GX2NRYL2JBHI7RIR7KOMEV3OILA" Name="start.png" />
+  </Directory>
+  <Directory Name="qrabbit" >
+   <Directory Name="tth" >
+    <File Size="4670" TTH="3L23T6KVTYVFKGPBQBYQTI56TIOZI7BU2TJIFMA" Name="base32.cpp" />
+    <File Size="806" TTH="DVSKJGEJWOLXCY2PEYYRSTCUM2WZUQL6YDBOCLA" Name="base32.h" />
+    <File Size="3125" TTH="4MMDYN4ICQGZR7UP7J7JWOA5S3XUNO4SX62C3EQ" Name="byte_order.h" />
+    <File Size="321" TTH="UJG7K3BL2PT5RJ4J7PA7EOJ7L4V2QUN2QCJMDSI" Name="hash.cpp" />
+    <File Size="192" TTH="VT6T5MPKCGHL577NC3ZG2P7HVBVPZL6WZLVLUPA" Name="hash.h" />
+    <File Size="5686" TTH="QXKUH4OIIJW75YW7RLSCLKY4RA76TZ7DTJOKD3Q" Name="hashfile.cpp" />
+    <File Size="829" TTH="J3RQT6EKU7WYYUEYMT7RIJH4IOI27MFPEDTAKWQ" Name="hashfile.h" />
+    <File Size="4633" TTH="BVS37GIN4ZAVB6TMCTP27SGW6NOEWC3MVTEWL5A" Name="tiger.c" />
+    <File Size="623" TTH="H2QZEZK5UIQBFZR477Z3GAII3SKFH3VQTQJN5NQ" Name="tiger.h" />
+    <File Size="36538" TTH="V7KHMFKT4UMIQVKOA5BMTUA4GMHBSPJT6X5CXDA" Name="tiger_data.c" />
+   </Directory>
+   <File Size="238792" TTH="EBU6PYXJF4F2HO52MV44LGKJCK2UYHXYGQAU46A" Name="base32.o" />
+   <File Size="8326" TTH="RWJR3QYPQLRUG4BJMNCLVDSLSW5RVFRXRZZ3QSI" Name="filemanager.cpp" />
+   <File Size="2128" TTH="OHBBGADVUC3AFLST53ODAB4ESFLMGHICHUZZEXQ" Name="filemanager.h" />
+   <File Size="495760" TTH="PESEVW62PE3LEIG66NTZ3OYXFT6CEHBL5ZHSBTI" Name="filemanager.o" />
+   <File Size="0" TTH="XBB5FNTYM6OASEAAAAACCAAAADHBE7SA2DP3WYI" Name="filenamager.cpp" />
+   <File Size="89886" TTH="QGTVUPOQWOLS27W62WN5CBB27FIF5Q46CSZ3IVY" Name="files.xml" />
+   <File Size="77" TTH="RIB26BWLGUX77CW2Y6G7LWTLERIFOUUY3TELG4I" Name="global.h" />
+   <File Size="230736" TTH="FIHIYMTIG6MGXCCRHW7DMY2RGSTA6F3OFCX7IHY" Name="hash.o" />
+   <File Size="247752" TTH="NH746P7E3OQNNVGWGHCULTPF7TS2V5G6B4WNBUA" Name="hashfile.o" />
+   <File Size="12854" TTH="ZYJH4QGQ365WDGHQUKLN46UDLL5AGRGFXQMZMRA" Name="hubconnection.cpp" />
+   <File Size="2677" TTH="FOKKLVWCF6I2YE5ABOB2F4H6DEQGMJWA3XLOBDQ" Name="hubconnection.h" />
+   <File Size="421904" TTH="QGJNDDXABKB4P32VQ6PHDJQ37FF7TQUPESIBV7I" Name="hubconnection.o" />
+   <File Size="2773" TTH="QEISESUOQA2F5D5YQL774J5AU6A7ZADSN7ANVUI" Name="hubnicklist.cpp" />
+   <File Size="1813" TTH="4PFAMJMQ2MQQDLLQB5GQVHCDYOIPLXZWNQMODTY" Name="hubnicklist.h" />
+   <File Size="337636" TTH="NHJ23UJKXL6UCK6YEQWJKFIXVA6GZFMQJN2Q6FQ" Name="hubnicklist.o" />
+   <File Size="177" TTH="YKEYOJCSC6TGEII24AHNIK4JV4FZJWQ3XSYNY4I" Name="main.cpp" />
+   <File Size="279876" TTH="ZUSBYDHHTSXJ4HFDFOJLQXIQL2WG7C7LFTBLHCY" Name="main.o" />
+   <File Size="1354" TTH="WCFJH4Z36GHJ24HNPHGIAO23H5RVAN5P2PAX7VY" Name="mainwindow.cpp" />
+   <File Size="566" TTH="7LFJAREZ6D4YCWAQOQXXX4LXIOOCHHSUVTCAQ5Q" Name="mainwindow.h" />
+   <File Size="336692" TTH="IBSQK2VOZXXXBKCGNJRRV425FMYANGE3YNRMK5A" Name="mainwindow.o" />
+   <File Size="4640" TTH="N2V6MFRST6SSRIFL27Q7F2JJJHTLKW5FKUOT62Q" Name="mainwindow.ui" />
+   <File Size="10614" TTH="UNISYSCPHQTEZPB22LKGFPURC6J32VQPH5ACGFQ" Name="Makefile" />
+   <File Size="2311" TTH="OCACR3YVWHG5QOZAOZFLHEZ2ZSBFA7MKPX7QWLI" Name="moc_filemanager.cpp" />
+   <File Size="323808" TTH="EGSNTDAULJBQZHBBFLCBGU3YCNG4A5X2R6KW2EI" Name="moc_filemanager.o" />
+   <File Size="7047" TTH="NL34FQT3YEFNV5G3TNJCE5HY226ABIXVSFP6BXI" Name="moc_hubconnection.cpp" />
+   <File Size="294776" TTH="MNW3AD2OTXITSWP6ECFQJ4HDZLF277YRYFNKL3Y" Name="moc_hubconnection.o" />
+   <File Size="2892" TTH="YRWBGEPFGMR3VJKND7UPVLHJ2Y6WHGBO3SX2GGI" Name="moc_hubnicklist.cpp" />
+   <File Size="280804" TTH="GNNQI7JARRW45EPGWQACWPA7FUBRZQOPFOG36QI" Name="moc_hubnicklist.o" />
+   <File Size="2620" TTH="GI7HVTO6LTD5M4TZMKRWW3RRKD7NVM3KSY7CDQI" Name="moc_mainwindow.cpp" />
+   <File Size="297328" TTH="QXIFEX7LM77BF6PMT2RASJWA7SO5W2TUMLGL5DA" Name="moc_mainwindow.o" />
+   <File Size="1963084" TTH="7UCZNUF2EPWSHQLYGE4DTUBFHCMKDSK7JAGAP2A" Name="qrabbit" />
+   <File Size="686" TTH="DAVWSJHWRXAO7HGW3ELJHOCRZOSO6OWU4KQUB7I" Name="qrabbit.pro" />
+   <File Size="15706" TTH="ZL2XGNQVMPCEASRAOODX3XPCRVTSMBZCJDGUP6Q" Name="qrabbit.pro.user" />
+   <File Size="1635" TTH="7CHVPQ6LCGMVSTEG22EWJHRRAMBGEQJZK63V4AQ" Name="tablemodel.cpp" />
+   <File Size="553" TTH="3VHXCVVYYNSSMDMQ42HJLARLT55HYVZTR6RADHY" Name="tablemodel.h" />
+   <File Size="304180" TTH="WB6VX6GVTR6EHXLZWTISXAEDICSBU6V56GOMUII" Name="tablemodel.o" />
+   <File Size="10800" TTH="C4NVBS4VWSFOBFAWFEFGCNTDILIF3VPIB7GFGHY" Name="tiger.o" />
+   <File Size="10012" TTH="6EB2GWZZC7IKBZPEJXNIKISU6EYRTVA2HZORA6I" Name="tiger_data.o" />
+   <File Size="6094" TTH="5UHWOYBYNYZDMGCJS3H4B7A67RAXPRR6HUBXURA" Name="ui_mainwindow.h" />
+  </Directory>
+  <Directory Name="QScrollArea" >
+   <File Size="432" TTH="J3WHLL4R3PTM4KVUKEKX4W33O37IZEMTP4O7M4A" Name="main.cpp" />
+   <File Size="4528" TTH="2R2JPXOPH3XAMS65TW5D247TEPNDUGRIPQDPOEA" Name="main.o" />
+   <File Size="6498" TTH="OBN3OJAG5GN3ZPYGXTQPWZEFCQTYJMMZQAT6EWY" Name="Makefile" />
+   <File Size="10240" TTH="WTYGVV32U7L3ZZAAYCWQQGUD77IECRYATR4A25Y" Name="qdevelop-settings.db" />
+   <File Size="14411" TTH="AFN5N6JQM74DCZSK7GGD72TLLJWLKAZERBJOU7A" Name="QScrollArea" />
+   <File Size="299" TTH="BG37E3PGJQQP35KFX7YR2RGCXFL7K25FTUESIOA" Name="QScrollArea.pro" />
+   <File Size="105514" TTH="QD25Z5QCB4DRGTPAXRFJ4LEUZSOZA6SSEG32WCI" Name="s.jpg" />
+  </Directory>
+  <Directory Name="QString" >
+   <File Size="175" TTH="LXDDHTHLUI7GVREFKEY7GVS3V5DSRPOIZR3PGQY" Name="main.cpp" />
+   <File Size="6425" TTH="JWY2HELJUG4BYGCP224RYNVYOK2P3RVGPO3CV2Y" Name="Makefile" />
+   <File Size="13024" TTH="WOMGR2OUTZRORKAT2IAL66HVYPNAKGMSYHQYVAY" Name="QString" />
+   <File Size="298" TTH="KLBX4ZZHUS3KAQ7KECJOVC3BKONW2ZO572KNJKY" Name="QString.pro" />
+  </Directory>
+  <Directory Name="qt_tth" >
+   <Directory Name="debug" >
+    <File Size="331456" TTH="K364AYXFJZV6LXLIC27EFX2WBS5UZY475TSOB2I" Name="main.o" />
+    <File Size="412024" TTH="OVNMRKVVWCXZCLQKGWYDHFTC66SQDQ47LUWBMRQ" Name="ThexOptimized.o" />
+   </Directory>
+   <Directory Name="qtc-gdbmacros" >
+    <Directory Name="debug" >
+     <File Size="801328" TTH="DSV4AH56JD5H3554FIW67IXE2CYMYQAUMH4NY7Y" Name="gdbmacros.o" />
+    </Directory>
+    <Directory Name="release" />
+    <File Size="79119" TTH="VAKOTONWJVJ6YC2XR3AERIY4NVN5EMWKVRFW74Q" Name="gdbmacros.cpp" />
+    <File Size="54" TTH="P5CZ4E3FOKJQMQOE7C2FJWQGOQE7XMAIGQPXTGA" Name="gdbmacros.pro" />
+    <File Size="534" TTH="P2MT23CGPSXSAW3MUFWYRX2REGFXAJ2GRTYW4MI" Name="LGPL_EXCEPTION.TXT" />
+    <File Size="462198" TTH="DWSYCDZ3C2BH7NBI7NLQ2OG7A6BRMBCRKHWJ35Q" Name="libgdbmacros.so" />
+    <File Size="462198" TTH="DWSYCDZ3C2BH7NBI7NLQ2OG7A6BRMBCRKHWJ35Q" Name="libgdbmacros.so.1" />
+    <File Size="462198" TTH="DWSYCDZ3C2BH7NBI7NLQ2OG7A6BRMBCRKHWJ35Q" Name="libgdbmacros.so.1.0" />
+    <File Size="462198" TTH="DWSYCDZ3C2BH7NBI7NLQ2OG7A6BRMBCRKHWJ35Q" Name="libgdbmacros.so.1.0.0" />
+    <File Size="26434" TTH="CF64RRAJA7O7AFUWVBFBHPNEWZEMXWIBX3RDMGI" Name="LICENSE.LGPL" />
+    <File Size="5992" TTH="Z3XXXLKTZYBQGBESEHKBDTHGYUPJIZ7TOWZVQFY" Name="Makefile" />
+    <File Size="5791" TTH="GAQHHLKHZNZFAFFMPT525OURUYFSSEKG5REHS3A" Name="Makefile.Debug" />
+    <File Size="5847" TTH="CY6OIAYSPZC7WQBFV3Z3W4L4KN3Y5YOQ4U7GLIQ" Name="Makefile.Release" />
+   </Directory>
+   <Directory Name="release" />
+   <File Size="76" TTH="PJTPHTHKCBCSE3FFUMKZPNRIIF7A4JQMDJTUV7Y" Name="main.cpp" />
+   <File Size="5616" TTH="OUIH2AY6NMXFMI62YID6BZRCO2QRHDJZ5YLK4KA" Name="Makefile" />
+   <File Size="5368" TTH="BVUKTLZVUZEFKDNID2ZWJBVRPC7OWG2JMD6SELY" Name="Makefile.Debug" />
+   <File Size="5438" TTH="MUI34Z4ZJBZQ5HJAMZXYA5NESDSDGI3ITXX3PCY" Name="Makefile.Release" />
+   <File Size="362" TTH="7PUFYYO7KJ5GUTO57ZLX2J2KKYLNRWOTFLXCIFQ" Name="qt_tth.pro" />
+   <File Size="14236" TTH="RH2ABWC27CO5N4S5BW2BW5MDSBRXNHUSDV3ZPOQ" Name="qt_tth.pro.user" />
+   <File Size="4792" TTH="7STCLDZOPXJJRATJBVTX5RR5QCKA2DUJYFJIUJY" Name="ThexOptimized.cpp" />
+   <File Size="1189" TTH="A63J6VGPXR4A3OC65D4RCGWKK43WKWF5V2QGC4Y" Name="ThexOptimized.h" />
+   <File Size="34634" TTH="PEEW7FI67QDIRHJ4QYITOC6AMFZQPON3PFCWAJA" Name="Tiger.cpp" />
+   <File Size="1047" TTH="STI6BRUH5E5TQVL72AUTY3DDLD3HVUCWGBMG4DY" Name="Tiger.h" />
+  </Directory>
+  <Directory Name="qttest" >
+   <Directory Name="debug" >
+    <File Size="186400" TTH="WIXP25ZMEGBAHBQGP25FUTWF4YJMLR3RQOZKXFI" Name="main.o" />
+    <File Size="336752" TTH="PNVIJ65IV6N7CLZZVSQLEGTAA4TTDZSJ2O5TUGA" Name="mainwindow.o" />
+    <File Size="1812" TTH="7TN22PIMLS36P7X5ITTGW2UVI4EXRZDISK2N4NQ" Name="moc_mainwindow.cpp" />
+    <File Size="193280" TTH="RVWKDCEPAFA45T62F7UOXORNMWWGLAZM2PUVE5A" Name="moc_mainwindow.o" />
+   </Directory>
+   <Directory Name="qtc-gdbmacros" >
+    <Directory Name="debug" >
+     <File Size="801328" TTH="5YB5EQS3RSIUQVTANPOAMZBJC2ZR3UUCHTSXCWA" Name="gdbmacros.o" />
+    </Directory>
+    <Directory Name="release" />
+    <File Size="79119" TTH="VAKOTONWJVJ6YC2XR3AERIY4NVN5EMWKVRFW74Q" Name="gdbmacros.cpp" />
+    <File Size="54" TTH="P5CZ4E3FOKJQMQOE7C2FJWQGOQE7XMAIGQPXTGA" Name="gdbmacros.pro" />
+    <File Size="534" TTH="P2MT23CGPSXSAW3MUFWYRX2REGFXAJ2GRTYW4MI" Name="LGPL_EXCEPTION.TXT" />
+    <File Size="462198" TTH="TNX6F4UOIJBFZ5HUKEOCYFAWSEPCZPLNVCH3HRA" Name="libgdbmacros.so" />
+    <File Size="462198" TTH="TNX6F4UOIJBFZ5HUKEOCYFAWSEPCZPLNVCH3HRA" Name="libgdbmacros.so.1" />
+    <File Size="462198" TTH="TNX6F4UOIJBFZ5HUKEOCYFAWSEPCZPLNVCH3HRA" Name="libgdbmacros.so.1.0" />
+    <File Size="462198" TTH="TNX6F4UOIJBFZ5HUKEOCYFAWSEPCZPLNVCH3HRA" Name="libgdbmacros.so.1.0.0" />
+    <File Size="26434" TTH="CF64RRAJA7O7AFUWVBFBHPNEWZEMXWIBX3RDMGI" Name="LICENSE.LGPL" />
+    <File Size="5991" TTH="WXLJJTYNISGMO6K72YYNFXED5K22KIM4QSXSDMI" Name="Makefile" />
+    <File Size="5790" TTH="HPC54G356XMQYITXXOX3FAIRWPDRBBEJAKNOLVQ" Name="Makefile.Debug" />
+    <File Size="5846" TTH="GW5UBV54E3CT7F44ZLIQ3Q4BHZYHELBEKL6FNBQ" Name="Makefile.Release" />
+   </Directory>
+   <Directory Name="release" />
+   <File Size="177" TTH="YKEYOJCSC6TGEII24AHNIK4JV4FZJWQ3XSYNY4I" Name="main.cpp" />
+   <File Size="220" TTH="WXHQPUHDVEQT3APCRCLDSVNVGYAQXVDESZJ5CTY" Name="mainwindow.cpp" />
+   <File Size="302" TTH="CS6MP2RA2MVGPZX6BBV4H2SDUSPSSLA5DDXA7EY" Name="mainwindow.h" />
+   <File Size="1239" TTH="HZX3VEJNIIEZR4MHGCC3RTA3NQRSCH6IZE33HKY" Name="mainwindow.ui" />
+   <File Size="5615" TTH="YIYK24YWBKSWDQENKDY3UYNP3HXRROVAX46ME7Y" Name="Makefile" />
+   <File Size="5854" TTH="MRT5XSHIPE2QOF2QLTVGHL32MQV6E6KXXW423NQ" Name="Makefile.Debug" />
+   <File Size="5940" TTH="BLQPLLHJWGISRDEIF45KXHYQPDKCLORMO3CFITQ" Name="Makefile.Release" />
+   <File Size="329283" TTH="YONN5RCCX24WQRLNXM5SX6ZF3KFVIZNMTV7M7HI" Name="qttest" />
+   <File Size="288" TTH="KS5B4D4ZM5K3WUOVGBUA53CQLLIL6H5727RD57Q" Name="qttest.pro" />
+   <File Size="14451" TTH="DUH7IAG4OD7FIM5QPAPFTC6DR25MKFIFG7XJFSA" Name="qttest.pro.user" />
+   <File Size="2966" TTH="CJJU5B4RZKJS3ICZGZDVIVD3FXC2BTN2KGXPRBA" Name="ui_mainwindow.h" />
+  </Directory>
+  <Directory Name="QWidget" >
+   <File Size="877" TTH="AQLVMVAHTPQ4UR7I26YIOCZEWBZ3JSYGSOW6E5Q" Name="main.cpp" />
+   <File Size="5264" TTH="GFE56POUFV426UYZ7DVY2S7336UCYTFIZATRESI" Name="main.o" />
+   <File Size="6418" TTH="U6OKIMDSKSTYRU5X7LWWU2XZRHWZYABVIBDTW4Q" Name="Makefile" />
+   <File Size="10240" TTH="CCP5JAGX7PZEGC534ABURXOKEVCRSIVJBRT34JY" Name="qdevelop-settings.db" />
+   <File Size="14708" TTH="VKWB7CLGKLCUVT2YCQAER5JIOSSVKKDQP3SW3EQ" Name="QWidget" />
+   <File Size="95" TTH="AHT2YOV3ZKSCZ2K6ZHQSPBZ7XUDJ4YKYIZRADMA" Name="QWidget.pro" />
+   <File Size="105514" TTH="QD25Z5QCB4DRGTPAXRFJ4LEUZSOZA6SSEG32WCI" Name="s.jpg" />
+  </Directory>
+  <Directory Name="QWord" >
+   <Directory Name="applications" >
+    <File Size="151" TTH="54FLY22S4MKMWHZ2F7ZR5XJFZRVBOOEE6GDXYUA" Name="qword.desktop" />
+    <File Size="176" TTH="SE7ZGZHLY53UCZWF25GTYDE2TK2B6PBLVUW4UUQ" Name="qword.desktop~" />
+   </Directory>
+   <Directory Name="images" >
+    <File Size="5914" TTH="7JUV3ZHMOXCUE67C6ZBS6ALUZXDJOVNNBHXEFKQ" Name="1238844450_fileclose.png" />
+    <File Size="3245" TTH="5IWCSC4LWYDCU5YREYGJJMGVWUOWGNJNP6WQYKQ" Name="1238844468_next.png" />
+    <File Size="7839" TTH="2QHVZXCGYGD4LIQOJABOX553JR6YFC3D2245OZQ" Name="1238844490_1_folder_open.png" />
+    <File Size="4269" TTH="PUVRD6AGULSKG6HOTRUXKUTWEXGXV7JWLQNJSGI" Name="1238844505_exit.png" />
+    <File Size="5071" TTH="5RSWCO4BQAGE6FYTH2Y7HDVUE4NDDS7K2FRARWA" Name="1238867598_add_48.png" />
+    <File Size="10566" TTH="MOIMBVCMF7T62YEXPBFI3UMBZTPEOYBBDN6XP7A" Name="1239111434_folder_new.png" />
+    <File Size="733" TTH="LKBT4B6S7SC5TKS7DVSKIXYBJRWDJZ5B45NOLJA" Name="1239185928_smiley_frown.png" />
+    <File Size="731" TTH="WNOHBVZRMT42COICAXEE6TKSO67UE4B3OJVQUSQ" Name="1239185944_smiley_smile.png" />
+    <File Size="2051" TTH="WZ4TVY3FIVR4FR6DSHPCZVAAPPQSPR6ZNTLJLYY" Name="2.png" />
+    <File Size="2625" TTH="RD4KG576JZTRSE6TKLCYRDICBPSZ6TEPU2NNJEY" Name="3.png" />
+    <File Size="735" TTH="H4V77PWD7OGG75AFDEOUHUHARRTPP46TJXSITOI" Name="logo.png" />
+    <File Size="4263" TTH="L5YY7LGBGZAS5S6U526NVIOQDBQVJCBY4FU3IRA" Name="logo.svg" />
+    <File Size="49349" TTH="NZKJJWZMCC54IGFQSCBN3433TKFQE242LXEPAWY" Name="qword.svg" />
+    <File Size="7140" TTH="HBL7ENGM5YAD5LHMAP7F4HGZEDZ7E7JRGCM3VSY" Name="test1.svg" />
+    <File Size="6480" TTH="YZH6YANZXRED27323545UTWF42INIFDBN6SNSWY" Name="test2.svg" />
+    <File Size="5466" TTH="GB5I35QOWTU44PMB54MKT2EPEU3BO7X337S4P2A" Name="test3.svg" />
+    <File Size="1118" TTH="GLOPFNCRXJ5NXGZCTWMFJ7KXNKXBFSTUUO56KSI" Name="test5.png" />
+    <File Size="49346" TTH="HABPB5SMH5ME4HJ54ALGHYQZMQFA4N4HUZVK5ZI" Name="test5.svg" />
+    <File Size="1048" TTH="PN7VQVCLB5WNO435DO32U4PSKQND6BPRB3SRC4I" Name="test6.png" />
+   </Directory>
+   <Directory Name="SPEC" >
+    <File Size="2182" TTH="ZI46FFR3NL4E5SGWMFUR52MU4TBKX467B3M3XVQ" Name="qword.spec" />
+    <File Size="2183" TTH="FR6XBVRZNMYMNAHITAKWUD3HEWXL2EIGMQWBO5I" Name="qword.spec~" />
+    <File Size="1770" TTH="NTZSMIDYMDSCXTVV7IYRLDKY2RWDQT3D4Q2C4SA" Name="qword_fedora.spec" />
+    <File Size="1801" TTH="CR6MUBEHVZJZGL56NOGVQNETHBDKT36Z3EI44FQ" Name="qword_fedora.spec~" />
+    <File Size="1929" TTH="AKSND5M4GZKUQTXMHPY7I7N7QNLFUWSNWONPCPI" Name="qword_suse.spec" />
+    <File Size="0" TTH="XBB5FNUIWWNQSEAAAAAESAAAAAAQAAAABMAAAAA" Name="qword_suse.spec~" />
+   </Directory>
+   <File Size="401" TTH="LL7CHHH2PRV47HJIKIGGAVMCQ3LDJWKPDP7YEPA" Name="about.cpp" />
+   <File Size="341" TTH="KIKDUER5XG44JAIIZCPSDWIKVF2BK2FH6A46NSY" Name="about.h" />
+   <File Size="526" TTH="HSPFRM7N43SU2TZDCEBIQJXD35I6OYLIRDOBVUI" Name="about.ui" />
+   <File Size="1616" TTH="Z342EVM62YTCCYF2NPDBHQC4HBEZ6ZUUQLWWALA" Name="adddialog.cpp" />
+   <File Size="733" TTH="FIPS7DFEMXUFCBKGROEHNXB7P4LCUXPG24XDRXY" Name="adddialog.h" />
+   <File Size="2584" TTH="A2Q2MDYJSEHBCAPJBLFLTRNIGZZ5SRYURRDPHAA" Name="adddialog.ui" />
+   <File Size="704" TTH="Z3T4KIZU7B2NZNBQU4SLMTAXSBOCVWCK7Q3E7HQ" Name="inquiryinitial.cpp" />
+   <File Size="472" TTH="XG5YKGTY2DWRTLFJCUOOWBVJMXO2MVP5WD35F7Y" Name="inquiryinitial.h" />
+   <File Size="3629" TTH="6HLBV7PCAYESC44N4GOE72WLH2J3QH7XUVDYV4Q" Name="inquiryinitial.ui" />
+   <File Size="199" TTH="VEBIRCIAXNA6YTQYUQUWCUHKZY63HMTQSLA4I5Y" Name="main.cpp" />
+   <File Size="2174" TTH="FTKKAEOGN2WN2VHLIBCCPG7I464RQ6WSIR4VIKI" Name="main_ru.qm" />
+   <File Size="6017" TTH="GDEP2FCEHDAGHIZMKQ2RMPL7POQ3WOCUTN4SHRQ" Name="main_ru.ts" />
+   <File Size="13139" TTH="FFY26HMABTRFZ3QWAR24WPVO43MLVNCLPD27O7A" Name="mainwindow.cpp" />
+   <File Size="1993" TTH="PHIAK3PW75BO54STENAFJYAKAWSDIF3NCQXOVHA" Name="mainwindow.h" />
+   <File Size="6121" TTH="Z3RCUHZSDG6EVN4LQIOOIZMMMRM2Y2WN3PERGRA" Name="mainwindow.ui" />
+   <File Size="11698" TTH="QMKTCC5NDD3PI3NOVMLAOL6RC6YW4YPTC2QYI7A" Name="Makefile" />
+   <File Size="3072" TTH="FOSUMTDRAOSGTLW7CICNMGQNMSVY2NDLYIRJQBI" Name="newnew.db" />
+   <File Size="3072" TTH="SMX5C2RU7TOE7E3IGQLI5PLQNAY234ELKXKJZOQ" Name="position.db" />
+   <File Size="274617" TTH="KSUGMNQLRP2EE2ZMLKZ5WCU2ZCJIL2XIMAXCMGA" Name="QWord" />
+   <File Size="896" TTH="XIYVT5NXHX4IYYS6OWMGXBWCCED5KZXUYRBXQXQ" Name="QWord.pro" />
+   <File Size="26822" TTH="M7CCZPU4ZA32C7S632Y63CKAWZMC36LFL4KHBLI" Name="QWord.pro.user" />
+   <File Size="888" TTH="Z7MOZ6GKEU6CK377D22MUN5AUKTEMNGCFBSGG3I" Name="qword.qrc" />
+   <File Size="1907" TTH="4EQ2S7K2JDXR2MPBCX3ZGXHJEKCVRZETYFEDZDI" Name="qword.spec" />
+   <File Size="3072" TTH="VVYLY5OPZBLQBJPXMBIDRI57MA4OGA3345YQQ2I" Name="s1.db" />
+   <File Size="1350" TTH="CVIR3AWALXJMYGWVC67W6QAE2PWDTNJNSUWQ6JY" Name="showdialog.cpp" />
+   <File Size="574" TTH="CP26XJLH4S3RLGVVCBTIETSZRIRZTSLFQV3PLAA" Name="showdialog.h" />
+   <File Size="2143" TTH="HPZGQT2JQBLOPRRWKAZM4YUEFC3DDELMOJYCQ7Y" Name="showdialog.ui" />
+  </Directory>
+  <Directory Name="sdc_hash" >
+   <File Size="42" TTH="VDWKL2ZFN2WC6GQS4LMZKL2SLZHXU7ZAROKTXXI" Name="hasher.cpp" />
+   <File Size="153" TTH="4UXL274CAQLOLDQSEJRXLQ5SZUDXLHNBIDFU42Q" Name="hasher.h" />
+   <File Size="131" TTH="O67H65PGAWECC2UAKPETLA33LCKDVH5JC6AQJ3Y" Name="main.cpp" />
+   <File Size="294" TTH="ULGKQQZHFTESHUQBCLGHKVYEQ52KW5X3LF76RLA" Name="sdc_hash.pro" />
+   <File Size="5964" TTH="WXR6CPYRDQZDTOHGVYC3MAQ5ALW4J7MKBTKCPZA" Name="sdc_hash.pro.user" />
+  </Directory>
+  <Directory Name="sqlite" >
+   <Directory Name="debug" >
+    <File Size="393624" TTH="SZVS6FDZN5MPGFCRH5CZFPIO5MB7RIDWMFLFNRY" Name="main.o" />
+   </Directory>
+   <Directory Name="qtc-gdbmacros" >
+    <Directory Name="debug" >
+     <File Size="801328" TTH="MRTX2MKM56ETJJVSRXXEEPOOJR6KWEAAAGWXYRI" Name="gdbmacros.o" />
+    </Directory>
+    <Directory Name="release" />
+    <File Size="79119" TTH="VAKOTONWJVJ6YC2XR3AERIY4NVN5EMWKVRFW74Q" Name="gdbmacros.cpp" />
+    <File Size="54" TTH="P5CZ4E3FOKJQMQOE7C2FJWQGOQE7XMAIGQPXTGA" Name="gdbmacros.pro" />
+    <File Size="534" TTH="P2MT23CGPSXSAW3MUFWYRX2REGFXAJ2GRTYW4MI" Name="LGPL_EXCEPTION.TXT" />
+    <File Size="462198" TTH="QK3VWH4ZAHAWKIEJXPMJ3BNMELPA2VAM53NEZ5I" Name="libgdbmacros.so" />
+    <File Size="462198" TTH="QK3VWH4ZAHAWKIEJXPMJ3BNMELPA2VAM53NEZ5I" Name="libgdbmacros.so.1" />
+    <File Size="462198" TTH="QK3VWH4ZAHAWKIEJXPMJ3BNMELPA2VAM53NEZ5I" Name="libgdbmacros.so.1.0" />
+    <File Size="462198" TTH="QK3VWH4ZAHAWKIEJXPMJ3BNMELPA2VAM53NEZ5I" Name="libgdbmacros.so.1.0.0" />
+    <File Size="26434" TTH="CF64RRAJA7O7AFUWVBFBHPNEWZEMXWIBX3RDMGI" Name="LICENSE.LGPL" />
+    <File Size="5990" TTH="MGVTKFWLJZTAQIKDIY2MJHHU4N6JK3GTURIIIGA" Name="Makefile" />
+    <File Size="5789" TTH="MNBEMWK2XZCY6X2ANWBM5GJLE57BLUSL25M4LDA" Name="Makefile.Debug" />
+    <File Size="5845" TTH="HC544UPB3G3YXU3ZZQJYH2VEL5XVNPAYE2TPXBQ" Name="Makefile.Release" />
+   </Directory>
+   <Directory Name="release" />
+   <File Size="737" TTH="FBQ2QCMC5SSXPN2IUEKGFND7OUZ2UQOLPYTL7DQ" Name="main.cpp" />
+   <File Size="5709" TTH="QOWIPMZBLB6NNJ3VVOUHQGOEJPANDBFGA44HJKA" Name="Makefile" />
+   <File Size="5010" TTH="5B5PZKBV3SQBWRTX7ZL5RB4YU5C5WKR5ONXDWUA" Name="Makefile.Debug" />
+   <File Size="5066" TTH="7UGCG34KSD5FUPFTKND2HUO2XUNVYU4A5XL4SLY" Name="Makefile.Release" />
+   <File Size="233406" TTH="Q24JJWERD4UULR2WZ77KD2EVAGLFJIVWJNKKPVY" Name="sqlite" />
+   <File Size="306" TTH="OPFUV7WC4BR257HCNQ6HADDC26QN5CLBBTHUSEY" Name="sqlite.pro" />
+   <File Size="14047" TTH="LWTEJ6DCSYIFADHDU5SL3Y75EJAFJJWCUBDYCQQ" Name="sqlite.pro.user" />
+   <File Size="2048" TTH="RYC45NXF5KITMZOS3NLMIPK65OVHN2JHV2E26TA" Name="test.db" />
+  </Directory>
+  <Directory Name="stimul" >
+   <Directory Name="images" >
+    <File Size="787510" TTH="FXONRB2D77YKSLDD67CEVSD5255ICSBQILVXYPA" Name="hor1_16.bmp" />
+    <File Size="787510" TTH="YHVF3VD2ENPD3NZK3VH6HIT7QJNAYT7YIRWWATI" Name="hor2_48_180.bmp" />
+    <File Size="787510" TTH="ZBWWWABQXZ2Q42SXKLDLHGPR4XRPQKDOTSMHFHQ" Name="hor3_64_270.bmp" />
+    <File Size="787512" TTH="QM4EMF4TAT3OVUFIWQJCF3XNEMGU7BP6M35AAPI" Name="random3.bmp" />
+    <File Size="787512" TTH="TNGJ7DIXD4TNOVB5RROCQHTX32VZH5VKD45NNLY" Name="random6.bmp" />
+    <File Size="787512" TTH="4BQGL56QJUZAMWUQYHIWK23UMP2WIFC2AJ6FZIY" Name="random9.bmp" />
+   </Directory>
+   <File Size="488" TTH="4AOUSQDMDC47AG3LCU6TAR3IQBKQLANEU7AAACA" Name="example.txt" />
+   <File Size="91" TTH="CBCFLIKCOQPJ6KJPJ5LI4J4VWZAW3AURUMRSCYI" Name="image.qrc" />
+   <File Size="17990" TTH="E2RSPA5HV2DNZB6VALZUZDZAQPWUE4ROBGORXIY" Name="license" />
+   <File Size="1389" TTH="ZCT7SIP7X3X7I67PNTAEPVB36TVYMIO4W6PQMVA" Name="main.cpp" />
+   <File Size="7795" TTH="KTEEKI3YO7MY6HWWZFZAHONAJQZSOY3AFX3GZPI" Name="Makefile" />
+   <File Size="25600" TTH="236TQJ5XDN5XQVT4GY6TYUUOTNJRKXA7RTFXI2Y" Name="qdevelop-settings.db" />
+   <File Size="196672" TTH="HL6ASJSUNYRALJSDFWVAF56ETQHSQA6ZS6GVQDQ" Name="Slide-qdeveloptmp.o" />
+   <File Size="1151" TTH="QURVJ7WOGDHFYCQTUCZXKV3JQ3V5XFDZLGOMIJY" Name="Slide.cpp" />
+   <File Size="1147" TTH="4SNQWQDSSWOA3VIG22PGZRVNX2XDTOSWKM53FFI" Name="Slide.h" />
+   <File Size="46176" TTH="NHQLI4KRAFD5GX2NRYL2JBHI7RIR7KOMEV3OILA" Name="start.png" />
+   <File Size="96146" TTH="ZVZHRGVX44MPIQYLX2A4UAWMVCTAJQZXCL7C6TQ" Name="Stimul" />
+   <File Size="451560" TTH="RCHXQZEQO76O6L7GEY7RIC4ZDM64653BYRT6FQA" Name="Stimul-qdeveloptmp.o" />
+   <File Size="3187" TTH="RLTCNARK7O6GLZ5H55VWSKHFTKLT442LIO6TNKQ" Name="Stimul.cpp" />
+   <File Size="1248" TTH="OBSRHRJ6AV4CVOEE7LPYLRTZJNYHJ7MEP3HQSSY" Name="Stimul.h" />
+   <File Size="186" TTH="MZEWAMZ73XLOADPW4XCWCPNINSNV74B4QXJVH7Q" Name="Stimul.pro" />
+   <File Size="3329" TTH="KSVKJ7L2JZSSIT6H4MKFKY4JZF2X7KZM5WXI45I" Name="welcome.svg" />
+   <File Size="1346" TTH="CYODXTP6HQ2LILQZ3TZNZPTOUTQLLIUNCWABKMQ" Name="window.cpp" />
+   <File Size="1264" TTH="ETVXE3SMSZBDPAWEZSXNGQJRMGRLVB6JWVG7HWI" Name="window.h" />
+  </Directory>
+  <Directory Name="stimul_final" >
+   <Directory Name="debug" >
+    <File Size="421200" TTH="2AMQBMU3OAXA2L4WOJORXVVVI64O6ZECIQY3BDY" Name="main.o" />
+    <File Size="2406" TTH="NADUI27BVLPTEHR6NMS3PGY5C7U55ZJP6QYFJII" Name="moc_Stimul.cpp" />
+    <File Size="387664" TTH="RXQ5KC55HAAI5J555JU62B7KMP3YYIV6ECQHXQQ" Name="moc_Stimul.o" />
+    <File Size="2463" TTH="PWLDXY7ZB5UJYQW2ZA2OLO66A67HJVN6R666JVY" Name="moc_window.cpp" />
+    <File Size="405032" TTH="7HW5RV5GL372E6ICHJRRKXPMFIKB3ZFHRJWP3OY" Name="moc_window.o" />
+    <File Size="237796" TTH="EKZTTW256SFI77IXX3RGP4GHCZL4XYAB53EXHBQ" Name="qrc_image.cpp" />
+    <File Size="57672" TTH="YTA4SQBA77YQEMVDZZLYGY2ZVMO6K6XWJ46SJCQ" Name="qrc_image.o" />
+    <File Size="203888" TTH="NKVNIP5B7XZ73LCTB3VVY6IRXTK3UUMBRT4M2MA" Name="Slide.o" />
+    <File Size="470656" TTH="GRDH6AVQUWV7IDI3UHJUNQKQGVMT7XXGW5UJA3Y" Name="Stimul.o" />
+    <File Size="422280" TTH="XIWS3USXCVNUVDAKLOXXL3FPN72BH7FNTRADDNQ" Name="window.o" />
+   </Directory>
+   <Directory Name="images" >
+    <File Size="787510" TTH="FXONRB2D77YKSLDD67CEVSD5255ICSBQILVXYPA" Name="hor1_16.bmp" />
+    <File Size="787510" TTH="YHVF3VD2ENPD3NZK3VH6HIT7QJNAYT7YIRWWATI" Name="hor2_48_180.bmp" />
+    <File Size="787510" TTH="ZBWWWABQXZ2Q42SXKLDLHGPR4XRPQKDOTSMHFHQ" Name="hor3_64_270.bmp" />
+    <File Size="787512" TTH="QM4EMF4TAT3OVUFIWQJCF3XNEMGU7BP6M35AAPI" Name="random3.bmp" />
+    <File Size="787512" TTH="TNGJ7DIXD4TNOVB5RROCQHTX32VZH5VKD45NNLY" Name="random6.bmp" />
+    <File Size="787512" TTH="4BQGL56QJUZAMWUQYHIWK23UMP2WIFC2AJ6FZIY" Name="random9.bmp" />
+   </Directory>
+   <Directory Name="qtc-gdbmacros" >
+    <Directory Name="debug" >
+     <File Size="801328" TTH="U5IXADWLIBBWNBULYKOZJPHXDYZJJLDD2Z5Q2BI" Name="gdbmacros.o" />
+    </Directory>
+    <Directory Name="release" />
+    <File Size="79119" TTH="VAKOTONWJVJ6YC2XR3AERIY4NVN5EMWKVRFW74Q" Name="gdbmacros.cpp" />
+    <File Size="54" TTH="P5CZ4E3FOKJQMQOE7C2FJWQGOQE7XMAIGQPXTGA" Name="gdbmacros.pro" />
+    <File Size="534" TTH="P2MT23CGPSXSAW3MUFWYRX2REGFXAJ2GRTYW4MI" Name="LGPL_EXCEPTION.TXT" />
+    <File Size="462214" TTH="OBVZOK7WOBCNPNR2YOVUAC2D54TAKW7GBZJZUAQ" Name="libgdbmacros.so" />
+    <File Size="462214" TTH="OBVZOK7WOBCNPNR2YOVUAC2D54TAKW7GBZJZUAQ" Name="libgdbmacros.so.1" />
+    <File Size="462214" TTH="OBVZOK7WOBCNPNR2YOVUAC2D54TAKW7GBZJZUAQ" Name="libgdbmacros.so.1.0" />
+    <File Size="462214" TTH="OBVZOK7WOBCNPNR2YOVUAC2D54TAKW7GBZJZUAQ" Name="libgdbmacros.so.1.0.0" />
+    <File Size="26434" TTH="CF64RRAJA7O7AFUWVBFBHPNEWZEMXWIBX3RDMGI" Name="LICENSE.LGPL" />
+    <File Size="5991" TTH="5WIDU253DVMP65JIIAW2SNW742NXDQIGSMEZI4Y" Name="Makefile" />
+    <File Size="5790" TTH="QUVGGJ2MB3A3I5QAHRMQZRM3E4CN3GGPRNPYBDA" Name="Makefile.Debug" />
+    <File Size="5846" TTH="XPMPF6FBZXF2XZSXAP62IXTVUVVOQBVUNF7NKVI" Name="Makefile.Release" />
+   </Directory>
+   <Directory Name="release" />
+   <File Size="488" TTH="4AOUSQDMDC47AG3LCU6TAR3IQBKQLANEU7AAACA" Name="example.txt" />
+   <File Size="91" TTH="CBCFLIKCOQPJ6KJPJ5LI4J4VWZAW3AURUMRSCYI" Name="image.qrc" />
+   <File Size="17990" TTH="E2RSPA5HV2DNZB6VALZUZDZAQPWUE4ROBGORXIY" Name="license" />
+   <File Size="1389" TTH="ZCT7SIP7X3X7I67PNTAEPVB36TVYMIO4W6PQMVA" Name="main.cpp" />
+   <File Size="5625" TTH="2SQDKANTQNR4VKEHWWOUWZHKBIZVMZGH2O7MX6A" Name="Makefile" />
+   <File Size="6635" TTH="BDBUWZZAUIXEFRPDQO7HP4CQB3STDBEC7MVXL6I" Name="Makefile.Debug" />
+   <File Size="6773" TTH="J5YG7JC6SL3FRKCXUJWYPZBBX2RYGWD4ZR3SDXI" Name="Makefile.Release" />
+   <File Size="2353" TTH="4CVO4A2YQGDJZ7A4PBDHXJ7AGNLAK3GHEODB4CI" Name="moc_Stimul.cpp" />
+   <File Size="2410" TTH="PAKMKNINJSCKNIQX3ZLKPOFJOQ4FDDTACBT3N2Y" Name="moc_window.cpp" />
+   <File Size="25600" TTH="236TQJ5XDN5XQVT4GY6TYUUOTNJRKXA7RTFXI2Y" Name="qdevelop-settings.db" />
+   <File Size="237791" TTH="QQ7FZA4L6YOLZXOG5BNBJODTIBJJWVK5TXDFEBQ" Name="qrc_image.cpp" />
+   <File Size="1151" TTH="QURVJ7WOGDHFYCQTUCZXKV3JQ3V5XFDZLGOMIJY" Name="Slide.cpp" />
+   <File Size="1147" TTH="4SNQWQDSSWOA3VIG22PGZRVNX2XDTOSWKM53FFI" Name="Slide.h" />
+   <File Size="46176" TTH="NHQLI4KRAFD5GX2NRYL2JBHI7RIR7KOMEV3OILA" Name="start.png" />
+   <File Size="894881" TTH="7OFLQKU6A6YTSTRHQYWR5FUX23T2SXXRFSLHRKI" Name="Stimul" />
+   <File Size="3187" TTH="RLTCNARK7O6GLZ5H55VWSKHFTKLT442LIO6TNKQ" Name="Stimul.cpp" />
+   <File Size="1248" TTH="OBSRHRJ6AV4CVOEE7LPYLRTZJNYHJ7MEP3HQSSY" Name="Stimul.h" />
+   <File Size="186" TTH="MZEWAMZ73XLOADPW4XCWCPNINSNV74B4QXJVH7Q" Name="Stimul.pro" />
+   <File Size="14482" TTH="AJNKUEI6HXVKBWB4BREWQKGITQ3LS5UXXU26YGI" Name="Stimul.pro.user" />
+   <File Size="3329" TTH="KSVKJ7L2JZSSIT6H4MKFKY4JZF2X7KZM5WXI45I" Name="welcome.svg" />
+   <File Size="1346" TTH="CYODXTP6HQ2LILQZ3TZNZPTOUTQLLIUNCWABKMQ" Name="window.cpp" />
+   <File Size="1264" TTH="ETVXE3SMSZBDPAWEZSXNGQJRMGRLVB6JWVG7HWI" Name="window.h" />
+  </Directory>
+  <Directory Name="SVN" >
+   <Directory Name="conf" >
+    <File Size="1080" TTH="JDT5WCJDD233KMCWCGNL7PJTSFVLAQULD4QNN5I" Name="authz" />
+    <File Size="309" TTH="ESLRD3VUOHWP32GL2CAWDIGZSL3YLXPSS7USJIQ" Name="passwd" />
+    <File Size="2279" TTH="NP4HP6BN7E46CFG7BFKOX7BRXYSEQ3GCS7LJNSY" Name="svnserve.conf" />
+   </Directory>
+   <Directory Name="db" >
+    <Directory Name="revprops" >
+     <Directory Name="0" >
+      <File Size="50" TTH="AEBCZX747UNBE2NTVKTLVKJTXB3RRQMZM77WWQY" Name="0" />
+      <File Size="92" TTH="DKUA7ADTBBXAEEO7OH6UICM3XLAQFVDQ4UAT7FQ" Name="1" />
+      <File Size="92" TTH="FBTRMLYKBD5AOM6QRR6NEWZGLD7YSOJCKASVA6Y" Name="2" />
+      <File Size="106" TTH="AYU2AVCBEZGCRUMNHYWM5CQKLXO36B5NT3NWZTQ" Name="3" />
+      <File Size="92" TTH="T6U62MN42XFTUNCEN6O2CXPNXUX32RZGDWQ62JI" Name="4" />
+      <File Size="104" TTH="G5AZWK4IPVF7NPGOWYUVM5ATSVYHIO4PHP36FFY" Name="5" />
+      <File Size="116" TTH="BEMSBFYT2QLPCQVU6FLUHPXRGWB6327SDE55SUA" Name="6" />
+     </Directory>
+    </Directory>
+    <Directory Name="revs" >
+     <Directory Name="0" >
+      <File Size="115" TTH="MTRKSWL6LMYVEJ2YIPLYPOJ5PQZK2QIVAEXMQ3A" Name="0" />
+      <File Size="280" TTH="3DKMYRAT4A4QQCGVXFMD76ON7FQ4ME2RAP2KVUY" Name="1" />
+      <File Size="440544" TTH="YJSBTZ5PZFGJEDDVBX5QNBZFKE7PC5MLCECLVQY" Name="2" />
+      <File Size="311882" TTH="YXVXEUAIZUYWJ2Y3MN5TZFP3JAHI5JYJOFASW2A" Name="3" />
+      <File Size="343354" TTH="G7AYKWSRIWMJSJWKGY6EUTVPQGCAZH7V7RCRKSQ" Name="4" />
+      <File Size="61614" TTH="YWTLCODT5TR6YG5EDLSYFE4DT2H2SFWKUQIFANQ" Name="5" />
+      <File Size="144977" TTH="6WHDDZDNEJ7WAMGRMCM55ZBL5BD6IJ7RQQ3JQUA" Name="6" />
+     </Directory>
+    </Directory>
+    <Directory Name="transactions" />
+    <Directory Name="txn-protorevs" />
+    <File Size="2" TTH="TAEBY2GW3XM32XJBMCM4OP6WEXIVGRMYGLBZDNQ" Name="current" />
+    <File Size="22" TTH="ET77EDHADO4FDETSGFU44MU5OTPCJ3OELMHG2GQ" Name="format" />
+    <File Size="5" TTH="AQMMETJTZ26JBBHWZBHYEQCRSQPCH4JZE6CYUXI" Name="fs-type" />
+    <File Size="2" TTH="TAEBY2GW3XM32XJBMCM4OP6WEXIVGRMYGLBZDNQ" Name="txn-current" />
+    <File Size="0" TTH="XBB5FNWIDGOASEAAAAACSAAAAAAQAAAAA4AAAAA" Name="txn-current-lock" />
+    <File Size="37" TTH="BIOVEBPSQIFXOGUC7MBRZPHIV6NAIYCZ6CUP4HA" Name="uuid" />
+    <File Size="0" TTH="XBB5FNQI5SNQSEAAAAACCAAAADFDTYUWHNVPQTQ" Name="write-lock" />
+   </Directory>
+   <Directory Name="hooks" >
+    <File Size="2015" TTH="MNOFHM2KGBGJ7MK4V5M6S2F2JT6VX63C64VGCIA" Name="post-commit.tmpl" />
+    <File Size="1638" TTH="UF7R4WNRESF2LF7LADFHYIYZGNORRF57XPUP3BA" Name="post-lock.tmpl" />
+    <File Size="2268" TTH="76QBOA5RSABNGCDFLANQIS33NJRQZR7TJZBEFCY" Name="post-revprop-change.tmpl" />
+    <File Size="1567" TTH="GWOCSKRDETUYWY36WCYERTVK2OS27FZHJTV2GFY" Name="post-unlock.tmpl" />
+    <File Size="2934" TTH="ALJYBYBCV3FM2JMC6ZAKHIVJIWOQLVUF3PMCW3Y" Name="pre-commit.tmpl" />
+    <File Size="2038" TTH="FSUSVI342EUEW6BM23J56CUQODEVQO2SCF43JDA" Name="pre-lock.tmpl" />
+    <File Size="2764" TTH="Q4QWUR4MEHQPLDJRR45W7Z5LKKUVAJQ55WU5M3Q" Name="pre-revprop-change.tmpl" />
+    <File Size="1980" TTH="FAS7DIUT3UYVMXD5IDMBHEJNLHHIX6KPRGQY3XI" Name="pre-unlock.tmpl" />
+    <File Size="2758" TTH="WHYIFBXAPJ3LVMR53AW2EZBSHJ5U4LEOR6VSD4Q" Name="start-commit.tmpl" />
+   </Directory>
+   <Directory Name="locks" >
+    <File Size="139" TTH="4BR2W44IHLOWTVZNCIU7LOKOPYO5J6VWH5WI3PA" Name="db-logs.lock" />
+    <File Size="139" TTH="4BR2W44IHLOWTVZNCIU7LOKOPYO5J6VWH5WI3PA" Name="db.lock" />
+   </Directory>
+   <File Size="2" TTH="CI6CA3NTYS2WUOWYV3EAO4AZSXJR4YLT6YTP3ZI" Name="format" />
+   <File Size="229" TTH="42IHBGJT7QVBWTOL66OFOEUFPQTOMZLJ4QOJDZA" Name="README.txt" />
+  </Directory>
+  <Directory Name="systray" >
+   <Directory Name="images" >
+    <File Size="3438" TTH="DJGWUINPUXVOWIV3H7L7US64GGT2AWTNMGC3TJA" Name="bad.svg" />
+    <File Size="3927" TTH="QX7EZJVKDKWMFL23LZ5OXZHYDGDZNYO7LGS4FWQ" Name="heart.svg" />
+    <File Size="3193" TTH="ILCV7MXD3S5UAWRB6W7SGCZVW7LNSOQOHEDVUAA" Name="trash.svg" />
+   </Directory>
+   <File Size="2539" TTH="JTH4CH2PMOFWUYZYWLGUYJUHKZX7I7ODVARWIUY" Name="main.cpp" />
+   <File Size="3656" TTH="DGORUCBKA5VBQ3RRUIF2RTRLOZQDWCYWVZDRRJY" Name="main.o" />
+   <File Size="9595" TTH="HMK2WQJYBPA5EIK6RFNYUJU2RLUJVHMLTCVETPQ" Name="Makefile" />
+   <File Size="2433" TTH="E5MIARIJUOV22P2U5YJK4RYSBEQQYUEF4VQA4UQ" Name="moc_window.cpp" />
+   <File Size="10880" TTH="RI44U5WNIM45Z6G6QZKFO3Q3P6HCSKACSGC4X5Q" Name="moc_window.o" />
+   <File Size="57013" TTH="2HNVEC73QGSPTHX2EJ46E26WL2RFKL2AOUUUKLQ" Name="qrc_systray.cpp" />
+   <File Size="14080" TTH="5ESDL3V35M4DDO4M463CCKZMJ7F5WLGUN2ZMY2A" Name="qrc_systray.o" />
+   <File Size="60346" TTH="ILBLW3UB66MYL3DEEJSDPYKJDEIOMYSTK3YOE4I" Name="systray" />
+   <File Size="735" TTH="F55J5WPVYCEP5GEMAMOYWLJJPFG4AL75UIU6H4A" Name="systray.pro" />
+   <File Size="4357" TTH="UGHXXFAH32CGOTGZLGOOL43KWLXVKQNE4HROZRQ" Name="systray.pro.user" />
+   <File Size="180" TTH="XRRGEW5GBWBQHZCEYPTJFYAQB6CDRZ4FB5JU24Q" Name="systray.qrc" />
+   <File Size="8908" TTH="PA7AEBTI42TUXZ2ZZ775UESWMKHYB5EFDL7RGOI" Name="window.cpp" />
+   <File Size="3343" TTH="XAI2IJQM74WZE5UB77O4VIZIJXE4D4OJVHMSUUA" Name="window.h" />
+   <File Size="27136" TTH="YXDSEDMTIODXJDUMFHFGMPS24GA3VGNT4NWKPCI" Name="window.o" />
+  </Directory>
+  <Directory Name="TableModel" >
+   <Directory Name="debug" >
+    <File Size="417664" TTH="NN56XU25JHXPXUZEMBNGY6JAUY5B5RAPFAJNZSY" Name="main.o" />
+    <File Size="437336" TTH="NZTQGZ4NHH2RTZL7G2NMVTP5G5VV55UAM3QRXLI" Name="tablemodel.o" />
+   </Directory>
+   <Directory Name="qtc-gdbmacros" >
+    <Directory Name="debug" >
+     <File Size="801328" TTH="EVHBZLEYSMJDDRUY5TPUNL5KCFFBWR5NZD2SN3Q" Name="gdbmacros.o" />
+    </Directory>
+    <Directory Name="release" />
+    <File Size="79119" TTH="VAKOTONWJVJ6YC2XR3AERIY4NVN5EMWKVRFW74Q" Name="gdbmacros.cpp" />
+    <File Size="54" TTH="P5CZ4E3FOKJQMQOE7C2FJWQGOQE7XMAIGQPXTGA" Name="gdbmacros.pro" />
+    <File Size="534" TTH="P2MT23CGPSXSAW3MUFWYRX2REGFXAJ2GRTYW4MI" Name="LGPL_EXCEPTION.TXT" />
+    <File Size="462214" TTH="FX7UVC2LUYUNJIL4KTUWK5QFXJHCLJB3JVRONSI" Name="libgdbmacros.so" />
+    <File Size="462214" TTH="FX7UVC2LUYUNJIL4KTUWK5QFXJHCLJB3JVRONSI" Name="libgdbmacros.so.1" />
+    <File Size="462214" TTH="FX7UVC2LUYUNJIL4KTUWK5QFXJHCLJB3JVRONSI" Name="libgdbmacros.so.1.0" />
+    <File Size="462214" TTH="FX7UVC2LUYUNJIL4KTUWK5QFXJHCLJB3JVRONSI" Name="libgdbmacros.so.1.0.0" />
+    <File Size="26434" TTH="CF64RRAJA7O7AFUWVBFBHPNEWZEMXWIBX3RDMGI" Name="LICENSE.LGPL" />
+    <File Size="5992" TTH="X5LGIKWC4Z7TA2E4YEEYJSRFFLXAAIPVDVGTSJI" Name="Makefile" />
+    <File Size="5791" TTH="QTGL6OD3NXX5MLQZO4ATAZIIIPQUR5KTXEB5TVY" Name="Makefile.Debug" />
+    <File Size="5847" TTH="ZCWIPTPKK46ZYGQKSMLKCRELUOU6B7GECL2UYIY" Name="Makefile.Release" />
+   </Directory>
+   <Directory Name="release" />
+   <File Size="582" TTH="U45LYFE6KYLS4M24T4KN5KUIXKL5PQAZB2RREBA" Name="main.cpp" />
+   <File Size="5640" TTH="OMQPSHLX44FIJHOJHYEPOGRQKWYDOKXAYGN62WI" Name="Makefile" />
+   <File Size="5253" TTH="JPWPUHGRWES7GBZNYRHHUP42AQ7O3XXSRELYYFQ" Name="Makefile.Debug" />
+   <File Size="5317" TTH="RYVFIKH45A7JYQHRRHKEQFWZ7ATAEABG763USKA" Name="Makefile.Release" />
+   <File Size="390314" TTH="EUKGL7K7GUKC2YTIAUVOLF5GKY3EYBIAOHPRMBA" Name="TableModel" />
+   <File Size="1491" TTH="G5KENRQCZLPEQEPA4NBNX7Y3VXCKEEI6AQPOLWI" Name="tablemodel.cpp" />
+   <File Size="665" TTH="RP7H2ICRGBQQRUE5LRZ3IK5GOK57HNAHIQPP2MI" Name="tablemodel.h" />
+   <File Size="338" TTH="IJQ76BLF5STYIN5BVJFHHYQPNK2MVR3PQ6PIOTA" Name="TableModel.pro" />
+   <File Size="18240" TTH="GVFTKQSLQFZMGA4J3NPR3ODJAXVVDDF5WGMV3RY" Name="TableModel.pro.user" />
+  </Directory>
+  <Directory Name="temp" >
+   <Directory Name="branches" />
+   <Directory Name="tags" >
+    <Directory Name="dc_test1" />
+   </Directory>
+   <Directory Name="trunk" />
+  </Directory>
+  <Directory Name="test_list" >
+   <Directory Name="debug" />
+   <Directory Name="qtc-gdbmacros" >
+    <Directory Name="debug" >
+     <File Size="801328" TTH="RH6NOPZWSWPOMCVYI7NFAUPJ6V7RM5O4ZWE3BLI" Name="gdbmacros.o" />
+    </Directory>
+    <Directory Name="release" />
+    <File Size="79119" TTH="VAKOTONWJVJ6YC2XR3AERIY4NVN5EMWKVRFW74Q" Name="gdbmacros.cpp" />
+    <File Size="54" TTH="P5CZ4E3FOKJQMQOE7C2FJWQGOQE7XMAIGQPXTGA" Name="gdbmacros.pro" />
+    <File Size="534" TTH="P2MT23CGPSXSAW3MUFWYRX2REGFXAJ2GRTYW4MI" Name="LGPL_EXCEPTION.TXT" />
+    <File Size="462214" TTH="XM4LGO2G5BV7PA2MF43ZHJL2OEBZQG3NI54Y6RY" Name="libgdbmacros.so" />
+    <File Size="462214" TTH="XM4LGO2G5BV7PA2MF43ZHJL2OEBZQG3NI54Y6RY" Name="libgdbmacros.so.1" />
+    <File Size="462214" TTH="XM4LGO2G5BV7PA2MF43ZHJL2OEBZQG3NI54Y6RY" Name="libgdbmacros.so.1.0" />
+    <File Size="462214" TTH="XM4LGO2G5BV7PA2MF43ZHJL2OEBZQG3NI54Y6RY" Name="libgdbmacros.so.1.0.0" />
+    <File Size="26434" TTH="CF64RRAJA7O7AFUWVBFBHPNEWZEMXWIBX3RDMGI" Name="LICENSE.LGPL" />
+    <File Size="5992" TTH="3WJHMO67QZMZL4M2IDZNYZPWTOWXOXMKGL5PIGA" Name="Makefile" />
+    <File Size="5791" TTH="KWY2I4T6KERGRXAGTNX2ELBFOQD3F6LD5JWB2CA" Name="Makefile.Debug" />
+    <File Size="5847" TTH="WI7UL4IO2DRG62DIUHBSXJOJY67JMQ35555FYIQ" Name="Makefile.Release" />
+   </Directory>
+   <Directory Name="release" />
+   <File Size="1226" TTH="WSUY6YSPTH3IGMKOUVOVA5EE3Y7FRZF74DKV5HA" Name="main.cpp" />
+   <File Size="5634" TTH="BRIEUHUCCIAINDDWVNA4YQMIT5UDI2TFQUOXKYY" Name="Makefile" />
+   <File Size="4985" TTH="4U7BQMWY5ZFMCTEJIXYK72DAINGHUIVDLKKINBI" Name="Makefile.Debug" />
+   <File Size="5041" TTH="X4SHQLIJ3FBF35TFNT6JFWVFPDURIJEEK63YTBI" Name="Makefile.Release" />
+   <File Size="104571" TTH="54JCQDUUPBED2XEALEKMNTGYFZFZ6CII62LMEEQ" Name="test_list" />
+   <File Size="299" TTH="P5SDKWT4WVANVZLLK7MKL2I6SQAAEFZNC7MKA4A" Name="test_list.pro" />
+   <File Size="14260" TTH="AZEXAQA5HS2KKCUOYI7TV7Q4U233SJ3Y42ZO2KQ" Name="test_list.pro.user" />
+  </Directory>
+  <Directory Name="tiger_test" >
+   <Directory Name="debug" >
+    <File Size="335224" TTH="3UT4SJKYE4LB7HY32N3OTOBDTJ6ELPNPNLFF7PI" Name="hash.o" />
+    <File Size="346160" TTH="GF7BJG3HRXTQEOAUHQOPSHZ7TM624HTPG2AUIYA" Name="main.o" />
+    <File Size="18464" TTH="YK4Y4GUNHLI65LUP5ABOPDSRSBKQS5G75WWHWHA" Name="tiger.o" />
+   </Directory>
+   <Directory Name="qtc-gdbmacros" >
+    <Directory Name="debug" >
+     <File Size="801328" TTH="ITY6OAEQXVNUPGQ6FUY7M6LRTE4K4POTJUTINNI" Name="gdbmacros.o" />
+    </Directory>
+    <Directory Name="release" />
+    <File Size="79119" TTH="VAKOTONWJVJ6YC2XR3AERIY4NVN5EMWKVRFW74Q" Name="gdbmacros.cpp" />
+    <File Size="54" TTH="P5CZ4E3FOKJQMQOE7C2FJWQGOQE7XMAIGQPXTGA" Name="gdbmacros.pro" />
+    <File Size="534" TTH="P2MT23CGPSXSAW3MUFWYRX2REGFXAJ2GRTYW4MI" Name="LGPL_EXCEPTION.TXT" />
+    <File Size="462214" TTH="OV6NOWBHG2BU7W2WUIYXQAURJPSCUD6OGAKVLLQ" Name="libgdbmacros.so" />
+    <File Size="462214" TTH="OV6NOWBHG2BU7W2WUIYXQAURJPSCUD6OGAKVLLQ" Name="libgdbmacros.so.1" />
+    <File Size="462214" TTH="OV6NOWBHG2BU7W2WUIYXQAURJPSCUD6OGAKVLLQ" Name="libgdbmacros.so.1.0" />
+    <File Size="462214" TTH="OV6NOWBHG2BU7W2WUIYXQAURJPSCUD6OGAKVLLQ" Name="libgdbmacros.so.1.0.0" />
+    <File Size="26434" TTH="CF64RRAJA7O7AFUWVBFBHPNEWZEMXWIBX3RDMGI" Name="LICENSE.LGPL" />
+    <File Size="5992" TTH="57RZVDPARCFNLY6N4I47A5GNGEXPCF5HKJL2FUI" Name="Makefile" />
+    <File Size="5791" TTH="2VT7L62H7W7GBHZUD2DLRDZMLRPLHWXNL7HT7IA" Name="Makefile.Debug" />
+    <File Size="5847" TTH="WWBQIG5UNNLTJLQBMQMXUVLB27NR3WKOKFXEADY" Name="Makefile.Release" />
+   </Directory>
+   <Directory Name="release" />
+   <File Size="1024" TTH="Y43J4HTQSVQA2YYBZEJ4EMMMH5AZF5YNO6UNS7Y" Name="1048" />
+   <File Size="2048" TTH="A7XUHCLTJPVHYC5FQGSSDJXRMUFJLVCV3SUEFUI" Name="2048" />
+   <File Size="672" TTH="EYZMNCEDZOWPPF7VIE7PPJKBV4AUFTZEIT5QJ3I" Name="hash.cpp" />
+   <File Size="151" TTH="46KBU5PDEOXSWWLIA62NBOKWIGLXM7VJ2KU3D5I" Name="hash.h" />
+   <File Size="400" TTH="YMZIQLIYYGCCDJC4JMIGJT7OFSVPDDB74R3VZUY" Name="main.cpp" />
+   <File Size="5545" TTH="GJIHJ2M7QVFYYAWHHSYFMRI4G2H2V5I7SPEANRY" Name="Makefile" />
+   <File Size="5145" TTH="VSXGVTME624ETWVL5OYLNE2HKO4SR6K7ZAO2KTQ" Name="Makefile.Debug" />
+   <File Size="5215" TTH="QQMMNNM2ZZV63EUJ7BPCSE2UPDRCNXRRQLDQLLY" Name="Makefile.Release" />
+   <File Size="6" TTH="TWTF5AX6CLZ5YJKOPQNKAGFSYCCLGDISRLJSYEY" Name="tiger" />
+   <File Size="5284" TTH="55W4XJ27HUSKC3HUBYHQ2ITCCFQUHUXJXCJCXMQ" Name="tiger.c" />
+   <File Size="39674" TTH="6D6ITMX4ZU7TK6JN76KXI5UKHPR7MFZHZOKMOSA" Name="tiger.h" />
+   <File Size="318255" TTH="RMACT47CTMULL3KL23OVKFEFECLZ63JZF4TCPSI" Name="tiger_test" />
+   <File Size="320" TTH="5MMM54S7CFBWP4UIF57M642ODV74IE7HGTUAJ6I" Name="tiger_test.pro" />
+   <File Size="18290" TTH="EFLNS457GBWV6MMQ3YB42HQ5FXS2BVJFJX5VZUQ" Name="tiger_test.pro.user" />
+  </Directory>
+  <Directory Name="tth" >
+   <File Size="11259" TTH="6S3GHNMOGISKHIQS5KJDVEPMPO3ZOCY46BRAH3I" Name="HashManager.cpp" />
+   <File Size="4622" TTH="L3IB2JWQUL2MAMYQ77ERBBDZZP2XBO746PV4I3I" Name="HashManager.h" />
+   <File Size="2397" TTH="HXEP4T477UNDK2HU2QMS6BGO7XNB7SZ35SIH7PA" Name="HashValue.h" />
+   <File Size="1999" TTH="ZQBER2X2V2RT4HTJKZMEPDJXIIHVZ7S6J5H2VUI" Name="ResourceManager.cpp" />
+   <File Size="2620" TTH="D36CFENDSVDLYD5TBIOGLPPE2OPAOHNZGDV2R2Y" Name="ResourceManager.h" />
+  </Directory>
+  <Directory Name="tth_c#" >
+   <File Size="6368" TTH="7H5CG5BOSRKN2BF2YKSS3ZNEFZLYUKXKLIWJYDY" Name="Base32.cs" />
+   <File Size="7104" TTH="ZNB6HWYMNHTOFRCFMODGVI3XEXS6YSZG5BOCMKY" Name="ThexOptimized.cs" />
+   <File Size="31621" TTH="ODNOVJPYTEGCLQP36BJ37S7SXXG3KKBGTHKSEYQ" Name="Tiger.cs" />
+  </Directory>
+  <Directory Name="without_libhash" >
+   <Directory Name="debug" >
+    <File Size="240488" TTH="HDRV5Y4V7CCIYQRO3NIXTYKYD7UVPPIHCIJKKAA" Name="Base32.o" />
+   </Directory>
+   <Directory Name="qtc-gdbmacros" >
+    <Directory Name="debug" />
+    <Directory Name="release" >
+     <File Size="374416" TTH="MM6HC6CKNPUK6O2I3ZBGVUNPGXKLJJDKYMMEXBA" Name="gdbmacros.o" />
+    </Directory>
+    <File Size="79119" TTH="VAKOTONWJVJ6YC2XR3AERIY4NVN5EMWKVRFW74Q" Name="gdbmacros.cpp" />
+    <File Size="54" TTH="P5CZ4E3FOKJQMQOE7C2FJWQGOQE7XMAIGQPXTGA" Name="gdbmacros.pro" />
+    <File Size="534" TTH="P2MT23CGPSXSAW3MUFWYRX2REGFXAJ2GRTYW4MI" Name="LGPL_EXCEPTION.TXT" />
+    <File Size="260287" TTH="VWFEVLVNNLL5TZ6ZSGZVBDUVWOZIKR7ACMOM57I" Name="libgdbmacros.so" />
+    <File Size="260287" TTH="VWFEVLVNNLL5TZ6ZSGZVBDUVWOZIKR7ACMOM57I" Name="libgdbmacros.so.1" />
+    <File Size="260287" TTH="VWFEVLVNNLL5TZ6ZSGZVBDUVWOZIKR7ACMOM57I" Name="libgdbmacros.so.1.0" />
+    <File Size="260287" TTH="VWFEVLVNNLL5TZ6ZSGZVBDUVWOZIKR7ACMOM57I" Name="libgdbmacros.so.1.0.0" />
+    <File Size="26434" TTH="CF64RRAJA7O7AFUWVBFBHPNEWZEMXWIBX3RDMGI" Name="LICENSE.LGPL" />
+    <File Size="5960" TTH="TW74J44XAPBMUHMOCW77DPCLBK3GDUHPCQGQ5FQ" Name="Makefile" />
+    <File Size="5777" TTH="KSUZCPZYOA6E7VZAFREXKIRZQXLESNJQK66NFRY" Name="Makefile.Debug" />
+    <File Size="5833" TTH="Y23SMRG252VC2LVJP3YJGNH3EA2OYBVDERW3CTI" Name="Makefile.Release" />
+   </Directory>
+   <Directory Name="release" >
+    <File Size="5448" TTH="BEPPYCIIYASMVD7EPAGGT4E73B4FDTLBSQOJPAY" Name="base32.o" />
+    <File Size="7688" TTH="JM6QBL2C72LYYHKXNWRPAIBLVJN4VSP6F62ESQQ" Name="hash.o" />
+    <File Size="13688" TTH="NEZSIV47PODOWNXBPT55A4OWWL2KRNPYGL4TTVA" Name="hashfile.o" />
+    <File Size="2144" TTH="DSXWBZXWLTI7PWEHG4HQAAEEFG7PGHJXTAEXVNQ" Name="main.o" />
+    <File Size="13728" TTH="LFKJT2BAA5ADFAKJM44IRWL6A4MQQNMKN3WKY2I" Name="tiger.o" />
+   </Directory>
+   <File Size="0" TTH="XBB5FNSQ3SNQSEAAAAACCAAAAD7XOUGWFJAF7YY" Name="0" />
+   <File Size="1024" TTH="Y43J4HTQSVQA2YYBZEJ4EMMMH5AZF5YNO6UNS7Y" Name="1048" />
+   <File Size="2048" TTH="A7XUHCLTJPVHYC5FQGSSDJXRMUFJLVCV3SUEFUI" Name="2048" />
+   <File Size="4671" TTH="3XIEBW7NU7B2CGQDUDNTASV4B2HEQ32UKGE7CBQ" Name="base32.cpp" />
+   <File Size="807" TTH="K7QSPPCJEIFNZZJ3WLBZOAUXKAY3B3WB6XX6DBY" Name="base32.h" />
+   <File Size="1938" TTH="FPJV55EKAYPLVRCHQ3JPTXZNDNBF3RDVEC73VMQ" Name="hash.cpp" />
+   <File Size="204" TTH="3TMXPIUXDHGH2K3ZBFZD55UK7HRU3SKWYSCYCWA" Name="hash.h" />
+   <File Size="2245" TTH="ZJGDNW3TQBTDW2N2G4Y7JBF7G5IAJ4XOTM44J6Y" Name="hashfile.cpp" />
+   <File Size="304" TTH="NZFZFFSW54Z3J4H43R6HOP6MUBQIGR6DP2L4QYY" Name="hashfile.h" />
+   <File Size="1422" TTH="RRR6LWCCV73AC7SJ4OBEAA6722OINJ6BG5HFERA" Name="main.cpp" />
+   <File Size="5638" TTH="G6SUOMFNZURZIEVQLQGHRJ45PYE3OVN2W5AVFWY" Name="Makefile" />
+   <File Size="5800" TTH="C6G6DT3D44NSNVZHMZ6BBYGZTXWXF5AWGVHPXLQ" Name="Makefile.Debug" />
+   <File Size="5882" TTH="YSGEOYG7SLTDVYXQOASF2MN5DSXYQH57HNJVB5Q" Name="Makefile.Release" />
+   <File Size="5284" TTH="MKGQHFNJTULFZWI5USLIY4ZIRLC4JW5SVUHTUGY" Name="tiger.c" />
+   <File Size="39674" TTH="6D6ITMX4ZU7TK6JN76KXI5UKHPR7MFZHZOKMOSA" Name="tiger.h" />
+   <File Size="37488" TTH="XQL6HJX3FL4U4T4YONXZPXTOJGYNMFPYONHFY6Q" Name="without_libhash" />
+   <File Size="424" TTH="P2SZKOBLGK4TL4YZ6SWC7YQ6UF2JK4NNPXGUC7Y" Name="without_libhash.pro" />
+   <File Size="33498" TTH="VFTNA7YUWEC4IJT4BYATD775ANP7QNBRVCDD2BA" Name="without_libhash.pro.user" />
+  </Directory>
+  <Directory Name="XML" >
+   <File Size="12304" TTH="7MS37P3PB4YJ4LHY37ZMEWZ4GMDZANLXZ524TPI" Name="files.xml" />
+   <File Size="12288" TTH="7QBRIAJEAC2SQ36H2OBATRSPXFKLPDJCOWJSRDY" Name="files.xml~" />
+   <File Size="924" TTH="NZ7OXPFFFFJLMESPC6ODIDWPBG7SDTCD3Y4YZCQ" Name="main.cpp" />
+   <File Size="294592" TTH="QBE4O2VQRLGVTQAKZF7EJXHY23GTMRMLAHAWW3A" Name="main.o" />
+   <File Size="6418" TTH="EFBIXWGGAGRW7AAODNW2COW7XVLY6SQVSBI4CSQ" Name="Makefile" />
+   <File Size="240244" TTH="SACQJNAYNLL7N5ZZMLKOZ6PRGV3PXGOVHP6S7MI" Name="XML" />
+   <File Size="328" TTH="SA42FJ5FWOGIJT2YES265VZHIPNTYSPQNXJDWFI" Name="XML.pro" />
+   <File Size="11809" TTH="BX2LW4MH266OCYGAQFKC2IFYZV6RZJKLXBOCHYQ" Name="XML.pro.user" />
+  </Directory>
+  <File Size="3808" TTH="QJWWLUNEPNZ7VQ3FOQDM3T37FQED7MF6QTPVPOA" Name="libhash_new_work.tar.bz2" />
+  <File Size="47398" TTH="SWJYKICXLUPGFIUYWYQIBZDGSCZIWDRX5F5XO4A" Name="QWordArchiv.tar.bz2" />
+  <File Size="763162" TTH="FX4T7XQZ6C7HUJKTFUK3GKKWDXSDQPQPSY3757A" Name="stimul.tar.gz" />
+  <File Size="421795" TTH="DIDY5WQZMQ47LE7IFDRNRY73YKBT4TGWHXEVIWY" Name="stimul_final.tar.gz" />
+  <File Size="14492" TTH="CBCOY2QBBQAIAUYYSC7Q3K4I2YDJVPO4CCLT5TY" Name="tiger_c_qt.tar.bz2" />
+  <File Size="269686" TTH="DAFDN3OEIWTFPH2JKZWF7ZWGSPW4P6BRHTENJHQ" Name="without_libhash.tar.gz" />
  </RootDirectory>
 </FileListing>

@@ -14,7 +14,7 @@ MainWindow::~MainWindow()
 }
 void MainWindow::on_btnStart_clicked()
 {
-    FileManager* s = new FileManager();
+    FileManager* s = new FileManager(this);
     /*HubConnection* hub;
     hub = new HubConnection(this, "dc.wideix.ru", 411); // dc.wideix.ru warez.gtk.su
     hub->slotConnect();
@@ -49,4 +49,8 @@ void MainWindow::on_lineSearch_returnPressed()
     {
         hubs[0]->SendSearch("");
     }
+}
+void MainWindow::on_info(QString str)
+{    
+    ui->lblInfo->setText(str);
 }

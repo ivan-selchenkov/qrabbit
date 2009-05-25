@@ -44,15 +44,15 @@ class FileManager: public QObject
 {
     Q_OBJECT
 public:
-    FileManager();
+    FileManager(QObject* parent);
 private:
     QDomDocument loadedDoc;
     QList<DirsTree> tree;
     QList<DirsTree> loadedTree;
     QList<QDir> folders;
-    void ScanFiles();
+    void scanFiles();
     void scan(DirsTree&);
-    void SaveXML();
+    void saveXML();
     //! Making QList of directories
     QList<QDomElement> makeDOM(QDomDocument&);
     //! Recursive function use for fill QDomElement el
@@ -66,12 +66,19 @@ private:
     //! Parsing child directories
     void traverseNode(const QDomNode& node, DirsTree & dtree);
     //! Loading XML Filelist
-    void LoadXML();
+    void loadXML();
 
     //! Setting TTH value for early hashed files
     void setTTH();
     //! Recursive function to set TTH in directory
     void setTTHDirectory(DirsTree & loadedTree, DirsTree & realTree);
+
+    //! Calculating TTH
+    void calculateTTH();
+    //! Calculate DirsTree
+    void calculateTTHDirectory(DirsTree & realTree);
+signals:
+    void newInfo(QString);
 };
 
 #endif // FILEMANAGER_H

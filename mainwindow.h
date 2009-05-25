@@ -21,6 +21,7 @@ private:
     QList<HubConnection*> hubs;
 public slots:
     void slotDisplayMessages(QString&);
+    void on_info(QString);
 private slots:
     void on_lineSearch_returnPressed();
     void on_lineEdit_returnPressed();
