@@ -15,7 +15,8 @@ SOURCES += main.cpp \
     tth/tiger.c \
     tth/hashfile.cpp \
     tth/hash.cpp \
-    tth/base32.cpp
+    tth/base32.cpp \
+    calculatetth.cpp
 HEADERS += mainwindow.h \
     hubconnection.h \
     global.h \
@@ -26,5 +27,8 @@ HEADERS += mainwindow.h \
     tth/hashfile.h \
     tth/hash.h \
     tth/byte_order.h \
-    tth/base32.h
+    tth/base32.h \
+    calculatetth.h \
+    fileinfo.h \
+    dirstree.h
 FORMS += mainwindow.ui

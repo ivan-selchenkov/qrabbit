@@ -1,18 +1,22 @@
 #include "filemanager.h"
-#include "tth/hashfile.h"
 #include "mainwindow.h"
 
-FileManager::FileManager(QObject* parent)
+FileManager::FileManager(QObject* parent): QObject(parent)
 {
-    folders.append(QDir("/home/ivan/QT"));
+    folders.append(QDir("/home/share/DC_SHARE"));
 
-    connect(this, SIGNAL(newInfo(QString)), (MainWindow*) parent, SLOT(on_info(QString)));
+    ctth = new CalculateTTH(this, &tree);
+
+    connect(ctth, SIGNAL(newInfo(QString)), (MainWindow*) parent, SLOT(on_info(QString)));
+    connect(ctth, SIGNAL(saveTree(bool)), this, SLOT(slotSaveXML(bool)));
+
     loadXML();
     scanFiles();
     setTTH();
-    calculateTTH();
 
-    saveXML();
+    ctth->start(QThread::LowPriority);
+
+    //saveXML();
 }
 void FileManager::scanFiles()
 {
@@ -49,6 +53,21 @@ void FileManager::scan(DirsTree& node)
         childNode.current.cd(subdir);
         scan(childNode);
         node.childDirs.append(childNode);
+    }
+}
+void FileManager::slotSaveXML(bool startAnywhere)
+{
+    if(startAnywhere) { saveXML(); return; }
+
+    if(time.elapsed() == 0) // first start
+    {
+        saveXML();
+        time.start();
+    }
+    else if(time.elapsed() > 30000)
+    {
+        time.restart();
+        saveXML();
     }
 }
 void FileManager::saveXML()
@@ -260,32 +279,5 @@ void FileManager::setTTHDirectory(DirsTree &loadedTree, DirsTree &realTree)
         index = realTree.files.indexOf(loadedFi);
         if(index >= 0)
                 realTree.files[index].TTH = loadedFi.TTH;
-    }
-}
-
-void FileManager::calculateTTH()
-{
-    int index;
-
-    for(index=0; index<tree.size(); index++)
-        calculateTTHDirectory(tree[index]);
-}
-
-void FileManager::calculateTTHDirectory(DirsTree & realTree)
-{
-    HashFile hf;
-    FileInfo file;
-    int index;
-
-    for(index=0; index<realTree.childDirs.size(); index++)
-        calculateTTHDirectory(realTree.childDirs[index]);
-
-    for(index=0; index<realTree.files.size(); index++)
-    {
-        if(realTree.files[index].TTH.isEmpty())
-        {
-            emit newInfo(QFileInfo(realTree.files[index].dir, realTree.files[index].filename).absoluteFilePath());
-            realTree.files[index].TTH = hf.Go(QFileInfo(realTree.files[index].dir, realTree.files[index].filename).absoluteFilePath());
-        }
     }
 }

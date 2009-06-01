@@ -53,4 +53,5 @@ void MainWindow::on_lineSearch_returnPressed()
 void MainWindow::on_info(QString str)
 {    
     ui->lblInfo->setText(str);
+    qApp->processEvents();
 }
