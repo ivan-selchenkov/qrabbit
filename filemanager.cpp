@@ -18,6 +18,10 @@ FileManager::FileManager(QObject* parent): QObject(parent)
 
     //saveXML();
 }
+FileManager::~FileManager()
+{
+    ctth->terminate();
+}
 void FileManager::scanFiles()
 {
     for(int i=0; i<folders.size(); i++)
