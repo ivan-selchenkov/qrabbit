@@ -15,6 +15,8 @@ MainWindow::~MainWindow()
 void MainWindow::on_btnStart_clicked()
 {
     FileManager* s = new FileManager(this);
+    connect(s, SIGNAL(progressInfo(int)), this, SLOT(on_progress_info(int)));
+
     /*HubConnection* hub;
     hub = new HubConnection(this, "dc.wideix.ru", 411); // dc.wideix.ru warez.gtk.su
     hub->slotConnect();
@@ -54,4 +56,8 @@ void MainWindow::on_info(QString str)
 {    
     ui->lblInfo->setText(str);
     qApp->processEvents();
+}
+void MainWindow::on_progress_info(int value)
+{
+    ui->lblInfo->setText("Hashing: " + QString::number(value) + " %");
 }

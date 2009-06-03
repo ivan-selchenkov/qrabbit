@@ -22,6 +22,7 @@ private:
 public slots:
     void slotDisplayMessages(QString&);
     void on_info(QString);
+    void on_progress_info(int);
 private slots:
     void on_lineSearch_returnPressed();
     void on_lineEdit_returnPressed();

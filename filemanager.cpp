@@ -7,7 +7,8 @@ FileManager::FileManager(QObject* parent): QObject(parent)
 
     ctth = new CalculateTTH(this, &tree);
 
-    connect(ctth, SIGNAL(newInfo(QString)), (MainWindow*) parent, SLOT(on_info(QString)));
+    //connect(ctth, SIGNAL(newInfo(QString)), (MainWindow*) parent, SLOT(on_info(QString)));
+    connect(ctth, SIGNAL(progressStatus(quint64)), this, SLOT(onHasingStatus(quint64)));
     connect(ctth, SIGNAL(saveTree(bool)), this, SLOT(slotSaveXML(bool)));
 
     loadXML();
@@ -15,15 +16,21 @@ FileManager::FileManager(QObject* parent): QObject(parent)
     setTTH();
 
     ctth->start(QThread::LowPriority);
-
+    qDebug() << "Total: " << totalCount;
     //saveXML();
+}
+void FileManager::onHasingStatus(quint64 hashed)
+{
+    emit progressInfo(100 * hashed/ totalCount);
 }
 FileManager::~FileManager()
 {
     ctth->terminate();
+    ctth->wait();
 }
 void FileManager::scanFiles()
 {
+    totalCount = 0;
     for(int i=0; i<folders.size(); i++)
     {
         DirsTree dir;
@@ -46,6 +53,7 @@ void FileManager::scan(DirsTree& node)
         fi.filename = file;
         fi.dir = node.current;
         fi.size = QFileInfo(node.current.absoluteFilePath(file)).size();
+        totalCount += fi.size;
         node.files.append(fi);
     }
     QStringList listDirs = node.current.entryList(QDir::Dirs);
@@ -199,7 +207,7 @@ void  FileManager::traverseNode(const QDomNode& node, DirsTree & dtree)
                     if(ok)
                         dtree.files.append(_file);
                 }
-                qDebug() << "TagName: " << domElement.tagName() << "\tName: " << str;
+                //qDebug() << "TagName: " << domElement.tagName() << "\tName: " << str;
             }
         }
         //traverseNode(domNode, dtree);
@@ -233,7 +241,7 @@ void FileManager::rootDirParse(const QDomNode& node)
             QDomElement domElement = domNode.toElement();
             if(!domElement.isNull()) {
                 if(domElement.tagName() == "RootDirectory") {                    
-                    qDebug() << "Name: " << domElement.attribute("Path");
+                    //qDebug() << "Name: " << domElement.attribute("Path");
                     _newDirTree.clear();
                     _newDirTree.current = QDir(domElement.attribute("Path"));
                     traverseNode(domNode, _newDirTree);

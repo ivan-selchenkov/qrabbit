@@ -13,6 +13,7 @@ public:
     FileManager(QObject* parent);
     ~FileManager();
 private:
+    quint64 totalCount;
     CalculateTTH* ctth;
     QTime time;
     QDomDocument loadedDoc;
@@ -43,7 +44,9 @@ private:
     void setTTHDirectory(DirsTree & loadedTree, DirsTree & realTree);
 public slots:
     void slotSaveXML(bool);
+    void onHasingStatus(quint64);
 signals:
     void newInfo(QString);
+    void progressInfo(int);
 };
 #endif // FILEMANAGER_H

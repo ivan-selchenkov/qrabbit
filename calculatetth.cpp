@@ -6,11 +6,13 @@ CalculateTTH::CalculateTTH(QObject* parent, QList<DirsTree> * _t): QThread(paren
 void CalculateTTH::run()
 {
     int index;
+    totalCount = 0;
 
     for(index=0; index<tree->size(); index++)
         calcDirectory((*tree)[index]);
 
     emit saveTree(true);
+    emit finished();
 }
 void CalculateTTH::calcDirectory(DirsTree & realTree)
 {
@@ -23,10 +25,14 @@ void CalculateTTH::calcDirectory(DirsTree & realTree)
 
     for(index=0; index<realTree.files.size(); index++)
     {
+        totalCount += realTree.files[index].size;
+
         if(realTree.files[index].TTH.isEmpty())
         {
-            emit newInfo(QFileInfo(realTree.files[index].dir, realTree.files[index].filename).absoluteFilePath());
+            //emit newInfo(QFileInfo(realTree.files[index].dir, realTree.files[index].filename).absoluteFilePath());
             realTree.files[index].TTH = hf.Go(QFileInfo(realTree.files[index].dir, realTree.files[index].filename).absoluteFilePath());
+
+            emit progressStatus(totalCount);
         }
         emit saveTree(false);
     }
