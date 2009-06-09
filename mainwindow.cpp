@@ -59,5 +59,10 @@ void MainWindow::on_info(QString str)
 }
 void MainWindow::on_progress_info(int value)
 {
-    ui->lblInfo->setText("Hashing: " + QString::number(value) + " %");
+    ui->lblInfo->setText(tr("Hashing: ") + QString::number(value) + " %");
+}
+
+void MainWindow::on_hashing_finished()
+{
+    ui->lblInfo->setText(tr("Hashing finished...OK"));
 }

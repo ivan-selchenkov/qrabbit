@@ -30,5 +30,6 @@ HEADERS += mainwindow.h \
     tth/base32.h \
     calculatetth.h \
     fileinfo.h \
-    dirstree.h
+    dirstree.h \
+    searchitem.h
 FORMS += mainwindow.ui

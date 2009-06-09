@@ -5,6 +5,7 @@
 #include "fileinfo.h"
 #include "dirstree.h"
 #include "calculatetth.h"
+#include "searchitem.h"
 
 class FileManager: public QObject
 {
@@ -42,11 +43,22 @@ private:
     void setTTH();
     //! Recursive function to set TTH in directory
     void setTTHDirectory(DirsTree & loadedTree, DirsTree & realTree);
+    
+    //! Searching files & directories
+    void searchStart(SearchItem& search);
+    //! Searching in subdirectories
+    void searchDirectory(SearchItem&, DirsTree &realTree);
+
 public slots:
     void slotSaveXML(bool);
     void onHasingStatus(quint64);
+    void on_search_request(QString search, QString mark);
+    void on_search_finished(QList<FileInfo> list, QString mark);
 signals:
+    //! Signal for MainWindow - new info for status bar
     void newInfo(QString);
+    //! Signal for MainWindow - hashing progress
     void progressInfo(int);
+    void searchFinished(QList<FileInfo> itemslist, QString mark);
 };
 #endif // FILEMANAGER_H

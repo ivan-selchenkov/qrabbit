@@ -5,6 +5,7 @@ struct FileInfo
     QString TTH;
     QByteArray interleaves;
     QDir dir;
+    QDir relativeDir;
     QString filename;
     quint64 size;
     void clear()
