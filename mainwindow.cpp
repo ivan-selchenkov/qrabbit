@@ -15,6 +15,8 @@ MainWindow::~MainWindow()
 void MainWindow::on_btnStart_clicked()
 {
     FileManager* s = new FileManager(this);
+    s->initScan();
+
     connect(s, SIGNAL(progressInfo(int)), this, SLOT(on_progress_info(int)));
 
     /*HubConnection* hub;
