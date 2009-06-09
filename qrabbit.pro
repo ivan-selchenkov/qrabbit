@@ -16,7 +16,7 @@ SOURCES += main.cpp \
     tth/hashfile.cpp \
     tth/hash.cpp \
     tth/base32.cpp \
-    calculatetth.cpp
+    initfiletree.cpp
 HEADERS += mainwindow.h \
     hubconnection.h \
     global.h \
@@ -28,8 +28,8 @@ HEADERS += mainwindow.h \
     tth/hash.h \
     tth/byte_order.h \
     tth/base32.h \
-    calculatetth.h \
     fileinfo.h \
     dirstree.h \
-    searchitem.h
+    searchitem.h \
+    initfiletree.h
 FORMS += mainwindow.ui

@@ -6,19 +6,11 @@
  </data>
  <data>
   <variable>RunConfiguration0-ProFile</variable>
-  <value type="QString" >qrabbit.pro</value>
+  <value type="QString" >/home/ivan/qt/qrabbit/qrabbit.pro</value>
  </data>
  <data>
   <variable>RunConfiguration0-RunConfiguration.name</variable>
   <value type="QString" >qrabbit</value>
- </data>
- <data>
-  <variable>RunConfiguration0-UseDyldImageSuffix</variable>
-  <value type="bool" >false</value>
- </data>
- <data>
-  <variable>RunConfiguration0-UseTerminal</variable>
-  <value type="bool" >false</value>
  </data>
  <data>
   <variable>RunConfiguration0-UserSetName</variable>
@@ -40,84 +32,14 @@
   <variable>buildConfiguration-Debug</variable>
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
-   <value key="QtVersionId" type="int" >0</value>
-   <value key="addQDumper" type="" ></value>
-  </valuemap>
- </data>
- <data>
-  <variable>buildConfiguration-Release</variable>
-  <valuemap type="QVariantMap" >
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Release</value>
-   <value key="QtVersionId" type="int" >0</value>
-   <value key="addQDumper" type="" ></value>
+   <value key="QtVersionId" type="int" >2</value>
+   <value key="buildDirectory" type="QString" >/home/ivan/qt/qrabbit</value>
   </valuemap>
  </data>
  <data>
   <variable>buildconfiguration-Debug-buildstep0</variable>
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
-   <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-7ZOkAUF85V,guid=8e1ab3fe59dc2b88b575dbe84a2cd5c3</value>
-    <value type="QString" >DESKTOP_SESSION=gnome</value>
-    <value type="QString" >DESKTOP_STARTUP_ID=</value>
-    <value type="QString" >DISPLAY=:0.0</value>
-    <value type="QString" >GDMSESSION=gnome</value>
-    <value type="QString" >GDM_LANG=ru_RU.UTF-8</value>
-    <value type="QString" >GDM_XSERVER_LOCATION=local</value>
-    <value type="QString" >GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
-    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-H02ywM/socket</value>
-    <value type="QString" >GTK_MODULES=gail:atk-bridge</value>
-    <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/ivan/.gtkrc-1.2-gnome2</value>
-    <value type="QString" >G_BROKEN_FILENAMES=1</value>
-    <value type="QString" >HISTCONTROL=erasedups</value>
-    <value type="QString" >HISTSIZE=1000</value>
-    <value type="QString" >HOME=/home/ivan</value>
-    <value type="QString" >INPUTRC=/etc/inputrc</value>
-    <value type="QString" >J2REDIR=/usr/lib/jvm/java-1.6.0-openjdk/jre</value>
-    <value type="QString" >J2SDKDIR=/usr/lib/jvm/java-1.6.0-openjdk</value>
-    <value type="QString" >JAVA_HOME=/usr/lib/jvm/java-1.6.0-openjdk</value>
-    <value type="QString" >LANG=ru_RU.UTF-8</value>
-    <value type="QString" >LC_COLLATE=C</value>
-    <value type="QString" >LESS=-R</value>
-    <value type="QString" >LOGNAME=ivan</value>
-    <value type="QString" >MOZ_PLUGIN_PATH=/usr/lib/mozilla/plugins:/opt/mozilla/lib/plugins</value>
-    <value type="QString" >OOO_FORCE_DESKTOP=gnome</value>
-    <value type="QString" >ORBIT_SOCKETDIR=/tmp/orbit-ivan</value>
-    <value type="QString" >PATH=/usr/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/bin/perlbin/site:/usr/bin/perlbin/vendor:/usr/bin/perlbin/core</value>
-    <value type="QString" >PKG_CONFIG_PATH=/usr/lib/pkgconfig</value>
-    <value type="QString" >PS1=[\u@\h \W]\$ </value>
-    <value type="QString" >PS2=> </value>
-    <value type="QString" >PS3=> </value>
-    <value type="QString" >PS4=+ </value>
-    <value type="QString" >PWD=/home/ivan</value>
-    <value type="QString" >QTDIR=/usr</value>
-    <value type="QString" >SESSION_MANAGER=local/vashik:@/tmp/.ICE-unix/5776,unix/vashik:/tmp/.ICE-unix/5776</value>
-    <value type="QString" >SHELL=/bin/bash</value>
-    <value type="QString" >SHLVL=0</value>
-    <value type="QString" >SSH_AGENT_PID=5806</value>
-    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-H02ywM/socket.ssh</value>
-    <value type="QString" >USER=ivan</value>
-    <value type="QString" >USERNAME=ivan</value>
-    <value type="QString" >WINDOWPATH=7</value>
-    <value type="QString" >XAUTHORITY=/home/ivan/.Xauthority</value>
-    <value type="QString" >XDG_CACHE_HOME=/home/ivan/.cache</value>
-    <value type="QString" >XDG_CONFIG_DIRS=/etc/xdg</value>
-    <value type="QString" >XDG_CONFIG_HOME=/home/ivan/.config</value>
-    <value type="QString" >XDG_DATA_DIRS=/usr/share:/usr/local/share:/usr/share:/usr/local/share:/usr/share/gdm/</value>
-    <value type="QString" >XDG_DATA_HOME=/home/ivan/.local/share</value>
-    <value type="QString" >XDG_SESSION_COOKIE=b32eb63ed803965238b5a5fe49f2c3c6-1244452290.770730-1139734598</value>
-   </valuelist>
-   <valuelist key="abstractProcess.arguments" type="QVariantList" >
-    <value type="QString" >/home/share/qt/qrabbit/qrabbit.pro</value>
-    <value type="QString" >-spec</value>
-    <value type="QString" >/usr/share/qt/mkspecs/linux-g++</value>
-    <value type="QString" >-r</value>
-    <value type="QString" >CONFIG+=debug</value>
-   </valuelist>
-   <value key="abstractProcess.command" type="QString" >/usr/bin/qmake</value>
-   <value key="abstractProcess.enabled" type="bool" >false</value>
-   <value key="abstractProcess.workingDirectory" type="QString" >/home/share/qt/qrabbit</value>
-   <value key="buildConfiguration" type="int" >2</value>
   </valuemap>
  </data>
  <data>
@@ -125,163 +47,125 @@
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-7ZOkAUF85V,guid=8e1ab3fe59dc2b88b575dbe84a2cd5c3</value>
-    <value type="QString" >DESKTOP_SESSION=gnome</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-cBgNQKZRmG,guid=7608484cc786b1bda67502bd4a2e2c04</value>
+    <value type="QString" >DESKTOP_SESSION=default</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
-    <value type="QString" >GDMSESSION=gnome</value>
+    <value type="QString" >GDMSESSION=default</value>
     <value type="QString" >GDM_LANG=ru_RU.UTF-8</value>
     <value type="QString" >GDM_XSERVER_LOCATION=local</value>
     <value type="QString" >GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
-    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-H02ywM/socket</value>
-    <value type="QString" >GTK_MODULES=gail:atk-bridge</value>
+    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-NyIHjY/socket</value>
+    <value type="QString" >GPG_AGENT_INFO=/tmp/seahorse-862hVW/S.gpg-agent:3261:1</value>
+    <value type="QString" >GTK_MODULES=canberra-gtk-module</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/ivan/.gtkrc-1.2-gnome2</value>
-    <value type="QString" >G_BROKEN_FILENAMES=1</value>
-    <value type="QString" >HISTCONTROL=erasedups</value>
-    <value type="QString" >HISTSIZE=1000</value>
     <value type="QString" >HOME=/home/ivan</value>
-    <value type="QString" >INPUTRC=/etc/inputrc</value>
-    <value type="QString" >J2REDIR=/usr/lib/jvm/java-1.6.0-openjdk/jre</value>
-    <value type="QString" >J2SDKDIR=/usr/lib/jvm/java-1.6.0-openjdk</value>
-    <value type="QString" >JAVA_HOME=/usr/lib/jvm/java-1.6.0-openjdk</value>
     <value type="QString" >LANG=ru_RU.UTF-8</value>
-    <value type="QString" >LC_COLLATE=C</value>
-    <value type="QString" >LESS=-R</value>
     <value type="QString" >LOGNAME=ivan</value>
-    <value type="QString" >MOZ_PLUGIN_PATH=/usr/lib/mozilla/plugins:/opt/mozilla/lib/plugins</value>
-    <value type="QString" >OOO_FORCE_DESKTOP=gnome</value>
     <value type="QString" >ORBIT_SOCKETDIR=/tmp/orbit-ivan</value>
-    <value type="QString" >PATH=/usr/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/bin/perlbin/site:/usr/bin/perlbin/vendor:/usr/bin/perlbin/core</value>
-    <value type="QString" >PKG_CONFIG_PATH=/usr/lib/pkgconfig</value>
-    <value type="QString" >PS1=[\u@\h \W]\$ </value>
-    <value type="QString" >PS2=> </value>
-    <value type="QString" >PS3=> </value>
-    <value type="QString" >PS4=+ </value>
+    <value type="QString" >PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
     <value type="QString" >PWD=/home/ivan</value>
     <value type="QString" >QTDIR=/usr</value>
-    <value type="QString" >SESSION_MANAGER=local/vashik:@/tmp/.ICE-unix/5776,unix/vashik:/tmp/.ICE-unix/5776</value>
+    <value type="QString" >SESSION_MANAGER=local/vnote:/tmp/.ICE-unix/3106</value>
     <value type="QString" >SHELL=/bin/bash</value>
-    <value type="QString" >SHLVL=0</value>
-    <value type="QString" >SSH_AGENT_PID=5806</value>
-    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-H02ywM/socket.ssh</value>
+    <value type="QString" >SSH_AGENT_PID=3237</value>
+    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-NyIHjY/socket.ssh</value>
     <value type="QString" >USER=ivan</value>
     <value type="QString" >USERNAME=ivan</value>
     <value type="QString" >WINDOWPATH=7</value>
     <value type="QString" >XAUTHORITY=/home/ivan/.Xauthority</value>
-    <value type="QString" >XDG_CACHE_HOME=/home/ivan/.cache</value>
-    <value type="QString" >XDG_CONFIG_DIRS=/etc/xdg</value>
-    <value type="QString" >XDG_CONFIG_HOME=/home/ivan/.config</value>
-    <value type="QString" >XDG_DATA_DIRS=/usr/share:/usr/local/share:/usr/share:/usr/local/share:/usr/share/gdm/</value>
-    <value type="QString" >XDG_DATA_HOME=/home/ivan/.local/share</value>
-    <value type="QString" >XDG_SESSION_COOKIE=b32eb63ed803965238b5a5fe49f2c3c6-1244452290.770730-1139734598</value>
+    <value type="QString" >XDG_DATA_DIRS=/usr/local/share/:/usr/share/:/usr/share/gdm/</value>
+    <value type="QString" >XDG_SESSION_COOKIE=bd88b288f880239c1745d5df49e37e83-1244539906.953474-953879991</value>
+   </valuelist>
+   <valuelist key="abstractProcess.arguments" type="QVariantList" >
+    <value type="QString" >/home/ivan/qt/qrabbit/qrabbit.pro</value>
+    <value type="QString" >-spec</value>
+    <value type="QString" >/usr/share/qt4/mkspecs/linux-g++</value>
+    <value type="QString" >-r</value>
+    <value type="QString" >CONFIG+=debug</value>
+   </valuelist>
+   <value key="abstractProcess.command" type="QString" >/usr/bin/qmake-qt4</value>
+   <value key="abstractProcess.enabled" type="bool" >false</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >/home/ivan/qt/qrabbit</value>
+   <value key="buildConfiguration" type="int" >2</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildconfiguration-Debug-buildstep2</variable>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList" >
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-cBgNQKZRmG,guid=7608484cc786b1bda67502bd4a2e2c04</value>
+    <value type="QString" >DESKTOP_SESSION=default</value>
+    <value type="QString" >DESKTOP_STARTUP_ID=</value>
+    <value type="QString" >DISPLAY=:0.0</value>
+    <value type="QString" >GDMSESSION=default</value>
+    <value type="QString" >GDM_LANG=ru_RU.UTF-8</value>
+    <value type="QString" >GDM_XSERVER_LOCATION=local</value>
+    <value type="QString" >GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
+    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-NyIHjY/socket</value>
+    <value type="QString" >GPG_AGENT_INFO=/tmp/seahorse-862hVW/S.gpg-agent:3261:1</value>
+    <value type="QString" >GTK_MODULES=canberra-gtk-module</value>
+    <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/ivan/.gtkrc-1.2-gnome2</value>
+    <value type="QString" >HOME=/home/ivan</value>
+    <value type="QString" >LANG=ru_RU.UTF-8</value>
+    <value type="QString" >LOGNAME=ivan</value>
+    <value type="QString" >ORBIT_SOCKETDIR=/tmp/orbit-ivan</value>
+    <value type="QString" >PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
+    <value type="QString" >PWD=/home/ivan</value>
+    <value type="QString" >QTDIR=/usr</value>
+    <value type="QString" >SESSION_MANAGER=local/vnote:/tmp/.ICE-unix/3106</value>
+    <value type="QString" >SHELL=/bin/bash</value>
+    <value type="QString" >SSH_AGENT_PID=3237</value>
+    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-NyIHjY/socket.ssh</value>
+    <value type="QString" >USER=ivan</value>
+    <value type="QString" >USERNAME=ivan</value>
+    <value type="QString" >WINDOWPATH=7</value>
+    <value type="QString" >XAUTHORITY=/home/ivan/.Xauthority</value>
+    <value type="QString" >XDG_DATA_DIRS=/usr/local/share/:/usr/share/:/usr/share/gdm/</value>
+    <value type="QString" >XDG_SESSION_COOKIE=bd88b288f880239c1745d5df49e37e83-1244539906.953474-953879991</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
     <value type="QString" >-w</value>
    </valuelist>
    <value key="abstractProcess.command" type="QString" >/usr/bin/make</value>
    <value key="abstractProcess.enabled" type="bool" >true</value>
-   <value key="abstractProcess.workingDirectory" type="QString" >/home/share/qt/qrabbit</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >/home/ivan/qt/qrabbit</value>
   </valuemap>
  </data>
  <data>
   <variable>buildconfiguration-Debug-cleanstep0</variable>
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
-   <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-7ZOkAUF85V,guid=8e1ab3fe59dc2b88b575dbe84a2cd5c3</value>
-    <value type="QString" >DESKTOP_SESSION=gnome</value>
-    <value type="QString" >DESKTOP_STARTUP_ID=</value>
-    <value type="QString" >DISPLAY=:0.0</value>
-    <value type="QString" >GDMSESSION=gnome</value>
-    <value type="QString" >GDM_LANG=ru_RU.UTF-8</value>
-    <value type="QString" >GDM_XSERVER_LOCATION=local</value>
-    <value type="QString" >GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
-    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-H02ywM/socket</value>
-    <value type="QString" >GTK_MODULES=gail:atk-bridge</value>
-    <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/ivan/.gtkrc-1.2-gnome2</value>
-    <value type="QString" >G_BROKEN_FILENAMES=1</value>
-    <value type="QString" >HISTCONTROL=erasedups</value>
-    <value type="QString" >HISTSIZE=1000</value>
-    <value type="QString" >HOME=/home/ivan</value>
-    <value type="QString" >INPUTRC=/etc/inputrc</value>
-    <value type="QString" >J2REDIR=/usr/lib/jvm/java-1.6.0-openjdk/jre</value>
-    <value type="QString" >J2SDKDIR=/usr/lib/jvm/java-1.6.0-openjdk</value>
-    <value type="QString" >JAVA_HOME=/usr/lib/jvm/java-1.6.0-openjdk</value>
-    <value type="QString" >LANG=ru_RU.UTF-8</value>
-    <value type="QString" >LC_COLLATE=C</value>
-    <value type="QString" >LESS=-R</value>
-    <value type="QString" >LOGNAME=ivan</value>
-    <value type="QString" >MOZ_PLUGIN_PATH=/usr/lib/mozilla/plugins:/opt/mozilla/lib/plugins</value>
-    <value type="QString" >OOO_FORCE_DESKTOP=gnome</value>
-    <value type="QString" >ORBIT_SOCKETDIR=/tmp/orbit-ivan</value>
-    <value type="QString" >PATH=/usr/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/bin/perlbin/site:/usr/bin/perlbin/vendor:/usr/bin/perlbin/core</value>
-    <value type="QString" >PKG_CONFIG_PATH=/usr/lib/pkgconfig</value>
-    <value type="QString" >PS1=[\u@\h \W]\$ </value>
-    <value type="QString" >PS2=> </value>
-    <value type="QString" >PS3=> </value>
-    <value type="QString" >PS4=+ </value>
-    <value type="QString" >PWD=/home/ivan</value>
-    <value type="QString" >QTDIR=/usr</value>
-    <value type="QString" >SESSION_MANAGER=local/vashik:@/tmp/.ICE-unix/5776,unix/vashik:/tmp/.ICE-unix/5776</value>
-    <value type="QString" >SHELL=/bin/bash</value>
-    <value type="QString" >SHLVL=0</value>
-    <value type="QString" >SSH_AGENT_PID=5806</value>
-    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-H02ywM/socket.ssh</value>
-    <value type="QString" >USER=ivan</value>
-    <value type="QString" >USERNAME=ivan</value>
-    <value type="QString" >WINDOWPATH=7</value>
-    <value type="QString" >XAUTHORITY=/home/ivan/.Xauthority</value>
-    <value type="QString" >XDG_CACHE_HOME=/home/ivan/.cache</value>
-    <value type="QString" >XDG_CONFIG_DIRS=/etc/xdg</value>
-    <value type="QString" >XDG_CONFIG_HOME=/home/ivan/.config</value>
-    <value type="QString" >XDG_DATA_DIRS=/usr/share:/usr/local/share:/usr/share:/usr/local/share:/usr/share/gdm/</value>
-    <value type="QString" >XDG_DATA_HOME=/home/ivan/.local/share</value>
-    <value type="QString" >XDG_SESSION_COOKIE=b32eb63ed803965238b5a5fe49f2c3c6-1244452290.770730-1139734598</value>
-   </valuelist>
-   <valuelist key="abstractProcess.arguments" type="QVariantList" >
-    <value type="QString" >clean</value>
-    <value type="QString" >-w</value>
-   </valuelist>
-   <value key="abstractProcess.command" type="QString" >/usr/bin/make</value>
-   <value key="abstractProcess.enabled" type="bool" >true</value>
-   <value key="abstractProcess.workingDirectory" type="QString" >/home/share/qt/qrabbit</value>
   </valuemap>
  </data>
  <data>
-  <variable>buildconfiguration-Release-buildstep0</variable>
+  <variable>buildconfiguration-Debug-cleanstep1</variable>
   <valuemap type="QVariantMap" >
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Release</value>
-   <value key="buildConfiguration" type="int" >0</value>
-  </valuemap>
- </data>
- <data>
-  <variable>buildconfiguration-Release-buildstep1</variable>
-  <valuemap type="QVariantMap" >
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Release</value>
-  </valuemap>
- </data>
- <data>
-  <variable>buildconfiguration-Release-cleanstep0</variable>
-  <valuemap type="QVariantMap" >
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Release</value>
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
   </valuemap>
  </data>
  <data>
   <variable>buildconfigurations</variable>
   <valuelist type="QVariantList" >
    <value type="QString" >Debug</value>
-   <value type="QString" >Release</value>
   </valuelist>
  </data>
  <data>
   <variable>buildstep0</variable>
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" ></value>
-   <value key="mkspec" type="QString" ></value>
   </valuemap>
  </data>
  <data>
   <variable>buildstep1</variable>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" ></value>
+   <value key="mkspec" type="QString" ></value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildstep2</variable>
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" ></value>
   </valuemap>
@@ -289,6 +173,7 @@
  <data>
   <variable>buildsteps</variable>
   <valuelist type="QVariantList" >
+   <value type="QString" >trolltech.qt4projectmanager.gdbmaros</value>
    <value type="QString" >trolltech.qt4projectmanager.qmake</value>
    <value type="QString" >trolltech.qt4projectmanager.make</value>
   </valuelist>
@@ -301,8 +186,16 @@
   </valuemap>
  </data>
  <data>
+  <variable>cleanstep1</variable>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" ></value>
+   <value key="clean" type="bool" >true</value>
+  </valuemap>
+ </data>
+ <data>
   <variable>cleansteps</variable>
   <valuelist type="QVariantList" >
+   <value type="QString" >trolltech.qt4projectmanager.gdbmaros</value>
    <value type="QString" >trolltech.qt4projectmanager.make</value>
   </valuelist>
  </data>
