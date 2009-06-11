@@ -12,13 +12,14 @@ class InitFileTree : public QThread
 {
     Q_OBJECT
 public:
-    InitFileTree(QObject* parent, QList<DirsTree> *, QList<QDir>* folders);
+    InitFileTree(QObject* parent, QList<DirsTree> &, QList<QDir>& folders);
     void run();
 private:
     quint64 totalCount;
+    quint64 hashedCount;
 
-    QList<QDir>* folders;
-    QList<DirsTree> * tree;
+    QList<DirsTree> & tree;
+    QList<QDir>& folders;
     QList<DirsTree> loadedTree;
 
     QTime time;
@@ -37,7 +38,7 @@ private:
     void setTTHDirectory(DirsTree & loadedTree, DirsTree & realTree);
 
     void scanFiles();
-    void scan(DirsTree&);
+    void scan(DirsTree&, const QDir& top);
     void saveXML();
 
     void slotSaveXML(bool);
@@ -53,8 +54,8 @@ private:
     QDomElement rootDirDOM(QDomDocument&, QString name, QString path);
 
  signals:
-    void finished();
-    void progress_status(quint64);
+    void signal_finished();
+    void signal_hashing_progress(int);
 
 };
 

@@ -1,5 +1,8 @@
 #ifndef DIRSTREE_H
 #define DIRSTREE_H
+
+#include "fileinfo.h"
+
 struct DirsTree;
 struct DirsTree {
     QDir current;

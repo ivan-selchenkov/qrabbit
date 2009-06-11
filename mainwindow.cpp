@@ -1,11 +1,13 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "filemanager.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindowClass)
 {
     ui->setupUi(this);
+    s = new FileManager(this);
+
+
 }
 
 MainWindow::~MainWindow()
@@ -14,10 +16,7 @@ MainWindow::~MainWindow()
 }
 void MainWindow::on_btnStart_clicked()
 {
-    FileManager* s = new FileManager(this);
-    s->initScan();
-
-    connect(s, SIGNAL(progressInfo(int)), this, SLOT(on_progress_info(int)));
+//    connect(s, SIGNAL(progressInfo(int)), this, SLOT(on_progress_info(int)));
 
     /*HubConnection* hub;
     hub = new HubConnection(this, "dc.wideix.ru", 411); // dc.wideix.ru warez.gtk.su
@@ -49,17 +48,18 @@ void MainWindow::on_lineEdit_returnPressed()
 
 void MainWindow::on_lineSearch_returnPressed()
 {
-    if(hubs[0]->isConnected())
+   /* if(hubs[0]->isConnected())
     {
         hubs[0]->SendSearch("");
-    }
+    } */
+
 }
 void MainWindow::on_info(QString str)
 {    
     ui->lblInfo->setText(str);
     qApp->processEvents();
 }
-void MainWindow::on_progress_info(int value)
+void MainWindow::slot_on_progress_info(int value)
 {
     ui->lblInfo->setText(tr("Hashing: ") + QString::number(value) + " %");
 }

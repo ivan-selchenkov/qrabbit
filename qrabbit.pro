@@ -16,7 +16,8 @@ SOURCES += main.cpp \
     tth/hashfile.cpp \
     tth/hash.cpp \
     tth/base32.cpp \
-    initfiletree.cpp
+    initfiletree.cpp \
+    searchmanager.cpp
 HEADERS += mainwindow.h \
     hubconnection.h \
     global.h \
@@ -31,5 +32,6 @@ HEADERS += mainwindow.h \
     fileinfo.h \
     dirstree.h \
     searchitem.h \
-    initfiletree.h
+    initfiletree.h \
+    searchmanager.h
 FORMS += mainwindow.ui

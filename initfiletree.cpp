@@ -1,6 +1,6 @@
 #include "initfiletree.h"
 
-InitFileTree::InitFileTree(QObject* parent, QList<DirsTree> * _t, QList<QDir>* _f): QThread(parent), tree(_t), folders(_f)
+InitFileTree::InitFileTree(QObject* parent, QList<DirsTree> & _t, QList<QDir>& _f): QThread(parent), tree(_t), folders(_f)
 {
 }
 void InitFileTree::run()
@@ -10,20 +10,17 @@ void InitFileTree::run()
     setTTH();
 
     calcTTH();
-    qDebug() << "Total: " << totalCount;
 
+    slotSaveXML(true);
+    emit signal_finished();
 }
 void InitFileTree::calcTTH()
 {
     int index;
-    totalCount = 0;
+    hashedCount = 0;
 
-    for(index=0; index<tree->size(); index++)
-        calcDirectory((*tree)[index]);
-
-    slotSaveXML(true);
-    emit finished();
-
+    for(index=0; index<tree.size(); index++)
+        calcDirectory(tree[index]);
 }
 void InitFileTree::calcDirectory(DirsTree & realTree)
 {
@@ -36,14 +33,14 @@ void InitFileTree::calcDirectory(DirsTree & realTree)
 
     for(index=0; index<realTree.files.size(); index++)
     {
-        totalCount += realTree.files[index].size;
+        hashedCount += realTree.files[index].size;
 
         if(realTree.files[index].TTH.isEmpty())
         {
             //emit newInfo(QFileInfo(realTree.files[index].dir, realTree.files[index].filename).absoluteFilePath());
             realTree.files[index].TTH = hf.Go(QFileInfo(realTree.files[index].dir, realTree.files[index].filename).absoluteFilePath());
-
-            emit progress_status(totalCount);
+            if(totalCount > 0)
+                emit signal_hashing_progress(100 * hashedCount / totalCount);
         }
         slotSaveXML(false);
     }
@@ -127,18 +124,22 @@ void  InitFileTree::traverseNode(const QDomNode& node, DirsTree & dtree)
 void InitFileTree::scanFiles()
 {
     totalCount = 0;
-    for(int i=0; i<folders->size(); i++)
+    QDir top;
+
+    for(int i=0; i<folders.size(); i++)
     {
         DirsTree dir;
-        if(!QDir(folders->at(i)).exists()) continue;
-        dir.current = folders->at(i);
-        scan(dir);
-        tree->append(dir);
+        if(!QDir(folders.at(i)).exists()) continue;
+        dir.current = folders.at(i);
+        top = dir.current;
+        top.cdUp();
+        scan(dir, top);
+        tree.append(dir);
     }
 
     //SaveXML();
 }
-void InitFileTree::scan(DirsTree& node)
+void InitFileTree::scan(DirsTree& node, const QDir& top)
 {
     FileInfo fi;
 
@@ -148,6 +149,7 @@ void InitFileTree::scan(DirsTree& node)
         fi.clear();
         fi.filename = file;
         fi.dir = node.current;
+        fi.relativeDir = top.relativeFilePath(node.current.absoluteFilePath(file));
         fi.size = QFileInfo(node.current.absoluteFilePath(file)).size();
         totalCount += fi.size;
         node.files.append(fi);
@@ -159,7 +161,7 @@ void InitFileTree::scan(DirsTree& node)
         DirsTree childNode;
         childNode.current = node.current;
         childNode.current.cd(subdir);
-        scan(childNode);
+        scan(childNode, top);
         node.childDirs.append(childNode);
     }
 }
@@ -168,14 +170,13 @@ void InitFileTree::setTTH()
     DirsTree loadedRootTree;
     DirsTree realRootTree;
     int index;
-    int i;
     // going throw loadedTree and setting TTH in tree
     foreach(loadedRootTree, loadedTree)
     {
         // finding roots  in tree
-        index = tree->indexOf(loadedRootTree);
+        index = tree.indexOf(loadedRootTree);
         if(index >= 0) {
-            setTTHDirectory(loadedRootTree, (*tree)[index]);
+            setTTHDirectory(loadedRootTree, tree[index]);
         }
     }
 }
@@ -186,7 +187,6 @@ void InitFileTree::setTTHDirectory(DirsTree &loadedTree, DirsTree &realTree)
     FileInfo current;
     QFileInfo fileinfo;
     int index;
-    HashFile hf;
 
     foreach(loadedDir, loadedTree.childDirs) // comparing childDirs
     {
@@ -247,7 +247,7 @@ QList<QDomElement> InitFileTree::makeDOM(QDomDocument& doc)
     DirsTree item;
     QList<QDomElement> result;
 
-    foreach(item, (*tree))
+    foreach(item, tree)
     {
         QDomElement el = rootDirDOM(doc, item.current.dirName(), item.current.absolutePath());
         nodeDOM(el, doc, item);
