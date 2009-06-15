@@ -1,6 +1,6 @@
 #include "filemanager.h"
 #include "mainwindow.h"
-#include "searchmanager.h"
+#include <QThreadPool>
 
 FileManager::FileManager(QObject* parent): QObject(parent), m_isFileListLoaded(false)
 {
@@ -23,11 +23,13 @@ FileManager::~FileManager()
     ift->wait(); // waiting while terminating...
     delete ift;
 
+    /*
     foreach(SearchManager* sm, searchHash)
     {
         sm->terminate();
         sm->wait();
     }
+    */
 }
 //! Hash is finished and file tree ready to search
 void FileManager::slot_on_hashing_finished()
@@ -40,24 +42,23 @@ void FileManager::slot_on_search_result(FileInfo fi, QString mark)
 }
 void FileManager::slot_on_search_finished(QString mark)
 {
-    SearchManager* sm = searchHash[mark];
-    delete sm;
-    searchHash.remove(mark);
+    //SearchManager* sm = searchHash[mark];
+    //delete sm;
+    //searchHash.remove(mark);
 }
 
 void FileManager::search(QString search, QString mark)
 {
-    SearchItem si(search, mark);
-
-    SearchManager* sm = new SearchManager(this, tree, si);
+    SearchManager* sm = new SearchManager(this, tree, search, mark);
 
     qRegisterMetaType<FileInfo>("FileInfo");
 
     connect(sm, SIGNAL(signal_search_result(FileInfo,QString)), this, SLOT(slot_on_search_result(FileInfo,QString)));
-    connect(sm, SIGNAL(signal_search_finished(QString)), this, SLOT(slot_on_search_finished(QString)));
+    //connect(sm, SIGNAL(signal_search_finished(QString)), this, SLOT(slot_on_search_finished(QString)));
 
-    searchHash[mark] = sm;
-    sm->start(QThread::LowestPriority);
+    //searchHash[mark] = sm;
+    //sm->start(QThread::LowestPriority);
+    QThreadPool::globalInstance()->start(sm);
 }
 
 

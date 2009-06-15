@@ -9,7 +9,9 @@ struct SearchItem
     QString mark;
     SearchItem(QString search, QString _mark): mark(_mark)
     {
-        list = search.split(QRegExp("\\W+"), QString::SkipEmptyParts);        
+    }
+    SearchItem()
+    {
     }
 };
 #endif // SEARCHITEM_H

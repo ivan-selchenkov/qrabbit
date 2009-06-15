@@ -40,11 +40,8 @@ public slots:
     void slotConnect();
     void slotReadyRead();
     void slotConnected();
-    void slotParseList();
-    void slotStartSend();
     void slotLoadNickList();
     void slotStartSendUdp();
-    void slotSearchMessage(QString);
 private:
     QTcpSocket* m_pTcpSocket;
     QUdpSocket* m_pUdpSocket;
@@ -64,12 +61,13 @@ private:
     void splitArray();
     QByteArray generateKey(const QByteArray&);
     bool m_isExtended;
+    void searchMessage(QString);
+    void parseList();
+    void startSend();
 signals:
     void signalConnected();
     void signalDisconnected();
     void signalRedirect(QString strHost, quint16 nPort);
-    void signalParseList();
-    void signalStartSend();
     void signalDisplayMessage(QString&);
 
     // Сигналы для списка пользователей
@@ -80,7 +78,7 @@ signals:
     void signalListChanged();
     void signalListAboutChanged();
 
-    void signalSearchMessage(QString);
+    //void signalSearchMessage(QString);
     void signalStartSendUdp();
 };
 struct UdpDatagram

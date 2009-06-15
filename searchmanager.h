@@ -3,15 +3,16 @@
 
 #include <QThread>
 #include <QtCore>
+#include <QRunnable>
 #include "dirstree.h"
 #include "searchitem.h"
 #include "fileinfo.h"
 
-class SearchManager : public QThread
+class SearchManager : public QObject, public QRunnable //public QThread
 {
     Q_OBJECT
 public:
-    SearchManager(QObject* parent, QList<DirsTree> &, SearchItem&);
+    SearchManager(QObject* parent, QList<DirsTree> &, QString search, QString mark);
     ~SearchManager();
     //! Searching files & directories
     void run();
@@ -20,7 +21,8 @@ public:
 
 private:
     QList<DirsTree> & tree;
-    SearchItem & si;
+    QStringList list;
+    QString mark;
     QList<FileInfo> sendlist;
 signals:
     void signal_search_finished(QString mark);
