@@ -2,9 +2,15 @@
 
 InitFileTree::InitFileTree(QObject* parent, QList<DirsTree> & _t, QList<QDir>& _f): QThread(parent), tree(_t), folders(_f)
 {
+    qDebug() << "InitFileTree()";
+}
+InitFileTree::~InitFileTree()
+{
+    qDebug() << "~InitFileTree()";
 }
 void InitFileTree::run()
 {
+    qDebug() << "InitFileTree->run()";
     loadXML();
     scanFiles();
     setTTH();
@@ -12,6 +18,7 @@ void InitFileTree::run()
     calcTTH();
 
     slotSaveXML(true);
+    qDebug() << "exiting InitFileTree->run()";
     emit signal_finished();
 }
 void InitFileTree::calcTTH()

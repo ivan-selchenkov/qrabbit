@@ -1,7 +1,12 @@
 #ifndef FILEINFO_H
 #define FILEINFO_H
-struct FileInfo
+
+#include <QtCore>
+#include <QList>
+
+class FileInfo
 {
+public:
     QString TTH;
     QByteArray interleaves;
     QDir dir;
@@ -21,4 +26,6 @@ struct FileInfo
             return false;
     }
 };
+
+//typedef QList<FileInfo> QListFileInfo;
 #endif // FILEINFO_H

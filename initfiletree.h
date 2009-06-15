@@ -13,6 +13,7 @@ class InitFileTree : public QThread
     Q_OBJECT
 public:
     InitFileTree(QObject* parent, QList<DirsTree> &, QList<QDir>& folders);
+    ~InitFileTree();
     void run();
 private:
     quint64 totalCount;

@@ -4,6 +4,7 @@
 #include <QtGui/QMainWindow>
 #include "hubconnection.h"
 #include "filemanager.h"
+#include "fileinfo.h"
 
 namespace Ui
 {
@@ -18,14 +19,15 @@ public:
     MainWindow(QWidget *parent = 0);
     ~MainWindow();
 private:
-    FileManager* s;
+    FileManager* filemanager;
     Ui::MainWindowClass *ui;
     QList<HubConnection*> hubs;
 public slots:
-    void slotDisplayMessages(QString&);
+    void slotDisplayMessages(QString);
     void on_info(QString);
     void slot_on_progress_info(int);
     void on_hashing_finished();
+    void on_search_result(FileInfo, QString);
 private slots:
     void on_lineSearch_returnPressed();
     void on_lineEdit_returnPressed();

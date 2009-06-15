@@ -26,7 +26,8 @@ private:
 
     bool m_isFileListLoaded;
 public slots:
-    void slot_on_search_finished(QList<FileInfo> list, QString mark);
+    void slot_on_search_finished(QString mark);
+    void slot_on_search_result(FileInfo, QString mark);
 private slots:
     void slot_on_hashing_finished();
 signals:
@@ -34,5 +35,6 @@ signals:
     void newInfo(QString);
     //! Signal for MainWindow - hashing progress
     void progressInfo(int);
+    void signal_search_result(FileInfo list, QString mark);
 };
 #endif // FILEMANAGER_H

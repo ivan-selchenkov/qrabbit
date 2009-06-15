@@ -12,6 +12,7 @@ class SearchManager : public QThread
     Q_OBJECT
 public:
     SearchManager(QObject* parent, QList<DirsTree> &, SearchItem&);
+    ~SearchManager();
     //! Searching files & directories
     void run();
     //! Searching in subdirectories
@@ -22,7 +23,8 @@ private:
     SearchItem & si;
     QList<FileInfo> sendlist;
 signals:
-    void signal_search_finished(QList<FileInfo> itemslist, QString mark);
+    void signal_search_finished(QString mark);
+    void signal_search_result(FileInfo itemslist, QString mark);
 };
 
 #endif // SEARCHMANAGER_H

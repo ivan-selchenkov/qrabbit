@@ -1,5 +1,6 @@
 #include "filemanager.h"
 #include "mainwindow.h"
+#include "searchmanager.h"
 
 FileManager::FileManager(QObject* parent): QObject(parent), m_isFileListLoaded(false)
 {
@@ -16,8 +17,11 @@ FileManager::FileManager(QObject* parent): QObject(parent), m_isFileListLoaded(f
 }
 FileManager::~FileManager()
 {
+    qDebug() << "~FileManager()";
+
     ift->terminate(); // terminating hashing process
     ift->wait(); // waiting while terminating...
+    delete ift;
 
     foreach(SearchManager* sm, searchHash)
     {
@@ -30,19 +34,30 @@ void FileManager::slot_on_hashing_finished()
 {
     m_isFileListLoaded = true;
 }
-
-void FileManager::slot_on_search_finished(QList<FileInfo> itemslist, QString mark)
+void FileManager::slot_on_search_result(FileInfo fi, QString mark)
 {
-    //qDebug() << itemslist[0].filename;
+    emit signal_search_result(fi, mark);
+}
+void FileManager::slot_on_search_finished(QString mark)
+{
+    SearchManager* sm = searchHash[mark];
+    delete sm;
+    searchHash.remove(mark);
 }
 
-void FileManager::slot_on_search_request(QString search, QString mark)
+void FileManager::search(QString search, QString mark)
 {
     SearchItem si(search, mark);
 
-    SearchManager sm(this, tree, si);
-    searchHash["mark"] = &sm;
-    sm.start(QThread::LowestPriority);
+    SearchManager* sm = new SearchManager(this, tree, si);
+
+    qRegisterMetaType<FileInfo>("FileInfo");
+
+    connect(sm, SIGNAL(signal_search_result(FileInfo,QString)), this, SLOT(slot_on_search_result(FileInfo,QString)));
+    connect(sm, SIGNAL(signal_search_finished(QString)), this, SLOT(slot_on_search_finished(QString)));
+
+    searchHash[mark] = sm;
+    sm->start(QThread::LowestPriority);
 }
 
 
