@@ -156,11 +156,12 @@ void InitFileTree::scan(DirsTree& node, const QDir& top)
         fi.clear();
         fi.filename = file;
         fi.dir = node.current;
-        fi.relativeDir = top.relativeFilePath(node.current.absoluteFilePath(file));
+        fi.relativePath = top.relativeFilePath(node.current.absoluteFilePath(file));
         fi.size = QFileInfo(node.current.absoluteFilePath(file)).size();
         totalCount += fi.size;
         node.files.append(fi);
     }
+    node.relativePath = top.relativeFilePath(node.current.absolutePath());
     QStringList listDirs = node.current.entryList(QDir::Dirs);
     foreach(QString subdir, listDirs)
     {

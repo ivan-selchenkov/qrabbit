@@ -55,7 +55,7 @@ void HubNickList::slotMyInfo(QString data)
     str.remove(str.size()-1, 1);
     user.connection = str;
     user.mode = c;
-    user.sharesize = split.at(4).toLong();
+    user.sharesize = split.at(4).toULongLong();
 
     m_mutex.lock();
         it = qFind(list.begin(), list.end(), user); // Looking for element

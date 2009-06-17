@@ -31,7 +31,7 @@ HEADERS += mainwindow.h \
     tth/base32.h \
     fileinfo.h \
     dirstree.h \
-    searchitem.h \
     initfiletree.h \
-    searchmanager.h
+    searchmanager.h \
+    searchitem.h
 FORMS += mainwindow.ui

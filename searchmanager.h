@@ -12,7 +12,7 @@ class SearchManager : public QObject, public QRunnable //public QThread
 {
     Q_OBJECT
 public:
-    SearchManager(QObject* parent, QList<DirsTree> &, QString search, QString mark);
+    SearchManager(QObject* parent, QList<DirsTree> &, SearchItem);
     ~SearchManager();
     //! Searching files & directories
     void run();
@@ -22,11 +22,11 @@ public:
 private:
     QList<DirsTree> & tree;
     QStringList list;
-    QString mark;
+    QRegExp exp;
+    SearchItem search_item;
     QList<FileInfo> sendlist;
 signals:
-    void signal_search_finished(QString mark);
-    void signal_search_result(FileInfo itemslist, QString mark);
+    void signal_search_result(FileInfo itemslist, SearchItem si);
 };
 
 #endif // SEARCHMANAGER_H

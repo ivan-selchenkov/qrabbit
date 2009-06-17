@@ -36,28 +36,23 @@ void FileManager::slot_on_hashing_finished()
 {
     m_isFileListLoaded = true;
 }
-void FileManager::slot_on_search_result(FileInfo fi, QString mark)
+void FileManager::slot_on_search_result(FileInfo fi, SearchItem search_item)
 {
-    emit signal_search_result(fi, mark);
+    qRegisterMetaType<FileInfo>("FileInfo");
+    qRegisterMetaType<SearchItem>("SearchItem");
+    emit signal_search_result(fi, search_item);
 }
-void FileManager::slot_on_search_finished(QString mark)
+void FileManager::slot_on_search_request(SearchItem search_item)
 {
-    //SearchManager* sm = searchHash[mark];
-    //delete sm;
-    //searchHash.remove(mark);
-}
 
-void FileManager::search(QString search, QString mark)
-{
-    SearchManager* sm = new SearchManager(this, tree, search, mark);
+    if(!m_isFileListLoaded) return; // file tree is not ready
+
+    SearchManager* sm = new SearchManager(this, tree, search_item);
 
     qRegisterMetaType<FileInfo>("FileInfo");
+    qRegisterMetaType<SearchItem>("SearchItem");
 
-    connect(sm, SIGNAL(signal_search_result(FileInfo,QString)), this, SLOT(slot_on_search_result(FileInfo,QString)));
-    //connect(sm, SIGNAL(signal_search_finished(QString)), this, SLOT(slot_on_search_finished(QString)));
-
-    //searchHash[mark] = sm;
-    //sm->start(QThread::LowestPriority);
+    connect(sm, SIGNAL(signal_search_result(FileInfo,SearchItem)), this, SLOT(slot_on_search_result(FileInfo,SearchItem)));
     QThreadPool::globalInstance()->start(sm);
 }
 

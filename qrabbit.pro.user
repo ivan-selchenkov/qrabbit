@@ -57,7 +57,7 @@
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-jkMl0SMcwB,guid=96c21b5a4a97efa31ba9ff324a35fc9c</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-KnjWzaejAB,guid=cf7f03cb391023bbfb9883dd4a38762b</value>
     <value type="QString" >DESKTOP_SESSION=gnome</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -65,7 +65,7 @@
     <value type="QString" >GDM_LANG=ru_RU.UTF-8</value>
     <value type="QString" >GDM_XSERVER_LOCATION=local</value>
     <value type="QString" >GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
-    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-JQpIPe/socket</value>
+    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-Q7Fy4Z/socket</value>
     <value type="QString" >GTK_MODULES=canberra-gtk-module:gail:atk-bridge</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/ivan/.gtkrc-1.2-gnome2</value>
     <value type="QString" >G_BROKEN_FILENAMES=1</value>
@@ -89,11 +89,11 @@
     <value type="QString" >PS4=+ </value>
     <value type="QString" >PWD=/home/ivan</value>
     <value type="QString" >QTDIR=/usr</value>
-    <value type="QString" >SESSION_MANAGER=local/vashik:@/tmp/.ICE-unix/5680,unix/vashik:/tmp/.ICE-unix/5680</value>
+    <value type="QString" >SESSION_MANAGER=local/vashik:@/tmp/.ICE-unix/5721,unix/vashik:/tmp/.ICE-unix/5721</value>
     <value type="QString" >SHELL=/bin/bash</value>
     <value type="QString" >SHLVL=0</value>
-    <value type="QString" >SSH_AGENT_PID=5710</value>
-    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-JQpIPe/socket.ssh</value>
+    <value type="QString" >SSH_AGENT_PID=5751</value>
+    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-Q7Fy4Z/socket.ssh</value>
     <value type="QString" >USER=ivan</value>
     <value type="QString" >USERNAME=ivan</value>
     <value type="QString" >WINDOWPATH=7</value>
@@ -103,7 +103,7 @@
     <value type="QString" >XDG_CONFIG_HOME=/home/ivan/.config</value>
     <value type="QString" >XDG_DATA_DIRS=/usr/share:/usr/local/share:/usr/share:/usr/local/share:/usr/share/gdm/</value>
     <value type="QString" >XDG_DATA_HOME=/home/ivan/.local/share</value>
-    <value type="QString" >XDG_SESSION_COOKIE=b32eb63ed803965238b5a5fe49f2c3c6-1245052059.786389-932261690</value>
+    <value type="QString" >XDG_SESSION_COOKIE=b32eb63ed803965238b5a5fe49f2c3c6-1245214250.769498-2046983975</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
     <value type="QString" >/home/share/qt/qrabbit/qrabbit.pro</value>
@@ -123,7 +123,7 @@
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-jkMl0SMcwB,guid=96c21b5a4a97efa31ba9ff324a35fc9c</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-KnjWzaejAB,guid=cf7f03cb391023bbfb9883dd4a38762b</value>
     <value type="QString" >DESKTOP_SESSION=gnome</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -131,7 +131,7 @@
     <value type="QString" >GDM_LANG=ru_RU.UTF-8</value>
     <value type="QString" >GDM_XSERVER_LOCATION=local</value>
     <value type="QString" >GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
-    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-JQpIPe/socket</value>
+    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-Q7Fy4Z/socket</value>
     <value type="QString" >GTK_MODULES=canberra-gtk-module:gail:atk-bridge</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/ivan/.gtkrc-1.2-gnome2</value>
     <value type="QString" >G_BROKEN_FILENAMES=1</value>
@@ -155,11 +155,11 @@
     <value type="QString" >PS4=+ </value>
     <value type="QString" >PWD=/home/ivan</value>
     <value type="QString" >QTDIR=/usr</value>
-    <value type="QString" >SESSION_MANAGER=local/vashik:@/tmp/.ICE-unix/5680,unix/vashik:/tmp/.ICE-unix/5680</value>
+    <value type="QString" >SESSION_MANAGER=local/vashik:@/tmp/.ICE-unix/5721,unix/vashik:/tmp/.ICE-unix/5721</value>
     <value type="QString" >SHELL=/bin/bash</value>
     <value type="QString" >SHLVL=0</value>
-    <value type="QString" >SSH_AGENT_PID=5710</value>
-    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-JQpIPe/socket.ssh</value>
+    <value type="QString" >SSH_AGENT_PID=5751</value>
+    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-Q7Fy4Z/socket.ssh</value>
     <value type="QString" >USER=ivan</value>
     <value type="QString" >USERNAME=ivan</value>
     <value type="QString" >WINDOWPATH=7</value>
@@ -169,7 +169,7 @@
     <value type="QString" >XDG_CONFIG_HOME=/home/ivan/.config</value>
     <value type="QString" >XDG_DATA_DIRS=/usr/share:/usr/local/share:/usr/share:/usr/local/share:/usr/share/gdm/</value>
     <value type="QString" >XDG_DATA_HOME=/home/ivan/.local/share</value>
-    <value type="QString" >XDG_SESSION_COOKIE=b32eb63ed803965238b5a5fe49f2c3c6-1245052059.786389-932261690</value>
+    <value type="QString" >XDG_SESSION_COOKIE=b32eb63ed803965238b5a5fe49f2c3c6-1245214250.769498-2046983975</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
     <value type="QString" >-w</value>
@@ -184,7 +184,7 @@
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-7YEO7EA3rQ,guid=e98d211a2b52a64cd2d798ac4a35edc1</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-weXFAS7Cwn,guid=4b78c3312320c8aee16a5d664a377d62</value>
     <value type="QString" >DESKTOP_SESSION=gnome</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -192,7 +192,7 @@
     <value type="QString" >GDM_LANG=ru_RU.UTF-8</value>
     <value type="QString" >GDM_XSERVER_LOCATION=local</value>
     <value type="QString" >GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
-    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-lArDZ7/socket</value>
+    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-BZpKvW/socket</value>
     <value type="QString" >GTK_MODULES=canberra-gtk-module:gail:atk-bridge</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/ivan/.gtkrc-1.2-gnome2</value>
     <value type="QString" >G_BROKEN_FILENAMES=1</value>
@@ -216,11 +216,11 @@
     <value type="QString" >PS4=+ </value>
     <value type="QString" >PWD=/home/ivan</value>
     <value type="QString" >QTDIR=/usr</value>
-    <value type="QString" >SESSION_MANAGER=local/vashik:@/tmp/.ICE-unix/5660,unix/vashik:/tmp/.ICE-unix/5660</value>
+    <value type="QString" >SESSION_MANAGER=local/vashik:@/tmp/.ICE-unix/5729,unix/vashik:/tmp/.ICE-unix/5729</value>
     <value type="QString" >SHELL=/bin/bash</value>
     <value type="QString" >SHLVL=0</value>
-    <value type="QString" >SSH_AGENT_PID=5690</value>
-    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-lArDZ7/socket.ssh</value>
+    <value type="QString" >SSH_AGENT_PID=5759</value>
+    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-BZpKvW/socket.ssh</value>
     <value type="QString" >USER=ivan</value>
     <value type="QString" >USERNAME=ivan</value>
     <value type="QString" >WINDOWPATH=7</value>
@@ -230,7 +230,7 @@
     <value type="QString" >XDG_CONFIG_HOME=/home/ivan/.config</value>
     <value type="QString" >XDG_DATA_DIRS=/usr/share:/usr/local/share:/usr/share:/usr/local/share:/usr/share/gdm/</value>
     <value type="QString" >XDG_DATA_HOME=/home/ivan/.local/share</value>
-    <value type="QString" >XDG_SESSION_COOKIE=b32eb63ed803965238b5a5fe49f2c3c6-1245048256.675967-1570655232</value>
+    <value type="QString" >XDG_SESSION_COOKIE=b32eb63ed803965238b5a5fe49f2c3c6-1245150561.669787-880494641</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
     <value type="QString" >clean</value>

@@ -2,6 +2,7 @@
 #include "global.h"
 #include <QTextCodec>
 #include <QStringList>
+#include "searchitem.h"
 
 HubConnection::HubConnection(QObject* parent, QString str_Host, quint16 n_Port): QObject(parent)
 {
@@ -111,7 +112,7 @@ void HubConnection::parseList()
         current = fromServer.takeFirst(); // Берем первый и удаляем его
         if(current.isEmpty()) continue; // Если пустая строка идем к следующей
 
-        //qDebug()<<"[DATA] "+current;
+        qDebug()<<"[DATA] "+current;
      if(current.at(0) == '$') {
         list = current.split(' '); // Делим строку на части по пробелу
         // Анализируем первую часть
@@ -229,8 +230,7 @@ void HubConnection::searchMessage(QString search)
 {
     qDebug() << search;
 
-    SearchPack s;
-    QString answer;
+    SearchItem search_item;
 
     QStringList split = search.split(" ");
 
@@ -241,49 +241,77 @@ void HubConnection::searchMessage(QString search)
 
     if(split_ip.at(0) == "Hub") // user is passive, send answer to hub
     {
-        s.host = "Hub";
-        s.nick = split_ip.at(1);
+        search_item.host = "Hub";
+        search_item.nick = split_ip.at(1);
     }
     else
     {
-        s.host = split_ip.at(0);
-        s.port = split_ip.at(1).toInt();
+        search_item.host = split_ip.at(0);
+        search_item.port = split_ip.at(1).toInt();
     }
 
     QStringList split_s = split.at(1).split("?");
     if(split_s.size() < 5) return;
 
-    if(split_s.at(0) == "T") s.isLimit = true;
-    else s.isLimit = false;
+    if(split_s.at(0) == "T") search_item.isLimit = true;
+    else search_item.isLimit = false;
 
-    if(split_s.at(1) == "F") s.isMore = true;
-    else s.isMore = false;
+    if(split_s.at(1) == "F") search_item.isMore = true;
+    else search_item.isMore = false;
 
-    s.size = split_s.at(2).toLong();
-    s.type = (Ftype)split_s.at(3).toInt();
+    search_item.size = split_s.at(2).toLong();
+    search_item.type = (SearchItem::SEARCH_FILE_TYPE)split_s.at(3).toInt();
 
-    s.data = split_s.at(4);
+    search_item.data = split_s.at(4);
 
-//    UdpDatagram u;
-//    u.data.clear();
-    answer = QString("$SR Washik DC_SHARE\\%1.exe").arg(s.data);
+    qRegisterMetaType<SearchItem>("SearchItem");
+
+    emit signal_search_request(search_item);
+
+}
+void HubConnection::slot_search_result(FileInfo file_info, SearchItem search_item)
+{
+    UdpDatagram udp;
+    QString answer;
+// $SR fromuser path_to_file.ext0x05filesize freeslots/openslots0x05hubname (hubaddress[:port])0x05touser|
+// $SR fromuser path_to_file.ext0x05filesize freeslots/openslots0x05hubname (hubaddress[:port])|
+// Directories: $SR <nick><0x20><directory><0x20><free slots>/<total slots><0x05><Hubname><0x20>(<Hubip:port>)
+// Files: $SR <nick><0x20><filename><0x05><filesize><0x20><free slots>/<total slots><0x05><Hubname><0x20>(<Hubip:port>)
+// $SR <user name> <file name>\05<file size> <slots>\05TTH:<file tth> (<hub ip>:<hub port>)|
+//note that port only needs to specified if it's not 411
+//There is also a SR command for answering active-mode queries via UDP.
+
+
+    if(file_info.isDir) {
+        answer = QString("$SR %1 %2").arg(userName).arg(file_info.relativePath.replace("/", "\\"));
+    }
+    else
+    {
+        answer = QString("$SR %1 %2").arg(userName).arg(file_info.relativePath.replace("/", "\\"));
+        answer.append((char)0x05); // file
+        answer.append(QString::number(file_info.size)); //file
+    }
+
+
+    answer.append(" 1/1"); qDebug()<<"set correct slot number HubConnection::slot_search_result()";
+
     answer.append((char)0x05);
-    answer.append("666");
-    answer.append(" 1/1");
-//    u.data.append(answer);
-//    u.data.append((char)0x05);
-    answer = QString("TTH:3CTFAAYAAAAAA4KW3RKKK7YAACQJM7YAAAAAAAA (127.0.0.1:411)|");
-//    u.data.append(answer);
-//    u.host = s.host;
-//    u.port = s.port;
 
-//    outUdp.append(u);
+    if(!file_info.isDir) answer.append(QString("TTH:%1").arg(file_info.TTH));
+
+    answer.append(QString(" (%2").arg(Host));
+
+    if(Port != 411)
+        answer.append(QString(":%1").arg(Port));
+
+    answer.append(")|");
+    udp.data.append(answer);
+    udp.host = search_item.host;
+    udp.port = search_item.port;
+
+    outUdp.append(udp); // to udp queue
 
     emit signalStartSendUdp();
-
-    QString tmp;
-    tmp = s.toString();
-    emit signalDisplayMessage(tmp);
 }
 void HubConnection::SendMessage(QString message)
 {

@@ -41,7 +41,7 @@ struct UserInfo
     QString connection;
     QChar status;
 
-    long sharesize; // размер шары
+    quint64 sharesize; // размер шары
 
     bool operator== ( const UserInfo & other ) const
     {

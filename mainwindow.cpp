@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "searchitem.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindowClass)
@@ -29,6 +30,11 @@ void MainWindow::on_btnStart_clicked()
 
     hub->slotConnect();
     connect(hub, SIGNAL(signalDisplayMessage(QString&)), this, SLOT(slotDisplayMessages(QString&)));
+    // connecting hubconnection to filemanager to analize search request
+    connect(hub, SIGNAL(signal_search_request(SearchItem)), filemanager, SLOT(slot_on_search_request(SearchItem)));
+    connect(filemanager, SIGNAL(signal_search_result(FileInfo,SearchItem)), hub, SLOT(slot_search_result(FileInfo,SearchItem)));
+
+
     ui->tableView->setModel(hub->model);
     ui->tableView->setColumnWidth (0, 150 ); //Nick size
     ui->tableView->setColumnWidth (1, 100 ); // Share size
@@ -55,7 +61,7 @@ void MainWindow::on_lineEdit_returnPressed()
 
 void MainWindow::on_lineSearch_returnPressed()
 {
-    filemanager->search(ui->lineSearch->text(), ui->lineSearch->text() + QTime::currentTime().toString());
+    //filemanager->search(ui->lineSearch->text(), ui->lineSearch->text() + QTime::currentTime().toString());
    /* if(hubs[0]->isConnected())
     {
         hubs[0]->SendSearch("");

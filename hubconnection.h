@@ -7,6 +7,8 @@
 #include <QList>
 #include "hubnicklist.h"
 #include "tablemodel.h"
+#include "searchitem.h"
+#include "fileinfo.h"
 
 class HubNickList;
 class TableModel;
@@ -42,6 +44,8 @@ public slots:
     void slotConnected();
     void slotLoadNickList();
     void slotStartSendUdp();
+
+    void slot_search_result(FileInfo, SearchItem);
 private:
     QTcpSocket* m_pTcpSocket;
     QUdpSocket* m_pUdpSocket;
@@ -80,39 +84,13 @@ signals:
 
     //void signalSearchMessage(QString);
     void signalStartSendUdp();
+
+    void signal_search_request(SearchItem);
 };
 struct UdpDatagram
 {
     QByteArray data;
     QString host;
     int port;
-};
-enum Ftype
-{
-    ANY = 1,
-    AUDIO = 2,
-    ARCHIVE = 3,
-    DOCUMENT = 4,
-    BIN = 5,
-    IMAGE = 6,
-    VIDEO = 7,
-    FOLDER = 8,
-    TTH = 9,
-    ISO = 10
-};
-struct SearchPack
-{
-    QString host;
-    QString nick;
-    int port;
-    bool isLimit;
-    bool isMore;
-    long size;
-    Ftype type;
-    QString data;
-    QString toString()
-    {
-        return QString("Host: %3, Port: %4, Nick: %5, Search: %1, Type: %2").arg(data).arg(type).arg(host).arg(port).arg(nick);
-    }
 };
 #endif // HUBCONNECTION_H

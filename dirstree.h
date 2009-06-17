@@ -6,6 +6,7 @@
 struct DirsTree;
 struct DirsTree {
     QDir current;
+    QString relativePath;
     QList<DirsTree> childDirs;
     QList<FileInfo> files;
     void clear()

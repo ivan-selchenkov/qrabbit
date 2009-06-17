@@ -17,24 +17,22 @@ public:
     {
         return m_isFileListLoaded;
     }
-    void search(QString search, QString mark);
 private:
     InitFileTree* ift;
     QList<DirsTree> tree;
     QList<QDir> folders;
-    QHash<QString, SearchManager*> searchHash;
 
     bool m_isFileListLoaded;
 public slots:
-    void slot_on_search_finished(QString mark);
-    void slot_on_search_result(FileInfo, QString mark);
+    void slot_on_search_request(SearchItem);
 private slots:
+    void slot_on_search_result(FileInfo, SearchItem);
     void slot_on_hashing_finished();
 signals:
     //! Signal for MainWindow - new info for status bar
     void newInfo(QString);
     //! Signal for MainWindow - hashing progress
     void progressInfo(int);
-    void signal_search_result(FileInfo list, QString mark);
+    void signal_search_result(FileInfo file_info, SearchItem search_item);
 };
 #endif // FILEMANAGER_H
