@@ -25,8 +25,8 @@ void MainWindow::on_btnStart_clicked()
 
     HubConnection* hub;
 
-//    hub = new HubConnection(this, "dc.wideix.ru", 411); // dc.wideix.ru warez.gtk.su
-    hub = new HubConnection(this, "localhost", 411); // dc.wideix.ru warez.gtk.su
+    hub = new HubConnection(this, "dc.wideix.ru", 411); // dc.wideix.ru warez.gtk.su
+    //hub = new HubConnection(this, "localhost", 411); // dc.wideix.ru warez.gtk.su
 
     hub->slotConnect();
     connect(hub, SIGNAL(signalDisplayMessage(QString&)), this, SLOT(slotDisplayMessages(QString&)));

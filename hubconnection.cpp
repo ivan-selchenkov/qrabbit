@@ -41,78 +41,33 @@ HubConnection::HubConnection(QObject* parent, QString str_Host, quint16 n_Port):
 }
 void HubConnection::slotConnect()
 {
-    m_pTcpSocket = new QTcpSocket(this);
-    connect(m_pTcpSocket, SIGNAL(connected()), SLOT(slotConnected()));
-    connect(m_pTcpSocket, SIGNAL(readyRead()), SLOT(slotReadyRead()));
+    hubtcpsocket = new HubTcpSocket(this);
+//    connect(m_pTcpSocket, SIGNAL(connected()), SLOT(slotConnected()));
 
-    m_pTcpSocket->connectToHost(Host, Port);
+    connect(hubtcpsocket, SIGNAL(signal_command_received(QByteArray)), this, SLOT(slot_command_received(QByteArray)));
+    connect(this, SIGNAL(signal_tcp_write(QByteArray)), hubtcpsocket, SLOT(slot_write(QByteArray)));
+
+    hubtcpsocket->connectToHost(Host, Port);
 }
 void HubConnection::slotConnected()
 {
     qDebug() << "[INFO] Received the connected() signal";
 }
-void HubConnection::slotReadyRead()
-{
-    QByteArray b;
-    for(;;) {
-        if(m_pTcpSocket->bytesAvailable() <= 0) // Если ничего нет, выходим
-            break;
-        b = m_pTcpSocket->readAll();// Читаем всё что есть
-        m_mutex.lock();
-            buffer.append(b);
-        m_mutex.unlock();
-        //qDebug() << b;
-        splitArray();
-    }
-}
-void HubConnection::splitArray()
-{
-    QList<QByteArray> list_array;
-    QString str;
-
-    m_mutex.lock();
-
-    list_array = buffer.split('|');
-    if(list_array.size() > 1)
-    {
-        // Значит есть новые строки
-        if(buffer.at(buffer.size()-1) != '|') // Если строка не кончалась на | то последняя часть обратно в буфер
-        {
-            buffer = list_array.last();
-            list_array.removeLast();
-        }
-        else
-        {
-            buffer.clear();
-        }
-    }
-
-    m_mutex.unlock();
-    if(list_array.size() > 1) fromServer.append(list_array); // Добавляем в наш список
-    parseList(); // Испускаем сигнал о том, что можно анализировать список
-
-}
 bool HubConnection::isExtended()
 {
     return m_isExtended;
 }
-void HubConnection::parseList()
+
+void HubConnection::slot_command_received(QByteArray current)
 {
-    if(isListParsing == true) return; // Если функция уже запущена
-
-    isListParsing = true; // метка что функция запущена
-
-    QByteArray current;
     QList<QByteArray> list;
     QByteArray result;
     QString tempstr;
     QByteArray lock;
 
-    while(!fromServer.isEmpty()) { // Пока список не пуст
-        current = fromServer.takeFirst(); // Берем первый и удаляем его
-        if(current.isEmpty()) continue; // Если пустая строка идем к следующей
+    if(current.isEmpty()) return; // Если пустая строка идем к следующей
 
-        qDebug()<<"[DATA] "+current;
+        //qDebug()<<"[DATA] "+current;
      if(current.at(0) == '$') {
         list = current.split(' '); // Делим строку на части по пробелу
         // Анализируем первую часть
@@ -131,29 +86,31 @@ void HubConnection::parseList()
             result.append("$Key ");
             result.append(generateKey(list.at(1)));
             result.append('|');
-            toServer.append(result);
+            emit signal_tcp_write(result);
 
             result.clear();
             result.append("$ValidateNick ");
             result.append(userName);
             result.append('|');
-            toServer.append(result);
-            startSend();
+
+            emit signal_tcp_write(result);
         }
         // Представляем расширенную инфорамция для регистрации на хабе
         else if(list.at(0) == "$Hello" && list.at(1) == userName && isHello == false) {
             result.clear();
             result.append("$Version 0.01|");
-            toServer.append(result);
+            emit signal_tcp_write(result);
 
-            slotLoadNickList();
+            result.clear();
+            result.append("$GetNickList|");
+            emit signal_tcp_write(result);
+
             result.clear();
             result.append("$MyINFO $ALL ");
             result.append(userName);
             result.append(QString(" <Rabbit++ V:%1,M:A,H:1/0/0,S:%2>$ $10Gb LAN(T3)$%3$10000000000$|").arg(VERSION).arg(slotsNumber).arg(email));
-            toServer.append(result);
+            emit signal_tcp_write(result);
             isHello = true;
-            startSend();
         }        
         else if(list.at(0) == "$GetPass")
         {
@@ -161,8 +118,7 @@ void HubConnection::parseList()
             result.append("$MyPass ");
             result.append(password);
             result.append("|");
-            toServer.append(result);
-            startSend();
+            emit signal_tcp_write(result);
         }
         // Пользователь ушел
         else if(list.at(0) == "$Quit")
@@ -185,14 +141,14 @@ void HubConnection::parseList()
         // Сигнал что хаб полный
         else if(list.at(0) == "$HubIsFull")
         {
-            m_pTcpSocket->close();
+            hubtcpsocket->close();
             emit signalDisconnected();
         }
         // Переход на другой хаб
         else if(list.at(0) == "$ForceMove")
         {
             if(list.at(1) == "") {
-                m_pTcpSocket->close();
+                hubtcpsocket->close();
                 emit signalDisconnected();
             }
             else
@@ -222,9 +178,6 @@ void HubConnection::parseList()
         tempstr = decode(changeKeysStC(current));
         emit signalDisplayMessage(tempstr);
     }
-  } // end while
-
-    isListParsing = false; // снимает метку
 }
 void HubConnection::searchMessage(QString search)
 {
@@ -319,8 +272,7 @@ void HubConnection::SendMessage(QString message)
     message = QString("<%1> %2").arg(userName, message);
     send_array = changeKeysCtS(encode(message));
     send_array.append('|');
-    toServer.append(send_array);
-    startSend();
+    emit signal_tcp_write(send_array);
 }
 QByteArray HubConnection::generateKey(const QByteArray& lock)
 {
@@ -344,7 +296,7 @@ QByteArray HubConnection::generateKey(const QByteArray& lock)
 
     return key;
 }
-void HubConnection::startSend()
+/*void HubConnection::startSend()
 {
     QByteArray current;
     if(isSending == true) return; // Если функция уже запущена
@@ -357,7 +309,7 @@ void HubConnection::startSend()
     }
     isSending = false; // снимает метку
 }
-
+*/
 void HubConnection::slotStartSendUdp()
 {
     UdpDatagram current;
@@ -378,21 +330,11 @@ void HubConnection::SendSearch(QString search)
     QString str = "$Search 127.0.0.1:55555 F?F?0?1?readme.txt|";
     result.clear();
     result.append(str);
-    toServer.append(result);
-    startSend();
-
+    emit signal_tcp_write(result);
 }
 bool HubConnection::isConnected()
 {
-    return m_pTcpSocket->isOpen();
-}
-// Requesting NickList
-void HubConnection::slotLoadNickList()
-{
-    QByteArray result;
-    result.append("$GetNickList|");
-    toServer.append(result);
-    startSend();
+    return hubtcpsocket->isOpen();
 }
 QByteArray HubConnection::changeKeysStC(QByteArray ar) // from server to client
 {

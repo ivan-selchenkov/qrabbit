@@ -57,7 +57,7 @@
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-KnjWzaejAB,guid=cf7f03cb391023bbfb9883dd4a38762b</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-61E8kQKAoY,guid=827edda29dcaecc21d13184b4a39c356</value>
     <value type="QString" >DESKTOP_SESSION=gnome</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -65,7 +65,7 @@
     <value type="QString" >GDM_LANG=ru_RU.UTF-8</value>
     <value type="QString" >GDM_XSERVER_LOCATION=local</value>
     <value type="QString" >GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
-    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-Q7Fy4Z/socket</value>
+    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-IMAFVT/socket</value>
     <value type="QString" >GTK_MODULES=canberra-gtk-module:gail:atk-bridge</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/ivan/.gtkrc-1.2-gnome2</value>
     <value type="QString" >G_BROKEN_FILENAMES=1</value>
@@ -89,11 +89,11 @@
     <value type="QString" >PS4=+ </value>
     <value type="QString" >PWD=/home/ivan</value>
     <value type="QString" >QTDIR=/usr</value>
-    <value type="QString" >SESSION_MANAGER=local/vashik:@/tmp/.ICE-unix/5721,unix/vashik:/tmp/.ICE-unix/5721</value>
+    <value type="QString" >SESSION_MANAGER=local/vashik:@/tmp/.ICE-unix/5673,unix/vashik:/tmp/.ICE-unix/5673</value>
     <value type="QString" >SHELL=/bin/bash</value>
     <value type="QString" >SHLVL=0</value>
-    <value type="QString" >SSH_AGENT_PID=5751</value>
-    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-Q7Fy4Z/socket.ssh</value>
+    <value type="QString" >SSH_AGENT_PID=5703</value>
+    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-IMAFVT/socket.ssh</value>
     <value type="QString" >USER=ivan</value>
     <value type="QString" >USERNAME=ivan</value>
     <value type="QString" >WINDOWPATH=7</value>
@@ -103,7 +103,7 @@
     <value type="QString" >XDG_CONFIG_HOME=/home/ivan/.config</value>
     <value type="QString" >XDG_DATA_DIRS=/usr/share:/usr/local/share:/usr/share:/usr/local/share:/usr/share/gdm/</value>
     <value type="QString" >XDG_DATA_HOME=/home/ivan/.local/share</value>
-    <value type="QString" >XDG_SESSION_COOKIE=b32eb63ed803965238b5a5fe49f2c3c6-1245214250.769498-2046983975</value>
+    <value type="QString" >XDG_SESSION_COOKIE=b32eb63ed803965238b5a5fe49f2c3c6-1245299541.634637-2081048841</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
     <value type="QString" >/home/share/qt/qrabbit/qrabbit.pro</value>
@@ -113,7 +113,7 @@
     <value type="QString" >CONFIG+=debug</value>
    </valuelist>
    <value key="abstractProcess.command" type="QString" >/usr/bin/qmake</value>
-   <value key="abstractProcess.enabled" type="bool" >false</value>
+   <value key="abstractProcess.enabled" type="bool" >true</value>
    <value key="abstractProcess.workingDirectory" type="QString" >/home/share/qt/qrabbit</value>
    <value key="buildConfiguration" type="int" >2</value>
   </valuemap>
@@ -123,7 +123,7 @@
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-KnjWzaejAB,guid=cf7f03cb391023bbfb9883dd4a38762b</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-61E8kQKAoY,guid=827edda29dcaecc21d13184b4a39c356</value>
     <value type="QString" >DESKTOP_SESSION=gnome</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -131,7 +131,7 @@
     <value type="QString" >GDM_LANG=ru_RU.UTF-8</value>
     <value type="QString" >GDM_XSERVER_LOCATION=local</value>
     <value type="QString" >GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
-    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-Q7Fy4Z/socket</value>
+    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-IMAFVT/socket</value>
     <value type="QString" >GTK_MODULES=canberra-gtk-module:gail:atk-bridge</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/ivan/.gtkrc-1.2-gnome2</value>
     <value type="QString" >G_BROKEN_FILENAMES=1</value>
@@ -155,11 +155,11 @@
     <value type="QString" >PS4=+ </value>
     <value type="QString" >PWD=/home/ivan</value>
     <value type="QString" >QTDIR=/usr</value>
-    <value type="QString" >SESSION_MANAGER=local/vashik:@/tmp/.ICE-unix/5721,unix/vashik:/tmp/.ICE-unix/5721</value>
+    <value type="QString" >SESSION_MANAGER=local/vashik:@/tmp/.ICE-unix/5673,unix/vashik:/tmp/.ICE-unix/5673</value>
     <value type="QString" >SHELL=/bin/bash</value>
     <value type="QString" >SHLVL=0</value>
-    <value type="QString" >SSH_AGENT_PID=5751</value>
-    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-Q7Fy4Z/socket.ssh</value>
+    <value type="QString" >SSH_AGENT_PID=5703</value>
+    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-IMAFVT/socket.ssh</value>
     <value type="QString" >USER=ivan</value>
     <value type="QString" >USERNAME=ivan</value>
     <value type="QString" >WINDOWPATH=7</value>
@@ -169,7 +169,7 @@
     <value type="QString" >XDG_CONFIG_HOME=/home/ivan/.config</value>
     <value type="QString" >XDG_DATA_DIRS=/usr/share:/usr/local/share:/usr/share:/usr/local/share:/usr/share/gdm/</value>
     <value type="QString" >XDG_DATA_HOME=/home/ivan/.local/share</value>
-    <value type="QString" >XDG_SESSION_COOKIE=b32eb63ed803965238b5a5fe49f2c3c6-1245214250.769498-2046983975</value>
+    <value type="QString" >XDG_SESSION_COOKIE=b32eb63ed803965238b5a5fe49f2c3c6-1245299541.634637-2081048841</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
     <value type="QString" >-w</value>

@@ -11,7 +11,7 @@ SearchManager::SearchManager(QObject* parent, QList<DirsTree> & _t, SearchItem _
         pattern.remove(-1,1);
     exp.setPattern(QString("(%1)").arg(pattern));
     exp.setCaseSensitivity(Qt::CaseInsensitive);
-    qDebug() << "SearchManager()";
+    qDebug() << "SearchManager(" << search_item.data << ")";
 }
 SearchManager::~SearchManager()
 {

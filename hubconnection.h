@@ -9,6 +9,7 @@
 #include "tablemodel.h"
 #include "searchitem.h"
 #include "fileinfo.h"
+#include "hubtcpsocket.h"
 
 class HubNickList;
 class TableModel;
@@ -40,19 +41,20 @@ public:
     void SendSearch(QString);
 public slots:
     void slotConnect();
-    void slotReadyRead();
     void slotConnected();
-    void slotLoadNickList();
     void slotStartSendUdp();
 
     void slot_search_result(FileInfo, SearchItem);
+
+    void slot_command_received(QByteArray);
 private:
-    QTcpSocket* m_pTcpSocket;
+    //QTcpSocket* m_pTcpSocket;
+    HubTcpSocket* hubtcpsocket;
+
     QUdpSocket* m_pUdpSocket;
     QByteArray buffer;
     QMutex m_mutex;
-    QList<QByteArray> fromServer;
-    QList<QByteArray> toServer;
+
     QList<UdpDatagram> outUdp;
     QList<UdpDatagram> inUdp;
     bool isListParsing;
@@ -62,13 +64,13 @@ private:
     bool isHello;
     QTextCodec *codec;
 
-    void splitArray();
     QByteArray generateKey(const QByteArray&);
     bool m_isExtended;
     void searchMessage(QString);
-    void parseList();
-    void startSend();
+    //void startSend();
 signals:
+    void signal_tcp_write(QByteArray);
+
     void signalConnected();
     void signalDisconnected();
     void signalRedirect(QString strHost, quint16 nPort);
