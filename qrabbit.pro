@@ -18,7 +18,10 @@ SOURCES += main.cpp \
     tth/base32.cpp \
     initfiletree.cpp \
     searchmanager.cpp \
-    hubtcpsocket.cpp
+    hubtcpsocket.cpp \
+    hubudpsocket.cpp \
+    clientconnection.cpp \
+    clienttcpsocket.cpp
 HEADERS += mainwindow.h \
     hubconnection.h \
     global.h \
@@ -35,5 +38,9 @@ HEADERS += mainwindow.h \
     initfiletree.h \
     searchmanager.h \
     searchitem.h \
-    hubtcpsocket.h
+    hubtcpsocket.h \
+    hubudpsocket.h \
+    clientconnection.h \
+    clienttcpsocket.h
 FORMS += mainwindow.ui
+LIBS += -lbz2

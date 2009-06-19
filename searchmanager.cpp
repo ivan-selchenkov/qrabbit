@@ -11,15 +11,15 @@ SearchManager::SearchManager(QObject* parent, QList<DirsTree> & _t, SearchItem _
         pattern.remove(-1,1);
     exp.setPattern(QString("(%1)").arg(pattern));
     exp.setCaseSensitivity(Qt::CaseInsensitive);
-    qDebug() << "SearchManager(" << search_item.data << ")";
+    //qDebug() << "SearchManager(" << search_item.data << ")";
 }
 SearchManager::~SearchManager()
 {
-    qDebug() << "~SearchManager()";
+    //qDebug() << "~SearchManager()";
 }
 void SearchManager::run()
 {
-    qDebug() << "SearchManager->run()";
+    //qDebug() << "SearchManager->run()";
     int i;
 
     for(i=0; i<tree.size(); i++)

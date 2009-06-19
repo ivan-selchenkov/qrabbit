@@ -6,8 +6,9 @@
 
 HubConnection::HubConnection(QObject* parent, QString str_Host, quint16 n_Port): QObject(parent)
 {
-    connect(this, SIGNAL(signalParseList()), SLOT(slotParseList()));
-    connect(this, SIGNAL(signalStartSend()), SLOT(slotStartSend()));
+    //connect(this, SIGNAL(signalParseList()), SLOT(slotParseList()));
+    //connect(this, SIGNAL(signalStartSend()), SLOT(slotStartSend()));
+
     isListParsing = false; // Метка что анализатор не запущен
     isSending = false; // Метка что отправка не запущена
     isSendingUdp = false;
@@ -37,16 +38,15 @@ HubConnection::HubConnection(QObject* parent, QString str_Host, quint16 n_Port):
     codec = QTextCodec::codecForName(encoding); // кодек для перекодировки сообщений
     m_isExtended = false;
 
-    m_pUdpSocket = new QUdpSocket(this);
-}
-void HubConnection::slotConnect()
-{
     hubtcpsocket = new HubTcpSocket(this);
-//    connect(m_pTcpSocket, SIGNAL(connected()), SLOT(slotConnected()));
-
     connect(hubtcpsocket, SIGNAL(signal_command_received(QByteArray)), this, SLOT(slot_command_received(QByteArray)));
     connect(this, SIGNAL(signal_tcp_write(QByteArray)), hubtcpsocket, SLOT(slot_write(QByteArray)));
 
+    hubudpsocket = new HubUdpSocket(this);
+    connect(this, SIGNAL(signal_udp_write(QByteArray,QString,quint16)), hubudpsocket, SLOT(slot_write(QByteArray,QString,quint16)));
+}
+void HubConnection::slotConnect()
+{
     hubtcpsocket->connectToHost(Host, Port);
 }
 void HubConnection::slotConnected()
@@ -67,8 +67,8 @@ void HubConnection::slot_command_received(QByteArray current)
 
     if(current.isEmpty()) return; // Если пустая строка идем к следующей
 
-        //qDebug()<<"[DATA] "+current;
-     if(current.at(0) == '$') {
+    qDebug()<<"[DATA] "+current;
+    if(current.at(0) == '$') {
         list = current.split(' '); // Делим строку на части по пробелу
         // Анализируем первую часть
         if(list.at(0) == "$Lock") { // Сервер послал $Lock
@@ -98,7 +98,7 @@ void HubConnection::slot_command_received(QByteArray current)
         // Представляем расширенную инфорамция для регистрации на хабе
         else if(list.at(0) == "$Hello" && list.at(1) == userName && isHello == false) {
             result.clear();
-            result.append("$Version 0.01|");
+            result.append("$Version 1.0091|");
             emit signal_tcp_write(result);
 
             result.clear();
@@ -108,7 +108,7 @@ void HubConnection::slot_command_received(QByteArray current)
             result.clear();
             result.append("$MyINFO $ALL ");
             result.append(userName);
-            result.append(QString(" <Rabbit++ V:%1,M:A,H:1/0/0,S:%2>$ $10Gb LAN(T3)$%3$10000000000$|").arg(VERSION).arg(slotsNumber).arg(email));
+            result.append(QString(" <Rabbit++ V:%1,M:A,H:1/0/0,S:%2>$ $1000%4$%3$%5$|").arg(VERSION).arg(slotsNumber).arg(email).arg((char)0x11).arg(sharesize));
             emit signal_tcp_write(result);
             isHello = true;
         }        
@@ -174,10 +174,51 @@ void HubConnection::slot_command_received(QByteArray current)
             tempstr = tempstr.remove("$Search ");
             searchMessage(tempstr);
         }
+        else if(list.at(0) == "$ConnectToMe")
+        {
+            QString address;
+            QString username;
+
+            if(list.size() == 4) // new protocol
+            {
+                //username = decode(changeKeysStC(list.at(2)));
+                username = list.at(2);
+                address = list.at(3);
+                emit slot_new_client(username, address);
+            }
+            else // old protocol
+            {
+                //username = decode(changeKeysStC(list.at(1)));
+                username = list.at(1);
+                address = list.at(2);
+                emit slot_new_client(username, address);
+            }
+        }
     } else {
         tempstr = decode(changeKeysStC(current));
         emit signalDisplayMessage(tempstr);
     }
+}
+void HubConnection::slot_set_sharesize(quint64 size)
+{
+    QByteArray result;
+    sharesize = size;
+
+    if(hubtcpsocket->isOpen())
+    {
+        result.clear();
+        result.append("$MyINFO $ALL ");
+        result.append(userName);
+        result.append(QString(" <Rabbit++ V:%1,M:A,H:1/0/0,S:%2>$ $1000%4$%3$%5$|").arg(VERSION).arg(slotsNumber).arg(email).arg((char)0x11).arg(sharesize));
+        emit signal_tcp_write(result);
+    }
+}
+void HubConnection::slot_new_client(QString username, QString address)
+{
+    QByteArray data;
+    data.append(QString("$ConnectToMe %1 %2|").arg(username).arg(address));
+    ClientConnection* client = new ClientConnection(this, username, address, data);
+    client_list.append(client);
 }
 void HubConnection::searchMessage(QString search)
 {
@@ -257,14 +298,22 @@ void HubConnection::slot_search_result(FileInfo file_info, SearchItem search_ite
     if(Port != 411)
         answer.append(QString(":%1").arg(Port));
 
-    answer.append(")|");
+    answer.append(")");
+
+    if(search_item.host == "Hub")
+    {
+        answer.append((char)0x05);
+        answer.append(search_item.nick);
+    }
+    answer.append("|");
     udp.data.append(answer);
     udp.host = search_item.host;
     udp.port = search_item.port;
 
-    outUdp.append(udp); // to udp queue
-
-    emit signalStartSendUdp();
+    if(search_item.host == "Hub")
+        emit signal_tcp_write(udp.data);
+    else
+        emit signal_udp_write(udp.data, udp.host, udp.port);
 }
 void HubConnection::SendMessage(QString message)
 {
@@ -295,34 +344,6 @@ QByteArray HubConnection::generateKey(const QByteArray& lock)
     key.replace((char)126, "/%DCN126%/");
 
     return key;
-}
-/*void HubConnection::startSend()
-{
-    QByteArray current;
-    if(isSending == true) return; // Если функция уже запущена
-
-    isSending = true; // метка что функция запущена
-    while(!toServer.isEmpty()) { // Пока список не пуст
-        current = toServer.takeFirst();
-        m_pTcpSocket->write(current);
-        qDebug()<<"[SEND] "+ current;
-    }
-    isSending = false; // снимает метку
-}
-*/
-void HubConnection::slotStartSendUdp()
-{
-    UdpDatagram current;
-    int error;
-    if(isSendingUdp == true) return; // Если функция уже запущена
-
-    isSendingUdp = true; // метка что функция запущена
-    while(!outUdp.isEmpty()) { // Пока список не пуст
-        current = outUdp.takeFirst();
-        error = m_pUdpSocket->writeDatagram(current.data, QHostAddress(current.host), current.port);
-        qDebug()<<"[SEND UDP] "+ current.data;
-    }
-    isSendingUdp = false; // снимает метку
 }
 void HubConnection::SendSearch(QString search)
 {

@@ -1,11 +1,16 @@
-#include "hubtcpsocket.h"
+#include "clienttcpsocket.h"
 
-HubTcpSocket::HubTcpSocket(QObject* parent): QObject(parent), socket(new QTcpSocket(parent))
+ClientTcpSocket::ClientTcpSocket(QObject* parent): QObject(parent), socket(new QTcpSocket(parent))
 {
-    //connect(socket, SIGNAL(connected()), SLOT(slotConnected()));
-    connect(socket, SIGNAL(readyRead()), this, SLOT(slot_ready_read()));
+    connect(socket, SIGNAL(connected()), SLOT(slot_connected()));
+    connect(socket, SIGNAL(readyRead()), SLOT(slot_ready_read()));
 }
-void HubTcpSocket::slot_ready_read()
+void ClientTcpSocket::slot_connected()
+{
+    qDebug() << "Client connected:" << socket->peerName() << socket->peerPort();
+    emit signal_connected();
+}
+void ClientTcpSocket::slot_ready_read()
 {
     QByteArray b;
     forever {
@@ -18,7 +23,7 @@ void HubTcpSocket::slot_ready_read()
         QTimer::singleShot(0, this, SLOT(slot_split_buffer()));
     }
 }
-void HubTcpSocket::slot_split_buffer()
+void ClientTcpSocket::slot_split_buffer()
 {
     QList<QByteArray> list_array;
     QString str;
@@ -48,22 +53,24 @@ void HubTcpSocket::slot_split_buffer()
     }
     signal_mutex.unlock();
 }
-void HubTcpSocket::connectToHost(QString host, quint16 port)
+void ClientTcpSocket::connectToHost(QString host, quint16 port)
 {
     m_host = host;
     m_port = port;
 
     socket->connectToHost(m_host, port);
 }
-void HubTcpSocket::close()
+void ClientTcpSocket::close()
 {
     socket->close();
 }
-void HubTcpSocket::slot_write(QByteArray data)
+void ClientTcpSocket::slot_write(QByteArray data)
 {
-    qDebug() << "{TCP HUB OUT}" << data;
-
+    qDebug() << "{TCP CLIENT OUT}" <<data;
     write_mutex.lock();
     socket->write(data);
     write_mutex.unlock();
+}
+void ClientTcpSocket::slot_disconnected()
+{
 }

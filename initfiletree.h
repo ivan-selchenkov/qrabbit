@@ -47,16 +47,19 @@ private:
     void calcTTH();
     void calcDirectory(DirsTree & realTree);
 //! Making QList of directories
-    QList<QDomElement> makeDOM(QDomDocument&);
+    QList<QDomElement> makeDOM(QDomDocument&, bool isLocal);
     //! Recursive function use for fill QDomElement el
     void nodeDOM(QDomElement& el, QDomDocument& doc, DirsTree & dtree);
     QDomElement fileDOM(QDomDocument&, FileInfo&);
     QDomElement dirDOM(QDomDocument&, QString);
-    QDomElement rootDirDOM(QDomDocument&, QString name, QString path);
+    QDomElement rootDirDOM(QDomDocument&, QString name, QString path, bool isLocal);
+
+    void bz2Compress();
 
  signals:
     void signal_finished();
     void signal_hashing_progress(int);
+    void signal_new_sharesize(quint64);
 
 };
 

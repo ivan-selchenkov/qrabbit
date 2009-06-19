@@ -34,5 +34,6 @@ signals:
     //! Signal for MainWindow - hashing progress
     void progressInfo(int);
     void signal_search_result(FileInfo file_info, SearchItem search_item);
+    void signal_new_sharesize(quint64);
 };
 #endif // FILEMANAGER_H

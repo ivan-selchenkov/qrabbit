@@ -1,4 +1,5 @@
 #include "initfiletree.h"
+#include <bzlib.h>
 
 InitFileTree::InitFileTree(QObject* parent, QList<DirsTree> & _t, QList<QDir>& _f): QThread(parent), tree(_t), folders(_f)
 {
@@ -19,6 +20,7 @@ void InitFileTree::run()
 
     slotSaveXML(true);
     qDebug() << "exiting InitFileTree->run()";
+    emit signal_hashing_progress(100);
     emit signal_finished();
 }
 void InitFileTree::calcTTH()
@@ -56,7 +58,7 @@ void InitFileTree::calcDirectory(DirsTree & realTree)
 void InitFileTree::loadXML()
 {
     DirsTree  s;
-    QFile file("files.xml");
+    QFile file("files_local.xml");
     loadedDoc.clear();
 
     // Setting up encoding to UTF8
@@ -235,29 +237,76 @@ void InitFileTree::saveXML()
     QDomElement docElement = doc.createElement("FileListing");
     doc.appendChild(docElement);
 
-    QList<QDomElement> result = makeDOM(doc);
+    QList<QDomElement> result = makeDOM(doc, true);
     QDomElement content;
     foreach(content, result)
         docElement.appendChild(content);
 
-
-
-    QFile file("files.xml");
+    QFile file("files_local.xml");
 
     if(file.open(QIODevice::WriteOnly))
     {
         QTextStream(&file) << doc.toString();
         file.close();
     }
+
+    QDomDocument doc_out;
+    QDomNode node_out = doc_out.createProcessingInstruction("xml", "version=\"1.0\" encoding=\"utf-8\"");
+    doc_out.insertBefore(node_out, doc_out.firstChild());
+    QDomElement docElement_out = doc_out.createElement("FileListing");
+    doc_out.appendChild(docElement_out);
+
+    QList<QDomElement> result_out = makeDOM(doc_out, false);
+    QDomElement content_out;
+    foreach(content_out, result_out)
+        docElement_out.appendChild(content_out);
+
+    QFile file_out("files.xml");
+
+    if(file_out.open(QIODevice::WriteOnly))
+    {
+        QTextStream(&file_out) << doc_out.toString();
+        file_out.close();
+    }    
+    bz2Compress();
+
+    emit signal_new_sharesize(totalCount);
 }
-QList<QDomElement> InitFileTree::makeDOM(QDomDocument& doc)
+void InitFileTree::bz2Compress()
+{
+    FILE*   f;
+    BZFILE* b;
+
+    int     bzerror;
+    int     nWritten;
+    unsigned int n, n1;
+
+    QFile file("files.xml");
+    if(!file.open(QIODevice::ReadOnly)) return;
+
+    QByteArray data = file.readAll();
+
+    f = fopen ("files.xml.bz2", "w");
+    if(!f) return;
+
+    b = BZ2_bzWriteOpen( &bzerror, f, 9, 0, 30);
+    if (bzerror != BZ_OK) {
+        BZ2_bzWriteClose (&bzerror, b, 0, &n, &n1 );
+        return;
+    }
+
+    BZ2_bzWrite ( &bzerror, b, (void *) data.constData(), data.size() );
+
+    BZ2_bzWriteClose( &bzerror, b, 0, &n, &n1 );
+}
+QList<QDomElement> InitFileTree::makeDOM(QDomDocument& doc, bool isLocal)
 {
     DirsTree item;
     QList<QDomElement> result;
 
     foreach(item, tree)
     {
-        QDomElement el = rootDirDOM(doc, item.current.dirName(), item.current.absolutePath());
+        QDomElement el = rootDirDOM(doc, item.current.dirName(), item.current.absolutePath(), isLocal);
         nodeDOM(el, doc, item);
         result.append(el);
     }
@@ -289,17 +338,23 @@ QDomElement InitFileTree::dirDOM(QDomDocument& doc, QString str)
     element.setAttributeNode(atr);
     return element;
 }
-QDomElement InitFileTree::rootDirDOM(QDomDocument& doc, QString str, QString path)
+QDomElement InitFileTree::rootDirDOM(QDomDocument& doc, QString str, QString path, bool isLocal)
 {
-    QDomElement element = doc.createElement("RootDirectory");
+    QDomElement element;
+
+    if(isLocal) element = doc.createElement("RootDirectory");
+    else element = doc.createElement("Directory");
+
     QDomAttr atr = doc.createAttribute("Name");
     atr.setValue(str);
     element.setAttributeNode(atr);
 
-    atr = doc.createAttribute("Path");
-    atr.setValue(path);
-    element.setAttributeNode(atr);
-
+    if(isLocal)
+    {
+        atr = doc.createAttribute("Path");
+        atr.setValue(path);
+        element.setAttributeNode(atr);
+    }
     return element;
 }
 QDomElement InitFileTree::fileDOM(QDomDocument& doc, FileInfo& fi)

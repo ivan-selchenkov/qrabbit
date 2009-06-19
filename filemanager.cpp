@@ -5,6 +5,7 @@
 FileManager::FileManager(QObject* parent): QObject(parent), m_isFileListLoaded(false)
 {
     folders.append(QDir("/home/ivan/Downloads"));
+    folders.append(QDir("/home/share"));
 
     ift = new InitFileTree(this, tree, folders);
 
@@ -12,6 +13,7 @@ FileManager::FileManager(QObject* parent): QObject(parent), m_isFileListLoaded(f
     connect(ift, SIGNAL(signal_finished()), this, SLOT(slot_on_hashing_finished()));
     // Sending hashing progress in percents
     connect(ift, SIGNAL(signal_hashing_progress(int)), (MainWindow*) parent, SLOT(slot_on_progress_info(int)));
+    connect(ift, SIGNAL(signal_new_sharesize(quint64)), this, SIGNAL(signal_new_sharesize(quint64)));
 
     ift->start(QThread::LowPriority);
 }

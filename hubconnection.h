@@ -10,6 +10,8 @@
 #include "searchitem.h"
 #include "fileinfo.h"
 #include "hubtcpsocket.h"
+#include "hubudpsocket.h"
+#include "clientconnection.h"
 
 class HubNickList;
 class TableModel;
@@ -40,23 +42,25 @@ public:
     void SendMessage(QString);
     void SendSearch(QString);
 public slots:
+    void slot_new_client(QString, QString);
+
     void slotConnect();
     void slotConnected();
-    void slotStartSendUdp();
 
     void slot_search_result(FileInfo, SearchItem);
 
     void slot_command_received(QByteArray);
-private:
-    //QTcpSocket* m_pTcpSocket;
-    HubTcpSocket* hubtcpsocket;
 
-    QUdpSocket* m_pUdpSocket;
+    void slot_set_sharesize(quint64);
+private:
+    HubTcpSocket* hubtcpsocket;
+    HubUdpSocket* hubudpsocket;
+    QList<ClientConnection*> client_list;
+    quint64 sharesize;
+
     QByteArray buffer;
     QMutex m_mutex;
 
-    QList<UdpDatagram> outUdp;
-    QList<UdpDatagram> inUdp;
     bool isListParsing;
     bool isSending;
     bool isSendingUdp;
@@ -67,9 +71,9 @@ private:
     QByteArray generateKey(const QByteArray&);
     bool m_isExtended;
     void searchMessage(QString);
-    //void startSend();
 signals:
     void signal_tcp_write(QByteArray);
+    void signal_udp_write(QByteArray, QString, quint16);
 
     void signalConnected();
     void signalDisconnected();
@@ -83,9 +87,6 @@ signals:
     void signalMyINFO(QString data);
     void signalListChanged();
     void signalListAboutChanged();
-
-    //void signalSearchMessage(QString);
-    void signalStartSendUdp();
 
     void signal_search_request(SearchItem);
 };

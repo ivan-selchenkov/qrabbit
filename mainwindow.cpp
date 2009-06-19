@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     filemanager = new FileManager(this);
     connect(filemanager, SIGNAL(signal_search_result(FileInfo,QString)), this, SLOT(on_search_result(FileInfo,QString)));
+    connect(filemanager, SIGNAL(signal_new_sharesize(quint64)), this, SLOT(slot_new_sharesize(quint64)));
 }
 
 MainWindow::~MainWindow()
@@ -25,14 +26,18 @@ void MainWindow::on_btnStart_clicked()
 
     HubConnection* hub;
 
-    hub = new HubConnection(this, "dc.wideix.ru", 411); // dc.wideix.ru warez.gtk.su
-    //hub = new HubConnection(this, "localhost", 411); // dc.wideix.ru warez.gtk.su
-
+//    hub = new HubConnection(this, "dc.wideix.ru", 411); // dc.wideix.ru warez.gtk.su
+    hub = new HubConnection(this, "192.168.1.2", 411); // dc.wideix.ru warez.gtk.su
+    if(settings.contains("Sharesize"))
+    {
+        hub->slot_set_sharesize(settings.value("sharesize").toULongLong());
+    }
     hub->slotConnect();
     connect(hub, SIGNAL(signalDisplayMessage(QString&)), this, SLOT(slotDisplayMessages(QString&)));
     // connecting hubconnection to filemanager to analize search request
     connect(hub, SIGNAL(signal_search_request(SearchItem)), filemanager, SLOT(slot_on_search_request(SearchItem)));
     connect(filemanager, SIGNAL(signal_search_result(FileInfo,SearchItem)), hub, SLOT(slot_search_result(FileInfo,SearchItem)));
+    connect(filemanager, SIGNAL(signal_new_sharesize(quint64)), hub, SLOT(slot_new_sharesize(quint64)));
 
 
     ui->tableView->setModel(hub->model);
@@ -41,6 +46,10 @@ void MainWindow::on_btnStart_clicked()
     ui->tableView->setColumnWidth (2, 200 ); // Desc size
 
     hubs.append(hub);
+}
+void MainWindow::slot_new_sharesize(quint64 size)
+{
+    settings.setValue("sharesize", size);
 }
 void MainWindow::slotDisplayMessages(QString str)
 {
