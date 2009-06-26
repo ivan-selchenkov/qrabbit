@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FileListing>
- <RootDirectory Path="/home/ivan/Downloads" Name="Downloads" >
+ <Directory Name="Downloads" >
   <Directory Name="V3update-uknewui-2.12-20090409-2" >
    <Directory Name="dict" >
     <File Size="2103" TTH="PKFQOLREFJ6NHC5LS2HQSN5RCATAILJFTJFQBMA" Name="Makefile.am" />
@@ -46,6 +46,7 @@
   <File Size="691" TTH="MLEIHLJSQKJMMFWGQ7XC4Z24A7WS2Z2MXJCJQSA" Name="cairo-wglitz.tar.gz" />
   <File Size="1007" TTH="ANSBLJA7CG3Q4DG62OG7K5UEOIAIY43VCRGQM7Y" Name="cleantext.p" />
   <File Size="907" TTH="6BZQI72CCGA5QR7OL2A6XTZMDHAWZV37UGK6CCQ" Name="cleantext.p~" />
+  <File Size="517251" TTH="BRNGRD2NBXBLCJHRE27KNGK4CDFTTB65MNZIXHI" Name="dclib-0.3.23.tar.bz2" />
   <File Size="1174113" TTH="NOLNLONVTGW7GMHM3WGYJAA7EH7YFO4TUTFMHWA" Name="enigmail-0.95.7-tb+sm.xpi" />
   <File Size="876996" TTH="ZHTBZX6NSIVGTBBACB6B5BI5ZGGOXZVGMENLIAQ" Name="Euro Rus_25.03.09_Combined.pdf" />
   <File Size="8766812" TTH="SEYZYL4ADUE23VZMXS3QYMNULLWTT3KU7ASODVQ" Name="flylink-tiera-1.21.exe" />
@@ -75,6 +76,7 @@
   <File Size="7499584" TTH="HAR577YJKHJIKZFAUAJNQYVDHIINB6DPEJFENTI" Name="pdfsam-1.1.2-out-src.zip" />
   <File Size="756574" TTH="YUX2BWNL6YQRWZPWEQULZAKBUCX44JW4IDSZW2Q" Name="pdftk-1.41.tar.bz2" />
   <File Size="2659480" TTH="UL622QEETNLXRN4V4S7GBV6QJI4V7GADWZNTPZQ" Name="phpMyAdmin-3.1.4-all-languages.tar.bz2" />
+  <File Size="248562" TTH="HCZJ46WVOMV4CPOGIZ4XNLXZQBNHGSY4MGE2O2A" Name="politkovskaya_anna_putinskaya_rossiya.fb2.zip" />
   <File Size="8168311" TTH="OLYC5B5J5JSAZTHHXNV76ZPA6YO4V3ZQA5X57CI" Name="qt-creator-1.1.0-src.zip" />
   <File Size="124513736" TTH="VONDXAEZZE7AA5GXZIWIOXA3NESQSJN3NLFG6HQ" Name="qt-x11-opensource-src-4.5.1.tar.gz" />
   <File Size="80220" TTH="RASHABUGBS6YFQOK7WI4AF5MCCO26FPF5NJO2CI" Name="sipgate_rates_xls.zip" />
@@ -86,11 +88,739 @@
   <File Size="25890" TTH="TIYPMLC4DSGGXD7NUS3LW62DGZY2W2E7WNYUWKA" Name="tevi_9_may.sql" />
   <File Size="3801972" TTH="5JD4HQ4EVJS3C2NKZUQ3HTNFG4LK64QRTXALG5I" Name="unetbootin-linux-323" />
   <File Size="32115853" TTH="Z2B6ZTWGRGV6BTZS4ULK7ZZA37VIA56YQ6B53BI" Name="V3update-uknewui-2.12-20090409-2.rar" />
+  <File Size="57671680" TTH="RH3PU3ADOELCSJ5D3IEZM6QGRW3K5U4MIKLXQ4I" Name="V3update.bin" />
+  <File Size="18589458" TTH="NF6SOB2CUMEJJLM2ZS7SPUYHLNYPJ6JPVFN6MQI" Name="v3update_cr3-20090619.zip" />
   <File Size="31546" TTH="7F6LGRJFEAHMM4QQHPTHIC7VJZ7AD66RDBLDX6I" Name="valye-jan-2008.kml" />
   <File Size="15934" TTH="MT4SP426LY6IJMGG6P7W4FDDUUKTZCGY6NAPLNY" Name="valye-jan-2008.zip" />
   <File Size="122775" TTH="HTT24ENASONPJUOEWZ7GRKULNLBFZRYBYRYE7LY" Name="vashik-QWord-59d9bec35b5a3926db6a63bb6cbc900544eceb75.zip" />
   <File Size="2334416" TTH="WGAKXQTYSHGAFQEV2IDBDTVWSX7BYRJ3R3K6JOA" Name="vmlinuz" />
   <File Size="132111" TTH="YJP2OZJ56RGVEOVETW53FY5ZNBWHNUYH6VJRZHQ" Name="wuala.tar.gz" />
   <File Size="410088856" TTH="ZCMBD34JMYWGIUMW7IKKPWXHOAWL6IQMORC7XAA" Name="X12-46720.exe" />
- </RootDirectory>
+ </Directory>
+ <Directory Name="DC_SHARE" >
+  <Directory Name="Music" >
+   <Directory Name="!Классика" >
+    <Directory Name="Wagner" >
+     <Directory Name="Classical Masterpiece of Music - Richard Wagner" >
+      <File Size="4048" TTH="3FFXQFUTLYLWLPXN2XXEMRL6STC54XKMA5Z7YPQ" Name="01-Lohengrin-Bridal Chorus _Treulich GefÃ¼hrt_.ogg" />
+      <File Size="4025" TTH="RXB6DVZNWRUWN7XMXROSQN6TO3FHS7AMZKEHYAA" Name="02-TannhÃ¤user-Oventyre.ogg" />
+      <File Size="4061" TTH="YVYJP3ROMWZCOKIBMZGC2MIHOEMCBY42B423JUI" Name="03-TannhÃ¤user-Entry Of The Guests _Frudig BergrÃ¼ssen Wir_.ogg" />
+      <File Size="4054" TTH="AI2L3EBDHXEXST64UEC47RAMVV74TISD5UOAP6A" Name="04-TannhÃ¤user-Pilgrim's Chorus _BeglÃ¼ckt Darf Nun_.ogg" />
+      <File Size="4043" TTH="AOVQLUKZYAQDD6WPNLUGO5OQCXBVAVDCTRUYY7Y" Name="05-Die Meistersinger Von NÃ¼berg-Oventyre.ogg" />
+      <File Size="4065" TTH="D5GBNBX6A3WJ2OJTL7OYBQOCUBN3WV3AGJZWWEY" Name="06-Die Meistersinger Von NÃ¼berg-Chorus From Act 3 _Wachet Auf_.ogg" />
+      <File Size="14871750" TTH="OJHXEL5GKX5T3QDGBF4F7R5XP24O5QV2C65RAFA" Name="07-The Flying Dutchman-Oventyre.ogg" />
+      <File Size="2396551" TTH="KD43MPFQG5O6MN4SWZD4KVH6LO5SURCCR7WBYJI" Name="08-The Flying Dutchman-Sailors' Chourus.ogg" />
+      <File Size="3917" TTH="6ON2GV7JLBJCLCDNXZVQCLWK42PN2BWJGTF5JXA" Name="Richard Wagner.txt" />
+     </Directory>
+    </Directory>
+    <Directory Name="Фортепиано" >
+     <File Size="3957658" TTH="QJCK2JEBA6GFTFIOUB3YZB7QCP5BZ4LBJHNSUPI" Name="20. CRAIG ARMSTRONG - BALCONY SCENE (ROMEO &amp; JULIET).ogg" />
+     <File Size="4530" TTH="AH4Z2KBFZSGHMMUN7BJGO6WF7BEMVEJ2EBK6V3I" Name="ÐÐ¸Ð½Ð° Ð Ð¾ÑÐ° - Ð Ð¾Ð¼ÐµÐ¾ Ð¸ ÐÐ¶ÑÐ»ÑÐµÑÐ°.ogg" />
+     <File Size="4546" TTH="ZD3T4QWYOUOLVW76D4SMXUF44ESKYQMD33KSBWQ" Name="Ð Ð¸ÑÐ°ÑÐ´ ÐÐ»Ð°Ð¹Ð´ÐµÑÐ¼Ð°Ð½ - Ð Ð¾Ð¼ÐµÐ¾ Ð¸ ÐÐ¶ÑÐ»ÑÐµÑÐ°.ogg" />
+    </Directory>
+    <File Size="4299933" TTH="QPTPYVOUQUNTWFGBM3JPKIF3LY5UZPSN5IEPIMY" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disc 2 - 01 - O sole mio - 1997.ogg" />
+    <File Size="5502677" TTH="HVOWHBBNFVQ335CI6LKCFNI24HW7JIV7RFXPTPQ" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disc 2 - 02 - Torna e Sorriento - 1997.ogg" />
+    <File Size="5924780" TTH="AQH3XENLTKBS7FAVBMCFBKNRPSCO2666Z47O42A" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disc 2 - 03 - Core 'ngrato - 1997.ogg" />
+    <File Size="3079124" TTH="UPFNLX7PU63U26WLRAZPJ6WRKC3EDZI7H4EVIKY" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disc 2 - 04 - Funiculi Funicula - 1997.ogg" />
+    <File Size="6030765" TTH="ECBLA7CAJOEEUEZ6Q44EPW4HT7CPT5AJLE53RGQ" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disc 2 - 05 - Notte 'e piscatore - 1997.ogg" />
+    <File Size="4931092" TTH="6VKTEFLNTNSVIEKJYQ6UH6OXIXIBV333NUW2P4Y" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disc 2 - 06 - O Holy Night.ogg" />
+    <File Size="4566057" TTH="W7XEO7XIF7XD5NG5ADURPQJRRL63BHH5DNPDYXA" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disc 2 - 07 - Panis angelicus - 1997.ogg" />
+    <File Size="5415867" TTH="P3MZXU3AXRWKEQBLF535JRR4BBO5HBSGQW6HRIA" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disc 2 - 08 - Ave Maria - 1997.ogg" />
+    <File Size="2537051" TTH="4TJS6XYSG7S4JBOA2OFTIAK3JZJ75ILWWK736RI" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disc 2 - 09 - Mattinata - 1997.ogg" />
+    <File Size="3532634" TTH="7YQVZJCZ6XQJ3YBCEZMR7VS5POIQHN7KZPUCI5Q" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disc 2 - 10 - La danza - 1997.ogg" />
+    <File Size="3918388" TTH="6C5GL4QQP4PL3YF2EPVBNFOQYL3JRKO6J2HPMCY" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disc 2 - 11 - Caro mio ben.ogg" />
+    <File Size="6530918" TTH="XEUGPOQQ7E4HBUQNY6ZISWVILL44PE33GZ5O6HA" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disc 2 - 12 - Caruso - 1997.ogg" />
+    <File Size="4675552" TTH="NAYE7JBBG3OP7BCEGLIQDYEZGSYBGAD7PBVCO6Y" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disc 2 - 13 - My Way - 1997 - classical.ogg" />
+    <File Size="2037296" TTH="42U4K2W5SQ7NODVSXHU7JPTZCTI27D6LAZBW6XY" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disc 2 - 14 - Santa Lucia.ogg" />
+    <File Size="4118458" TTH="DTGRULQR5BWX56PXUDPSVKYAODFYPYAWPC3K3CI" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disc 2 - 15 - Tu che m'hai perso il cuor.ogg" />
+    <File Size="4661382" TTH="6MSCOBNVOK65BMXKCUIH6KHZZXTUFIPR6SEVFTQ" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disc 2 - 16 - Mamma.ogg" />
+    <File Size="4075654" TTH="M5ZNN4GBSDHHJX2IBRFRWHJMFC5CZ4ZKFBBKEII" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disc 2 - 17 - La mia canzone al vento.ogg" />
+    <File Size="5564758" TTH="EJA3PWUNMOC5HGSJ2RLKZ3CLVLLRTVGU72R634A" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disc 2 - 18 - Volare - 1997.ogg" />
+    <File Size="4404072" TTH="EXOWUCZVZKVCF3O43TEG5LC3DV234AAA3BWAVNQ" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disc 2 - 19 - Passione.ogg" />
+    <File Size="4064625" TTH="MICRZYHPZGXD7X5JDK6FFG55RXDVCYAFGBBA37A" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disc 2 - 20 - Granada - 1997.ogg" />
+    <File Size="3562356" TTH="P6DDJ3YHN3UQT4HZY4JTHSNV5R2HOU6G33B742I" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disk 1 - 01 - Nessun Dorma - 1997.ogg" />
+    <File Size="5512999" TTH="6GB5ZJ3CBXLRXFTELVG2D42F6CTARFW3RHIG7TA" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disk 1 - 02 - Che gelida manina - 1997.ogg" />
+    <File Size="3278305" TTH="TBKHRXQZC27MQQFM3N3VUE3TTD6CH3M7CEYCHOY" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disk 1 - 03 - Brindisi - 1997.ogg" />
+    <File Size="4853361" TTH="WWNCQS6VQCRKX74H2ZIRCFC26MJGNZKBJ4B7TVY" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disk 1 - 04 - Celeste Aida - 1997.ogg" />
+    <File Size="5319254" TTH="YM3NTP4L2QGSSS3JAK7R2NXGZTX5ZM4PLHICW3I" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disk 1 - 05 - Una furtiva lagrima - 1997.ogg" />
+    <File Size="1822994" TTH="4WREHPT24FUDCBISDNSISB5U4RCKAWHRFNXXYZA" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disk 1 - 06 - Questa o quella - 1997.ogg" />
+    <File Size="3982385" TTH="DI6MQNE4E446HWWETZBINK42AZJUUDBORBACH7A" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disk 1 - 07 - M'appari.ogg" />
+    <File Size="3809247" TTH="TN5IV6YY7SPGLQDHCASP746ME7VSEXD6NV3IRSI" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disk 1 - 08 - E lucevan le stelle - 1997.ogg" />
+    <File Size="2077344" TTH="GNO4IDPLL2QYIHGR7PCQ64S6LFTX4KHSSMCK2UY" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disk 1 - 09 - Amor ti vieta.ogg" />
+    <File Size="4540672" TTH="L5XKSA26REUPI3QRSA7JWH5NZJHB6RBMBETOF2A" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disk 1 - 10 - Vesti la guibba.ogg" />
+    <File Size="2235148" TTH="L5LMGRWGWWZ7TSSQJV5JBXMIML7JQ5SR4WJLKWY" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disk 1 - 11 - Donna non vidi mai.ogg" />
+    <File Size="2846335" TTH="RT5B2VVJ5QTQMFUIPXIDSSQBRR6RNYYDKL4Y7QY" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disk 1 - 12 - La donna e mobile.ogg" />
+    <File Size="4250590" TTH="SYFB6LP4VCUCHSNZ7SISUQGOWUAYLUBDQQZZ4CA" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disk 1 - 13 - O paradiso.ogg" />
+    <File Size="3824789" TTH="EFC3FYRSJCJWRICFHDPFFE4OGFDJ45TQH5PA5WQ" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disk 1 - 14 - Pourquoi me reveiller.ogg" />
+    <File Size="5281496" TTH="NCIYCXYENDY2UVPLL6ACUBKCUBWAMSPZDD5U2GI" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disk 1 - 15 - La fleur que tu m'avais jetee.ogg" />
+    <File Size="1364120" TTH="2ZHO27OMX7ANCSPBSNUCAGZXQVCH3QZ7EF5XY3A" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disk 1 - 16 - Tra voi, belle.ogg" />
+    <File Size="6174733" TTH="XNQCDQR6KTSBN6Y2U45HEMGP2DQPTOBGEMP2IHY" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disk 1 - 17 - Cielo e mar!.ogg" />
+    <File Size="3273785" TTH="EV67HEUMS4O6FV5Y4YBV3VBUY6Y7NH7OE5O3J7Y" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disk 1 - 18 - Recondita armonia.ogg" />
+    <File Size="5125057" TTH="CCFW44QZO7EP6EEOJVCO26OQLRHWZUKAVJTNNZQ" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disk 1 - 19 - Spirito gentil.ogg" />
+    <File Size="4058482" TTH="FNQJ65TBLSEW3SW4DAQZTI5HCHAG7FOZWPMJSMY" Name="Pavarotti, Luciano - Greatest Hits, The Ultimate Collection, Disk 1 - 20 - Di quella pira - 1997.ogg" />
+    <File Size="4532" TTH="KIWPRQSWP5WA3D5S2TC3UUIUZLYXLWKSZOUW2ZY" Name="ÐÐµÑÑÐ¾Ð²ÐµÐ½ - ÐÑÐ½Ð½Ð°Ñ ÑÐ¾Ð½Ð°ÑÐ°.ogg" />
+    <File Size="4015" TTH="HW7G6D2OCBDNMBWS3JDVC23G2KW6TPNS3SCPSPQ" Name="ÐÐ°Ð³Ð½ÐµÑ - Loengrin_prelyudiya_Akt_3.ogg" />
+    <File Size="4002" TTH="ILXWDMZXMSH2WIOCPH7L3PVQENKGMLB7E46X2TA" Name="ÐÐ°Ð³Ð½ÐµÑ - ÐÐ¾Ð»ÐµÑ ÐÐ°Ð»ÑÐºÐ¸ÑÐ¸Ð¸.ogg" />
+    <File Size="4022" TTH="OY6B6O6R5AEDQS2ROUMZWCQ7FZ3XQ77WVGEOKBA" Name="ÐÐ°Ð³Ð½ÐµÑ - Ð¢ÑÐ¸ÑÑÐ°Ð½ Ð¸ ÐÐ·Ð¾Ð»ÑÐ´Ð° Ð¿ÑÐµÐ»ÑÐ´Ð¸Ñ.ogg" />
+    <File Size="4054" TTH="OLE2YFWZDZMBGQUTEUUAK5IM6AYIB37W6IF2YEY" Name="ÐÐ°Ð³Ð½ÐµÑ_-_Nyurnbergskie_meystenzingeri.ogg" />
+    <File Size="5027072" TTH="QWQ3EJ5SWRCJE7U3DJLN2OKEOD34QEDXCTJZXEI" Name="Глинка - Увертюра Руслан и Людмила.ogg" />
+    <File Size="3828250" TTH="GREFOZTOBDRDASDPLZ4UM6CVWPWYP3XOFOZBWHQ" Name="Россини - Увертюра к опере Вильгейм Тель.ogg" />
+   </Directory>
+   <Directory Name="Andrea Bocelli" >
+    <File Size="5128236" TTH="S2KI2P723YAN5FOWXO47FFR5I4TJSFTUVQ67CYA" Name="001 034-ANDREA BOCELLI - MELODRAMMA.ogg" />
+    <File Size="5289024" TTH="J5QSENR5N7ZMGLETZ2FOLHBCHOL6FUISEA7D6PY" Name="04-Time To Say Goodbye (with Andrea Bocelli).ogg" />
+    <File Size="11645592" TTH="SKDNUJK47ATWNSZH7FWE2DRO7GFXEEDZSC72ERY" Name="05MUSI~1.MP3" />
+    <File Size="4851040" TTH="S24VXD2KPD3Q5PLOB32QJB5NIAZLVZMB3HZT7LY" Name="07_andrea_bocelli_ave_maria.ogg" />
+    <File Size="5453326" TTH="DUW33HO73RXSDYUGC32FVOV7ZUPAGJERJVTGK3Q" Name="12 - Celine Dion &amp; Andrea Bocelli - The Power.ogg" />
+    <File Size="5453283" TTH="OFZYYW7RTJBPRK4Z2RGJAL5IYNJEMUZPEUIYHIA" Name="12.CELINE DION &amp; ANDREA BOCELLI -THE POWER-.ogg" />
+    <File Size="5257014" TTH="U6AI55VRFMFP2A6XDA4X3MWCRC5KDESLDNCIE3A" Name="A Mio Padre.ogg" />
+    <File Size="6006145" TTH="HP33LMGYAGAMENVVRF74ONZOIDW4DOZEG3HC5GA" Name="A Volte Il Cuore.ogg" />
+    <File Size="6604531" TTH="NVQQWZUISN2I6FBW4X2FQTEKBWM7EIME6PXR27Y" Name="A_BOCELLI_CARUSO.ogg" />
+    <File Size="5456511" TTH="3P25PXUSS5PQUQ7ZHPXNRG7MRVEP3OE7ETYYJTI" Name="A_BOCELLI_CON TE PARTIRO.ogg" />
+    <File Size="6410501" TTH="7TPWVKNY3LPDMVUHTV3PAA7RDEEY4O5SLGAHYWQ" Name="A_BOCELLI_L ABITUDINE.ogg" />
+    <File Size="5888664" TTH="O6JVOWDSGQRX2VK52P4KE2VUDT2EH22MX5JVSJQ" Name="A_BOCELLI_LE TUE PAROLE.ogg" />
+    <File Size="5627379" TTH="6US4FIVGPUQF3DW6CWLMZHFHKZZOTPCJJW4NM2I" Name="A_BOCELLI_MACCHINE DA GUERRA.ogg" />
+    <File Size="6446507" TTH="S3JYKW763DNLFPO43AI3NV2DGKDFK6H5UIJBE6A" Name="A_BOCELLI_MARE CAL MO DELLA SERA.ogg" />
+    <File Size="6142076" TTH="X4ATOOH4ZC6PSIPYKIV6XGEQQCQXM2PMI5A4DZI" Name="A_BOCELLI_MISERERE.ogg" />
+    <File Size="6325383" TTH="RYROWWH3YESSLOWOSOC5ZXMOHFCSZLBYEGJKEDQ" Name="A_BOCELLI_PER A MORE.ogg" />
+    <File Size="4854382" TTH="ORIVV5RB6ZWN26S3XRGJLC6VYMUV7RVWMR3O7FI" Name="A_BOCELLI_ROMANZA.ogg" />
+    <File Size="5806457" TTH="JAS6QGOTDYACKUISRFZWLQJFH6GRN2KVYJWNEPA" Name="A_BOCELLI_TIME TO SAY GOODBYE.ogg" />
+    <File Size="6231626" TTH="PIEUPLTD5HRT7D65N5RHZOYRYSJPP6GTMSYBVOA" Name="A_BOCELLI_VIVO PER LEI.ogg" />
+    <File Size="4719788" TTH="WTTIJQV7NJVXE7CVYFFOOONVSUG5LK7TMVFWO4Q" Name="Andrea Bocelli - Per Amore.ogg" />
+    <File Size="5737018" TTH="4HRFZZ476XHP5EZOJAQ2RKS4YJIRMGA2GYSBLVY" Name="andrea_bocelli_-_somos_novios_its_impossible.ogg" />
+    <File Size="5117785" TTH="LJQZRAF3IK4N55AC35UZBKYT2HJEILPJ7OHECZQ" Name="Cantico.ogg" />
+    <File Size="5384453" TTH="JDYX663HITJVRSSYEXLPB62T5OF2MFHKNLVOWBQ" Name="Canto Della Terra.ogg" />
+    <File Size="6037044" TTH="7HVJ3FZNGEFJZGCZB7DOMCTAL4L322Q545X5TCI" Name="Caruso.ogg" />
+    <File Size="6260376" TTH="DJSIRVIIRMMGFUQKLVW4XTFKCJUS4GJ5LRZJTCY" Name="Come Un Fiume Tu.ogg" />
+    <File Size="5056034" TTH="ARFAEOSM56HEBVBTLVW7R3HZWLOM5BQHKN2C72Q" Name="Con Te Partir.ogg" />
+    <File Size="5735519" TTH="ZJXV35E7HJ2EU7CUNLHLKBAWR4UZYDQQYYMBSWA" Name="E Chiove.ogg" />
+    <File Size="4911855" TTH="WDDXPEEGFXTH3ZGSQN54FR4IETAIQVRC3QSCBAY" Name="I Love Rossini.ogg" />
+    <File Size="5843707" TTH="W67RF4XMNOMUY6Q6NALGDEGYTIBXMT5JEXTU7DQ" Name="Il Mare Calmo Della Sera.ogg" />
+    <File Size="5962185" TTH="EKMTWW6BCS2JMYC32AJTBIYY56XM2NEG73NIVCI" Name="Immenso.ogg" />
+    <File Size="5955923" TTH="3OFOWX4GYUUEOSWFB7V72PJAAIRENBDAFDOPDEQ" Name="La Luna Che Non C.ogg" />
+    <File Size="5085404" TTH="V266E6LG3OMVJYCW7HVL6ILMECUP7CTK52ZRYYQ" Name="Le Tue Parole.ogg" />
+    <File Size="5105482" TTH="LYGKJX5OPWDAUZNHKYIG2HWMASWVCGBUDI4JC5Y" Name="Macchine Da Guerra.ogg" />
+    <File Size="5442185" TTH="M3ZZPGQRHWB6QGAGBHRYZPPKNO5J6ZWCTIPWLSY" Name="Mai Piu Cosi Lontano.ogg" />
+    <File Size="5581599" TTH="5CLJXHO5OHJRJ7B3IQCWGCY5P6EEORT4POS6AVQ" Name="Miserere [live].ogg" />
+    <File Size="4890278" TTH="2OH2E7CZM45RFVLSZCLBSUMOTEFUDT7BESSD6WQ" Name="Nel Cuore Lei [feat Eros Ramazotti].ogg" />
+    <File Size="5214208" TTH="RFI2TVQBDJKDDXR27EXFZUDRHRERFUGCHO7SYEQ" Name="O Mare E Tu [feat Dulce Pontes].ogg" />
+    <File Size="5759381" TTH="55J5MZYGIORB2AVLGSDAXP7BLNRBDHNEJFMJ2VY" Name="Per Amore.ogg" />
+    <File Size="6436694" TTH="PMV2YED5WGXGVKE4DBHO5HBHP6TUPOPDIEDHYVA" Name="Rapsodia.ogg" />
+    <File Size="4425694" TTH="V7MVPGAD3LMCZAHGL4GGPOQSXEZIZ4MYRAFWJ5Q" Name="Romanza.ogg" />
+    <File Size="5215568" TTH="ZL7L4EAGEP5GQ63YSODCURU7SMMYJRFUPM4ZKOQ" Name="Sogno [dream].ogg" />
+    <File Size="5643703" TTH="OHVUNDV74XXBKK5WCLT2YUGVOOSLNGWJM3LLXKY" Name="The Prayer [feat Celine Dion].ogg" />
+    <File Size="5484365" TTH="C3XU3HKA4SAWAFA4L52YQENDNAYFW63LZHHCXCQ" Name="Time To Say Goodbye (con te partir).ogg" />
+    <File Size="5989361" TTH="P2XLOGINQ5PPN7DB6P2XJ5DR6V5I5NW6LGA45MI" Name="Tremo E T Amo.ogg" />
+    <File Size="5577534" TTH="TYG4PWLYBU5QF3YP6EVP3FOH2WNS7EQPCONL5QQ" Name="Un Canto.ogg" />
+    <File Size="5145992" TTH="F4SJDHKULJT6DYLXEMWFDMNRKDVCHPJVPJBDUSI" Name="Vivere.ogg" />
+    <File Size="5735389" TTH="XEU4TW23GWBED2LE2XP2GYXERXGMQOJC5IIDEOA" Name="Vivo Per Lei.ogg" />
+    <File Size="4974849" TTH="CJXQBFXN6J2UZBHP4LHEHDTXZKWDW65YCENISBA" Name="Voglio Restare Cos.ogg" />
+    <File Size="3835" TTH="4DWSNDN3WVUEQBPKLGPZQ72IQBMMMD4LN5VK4PA" Name="ÐÐ°Ð¿Ð¸ÑÑ 001.ogg" />
+    <File Size="3835" TTH="4DWSNDN3WVUEQBPKLGPZQ72IQBMMMD4LN5VK4PA" Name="ÐÐ°Ð¿Ð¸ÑÑ 002.ogg" />
+    <File Size="3835" TTH="4DWSNDN3WVUEQBPKLGPZQ72IQBMMMD4LN5VK4PA" Name="ÐÐ°Ð¿Ð¸ÑÑ 003.ogg" />
+   </Directory>
+   <Directory Name="Bocelli" >
+    <Directory Name="1994 - Il Mare Calmo Della Sera" >
+     <File Size="4867919" TTH="YBE5GYB4BW7GZUUIRPFA6ARY3MO2LEJ5QTY7CIY" Name="01. Il Mare Calmo Della Sera.ogg" />
+     <File Size="5066813" TTH="MLUPNWAGGS6J6KEHWQXIK5QQB53AVU7W5HEWYKY" Name="02. Ave Maria No Morro.ogg" />
+     <File Size="4467780" TTH="OPTEJBVTFZZCMVW6TQN27WDUCTNBWN7Y5YPG6CY" Name="03. Vivere (Featuring Gerardina Trovato).ogg" />
+     <File Size="5727396" TTH="4FHMIDW4PNKNM32Q5WLE73S6CEVDP5GBJKFBFKY" Name="04. Rapsodia.ogg" />
+     <File Size="4586" TTH="44LAOJIJ3ASO6P6ME7F5SCUZQW6P4LIJBEGYXNY" Name="05. La Luna Che non C'Ã¨.ogg" />
+     <File Size="5514074" TTH="AP4NIVMGUTK4WU32BCY3JGFUUBAA67LRS5RYHKA" Name="06. Caruso.ogg" />
+     <File Size="4743525" TTH="RAZ7CTAZN5OEQKDHLSOJNF6U5FK7XJ73B2RDIRI" Name="07. Miserere.ogg" />
+     <File Size="4177709" TTH="UUBBD77GXZD6F3D7DX6GHWYHAEPWGILSVL5BWIQ" Name="08. Panis Angelicus.ogg" />
+     <File Size="4611983" TTH="7RHELOYVU4ANGJ2CIY4XLL67VCZWFALCGCXB5XY" Name="09. Ah, La Paterna Mano (from Macbeth).ogg" />
+     <File Size="3680151" TTH="BKGQMGYRFQG5AF6BNU45ALEP64XPLUPTWCVQEAA" Name="10. E Lucean Le Stelle (from Tosca).ogg" />
+     <File Size="4944169" TTH="VWFEHEWCJDLI27CIJYI46RDGLMT5SH347EEZQOA" Name="11. La Fleur Que Tu M Avais Jet e (from Carmen).ogg" />
+     <File Size="2665078" TTH="3S3XNCD22KNLYNZAGEEQKCAIK3ZJNRWXHIOGDTY" Name="12. L'Anima Ho Stanca (from Adriana Lecouvreur).ogg" />
+     <File Size="3313788" TTH="5XOFETB2UBEXXXIPJY6WZRUXCPLYPH627SLVOZQ" Name="13. Sogno.ogg" />
+    </Directory>
+    <Directory Name="1995 - Bocelli" >
+     <File Size="6234200" TTH="XKQFG2ZTCLMUBEHBV3A6PYWAVKP7WA3FK22SOEI" Name="01 - Con Te Partiro.ogg" />
+     <File Size="7223223" TTH="ZL6HSICUQC7XFP7WDV2SPZFQY7VW6U2UB5H5TOA" Name="02 - Per Amore.ogg" />
+     <File Size="6543679" TTH="BZQ5ZDHLGOOZ23AUG6N3V3SOCCKWFDTN74JPNYQ" Name="03 - Macchine Da Guerra.ogg" />
+     <File Size="7443341" TTH="CJECF6LAM6YATFXVDS5SFYSFOYAGX4FKZKRVPIQ" Name="04 - E Chiove.ogg" />
+     <File Size="5630981" TTH="MAQ2HJJF5U76EXW7FCHPE46QKGCR7FUHLETNFIQ" Name="05 - Romanza.ogg" />
+     <File Size="9432624" TTH="VUQRFORUD52NY4ZW5NE5OQGUD7V6JSTM7J7YNPI" Name="06 - The Power of Love.ogg" />
+     <File Size="8142099" TTH="UXJXCDKWEMQYTPDKHAE64BC7DLRJWDISCWIHF4A" Name="07 - Ich Lebe Fur Sie (feat. Judy Weiss).ogg" />
+     <File Size="6758331" TTH="VAKIHKMSKGTFP4GDHHAQ53IMQG4VSM7UFQXK75Y" Name="08 - Le Tue Parole.ogg" />
+     <File Size="7931926" TTH="UMDJWVEHZEUX2SPGEF5G7DT3SH4E5ZNIC5X6BVI" Name="10 - Sempre Sempre.ogg" />
+     <File Size="6558944" TTH="D7NDO6VEOFBK2HNUORLLAULX4IFFPP7LZCUTFVQ" Name="11 - Voglio Restare Cosi.ogg" />
+    </Directory>
+    <Directory Name="1996 - Romanza" >
+     <File Size="6234200" TTH="4A527PDXP7VTRWSAU5GLTJBEELDPZAJQTGTR2CA" Name="01 - Con Te Partiro.ogg" />
+     <File Size="6682180" TTH="P3OBOJVDHOYRVQHPHVEALTW5E7ODZDGFTTQ3R5A" Name="02 - Vivere.ogg" />
+     <File Size="7223223" TTH="2CQKSNQT55IQPU5TYRI4YUBLKKVGUDKLN6BJ5UY" Name="03 - Per Amore.ogg" />
+     <File Size="7486366" TTH="5YSCPFRGJOAHUVOMBKQWAGBMHCFEZ5DTIDU44UQ" Name="04 - Il Mare Calmo Della Sera.ogg" />
+     <File Size="7920967" TTH="QYLLGAUBN4MNSMMF5WHSW4NTRICNV6YIWTFHPBA" Name="05 - Caruso.ogg" />
+     <File Size="6543679" TTH="5FYUC5B7B23DHRTWQGS656T5U5FZ4XY6HZJRA2I" Name="06 - Macchine Da Guerra.ogg" />
+     <File Size="6758331" TTH="JXNAM3NDFU6UMKJQISZHWURKPNSW6OXHMKNYC2A" Name="07 - Le Tue Parole.ogg" />
+     <File Size="7337996" TTH="RI2FOHDCFUFVCNUFQEMS3IDSUF4XBS2AQYO6GWI" Name="08 - Vivo Per Lei.ogg" />
+     <File Size="5630981" TTH="BADFVMJAF5I5RFV4GD4FZK7AO5R3XSTFVMZB43I" Name="09 - Romanza.ogg" />
+     <File Size="7688184" TTH="KN5Q4N73SGUYLFQR6SO6VI5ISHCB2QMEUL5QRLQ" Name="10 - La Luna Che Non C'e.ogg" />
+     <File Size="8469282" TTH="6K53S5MR3CLDWO5R5THPWUE7C2RKORHCNJKJV4I" Name="11 - Rapsodia.ogg" />
+     <File Size="6558944" TTH="XJLMWQ3CQTCNNT2IEP7OAKWSUIVNXTFUUCUYRPY" Name="12 - Voglio Restare Cosi.ogg" />
+     <File Size="7443341" TTH="BDOI2LEJ3D7TWN2EA2QALPUMJTL2ROPONPFULII" Name="13 - E Chiove.ogg" />
+     <File Size="7053188" TTH="RG5VGX732NSGQEYLZUVJK5THD655O67FGX6V5EY" Name="14 - Miserere (Live).ogg" />
+     <File Size="6550073" TTH="TPWUHQJG66UPXPNAHSWWDSTA3CJFPVIOC5AN2IY" Name="15 - Time To Say Goodbye.ogg" />
+     <File Size="2383" TTH="NQUZV2EDWW4ZE77KKJ6CNI7FWEKOZ5TTRJU62OY" Name="AlbumArtSmall.jpg" />
+     <File Size="9047" TTH="UFONBBSDE62GNTEUPHFCQLEWLDA7NKRRYFT5RMY" Name="Folder.jpg" />
+    </Directory>
+    <Directory Name="1996 - Romanza (Spanish Retail)" >
+     <File Size="5018759" TTH="3DEERKTSI6CVV6XR77O54FUOFIUAJO7CACHVCKY" Name="01 - Por Ti Volare (Con Te Partiro).ogg" />
+     <File Size="4302398" TTH="COXTXYR3ITZT4INVWF4EKQ5P7FKIGWFEY4W7UQY" Name="02 - Vivere (feat. Geraldina Trovato).ogg" />
+     <File Size="5331793" TTH="D37TBUWJQ7RX2TPAL3O25MZQ2222DFTCROBL73A" Name="03 - Por Amor (Per Amore).ogg" />
+     <File Size="5771879" TTH="SWB5CRBM6GIKDQGWA2EG44ZKPYRZOLMK7DKAYCI" Name="04 - El Silencio De La Espera (Il Mare Calmo Della Sera).ogg" />
+     <File Size="7920985" TTH="JQRX2ZE7PSVXEPCZTRNJMBBDNWWUCQDOPL4O3EQ" Name="05 - Caruso.ogg" />
+     <File Size="6543697" TTH="QUPVADQNVJSF3GV2A2SFPS43DRBUXHCVLYYDADY" Name="06 - Macchine Da Guerra.ogg" />
+     <File Size="6758349" TTH="ZOZBVWN5EUYJFQ2H6RSA77VHRPK4SN3DOEQJACA" Name="07 - Le Tue Parole.ogg" />
+     <File Size="7739334" TTH="MKBZQN3ZNQXGMFRZOWRQWS4YT346XEL4PPXWWRQ" Name="08 - Vivo Por Ella.ogg" />
+     <File Size="5630999" TTH="KR4JXSCPZBFEDOYGLSAKTTPLICFLZEJCSAWD3EY" Name="09 - Romanza.ogg" />
+     <File Size="7688202" TTH="SAQRQAVSD3BRG4XMNUWFVLLFZYW2IWBNOH26DVI" Name="10 - La Luna Che Non C'e.ogg" />
+     <File Size="8469300" TTH="2KXRGQ27ZXWAUM4V6QXCU7LCQJIP3VO3IMDZESY" Name="11 - Rapsodia.ogg" />
+     <File Size="6558962" TTH="J4IE3NICGYKTVY4IFNZQU2ZT4BITUXQJI6E3DUQ" Name="12 - Voglio Restare Cosi.ogg" />
+     <File Size="7443359" TTH="747VVKXQG3S3C57R4P5ZVTGYYEG6X5RMEORMHEY" Name="13 - E Chiove.ogg" />
+     <File Size="7053206" TTH="67SSZSU2CDCCROTWTADM5L7HXCU27FQ5XBOFJRI" Name="14 - Miserere (Live).ogg" />
+     <File Size="6550138" TTH="DBGOSUKNPABM32OREFPHL6H4JRST5HK2AX2BS4Q" Name="15 - Time To Say Goodbye.ogg" />
+     <File Size="7615251" TTH="QPG32EKPDI5V455Q2LHRWRQDKOR2VDD3MBN2UVY" Name="16 - Je Vis Pour Elle (feat. Helene Segara).ogg" />
+     <File Size="4887872" TTH="IV4HSGX5DJAVZRSYIH4VSXX32VOI547PJ5A3VPI" Name="17 - Vivo Por Ella (feat. Sandy Leah Lima).ogg" />
+    </Directory>
+    <Directory Name="1997 - Viaggio Italiano" >
+     <File Size="5347870" TTH="2JATKICIGFMCTXEHPBELGHXRX3CD3L3T4ZBHKZQ" Name="01 - Nessun Dorma.ogg" />
+     <File Size="7384224" TTH="C2PICECDLPALMMNNVJULC3F5KDANWS5FB7JZXCQ" Name="02 - Lamento Di Federico.ogg" />
+     <File Size="5349427" TTH="4JUVOY74HSZDUG3D6P2VLKBFM3IU6DVKPTYK76I" Name="03 - Ah, La Paterna Mano.ogg" />
+     <File Size="3741067" TTH="ELV2RQ34CV3VJYLKYEO34VPETCIVC7JFOCIBX4Y" Name="04 - La Donna e Mobile.ogg" />
+     <File Size="6657736" TTH="YVF5DGX6XXHBPTEZ2CAWI4GITRKUUWCIK223VOA" Name="05 - Una Furtiva Lacrima.ogg" />
+     <File Size="6309713" TTH="5KR6XB4MF4AKTCLOIRWJ5GMYKYG6F5I6OLYDYWA" Name="06 - Panis Angelicus.ogg" />
+     <File Size="6851577" TTH="LTUL5CP56LAAFFIO3D3N7FMICPWDD4GVLZNDO6Q" Name="07 - Ave Maria.ogg" />
+     <File Size="7631820" TTH="LWLWABHZBFU4U72O5HBYZ3JUL7EAY2POQVQYRCY" Name="08 - O Sole Mio.ogg" />
+     <File Size="7628298" TTH="J5UPCRUF6MYCOD6TTNY4Y2HDMKNBVEIVDBUYASA" Name="09 - Core N'grato.ogg" />
+     <File Size="8435992" TTH="EJPEPGLYFGEL3ZPE64X5MJU2JA7S2B7GQJCMAMY" Name="10 - Santa Lucia Luntana.ogg" />
+     <File Size="4327" TTH="S2LUTEMYXTRERXLZ2GKS2Y72T7UL5DUCTYNTQMA" Name="11 - I' Te Vurria VasÐ°.ogg" />
+     <File Size="5889422" TTH="IPU6LRIRYAFHZWYKMP5Q4CLCI2OVGKLSFQZ7KVI" Name="12 - Tu, 'ca Nun Chiagne!.ogg" />
+     <File Size="6537035" TTH="QA6II5UPIPL3XULV7BSFNFA7AORRKYKRFNVEKZA" Name="13 - Marinarello.ogg" />
+     <File Size="6736902" TTH="2R5HFJJE5DPZHLNZO4SBQLGJGYYIX7J5ZFKB2QQ" Name="14 - Piscatore 'e Pusilleco.ogg" />
+     <File Size="503970" TTH="U34KNGQWB6B2YXT6CZ2ZU5USI6O3W5OLMQ7YZXA" Name="15 - Message Bocelli.ogg" />
+     <File Size="5475239" TTH="L2RGKRTFAS7JUVF7BRFWY2PBWUYSCFHQX4ARJ7Q" Name="16 - Adeste Fideles.ogg" />
+     <File Size="6492679" TTH="X4DD5HASX46LOYWB5VKSNU4LV5W7K777DT7UPUI" Name="17 - I Believe.ogg" />
+     <File Size="6513083" TTH="K7H2RJIZFIOWOWEL2OP7VN36YTJXCCFJ3ORZT3Q" Name="18 - The Pearl Fishers (feat. Bryn Terfel).ogg" />
+    </Directory>
+    <Directory Name="1998 - Aria The Opera Album" >
+     <File Size="3004236" TTH="3OX5WCCKQG3NM343HBZ44OFVFN24C2UTW2UWNLY" Name="01 - Questa O Quella (Verdi - Rigoletto).ogg" />
+     <File Size="7248979" TTH="EGALIW5C46WLRILYPS34VESXE2O36OH2NRNXNOI" Name="02 - Che Gelida Manina (Puccini - La Boheme).ogg" />
+     <File Size="4938091" TTH="DCNYRFZKYI2M6IYUTLX76U4SXYWXQ75NTXKJOGI" Name="03 - Recondita Armonia (Puccini - Tosca).ogg" />
+     <File Size="4640185" TTH="XQBCL5CNESUQV7MOVZQINTOGXIUJWOMMKWWYNIA" Name="04 - E Lucevan Le Stelle  (Puccini - Tosca).ogg" />
+     <File Size="3066172" TTH="SPAXLGC4V75FX3WLSMBVAGV3O623DBN3OWPTK5A" Name="05 - Addio, Fiorito Asil (Puccini - Madama Butterfly).ogg" />
+     <File Size="5626157" TTH="IDCSYIAN7AFSCGNFZEBQPWQU3LL2DHY6LHV2ZXI" Name="06 - Come Un Bel Di Di Maggio (Girodano - Andre Chenier).ogg" />
+     <File Size="4994503" TTH="BELMT45QL5ZR56ES7MWFLOT4KTSLXZFO5ENJKBI" Name="07 - A Te, O Cara (Bellini - I Puritani).ogg" />
+     <File Size="3614062" TTH="PGRQX3G3PYNRI7YHHDQ56C2K33OFGJMMUCAEV4Q" Name="08 - Di Rigori Armato Il Seno (Strauss - Der Rosenkavalier).ogg" />
+     <File Size="3122161" TTH="UVN2NGFQWMTJH2FBJS6LBOW47QKGWIR7HRGHPKY" Name="09 - Amor Ti Vieta (Girodano - Fedora).ogg" />
+     <File Size="3266636" TTH="QWMDM5S67FCUZ3W2AYF7NS2UCS3N4ZO4NCQK2OA" Name="10 - Ch'ella Mi Creda (Puccini - La Fanciulla Del West).ogg" />
+     <File Size="7457639" TTH="T2GK4FMXYDHQATJAIS333YIQZYEVI2GC3XUC3VQ" Name="11 - Cielo E Mar! (Ponchielli - La Gioconda).ogg" />
+     <File Size="3666093" TTH="4D55IJFH3DXDE4K2LJGYF5KAV65MAGESWD2JBXI" Name="12 - La Dolcissima Effigie (Cilea - Adriana Lecouvreur).ogg" />
+     <File Size="5099497" TTH="SOT3WTHOEQ4URE5PTKVWE64TTVQAAGZNOXCGP2I" Name="13 - Musetta! Testa Adorata (Puccini - La Boheme).ogg" />
+     <File Size="11334428" TTH="ZHS2YRCTBKAM7XDIYTNSIYMU5F5FYJQWIE4WMZQ" Name="14 - Tombe Degli Avi Miei (Donizetti -  - Lucia Di Lammermoor).ogg" />
+     <File Size="4900172" TTH="5DLDQXAYMBCDMZ5X4WEL4WLD2ATYEBEK4REVKYQ" Name="15 - Pourquoi Me Reveiller (Massenet - Werther).ogg" />
+     <File Size="7267914" TTH="T7M3BJOQCIGSDOIOFYQGOJM53WOZ4JJTNWKIFLA" Name="16 - La Fleur Que Tu M'avais Jetee (Bizet - Carmen).ogg" />
+     <File Size="3806202" TTH="BERMDTR3T346UTZDRT5P35TIDN57HMPMGNQACYQ" Name="17 - Pour Mon Ame (Donizetti - La Fille Du Regiment).ogg" />
+    </Directory>
+    <Directory Name="1999 - Sogno" >
+     <File Size="6919224" TTH="FUEYG4ZKU2I2IMWIZLJDPVUNRKGZG2PVK5DQMMI" Name="01 - Canto Della Terra.ogg" />
+     <File Size="6865967" TTH="R2NOCY7C2KFMTP5XO46HAYGLV66GQBZHWX7IOSY" Name="02 - The Prayer (feat. Celine Dion).ogg" />
+     <File Size="6499676" TTH="KPJN3GKR2UKRREFS3UF5O725PJHH4PJMKEWWWUY" Name="03 - Sogno.ogg" />
+     <File Size="7317421" TTH="QPKU2VDEU2IEMZUPL6HGAHICGUKKSDS2YBRVJZI" Name="04 - O Mare e Tu (feat. Dulce Pontes).ogg" />
+     <File Size="7905318" TTH="22BKJ676AIM6OIO3AG2TPJKXXJSEYJVNMSURFWY" Name="05 - A Volte Il Cuore.ogg" />
+     <File Size="6372414" TTH="JJGU37KPXW44UMOXTFM7PCULQUGGN72RGO5NSLI" Name="06 - Cantico.ogg" />
+     <File Size="7461627" TTH="NEPTV6DDPFTPNOBCOC5CQACEWA4AMPSRTYJ7F2Q" Name="07 - Mai Piu' Cosi' Lontano.ogg" />
+     <File Size="7807585" TTH="7N6GNP3ETV6RCFKLPPEV6VQN7PWFE74WZGE2VOA" Name="08 - Immenso.ogg" />
+     <File Size="6564534" TTH="CELT5EEJJF57SEDAVAC3T2ZWUBFA5I3YZGYDCKY" Name="09 - Nel Cuore Lei (feat. Eros Ramazzotti).ogg" />
+     <File Size="7585654" TTH="B3RE32UPKGCWKXDMAOEBMCEC5JSRGF2WRDQCT6I" Name="10 - Tremo e T'Amo.ogg" />
+     <File Size="6265006" TTH="SU5JLJ3ZVHQYHDYZSWRKKKYFOD34IM7PIALX3HA" Name="11 - I Love Rossini.ogg" />
+     <File Size="6975345" TTH="RWTZZFXRDACYVHY3USWCM7W3RHUG6VTUETJMLBA" Name="12 - Un Canto.ogg" />
+     <File Size="8249482" TTH="76FBB4BNIVU3ADSDGAK5TNNG4PLSWE3ZSK27OBI" Name="13 - Come Un Fiume Tu.ogg" />
+     <File Size="7195420" TTH="4FJBC5KD675JG35LZZWWXL5ZGUBDBTPYLHV2API" Name="14 - A Mio Padre (6 Maggio 1992).ogg" />
+    </Directory>
+    <Directory Name="1999 - Sueno" >
+     <File Size="5535223" TTH="W47ARC4CK3C4S4PIJIWB2C3IQVVHI5VRAR2P2WA" Name="01 - Canto De La Tierra.ogg" />
+     <File Size="6866039" TTH="3TQN553X6VYFS6QKGNZUCVLGJ673D3EMZX4DQPI" Name="02 - The Prayer (feat. Celine Dion).ogg" />
+     <File Size="5446427" TTH="Z6J3O7TW4CJ64RUPD3HDW54ITRADI6YSPO6VQQA" Name="03 - Sueno.ogg" />
+     <File Size="6201390" TTH="D5EE6WDSFIKLEFFH4PYCO4LCXJ7HJQHF5L2LJNI" Name="04 - El Mar y Tu (feat. Dulce Pontes).ogg" />
+     <File Size="7905390" TTH="3QFO7KSAONBXVTKFEC6TKOVXFLJYP32UONR7RWY" Name="05 - A Volte Il Cuore.ogg" />
+     <File Size="6372486" TTH="P3437ECPGSLGTU5G2B4762CFO6V5IYPTRCYSYMQ" Name="06 - Cantico.ogg" />
+     <File Size="7461699" TTH="B5YNKG2NIHZOKFDQ5ZMVAI4VLTAF6PKVH73YXDY" Name="07 - Mai Piu' Cosi' Lontano.ogg" />
+     <File Size="7807657" TTH="TVTUQDPGJZZVFCWYFAHMUQ5A5UCUWDT6TMDF7SY" Name="08 - Immenso.ogg" />
+     <File Size="6564606" TTH="EHMUKCDK6FHLMO5WQJ65Z2IJFGE7QEVSL3V625I" Name="09 - Nel Cuore Lei (feat. Eros Ramazzotti).ogg" />
+     <File Size="7585291" TTH="XCEAKKTQMAZNUBXL3WNQWCBPFKRHDZ3QJPKWPQQ" Name="10 - Tremo e T'Amo.ogg" />
+     <File Size="6265078" TTH="6OOATARZ2PJ64GXODDJENOHWIF4NJJ34UWGDMJY" Name="11 - I Love Rossini.ogg" />
+     <File Size="6975417" TTH="FZGMKN46MGTS5IEXJYXG5MKMIW3IERNPQ7V4LWY" Name="12 - Un Canto.ogg" />
+     <File Size="8249482" TTH="HFWA2SD7RVABBDOG4ROSRWILSTS32J4Y5RLSWOQ" Name="13 - Come Un Fiume Tu.ogg" />
+     <File Size="7195492" TTH="OMTDK2TFWXBUVXPFZSBUP4VFG6IRXIHC7IJSIII" Name="14 - A Mio Padre (6 Maggio 1992).ogg" />
+    </Directory>
+    <Directory Name="2000 - La Boheme (Puccini)" >
+     <Directory Name="CD 1" >
+      <File Size="6903251" TTH="YPS5YPCDGOMZKLV7IBHXUMN7ICFMKARSQR3KWAY" Name="01 - Questo Mar Rosso Mi Ammollisce.ogg" />
+      <File Size="1859358" TTH="SDIS7UBLYCOSJSZTLNDW5VOR6XEN245B7QRILFY" Name="02 - Pensier Profondo!.ogg" />
+      <File Size="6320576" TTH="HQKZPSDHUR27DWSHSXYQYJK2CRPRKVMDS4WPVUA" Name="03 - Abbasso, Abbasso L'autor.ogg" />
+      <File Size="4344" TTH="TC2O3WQ6IFGE2FSADQSOPRMB33573KOSCSL5WJY" Name="04 - Si PuÑ.ogg" />
+      <File Size="1368415" TTH="J7N7COPOZHPFPKJXCFU4CE3VETFBEMYOKJXN6GI" Name="05 - Io Resto Per Terminar L'artico.ogg" />
+      <File Size="2245999" TTH="HF2ZEG5JQOVJD6SE6OLHGWHR2JXSWDI2CJNQ7SI" Name="06 - Non Sono In Vena.ogg" />
+      <File Size="4037885" TTH="5WB6OBQAMLAE4U7CMMBMOZULBWW6567LFXE6M6I" Name="07 - Si Sente Meglio.ogg" />
+      <File Size="6874468" TTH="QZGPSOSCCLOSWYHCJOKJM44TK4BZUP42WQBKDCI" Name="08 - Che Gelida Manina.ogg" />
+      <File Size="4358" TTH="A2SSI6OOZZOAR75FTIWX4UHK3WFETSSGP5PTW5Q" Name="09 - SÐ¼. Mi Chiamano MimÐ¼.ogg" />
+      <File Size="1097201" TTH="YOAKHKAMNEF3DJ53KQDA2GY5GEUVUODG3XYU2RI" Name="10 - Ehi! Rodolfo!.ogg" />
+      <File Size="6248577" TTH="GHYZOXA6XYWT3YVB4KNUFSX4YZZSTJL62XYUQOY" Name="11 - O Soave Fanciulla.ogg" />
+      <File Size="4593082" TTH="N7AMKCEL4LDQYYPA42QVDUWPLGSB5U5F4VYBOZI" Name="12 - Aranci, Datteri, Caldi I Marro.ogg" />
+      <File Size="1430070" TTH="GCHMSAJFCGZS4CU53J5XBQGMA7QPOHWYILAS4SQ" Name="13 - Chi Guardi.ogg" />
+      <File Size="4351" TTH="LQQWTXDS43AXJRY2WS7TS2BC6YMNUAK57Q6MCNY" Name="14 - Questa Ð MimÐ¼.ogg" />
+      <File Size="3292210" TTH="ADY2M47CAZWHMEREXPWZAZYRPKTNJD3RFYQN7JI" Name="15 - Viva Parpignol!.ogg" />
+      <File Size="5774069" TTH="P42I72GHBKJYFPTR6XB6SW4SCS6EMQAV32R4DII" Name="16 - Allegri, E Un Toast.ogg" />
+      <File Size="4352" TTH="42A2IB6SPPGL3ZMQ4NLBPHCJHKWMFKDCXRIB5AQ" Name="17 - Quando Me N' VÑ.ogg" />
+      <File Size="3848104" TTH="CHVK6NUYYN4Z2AMHCN7ITV54TC6IJNLDRZB6MZQ" Name="18 - Il Conto.ogg" />
+     </Directory>
+     <Directory Name="CD 2" >
+      <File Size="4369" TTH="3PMJH6MF5I5PG4UBZO6OPG2WUWHGDRXFUIIRMYA" Name="01 - OhÐ¸, LÐ°, Le Guardie! Aprite!.ogg" />
+      <File Size="4375" TTH="GZBM4ZY7RFGBZIFY4F7L7UYYPMNRWMOBVRHBU6I" Name="02 - Sa Dirmi, Scusi, QualÒÐ¸ LÒosteria.ogg" />
+      <File Size="4372" TTH="K4WNIKYVSJ3QTTIEDKD3QOEYJJFTSXLHF3D5SRQ" Name="03 - MimÐ¼! -- Speravo Di Trovarvi Qui.ogg" />
+      <File Size="1982128" TTH="VMWSOQG5LWYZJKGZRB74RQO665HABFFIDIO7MKY" Name="04 - Marcello. Finalmente!.ogg" />
+      <File Size="4359" TTH="HAD2D3VGD4RMEYPGIGAWWK3GICNRIDR3HR53R4A" Name="05 - MimÐ¼ Ð Una Civetta.ogg" />
+      <File Size="4360" TTH="PLV7J5L6G4XELXRKUW7ZQG55ERE56MFZOJQWMTA" Name="06 - MimÐ¼ Ð Tanto Malata.ogg" />
+      <File Size="4362" TTH="TKNNCEYDJE3T7O5A6R23E72WOAUTYNQXVXN775A" Name="07 - MimÐ¼ De Serra Ð Fiore.ogg" />
+      <File Size="4378" TTH="E4N7AET6AW7IVEHZ3UZIFO5CLGVDUSZZ4YDRV2Q" Name="08 - Donde Lieta UscÐ¼ Al Tuo Grido DÒamore.ogg" />
+      <File Size="4364" TTH="VURCP4JRFMOGK4N5VM3LOLDJBYH3PBNVJ5ARZJI" Name="09 - Dunque Ð Proprio Finita!.ogg" />
+      <File Size="4377" TTH="PLFNUH2UOW72O3QAXJAUUAAEKV3BK2MHKIPOOFY" Name="10 - In Un CoupÐ¸ -- Con Pariglia E Livree.ogg" />
+      <File Size="4365" TTH="GE5PUIATDC4RIBUJNSQF5BXDQCCPIM5K7PY7UIY" Name="11 - O MimÐ¼, Tu PiÑ Non Torni.ogg" />
+      <File Size="3738250" TTH="NB3CRKA5JAGBOZKS7H76KUXX3H5KXC2KE7ZWAOA" Name="12 - Che Ora Sia.ogg" />
+      <File Size="2755409" TTH="IW3WVNBQBLZSWN5D33YDYN5NE2IIAISSAQOVH6Y" Name="13 - Gavotta! Minuetto! Pavanella! Fandango!.ogg" />
+      <File Size="4351" TTH="H6F5KYPQT5NOEGR5KFOYT67ORIP6EQJAUB6HHBQ" Name="14 - CÒÐ¸ MimÐ¼!.ogg" />
+      <File Size="5745592" TTH="JZCI6UG7FP7PACKCJRJYL52FUNJEIKNRHGGG5CQ" Name="15 - Vecchia Zimarra, Senti.ogg" />
+      <File Size="7729461" TTH="HOQIOTHNXKQAYSTTG4WQXIND6I2EKHFPCIASB4I" Name="16 - Sono Andati Fingevo Di Dormire.ogg" />
+      <File Size="4353" TTH="26K6DGGQGTLD7QZZSKVAS5M4VU7HX5R6LHZ5HHQ" Name="17 - Oh Dio! MimÐ¼!.ogg" />
+      <File Size="4801899" TTH="W4NSNQJVFJZJ2DTXNHKW643RKHXRBQU6QJF6GXQ" Name="18 - Che Ha Detto Il Medico.ogg" />
+     </Directory>
+    </Directory>
+    <Directory Name="2000 - Sacred Arias" >
+     <File Size="5840221" TTH="TDF5MOWE5KBRBQARSL7ZEBAIDZOZMGB4QILFTWQ" Name="01 Ave Maria.ogg" />
+     <File Size="5936571" TTH="KGCQ3XCXPUAOUFC44OIWRWJ63Q2RVBRHUTSK3VA" Name="02 Sancta Maria.ogg" />
+     <File Size="4841828" TTH="UKCXUKXKNND7GOMESSAPXXA6ZU26G77QZIG66SI" Name="03 Ave Maria.ogg" />
+     <File Size="3879675" TTH="IKH2LDYSIFOQOOCS7RLCWTZX6ZF6Z642VCTLR4I" Name="04 Ave Maria.ogg" />
+     <File Size="5634977" TTH="U3AWVYFKMAUFUAN3L6AQPZGZ3V4OM7DFXFLOEOA" Name="05 Panis Angelicus.ogg" />
+     <File Size="8817730" TTH="O37O3ZDSV3V4DNURUN6PIFP5VVMJW7DH22O2AIA" Name="06 Cujus Animam [from Stabat Mater].ogg" />
+     <File Size="6558008" TTH="RURZY6AHAT5DKWQXHZYNCEIWROHL5N4VVYPLSII" Name="07 Ingemisco [From Requiem].ogg" />
+     <File Size="4730218" TTH="BHJA6TILROECP5XQBJGGWN5WQFXZBYMFW5YONRI" Name="08 Ave Verum Corpus.ogg" />
+     <File Size="4898358" TTH="PUNNV6BNAIPSGFMPYW45Z7KLYQFAPDWJWJI2CPA" Name="09 Der Engel [from Wesendonck-Lieder].ogg" />
+     <File Size="6310142" TTH="IDH5UBSN4Z66WVNWGOZKIJS3RTINKMBIZQJ5GDI" Name="10 Frondi Tenere... Ombra Mai Fu [From Serse].ogg" />
+     <File Size="10835470" TTH="AA254ZVAPD3VXIE6SWABGN7BFTQSCSJPLXQPRKQ" Name="11 Pieta, Signore.ogg" />
+     <File Size="7536410" TTH="B42VQ45WYNMVKZHV4DCQP4CLRJW6CPS3EGOHT5I" Name="12 Domine Deus [from Petite Mess Solemnelle].ogg" />
+     <File Size="6008283" TTH="TZFHUN5UX6IAN34AH423GCHAM7ILSLAJ4WUTUJY" Name="13 Mille Cherubini in Coro.ogg" />
+     <File Size="4806872" TTH="DKSRNMS6WNQFLGZEKUAMGCBNA6LW4UD4O65TKNA" Name="14 Silent Night.ogg" />
+     <File Size="4725360" TTH="7D6W4IHHMGM2AFP2HN432SALPI2F35BKK2D5PAA" Name="15 Adeste Fideles (O Come, All Ye Faithful).ogg" />
+     <File Size="10620128" TTH="IXODI5QHU5W4AY4GHOODYI2ZITX6ZVUUVMRE7AI" Name="16 Gloria a Te, Cristo Gesu (The Hymn of the Great Jubilee).MP3" />
+     <File Size="8447304" TTH="O2GDKYO7C533GCEIXAVYWETOWX5VSFKQ72AWQHQ" Name="17 Angus Dei.ogg" />
+    </Directory>
+    <Directory Name="2000 - Verdi" >
+     <File Size="4799665" TTH="S32AW2GCCXVI2RHTRSTXBIWNYAWVXX647VDIWEY" Name="01-Di Quella Pira.ogg" />
+     <File Size="4681704" TTH="ZWPM3ZVNZ3YNZERTK5XXV2LRMQEZMSARXZ2E3FQ" Name="02-Ah Si, Ben Mio.ogg" />
+     <File Size="3232294" TTH="SXNWCT6HQCIHKDPQOY2TVBUDVXSCVYDB3DOXWXI" Name="03-La Donna e Mobile.ogg" />
+     <File Size="4466082" TTH="QDW57JQYDAB2BLAKFWFZ5CDSTY3XYFHYD53EFVA" Name="04-Di' Tu Se Fedele.ogg" />
+     <File Size="3663425" TTH="7ST4TTBDOAGRJB6NW2NHEUCWK53OHDLWJTUGXKQ" Name="05-Ma Se M'e Forza Perderti.ogg" />
+     <File Size="6612813" TTH="2X2YPWH33JOX6SXGP3T5RYTUOIVJJTCYG3BVR2A" Name="06-Ella Mi Fu Rapita!.ogg" />
+     <File Size="4361215" TTH="6YZTRSZ2IFMBHRISQTNR47CAQTBZFTLXRBA42TQ" Name="07-Possente Amor Mi Chiama.ogg" />
+     <File Size="6197446" TTH="FM4RC4QCZIE6T4OA3QQYZKMC62A6DDPYDVTVQDI" Name="08-Celeste Aida.ogg" />
+     <File Size="5304757" TTH="MEDBYYB3KCSMMCXNHWCYD3MF6UXSP5TZRNBXRJA" Name="09-De' Miei Bollenti Spiriti.ogg" />
+     <File Size="4297111" TTH="5HKGZJG65263ZLTR3TZ4RANEEIADMQVMHBLRUOY" Name="10-Oh Mio Rimorso!.ogg" />
+     <File Size="3027864" TTH="QSJBC4QTLMEAYHX2O6CYANPCZA6KFJLIWAHLPXY" Name="11-La Mia Letizia Infondere Vorrei.ogg" />
+     <File Size="9958267" TTH="DVTFS767PUCFHU43XXL6YUQFDCZDPM5QNNBNG3Q" Name="12-Merce, Diletti Amici.ogg" />
+     <File Size="5472912" TTH="4TOFURUN65IXORHJN7KJCXOMBVNQIN7HUNJOOMI" Name="13-Lo la Vidi E Il Suo Sorriso.ogg" />
+     <File Size="7375062" TTH="PPAIKVHHDNS472GX7RLMTDOFRWKKZRHFGQ3CQQQ" Name="14-Quando le Sere Al Placido.ogg" />
+     <File Size="13824428" TTH="CEUKQOKKMEMESIREVIFOCASF2QR24V5DFI5ZH5Q" Name="15-La Vita e Inferno All'infelice.ogg" />
+    </Directory>
+    <Directory Name="2001 - Cieli Di Toscana" >
+     <File Size="6874593" TTH="WOFQVUEUWOV7N5WLDM34G7BJLDA7EXLCNHOTQLA" Name="01.Melodramma.ogg" />
+     <File Size="7658021" TTH="RSWKSIWIEEJLF42NAKPA3VWNRPAD5P3PE7B6JLQ" Name="02.Mille Lune Mille Onde.ogg" />
+     <File Size="8440486" TTH="KQCG6EWUV7FUYXOU2FQL5XNB3GZAW3CQ7NW244A" Name="03.E Sara' A Settembre (Someone Like You).ogg" />
+     <File Size="6890809" TTH="JOCLFOYWU2KNS2O36S3LHCV62IUAWQVKYSVNS5Y" Name="04.Chiara.ogg" />
+     <File Size="7180661" TTH="VMWRJANBPSKXISHTEHH4DOT6IWUUBL5ZO467SZQ" Name="05.Mascagni.ogg" />
+     <File Size="6619722" TTH="PTXXZKHT4VFRUYVBBJCNOSBARVB4VDR6NQS4I6Q" Name="06.Resta Qui.ogg" />
+     <File Size="8646143" TTH="YRUZ6NYD7WE4UCF46PDTTRJQQ2D42UTL2RZK3OY" Name="07.Il Mistero Dell'Amore.ogg" />
+     <File Size="8029200" TTH="GJWH2MXPWIH2JNW7KI3B3WI6INORLEKYKQKOXHY" Name="08.Se La Gente Usasse Il Cuore.ogg" />
+     <File Size="7281368" TTH="SPIIGKR3SQCFZQOZY6D533TNULPZN7UQMJBMHUQ" Name="09.Si Volto'.ogg" />
+     <File Size="7499936" TTH="LZWE43MDLWGR53KFWQPJJ3DMZARJ7YT4R4DSXPY" Name="10.L'Abitudine.ogg" />
+     <File Size="8570830" TTH="RIM4O7HZ4PWAKPEHFSCLYSZUQQDQPILHWCGP3QI" Name="11.L'Incontro.ogg" />
+     <File Size="7851780" TTH="AIIH6JJOHVTVXVEE2H7CDFLRUZSPOQKW4GR5HPY" Name="12.E Mi Manchi Tu.ogg" />
+     <File Size="7814514" TTH="VHCAPMONCWEN3UZPFZHVJTFE643UPK472FIQLPA" Name="13.Il Diavolo E L'Angelo.ogg" />
+     <File Size="6134633" TTH="7TWQWQLTOPV7WIB56EWAFMAVAPCVOABOVUDHBUI" Name="14.L'Ultimo Re.ogg" />
+     <File Size="5386419" TTH="A3QVTEVIL6PKKYI3QN6J3V3Y6JH6YIMC4RKQBJI" Name="15.Tornera La Neve.ogg" />
+    </Directory>
+    <Directory Name="2001 - Cieli Di Toscana (Spanish Retail)" >
+     <File Size="5360533" TTH="VBKOQRC2ALHLR5K26RT4TQLI5ADSD46LHX54SFI" Name="01.Un Dulce Melodrama.ogg" />
+     <File Size="5623272" TTH="GKRRUMOUYX6KTO6YMFDK6GATF2PYIWNBNYULPSY" Name="02.Mil Lunas, Mil Olas.ogg" />
+     <File Size="8440507" TTH="JI4VGPIICS6XYZ6AKTLFDZXJISUKIDJNAORMSGY" Name="03.E Sara' A Settembre (Someone Like You).ogg" />
+     <File Size="6890830" TTH="JHOB5N2VJJULXQQ7VDJPR3YJZBTRSLWDA4T6NWY" Name="04.Chiara.ogg" />
+     <File Size="7180682" TTH="4K7QCFGSYHAQHNUVJTATKY5RGAUPSZQAOI33Z6I" Name="05.Mascagni.ogg" />
+     <File Size="6619743" TTH="E4KTIQIC3YTA2PGOPKJQATMICPS4LN6KR3XQUNQ" Name="06.Resta Qui.ogg" />
+     <File Size="4675824" TTH="TKM2SZKPFFHEYBM3LDUDN4PCWXUXTHGVJ4F2KYY" Name="07.El Misterio Del Amor.ogg" />
+     <File Size="8029221" TTH="O534ARIUBBAWZ5GVPYKMTX3ITFPRHYFBBVQROVQ" Name="08.Se La Gente Usasse Il Cuore.ogg" />
+     <File Size="7281389" TTH="OGRWQY2ZNS5YRU3ITTJP4KJ33S2TFS2XWA67MMA" Name="09.Si Volto'.ogg" />
+     <File Size="7499957" TTH="HQJISRDYM7NIASRP2MEZ2SEGJIVAEPOG24LN6GA" Name="10.L'Abitudine.ogg" />
+     <File Size="5017608" TTH="NHSHEAEWMBXNIRE7ZO7WZGAG2ALYL5IAGWHPJZQ" Name="11.El Encuentro (feat. Bono).ogg" />
+     <File Size="7851801" TTH="ANB7YV32SK5LVWFXZA5WK7QXHSWL24CI6RI6PXQ" Name="12.E Mi Manchi Tu.ogg" />
+     <File Size="7814535" TTH="7IXQVYQU5MSR72J47MJTBBGUKCU4UMLFZGDFTOI" Name="13.Il Diavolo E L'Angelo.ogg" />
+     <File Size="6134654" TTH="CYTGJMQ5YGAJUB5FTNDN43SAGYX6RPRGTQ2YGLA" Name="14.L'Ultimo Re.ogg" />
+    </Directory>
+    <Directory Name="2002 - Sentimento" >
+     <File Size="5558413" TTH="QSKF3DF5ZLTCVIARSCFGKJ27UCA7R5T5MSUGTBI" Name="01 En Aranjuez con tu amor.ogg" />
+     <File Size="3947098" TTH="DSZGK2GBH6XOG5OFJC4UW3Y5MXTVV7DGJT5EEEQ" Name="02 Mattinata.ogg" />
+     <File Size="4063198" TTH="7UVXGXBWRVFOHMZCOBWZHUU5QADYFCIXX7NGZ2Q" Name="03 Barcarolle.ogg" />
+     <File Size="4310358" TTH="352LYRJ5XOVIWJZGERB24ZF573ZD526RNWHYIFQ" Name="04 L'alba separa dalla luce l'ombra.ogg" />
+     <File Size="8143689" TTH="3BCPS2XHSZIK4RFW6TWYVAEEBM6C5AIC3X37OGI" Name="05 Sogno d'amore.ogg" />
+     <File Size="5366321" TTH="6FAKMR2B35NLCOKUY4A3N4GQUTVU5ILFO4Z5QWA" Name="06 La serenata.ogg" />
+     <File Size="6934538" TTH="237Z6M5B4EZOYPBIDBJ52KVTWKZADSBUWIKWDRI" Name="07 L'ultima canzone.ogg" />
+     <File Size="5458615" TTH="QWRBFDW7EFVYZFB6GI46D2AHRSZ7T3YT2QBKPJY" Name="08 Malia.ogg" />
+     <File Size="5143970" TTH="DSV5NOGSDT64VXHAGWIKF2JDSXXX4CYC5NCUVYY" Name="09 La danza.ogg" />
+     <File Size="4874536" TTH="6GV3UBU63E43TTCGMXM3IIRK2DN3LWRXNVZHPGA" Name="10 Ideale.ogg" />
+     <File Size="4882021" TTH="FYG2KST7TUFR6Q7QAJQEQXPW3VURK5EG45UFF4I" Name="11 Sogno.ogg" />
+     <File Size="6034957" TTH="LDJ7TC7I76XHAQTWNTCRO462GBKZR7725AQSZDQ" Name="12 Plaisir d'amour.ogg" />
+     <File Size="5707859" TTH="T54DBYMC5VODCJBC472ZFHKYHYUTFCMQ4SAY4NQ" Name="13 Musica proibita.ogg" />
+     <File Size="5281391" TTH="6JL6TNZO3XYRVMGEA4D3X3FJCK7QY4K3YEQXSFY" Name="14 Occhi di fata.ogg" />
+     <File Size="4352936" TTH="GPM6M7MGA5WI4CYL6CYB27F2SDNIBW744DAJ73A" Name="15 Avucchella.ogg" />
+     <File Size="7892987" TTH="CDHJOLWWCT6TJYLJ7HRMWUSOX3JGHPCJDU7K7LQ" Name="16 Vorrei morire !.ogg" />
+     <File Size="5377057" TTH="WCFLXK7IY24TE52EYHM2IJGRNOOE253LLKCDOFA" Name="17 Vachissima sembianza.ogg" />
+     <File Size="7210470" TTH="IOCNC4QK5BXTY7SI74UDF2RAWXV5HODQ45VVVFA" Name="18 Non T'Amo Piu.ogg" />
+    </Directory>
+    <Directory Name="2004 - Andrea" >
+     <File Size="6077371" TTH="DMHNILYVO4PKUOSMW3JPUHSSL4OTGOSK5K27ZXA" Name="01 Dell'Amore Non Si Sa.ogg" />
+     <File Size="7914978" TTH="25HWDNGCQLQKSNTWXW3OV3NRO3IVKLMXBQDXC3Q" Name="02 L'Attesa.ogg" />
+     <File Size="7482131" TTH="GA3OSLBVMCS34HAMEA2ILDP3ZM4P3LHY4YNODUI" Name="03 Un Nuovo Giorno.ogg" />
+     <File Size="7888887" TTH="VLLF225T2PGBBTE6GM7SZGGRL3T2PQYET5VA7GY" Name="04 Tu Ci Sei.ogg" />
+     <File Size="7635545" TTH="OUGIKR56RI4DTD3NNAG2ZRGDJJLTFKWWIIJRPDY" Name="05 Semplicemente (Canto Per Te).ogg" />
+     <File Size="6901987" TTH="E4X45S7IZRCWSQSSKQKPLUPQ3J5YGSUQ2776PIY" Name="06 Liberta.ogg" />
+     <File Size="7466654" TTH="2HQCPHETFEKSYDPO7BOXFHT756X7QROWJDVXDNI" Name="07 Per Noi.ogg" />
+     <File Size="7408681" TTH="UTPYV5DQDOGJOXYOOIBB3GHGKB2TV32DTXRSO4Q" Name="08 Le Parole Che Non Ti Ho Detto.ogg" />
+     <File Size="8025495" TTH="TOFISU6OYNAPDUH7XT4BLI4CUOFHZSSCJRVAM2Q" Name="09 Sin Tu Amor (feat. Mario Reyes).ogg" />
+     <File Size="6723318" TTH="XSPGKVHVYYDPKE4ZE576WLIL3GF3NAGWDYM7TJA" Name="10 Sempre o Mai.ogg" />
+     <File Size="6816678" TTH="2GS7MNPCMWVGNGPNEIMQZZ7S4WK6FQCBOSFXISA" Name="11 In-Canto.ogg" />
+     <File Size="8990756" TTH="2GKOFAL7APNBJE7K3V3DZRFXPCGMM7GWUZUQGRI" Name="12 Quante Volte Ti Ho Cercato.ogg" />
+     <File Size="6543905" TTH="OU2BREMKN7YPWWFLCLRAY3Y5B5Y7L26YPWV5YPY" Name="13 Go Where Love Goes (feat. Holly Stell).ogg" />
+     <File Size="5120752" TTH="WCCN5PDLOXR7NRZUKLVSVFUXV63P2U7RRSSOJOY" Name="14 Domani.ogg" />
+     <File Size="6583635" TTH="HT37EPWPZ5OKD4TQRF6WMWAQYQQQQBHQIZZKEQY" Name="15 When A Child Is Born (Soleado).ogg" />
+     <File Size="5762532" TTH="CSR3WJ7HJEFEDFNWCU3FKN6KZ5IG2CCBDV2CCPA" Name="16 Dell'Amore Non Si Sa (feat. Hayley Westenra).ogg" />
+    </Directory>
+    <Directory Name="2005 - Massenet (Werther)" >
+     <Directory Name="CD 1" >
+      <File Size="5622765" TTH="Q72ANAB3YQ4OZAH2RJLXF7LEBLMTF4YWPYVMENI" Name="01 - Prelude.ogg" />
+      <File Size="9676164" TTH="DZ3HRORC4UVF5DCFJIS4GLADWNEQA57H75QH2BY" Name="02 - Assez! Assez! Noel! Noel! Jesus vient de naitre.ogg" />
+      <File Size="6135434" TTH="OMVWBQSQZ7UD5772FFQXD6ZSTVB52JUXE466GUA" Name="03 - Alors, c'est bien ici la maison du Bailli .ogg" />
+      <File Size="8288311" TTH="XPQEDDGDR7XPQY26YZP7NSTF63Y4OGUMLLREYSY" Name="04 - Jesus vient de naitre! ... Charlotte! Charlotte!.ogg" />
+      <File Size="4418687" TTH="HBZANB4O36WGL3NFQQZYEM5DNIJILCNSYMYGXEY" Name="05 - O spectacle ideal d'amour et d'innocence.ogg" />
+      <File Size="3069249" TTH="FLHJ7JTJQJSDSQIYSHPATTXVLXB3MPZGI2Y3PQA" Name="06 - Sophie! Albert! Toi de retour!.ogg" />
+      <File Size="4765487" TTH="HDMAY2XRLMXHUD7F24DP6UKXEIF7G27NCDB77QI" Name="07 - Elle m'aime ... elle pense a mio!.ogg" />
+      <File Size="4408074" TTH="47KQOEZBNX6GRWDJELPJ5KUQANFLS3IQCHKFBRA" Name="08 - Interlude orchestral.ogg" />
+      <File Size="4639865" TTH="ZF4O3YEFJSDMLWAZQML5XLHXRQ3PTZIH4U745LY" Name="09 - Mais vous ne saez rien de moi.ogg" />
+      <File Size="5101071" TTH="73OCHXO7RFM6POJF4H2PUF53FZGAHW7ANJEDYKQ" Name="10 - Reve! Extase! Bonheur!.ogg" />
+      <File Size="7742561" TTH="HQ45KEL6Q4XEZLU3F3WV5UG3FTZO6RLU62QKW6A" Name="11 - Prelude Deuxieme Acte.ogg" />
+      <File Size="3288493" TTH="WEQDXK23J7HZ6T7KAJIZBUXQ27GN6ABPVL75KXA" Name="12 - Trois Mois Voici trois mois que nous sommes unis!.ogg" />
+      <File Size="5635892" TTH="E6YH2AFGDZQ22ENUB6BKAYL46NMGKWPUKVCXM5Y" Name="13 - Un autre est son epoux!....ogg" />
+      <File Size="4572756" TTH="GLGUT5ZJ4YETBNTUGWZUKDSSNRQT4Z3NORAWKZQ" Name="14 - Au bonheur dont mon ame est pleine, ami.ogg" />
+      <File Size="4624569" TTH="YN4K5BKP6KCOBFK6XNS53ZQ6X6BXEQMGJRGP4UQ" Name="15 - Frere,voyez le beau bouquet!.ogg" />
+      <File Size="9281623" TTH="CXZQNGFE4HAPPIZUPV4YCEXJEIP376AGO4IADFA" Name="16 - Ai-je dit vrai .ogg" />
+      <File Size="5339724" TTH="CPALL77S5HHCI7GGJQM6YEJVAMPKBANI6BKMOBQ" Name="17 - Oui, ce qu'elle m'ordonne pur son reps, je le ferai....ogg" />
+      <File Size="2494619" TTH="IVW2EVWBYRVZUWYSFLQMKOPPRP2PVQZ4UDVUIAQ" Name="18 - Mas venez donc!.ogg" />
+     </Directory>
+     <Directory Name="CD 2" >
+      <File Size="4311006" TTH="DIDWJDPIJIGP55HZJ74GP52BXXXO6YNA44C7RRY" Name="01 - Prelude.ogg" />
+      <File Size="9075104" TTH="7JHTM6SH7OUCRAPMST2V2PDN6NPPLU3TZYYC3ZQ" Name="02 - Werther! ... Ces lettres.. ah! je les relis sans cesse.ogg" />
+      <File Size="4864356" TTH="G5DIXNCUK7GOK56RPQ7L7JRN5YLK56UPGGZWS7I" Name="03 - Bonjour, grande soeur!.ogg" />
+      <File Size="5959952" TTH="NDOL4UEB7GKOSA5CKYTWNJRTLOXXWOTHNAMLIZY" Name="04 - Va! Laisse couler mes larmes.ogg" />
+      <File Size="3528485" TTH="76M7A4BOH2WDTZDVEMCBWM6QWWRQHYC6CJQNCKY" Name="05 - Ah! Mon courage m'abandonne!.ogg" />
+      <File Size="6126223" TTH="7Z3DSYS3JJ56BQMCGA5XKCAHZI5V6CM3CKFRKVI" Name="06 - Oui, c'est moi! Je reviens.ogg" />
+      <File Size="6983429" TTH="KNCLZRTPQI5CVOLIO43JEIT4FYQDJC62XTI5BHY" Name="07 - Toute mon ame est la!.ogg" />
+      <File Size="3688528" TTH="UNNPKZLR6JTDQWDDXYAPGFHBA4HMXOAT32RONHI" Name="08 - Ah! moi! moi! dans ses bras!.ogg" />
+      <File Size="3824396" TTH="Q3I3L4XDSB3XA7QUZ7UNQKHKQQ7G3RPCSXIUJGA" Name="09 - Werther est de retour_ on l'a vu revenir.ogg" />
+      <File Size="7295265" TTH="JEHD3ELJMA3JXUDMCGVWLSKTG4KGNDHRM5GY53A" Name="10 - La nuit de Noel.ogg" />
+      <File Size="2226345" TTH="SSUTUUC6QSTWJX5JIPKPFLFCVUKIWE5ZLOV6T4A" Name="11 - Wether! ... Rien!.ogg" />
+      <File Size="5510351" TTH="72VXJGV6KVBJZDVBITGKKAWNYX6X2SHT5V3IUBQ" Name="12 - Qui parle  ... Charlotte, Ah!.ogg" />
+      <File Size="5218568" TTH="WHIHRPZJQ2LJ6VIVM3QOEGXYNO7DDXDPRJIOBWI" Name="13 - Et moi, Werther, et moi je t'aime.ogg" />
+      <File Size="2685800" TTH="J2UYW66FNGILCQ5V7B7O7SJ4K3J2RI7THEMVINQ" Name="14 - Noel!, Noel!, Noel!.ogg" />
+      <File Size="5693992" TTH="IFDYZV7AGM4S76M5AMUAMC7IH5CWNCH7QTDRG5I" Name="15 - Ah Ses yeux se ferment....ogg" />
+     </Directory>
+    </Directory>
+    <Directory Name="2006 - Amor" >
+     <File Size="7668248" TTH="Z43FTQWCSCKKXY2KELZLDGHOF74UNGYR7LGTKTQ" Name="01 - Besame Mucho.ogg" />
+     <File Size="7024173" TTH="FG4AI4TURMOY7G34MFGR2WNS567SIFIE5YIZV7Q" Name="02 - Cancion Deasfinada (feat. Stevie Wonder).ogg" />
+     <File Size="6262098" TTH="5Y33YMPOY6HSKLY4PZ6BRVCRSAPBZLZTA36D5EQ" Name="03 - Solamente Una Vez.ogg" />
+     <File Size="7586374" TTH="76J72ASPH3CQA2Q2GPP7RIQDURQL3IMTDKVHELQ" Name="04 - Somos Novios (feat. Christina Aguilera).ogg" />
+     <File Size="6837851" TTH="WJILJFWKL2VVIHYPQQOXQVSBEQH3Z6WT5I7DWUY" Name="05 - Jurame.ogg" />
+     <File Size="6739296" TTH="JQXCLLN7TNVAK7IWWIA4VUGZ2JZZMUW5ZKRD2DY" Name="06 - Te Extrano.ogg" />
+     <File Size="8356223" TTH="BXZCWUW4XQ2FJHAEFO6YPEGIIF4AA7SVH5IDYMA" Name="07 - Las Hojas Muertas (Autumn Leaves).ogg" />
+     <File Size="7522287" TTH="IYLTOSSWLMJ53F6HNLUSDO2TKL2WHFLVPUTG3LY" Name="08 - Momentos.ogg" />
+     <File Size="7081438" TTH="IXIBXTPTARYTEY5FDRMDA3BCBAZ2NHZAPBGHYRY" Name="09 - Me Faltas (feat. Kenny G).ogg" />
+     <File Size="7263753" TTH="KDUJNNTETMBHHU4F5JHJSYJ5BAE6TPEJ547WDLA" Name="10 - Cuando Me Enamoro.ogg" />
+     <File Size="6235631" TTH="SGA2FW22C74S47RVBREHEC25BDFK6GFRSSYVA5Y" Name="11 - Porque Tu Me Acostumbraste.ogg" />
+     <File Size="5871577" TTH="PGCB23MKSDPEUBH66ZI6MILO5T3HJSG2ICLOMZQ" Name="12 - Amapola.ogg" />
+     <File Size="6141228" TTH="UNVARVWFILNRFDBN5FZSWVQ2IABWHHHUL36MA5Q" Name="13 - Verano (feat. Chris Botti).ogg" />
+     <File Size="7594611" TTH="34ROQSNB2ZHJ5C5YOZONYNM7P7O4JWUFNM67LWI" Name="14 - Nuestro Encuentro (Sentado A'Beira Do Caminho).ogg" />
+     <File Size="7077778" TTH="GVHK6QYB3AID37B4MKFRI7H3V6NEWCP36JKV7UA" Name="15 - Cancion Deasfinada (feat. Stevie Wonder) (#2).ogg" />
+     <File Size="4804975" TTH="OKEUILSHNP5VYICATIWVA6EFF5UI5ZFJTSBU3UY" Name="16 - Ama Credi e Vai (feat. Gianna Nannini).ogg" />
+     <File Size="4681556" TTH="ZXMLKJCTVY5OKKOS7U64YNO7KVDN3KOJUQIIL5A" Name="17 - Somos Novios (solo version).ogg" />
+    </Directory>
+    <Directory Name="2006 - Amore" >
+     <File Size="5691771" TTH="RFASS3WCCT6QXVYIFJLCTMOUZ63D5YITUYM56PQ" Name="01.Amapola.ogg" />
+     <File Size="7177893" TTH="HMZTLCYPB3R3YHDCEBLT2BYPATDP3TZDEBAU4IQ" Name="02.Besame Mucho.ogg" />
+     <File Size="8027216" TTH="5P47QJMPE7I4V7JWVEP5OSNQPMJ4PUESNH4BPYY" Name="03.Les Feuilles Mortes (Autumn Leaves).ogg" />
+     <File Size="6725212" TTH="X3BIC2JPRQXXH3HNO4NVZYVIOGMRX7UIBJPXMTY" Name="04.Mi Manchi.ogg" />
+     <File Size="7237026" TTH="LB4GMP3AZC66FTWYRH2NGIZLFJWFYQ4UPTCLRZY" Name="05.Somos Novios (It's Impossible).ogg" />
+     <File Size="6004443" TTH="KKH723ZJASKNQU6VL6QXH635OYNW7JVP7YBC4II" Name="06.Solamente Una Vez.ogg" />
+     <File Size="6422859" TTH="4UULKNEJVURF5XAE5ZXMIIGNAEAQNGONXD6N7XQ" Name="07.Jurame.ogg" />
+     <File Size="6452338" TTH="XTNVC4GS3PCI3LVMA4CMWOA2L4GE7BHE74MDLAI" Name="08.Pero Te Extrano.ogg" />
+     <File Size="9578546" TTH="LP6ERB6JFYFU6X4BQNT6O42RQCQPEJWVUVCCM4Y" Name="09.Canzoni Stonate.ogg" />
+     <File Size="7416684" TTH="4F7T6PI7FD3676Z5YCPY3FYECYEZCPFYGRAVDQY" Name="10.L'Appuntamento.ogg" />
+     <File Size="6942401" TTH="TV2JYTY6JUS5OZARMI7PRV25BRN4LF2DBAFLO7Y" Name="11.Cuando Me Enamoro.ogg" />
+     <File Size="5798331" TTH="MOQ4UJ6N7OFU5YDQIBWENWQLYUGPXPIXBQSUITQ" Name="12.Can't Help Falling In Love.ogg" />
+     <File Size="7495579" TTH="YGELCP3TT3RFY65MBPSK5MAEJDTDUZCY5YU3ZLI" Name="13.Because We Believe.ogg" />
+     <File Size="7543875" TTH="V77W4JIYZU72WWE3Y5FEREBD2HYBGLDMLTBB57Y" Name="14.Ama Credi e Vai.ogg" />
+    </Directory>
+    <Directory Name="2006 - Pagliacci (Leoncavallo)" >
+     <File Size="4603341" TTH="ZUOQIARBYWZ76YRMEJC3RIBG2JTC6D6HBIMSDPA" Name="01 Introduzione.ogg" />
+     <File Size="4190" TTH="OSZCOSQZY4PIEZTDKGKXNHTVZXTBN4AO57U3KZQ" Name="02 Si puÃ² Si PuÃ².ogg" />
+     <File Size="5169073" TTH="V5XEFZV2W7BQEUQ7CYIENCRCS4SZKAFLJEUSZVY" Name="03 Son qua! Ritornano....ogg" />
+     <File Size="4206" TTH="W3M4PYNTLL7ICRVRRB4DO6TJNGJGI3BFUVFZXOQ" Name="04 Un grande spettacolo a ventitrÃ© ore.ogg" />
+     <File Size="4742771" TTH="HDTOONTAMDHIKN55BGVEYHY7BZDL5EBQ5CV6QKA" Name="05 Un tal gioco, credetemi.ogg" />
+     <File Size="6251402" TTH="P2DRBMVMU6E7YEO77LNGDS4W2RC5EYKWP2DJXTI" Name="06 I zampognari! ... Don, din, don.ogg" />
+     <File Size="4082538" TTH="OYAXISHQMBZ6VITQ7CCJHDWPY5MIUV3GTTOOLTY" Name="07 Qual fiamma avea nel guardo!.ogg" />
+     <File Size="4189" TTH="2AO6URXLBVICWZ7OPRGBULL4IAUPHQM2M52M6TY" Name="08 Stridono lassÃ¹.ogg" />
+     <File Size="4231" TTH="V4PZ37QPSPRPMPEVDWGBRCNNG623XDYK3P3AXNQ" Name="09 Sei lÃ ! Credea che te ne fossi andato.ogg" />
+     <File Size="3004671" TTH="JLEV7OVI4HC4DH2QP44MBYWMYMDUVWVMKKKDJVI" Name="10 Silvio, a quest'ora, che imprudenza....ogg" />
+     <File Size="3253467" TTH="LYPGLO7WWI7FQR3ZCIN6UXAJTRSMFD4ZJYCAJTI" Name="11 Decidi il mio destin.ogg" />
+     <File Size="5357958" TTH="JL2MYAGWUMOE76U6QDIYJHNZ7ELJOUKZ3A527PA" Name="12 Non mi tentar!.ogg" />
+     <File Size="4192" TTH="Z2O7CLC3A6SAB6R3JTOJJXLH3O5BITR5ICJSWMY" Name="13 E allor perchÃ©, di'.ogg" />
+     <File Size="2808663" TTH="MOCQUDF5GCK4GBD7XUYAQHYQKCZGGYX27YCLE6Q" Name="14 Cammina adagio e li sorprenderai.ogg" />
+     <File Size="4765169" TTH="EZO7LLZVEDKTOXCGOZFKXBUF7IORYFVTLBALYAI" Name="15 Derisione e scherno!.ogg" />
+     <File Size="6074686" TTH="PXBJYFY5N4S3YBHSKNSIPXMAHRZ2ZKNRSXC6JHI" Name="16 Recitar! ... Vesti la giubba.ogg" />
+     <File Size="5285070" TTH="7IBVC6QHFC5UGMXPXAYLDZEXHFRTZBM6B7NPROQ" Name="17 Intermezzo.ogg" />
+     <File Size="4236" TTH="75FBBNJV47KCCYZB7XN2ODQFJA6N3Y2RRXRNB4Y" Name="18 OhÃ¨! ... OhÃ¨! Presto, affrettiamoci.ogg" />
+     <File Size="2700269" TTH="TC5NQEL3CUPYG37HETTOA5EB7GJGHL5LYZP7DKA" Name="19 Pagliaccio, mio marito.ogg" />
+     <File Size="4226" TTH="CI62EW6KPNRPSRRD3XJJUBBHTV6UUITGCYXUYWA" Name="20 O Colombina, il tenero fido Arlecchin Ã¨ a te vicin!.ogg" />
+     <File Size="4202" TTH="UCIUUI2P67BEHOZELCB5W4KRW5CL2UOKKFE6CGI" Name="21 Ã dessa! Dei, com'Ã¨ bella!.ogg" />
+     <File Size="2906696" TTH="AQ2R4DCLQLWBCB5LSOAFMD3GIHFIUYPY47B54WA" Name="22 Arlecchin! - Colombina!.ogg" />
+     <File Size="4597962" TTH="X4V3YOA2HMH37XKBWZDRY2Z7N37TVENFKW2IW2I" Name="23 Versa il filtro ne la tazza sua.ogg" />
+     <File Size="2053511" TTH="S4N3MFG376E7N5XO7X2JHJE3JFTZV65RZ5JT7UA" Name="24 No, Pagliaccio non son.ogg" />
+     <File Size="4336" TTH="DE25IT2DXX7HPPMB75QTAGARAQNTOTZYSERI3UQ" Name="25 Sperai, tanto il delirio accecato m'aveva, se non amor, pietÃ ... mercÃ©!.ogg" />
+     <File Size="4236" TTH="U2VQQM4OSKSZOMAP2UB7T5Q4XSHJ26VXPU6256Y" Name="26 Suvvia, cosÃ¬ terribile davver non ti credeo!.ogg" />
+    </Directory>
+    <Directory Name="2006 - Under The Desert Sky" >
+     <File Size="7417061" TTH="CVI3C66TYCPJNAP4X4ZLOHLMCI2D6WKW5KSA2VQ" Name="01 - Besame Mucho (Live).ogg" />
+     <File Size="7427759" TTH="NCGR6ZXCG5W3UIVXWQSJTNKFGNMOT4RPR222MMQ" Name="02 - Cuando Me Enamoro (Live).ogg" />
+     <File Size="6134790" TTH="SDIPD4DI2TJSFAVM2BMZ43KPHCKIFGWF33YO4DQ" Name="03 - Estate (feat. Chris Botti).ogg" />
+     <File Size="2213985" TTH="B47X5SSY64JTVLVYVEXXOEKXUKKCIMH6P24UPQQ" Name="04 - September Morn (Live).ogg" />
+     <File Size="5658710" TTH="BCFNGYN2FPVZJZJ2Q2KWVOJZP7LK6TONCNGZLVA" Name="05 - Can't Help Falling In Love (feat. Katharine McPhee).ogg" />
+     <File Size="7145904" TTH="FK435VBMSL5ZP22MEF4QSVGLCRSKZXP4HWE3FRI" Name="06 - Canzoni Stonate (feat. Stevie Wonder) (edit).ogg" />
+     <File Size="7234725" TTH="4YZ3XFLPQ4SMWOQIQWOWRBTT76GBDD7ITHRPLLQ" Name="07 - Momentos (Live).ogg" />
+     <File Size="7886328" TTH="VH6AJQS4UCZK2I4IRWFD4Q4AFOIHIMLPVAXUAEA" Name="08 - Somos Novios (It's Impossible) (Live).ogg" />
+     <File Size="7232005" TTH="WBHOPTFTRRX26KVAH3FHC7CPNQMUI5LQIRVJRMY" Name="09 - The Prayer (feat. Heather Headley) (Live).ogg" />
+    </Directory>
+    <Directory Name="2007 - Cavalleria Rusticana (Mascagni)" >
+     <File Size="3862375" TTH="NTK2RTASUUUMFB363YF26HO5V46QBY23DBBZUXQ" Name="01 - Preludio.ogg" />
+     <File Size="6622338" TTH="UHWCYV3GPP5FRDZ6STPCPNLWYW2H3UY7ZRNYNCY" Name="02 - O Lola ch'ai di latti la cammisa.ogg" />
+     <File Size="3512629" TTH="IQS7AHEPWDMY3LL7L63XESQTTDBBXALWFBRVGLA" Name="03 - Introduzione.ogg" />
+     <File Size="6229598" TTH="A3SOQUS4RTVIJT5DLREH75P2475JOPYYMHG47QI" Name="04 - Gli aranci olezzano.ogg" />
+     <File Size="5473600" TTH="ZLLJZMQDQ5NJEXI6BLWLALIGOSAGHQLVMBEEZVA" Name="05 - Dite, Mamma Lucia.ogg" />
+     <File Size="3345178" TTH="EINKE5VX7LJR27YEC3FV6H2UOTPI2DIG2GWMXQQ" Name="06 - Il cavallo scalpita.ogg" />
+     <File Size="1134983" TTH="POTWG7E4TLNB2T6MJKHDQEQXRGAPGVR6LLFVRVA" Name="07 - Beato voi, compar Alfio.ogg" />
+     <File Size="2715635" TTH="6YDUNVCOPYUIKW6D37AXTGORLCHBTXTOSK3TLZY" Name="08 - Regina Coeli, laetare.ogg" />
+     <File Size="4098" TTH="FT6DJZZKSXG6A25LKZLCVGNTZ5XW7NWRVVHU2VA" Name="09 - Inneggiamo, il Signor non Ã¨ morto.ogg" />
+     <File Size="7314926" TTH="5VQULWP6EQDVX6Z75GZYZ5N4QMQ3KZB266PJC6Q" Name="10 - Voi lo sapete, o mamma.ogg" />
+     <File Size="4814347" TTH="GMQO7VTE3OY6MFZMFEPFVNNIH3QMS5CN4QOG57Q" Name="11 - Tu qui, Santuzza-.ogg" />
+     <File Size="1280936" TTH="SE6FLFXVF2BTBBOWGIHT546OULUOQ6G2IPWEO6I" Name="12 - Fior di giaggiolo.ogg" />
+     <File Size="4090" TTH="AAOXKYJ5PLAQN33PNVQ6Z5EK2DLZOJWP35IXLHI" Name="13 - Turiddu, Ã¨ passato Alfio.ogg" />
+     <File Size="734023" TTH="C3HFGJGFDEABHLQR4ZN4U6UE7DZ34FWU37FJZCY" Name="14 - Ah! lo vedi, che hai tu detto-.ogg" />
+     <File Size="6873656" TTH="XBN6UONSJ2GTKCZRXPOAAD34HBBJNKPBVHPW4IQ" Name="15 - No, no, Turiddu.ogg" />
+     <File Size="1431911" TTH="DLB4266YZNU66IWJUZOS4EPVFCMLKY2TTRBTY3Q" Name="16 - Oh! Il Signore vi manda, compar Alfio!.ogg" />
+     <File Size="5416014" TTH="P565CDDGOHHFPB3M2GXERSPUZ7EIP5BVOGQSXYQ" Name="17 - Turiddu mi tolse, mi tolse l'onore.ogg" />
+     <File Size="5234731" TTH="5RQ5WOYZK6TWJSNLT2FX66H6Y3YD22K5T4CEITY" Name="18 - Intermezzo.ogg" />
+     <File Size="2724523" TTH="MGFXAMMVBYKYTS6YPMOQAOL6IOVR5YSYO4CIDYQ" Name="19 - A casa, a casa, amici...Comare Lola.ogg" />
+     <File Size="3604184" TTH="OSSNH4RMJX5QGNZKY6JQLGRDWU5NXD7HWKEWL3Q" Name="20 - Intanto, amici, qua, beviamone un bicchiere!.ogg" />
+     <File Size="2871468" TTH="LZN3TGTOD2ZBXINAGZL4GU5FLQNATPYQVVPUL7A" Name="21 - A voi tutti, salute!.ogg" />
+     <File Size="4102" TTH="ECM3MHJGJJIYNHYTNAXYKHO7OBJH4XWQBFZ432Y" Name="22 - Compar Alfio...Lo che il torto Ã¨ mio.ogg" />
+     <File Size="4100" TTH="LMITU25UHQQSV6OIMDR7WG4TKNVK3M5BND62HFI" Name="23 - Mamma! Mamma, quel vino Ã¨ generoso.ogg" />
+     <File Size="2795943" TTH="OMFDAQUKJ7LHGLXKMADG2WJ7UO5ORVWVZYHEMMY" Name="24 - Addio!.ogg" />
+    </Directory>
+    <Directory Name="2007 - Vivere - The Best Of" >
+     <File Size="8238788" TTH="F7K5QORVE4AIRPEP3KNVBQQH65BITBEK6DIPTJQ" Name="01 - La Voce Del Silenzio.ogg" />
+     <File Size="6569432" TTH="3O4LP54OTCHO6USDSVCBBLIVJSVEFFDPFHQY4SI" Name="02 - Sogno.ogg" />
+     <File Size="7551866" TTH="TSVGIOI2U6X54IGKZM6BNX2BFJH6JRJ4NZJLWBY" Name="03 - Il Mare Calmo Della Sera.ogg" />
+     <File Size="7273160" TTH="7BCZJGRMRX63X7XRCGIMFWHHHRXFG4U3NDANHZA" Name="04 - Dare To Live (Vivere) (feat. Laura Pausini).ogg" />
+     <File Size="6713052" TTH="DSAJPHGR3232S6GG2RT2W54PVSDGA2FUU6Q4PAI" Name="05 - Canto Della Terra (feat. Sarah Brightman).ogg" />
+     <File Size="7156414" TTH="FTSG76NB2CHZW7N2BX6BNYENLZ7QSIC3WBCCE5Y" Name="06 - A Te (feat. Kenny G).ogg" />
+     <File Size="7821752" TTH="P42HIONCGH5GH6NT6CIW4VOWUGNTD5TRASMILYY" Name="07 - Besame Mucho.ogg" />
+     <File Size="6694404" TTH="TIHDSEYSP67FZGHE4CPDQQZ6NYPEC6CJCYXS6JY" Name="08 - Time To Say Goodbye (Con Te Partiro).ogg" />
+     <File Size="7620257" TTH="APTSFWNOALEX7VBJ6PIHAO2YTZSAECVG573TVNY" Name="09 - Io Ci Saro (feat. Lang Lang).ogg" />
+     <File Size="5792851" TTH="MNXMULXVHU3SJ3X4ZC2LMGKEANIAXK6GTDBEZEY" Name="10 - Romanza.ogg" />
+     <File Size="7595671" TTH="JRVXNXSYB2QN4R6DA332YCREUXSBLOWYTBBIGWA" Name="11 - Vivo Per Lei (feat. Giorgia).ogg" />
+     <File Size="7009460" TTH="3L4CY6TFYDXAALXYVRPIKFWKMKB75GSGUBUYWDY" Name="12 - Melodramma.ogg" />
+     <File Size="7730093" TTH="QIXHDZLFVTDNVNVRXWTQQ7WOE2ELS2PZZ27ORRQ" Name="13 - Bellissime Stelle.ogg" />
+     <File Size="6892931" TTH="SGQMLMK2FLAUQ6NZAMWGJHJURFMFDTC5TUDRH3Y" Name="14 - The Prayer (feat. Celine Dion).ogg" />
+     <File Size="8089074" TTH="YRGRWTOOBARO7B4MDFBA2NKHVAAYGXZQJVHPK6Q" Name="15 - Because We Believe (feat. Marco Borsato).ogg" />
+     <File Size="8389014" TTH="SPKENDLJDDZ6GDHZELQDACGILHM7BA4A5JLE4WI" Name="16 - Italia (feat. Chris Botti).ogg" />
+    </Directory>
+    <Directory Name="2007 - Vivire - Lo Mejor De" >
+     <File Size="6215807" TTH="3ZAJAR6F47QQ6UG6UVCHRHIVRZU72PGNIKVBPMI" Name="01 La Voz Del Silencio.ogg" />
+     <File Size="5100218" TTH="TUOBN6THBUAV7COQ2WVQCZGHO7UIFBHJ2DXCV2I" Name="02 Sueno.ogg" />
+     <File Size="5771873" TTH="WV3GPRX7MXRUREMWEWW7KDAEKHG2U34MCM6AS5Y" Name="03 El Silencio De La Espera.ogg" />
+     <File Size="6163853" TTH="OD2PFVJSPHOH2VWTK6OC2L37O6WLPX4M3HPWNQY" Name="04 Vive Ya (Vivire) (feat. Laura Pausini).ogg" />
+     <File Size="5173924" TTH="E2PNUE3WXAMDJYC3VLG7B2QAT5OY2B5AQMYZBPY" Name="05 Canto De La Tierra.ogg" />
+     <File Size="5317967" TTH="KVZY7SUFLIPGEMBFA6DTKKQRDIVVV7AYVYNSPQI" Name="06 A Ti.ogg" />
+     <File Size="5814220" TTH="ATOQOJNUBY566VIGOFXOQJRLVGHRBM7GL5SIEGY" Name="07 O' Mare E Tu.ogg" />
+     <File Size="7177907" TTH="NI4MXVSHAJ4KBZ7CUAL4F2KIPNJWOZPQ2OQ4NRQ" Name="08 Besame Mucho.ogg" />
+     <File Size="5623258" TTH="CAHF7V5L3GTNSPUSZP3WAFB2FXYSS4XOHV5XMNQ" Name="09 Mil Lunas, Mil Olas.ogg" />
+     <File Size="5018753" TTH="VNSEFXFG4LKVG6BNT3XUQFKKRUK6BWFBPLTXSZI" Name="10 Por Ti Volare.ogg" />
+     <File Size="7620257" TTH="2JDCIDAYQ3KZ7CM5UADXP33ISRAN234P6XFSOJQ" Name="11 Io Ci Saro (feat. Lang Lang).ogg" />
+     <File Size="5630993" TTH="DVAY6QQHQUYGI3I2LU7XFU4HKHTPICRJOW4I6JI" Name="12 Romanza.ogg" />
+     <File Size="5544908" TTH="ACURRELHG2H6JNCAXQIS7FMTJVRDUNI3LYQQXTA" Name="13 Vivo Por Ella.ogg" />
+     <File Size="5360519" TTH="4ZMBCAVYPJCDVIANB6B6K6TY7CCJFNKL6YR7CXA" Name="14 Un Dulce Melodrama.ogg" />
+     <File Size="5666435" TTH="VA757KOXDLLCVXM3JXKAXQR6NETTMN3LKZKPZ2Y" Name="15 Hermosas Estrellas.ogg" />
+     <File Size="6892931" TTH="EJEJOV7JSZPUWX5AULABAFUZJAS4UWAXGKN7U4Y" Name="16 The Prayer (feat. Celine Dion).ogg" />
+    </Directory>
+    <Directory Name="2008 - Embrace In Love and Dream (single)" >
+     <File Size="8433953" TTH="HHZBGANAXJP2QHWUCGKEEXQMEW634AFBL2GU6NA" Name="01 - Embrace in Love and Dream - English version.ogg" />
+     <File Size="8457189" TTH="4XOJZKNCHZSK52XTTUZHGU6SZ6Q4OJ4YA5JALUQ" Name="02 - Embrace In Love and Dream - Mandarin version.ogg" />
+    </Directory>
+    <Directory Name="2008 - Vivere - Live In Tuscany" >
+     <File Size="9645565" TTH="ICYUSL4Q6WP4QG7QRQUH3YLGJJT2NZCT4YQ74NY" Name="01 - Italia (feat. Chris Botti) (Live).ogg" />
+     <File Size="8394967" TTH="RX2UNYCH4FQKLUOERFA7LOIUILBHJDUOX4NSFEI" Name="02 - La Voce Del Silenzio (feat. Elisa) (Live).ogg" />
+     <File Size="11083413" TTH="LETAJ3MUUXGIXJKF5AYTTYXWOGIDNL47D5HZ45A" Name="03 - Medley - Besame Mucho-Somos Novios-Can't Help Falling In Love (Live).ogg" />
+     <File Size="7232960" TTH="IZDLWYBPLGCWUBP5VLPFQQV2YTROCF7PCU7MEMY" Name="04 - Canto Della Terra (feat. Sarah Brightman) (Live).ogg" />
+     <File Size="7050357" TTH="2WILZFE4IYTD6PQR4TDI63T4KF4ANFV5JA4CWDI" Name="05 - Mille Lune Mille Onde (Live).ogg" />
+     <File Size="5938129" TTH="LKCX2T7UDJCRFXW53C5WNJ63B2JODLUEZJSEVCQ" Name="06 - Romanza (Live).ogg" />
+     <File Size="8029212" TTH="TH2QNBCJEFGOD2TBZJ6GVMTS2TSMQ2ZQUW2JXUA" Name="07 - Se La Gente Usasse Il Cuore.ogg" />
+     <File Size="5120769" TTH="M56T74SWX2744MFQQV536EW4B5EWND3ITQLAT7A" Name="08 - Domani.ogg" />
+    </Directory>
+    <File Size="5257014" TTH="JBB3K24IXXVEJKSXYXP3VNI45NMNHYRBQBLMPVA" Name="A Mio Padre.ogg" />
+    <File Size="6006145" TTH="BJ5BKXSRY7JVBALIVGLPKAR5HDEJINRI55Z5VXQ" Name="A Volte Il Cuore.ogg" />
+    <File Size="5117785" TTH="6OXTXVUZUSYBGI5SGZV4GBTRK2XS57BXAGINIKI" Name="Cantico.ogg" />
+    <File Size="5384453" TTH="MWOTJURMYSIBAFBRSGTAS62T5KDYCKT2U7ALKZY" Name="Canto Della Terra.ogg" />
+    <File Size="6037044" TTH="KCCRY5PHBMWSECQPFUN4FAFB56YPOPGT6X2DC6I" Name="Caruso.ogg" />
+    <File Size="6260376" TTH="NOM755X3XNJMLYE7KHYIHTDXJZ2GWGILTCCNIHQ" Name="Come Un Fiume Tu.ogg" />
+    <File Size="5056034" TTH="CDH6BCYTO3QKTWV36N52H6JJ53HNF4MWFDYP7HQ" Name="Con Te Partir.ogg" />
+    <File Size="5735519" TTH="7SERLCVXJB6XKN6K7TBVSJ44D3NAXFL2WBZSKUY" Name="E Chiove.ogg" />
+    <File Size="4911855" TTH="FUOXJFCTBKBOAJQ4GVF5BZ3G7373KYG7Z5T4OBY" Name="I Love Rossini.ogg" />
+    <File Size="5843707" TTH="ROL2XG5DSRBLMRKP4RK2HNNKDPAFJAEMBWKYMKY" Name="Il Mare Calmo Della Sera.ogg" />
+    <File Size="5962185" TTH="BE5Z3XYFCJ5Y3KMBF7Q2U46PW7S6Z2TO2GFMXYA" Name="Immenso.ogg" />
+    <File Size="5955923" TTH="O3PSSBC4Z7SUQWE7SG4IJHHRGAWGC2LX4FYG6JQ" Name="La Luna Che Non C.ogg" />
+    <File Size="5085404" TTH="XZKW2VPJNYLS4XI5MPCV5HRYR3LOH32AWZO2KNA" Name="Le Tue Parole.ogg" />
+    <File Size="5105482" TTH="TZ2SZEKFCBITZ2CIJV3M7DKDV6JRTLLOYWJBERA" Name="Macchine Da Guerra.ogg" />
+    <File Size="5442185" TTH="ATTEE3H4HMK6UFU3XIO2KHQGUKL4EXXSJXCGQBA" Name="Mai Piu Cosi Lontano.ogg" />
+    <File Size="5581599" TTH="IBYCKOERNGSEPGS462BVYK2LBDMBP5XCCNB33OY" Name="Miserere [live].ogg" />
+    <File Size="4890278" TTH="SDBTHLLUD5UEX5WENR7ZHU2IK2ATGYG3RSZ4PAQ" Name="Nel Cuore Lei [feat Eros Ramazotti].ogg" />
+    <File Size="5802312" TTH="4TWJQMEFL7HMN27B26536QLVASZS35G6I6ZW6GY" Name="O Mare E Tu [feat Dulce Pontes].ogg" />
+    <File Size="5759381" TTH="7T7ANQWH5LFDKDU4J5GARQRZGFF5CJVXLXXS2LI" Name="Per Amore.ogg" />
+    <File Size="6436694" TTH="ARV7BLY3VNN3N4SDUFV7KYPJM5F4S7LW7LHTJMY" Name="Rapsodia.ogg" />
+    <File Size="4425694" TTH="ZABFO7JJVECXXKBSXNRZ3CGGLWOQM3N6AWDDOMA" Name="Romanza.ogg" />
+    <File Size="5215568" TTH="S4QOOUPJMSQMWE3466OODKAOJFBXUHULX24Q4DQ" Name="Sogno [dream].ogg" />
+    <File Size="5643703" TTH="RQFEXCUMPYREOEXLQNYCA4FPSZKTYZ5OARB4OPA" Name="The Prayer [feat Celine Dion].ogg" />
+    <File Size="5484365" TTH="CAIUH2R745HQSU7HSXOU3QSI5R3H26YHSXHDW3Q" Name="Time To Say Goodbye (con te partir).ogg" />
+    <File Size="5989361" TTH="QU62A6NOOKH4Q7JSZSTELC7ED2MY5EE5X3UPL4Q" Name="Tremo E T Amo.ogg" />
+    <File Size="5577534" TTH="D5YOBNMZ7WWB6PCE75BW5CETCB4B57JEMYWPG2I" Name="Un Canto.ogg" />
+    <File Size="5145992" TTH="MHWKMKDNQIL35IFNDYZVFO5QDW6OCFDVCPLHOKA" Name="Vivere.ogg" />
+    <File Size="5735389" TTH="3HZZBRLDFM6NDV3TPFE62VWEQRDR3YX3Z5TXBOA" Name="Vivo Per Lei.ogg" />
+    <File Size="4974849" TTH="HFOU3M2QWMRA7FOTJND4Z6DQVUNVFNER6HYG76A" Name="Voglio Restare Cos.ogg" />
+   </Directory>
+   <Directory Name="The Pavarotti Edition 10 + 1 Bonus CD[FLAC] pack 2 of 2" >
+    <Directory Name="The Pavarotti Edition - CD10 Neapolitan and Italian Popular Songs" >
+     <File Size="18843282" TTH="PBOCDVOTLAYJHTTN2FZ5FAZDIIYLNR4FNCXFTTY" Name="01 - O sole mio.flac" />
+     <File Size="2742646" TTH="2H5QGTBXFSOMZ2X5LD3VE52NOLRF7LYMR5SKRXA" Name="01 - O sole mio.ogg" />
+     <File Size="23052964" TTH="WOTAMG3PSARRSNQLSPGEFAZ3IEQTWBYBJY2PGYA" Name="02 - Voce e notte!.flac" />
+     <File Size="3548160" TTH="ICUXAU2GUMZAN7TVHPTE2UF3E4C7S4V7NXRERXI" Name="02 - Voce e notte!.ogg" />
+     <File Size="23356103" TTH="CKM5SDPTX2ENB3TPB6DDIUX7ZXAXQIXIGNW76PY" Name="03 - Torna a surriento.flac" />
+     <File Size="3547381" TTH="JS3GCBKK2KZPOGTZDVTMTFQQ3NKZNVWJM3GRRDA" Name="03 - Torna a surriento.ogg" />
+     <File Size="25872346" TTH="X2SRBTHYIZKJA5GBCTJRKPX7O2HGSEF5Z2JWHGQ" Name="04 - Core n' grato.flac" />
+     <File Size="3869314" TTH="2FGARXZQ576ZV5URPTBSO3E46YLZCFM6XQS4GJA" Name="04 - Core n' grato.ogg" />
+     <File Size="18675551" TTH="3HEF2JNPM3JESXP4RXGDOQDC2Y7LQ5VQXSFT64Q" Name="05 - O paese d'o sole.flac" />
+     <File Size="19532660" TTH="DPEUEF7IZXC7G62WEXWM5XSYDUQK5VWNHNBOD7A" Name="06 - Passione.flac" />
+     <File Size="14809393" TTH="VBBQDHI7ZING7FAVQIIBNVO2HR74PIVWHDNRPOA" Name="07 - Tu, ca nun chiagne.flac" />
+     <File Size="27546151" TTH="QZXY3UUDNUACWRXJ7Q247VOIPX4BRAB4EOBI6EY" Name="08 - Santa Lucia luntana.flac" />
+     <File Size="14224299" TTH="TAGF76GWHSA3FSU6QELCSVIKWUXZ3YDU7RC6JHA" Name="09 - Funiculi Funicula.flac" />
+     <File Size="18033532" TTH="HIADMRMZX373EIXTFCOMZ246JK7YHDBMAC5E5PA" Name="10 - Rondine al nido.flac" />
+     <File Size="20452338" TTH="LAITVOO7MMF5KBR72T4YMHUIKZE2V4SOUCACQBQ" Name="11 - Mamma.flac" />
+     <File Size="16732585" TTH="3RPDMJ3LUMYWHSMSFXGFYVSCTRMMCEEH4HBIULQ" Name="12 - Volare.flac" />
+     <File Size="10876558" TTH="QGGP752U2IAZGOC3C6GJWZFBCSMXJYDRGC6KIYQ" Name="13 - La girometta.flac" />
+     <File Size="23395598" TTH="24WMNIV327JGKSNFKYP2DJJHH42IYUY2F6IOGMA" Name="14 - La Ghirlandeina.flac" />
+     <File Size="17521299" TTH="ATNXRN6DF5RQB3AMSTR3NDZ47IA5EX2GEDQJFFQ" Name="15 - Fra tanta gente.flac" />
+     <File Size="19891371" TTH="K2IWGJV47BUX3XGUM3BRTPIOFIKBMOD6ZSU7JGA" Name="16 - Vivere.flac" />
+     <File Size="23655871" TTH="ZZNYTUE6OKVFLSRPU2IRESYHNX2CBDIOU34GUHQ" Name="17 - Un amore cosi grande.flac" />
+     <File Size="16743005" TTH="SCM7VUYALFFEJPUOJKDX7GY4NCIFZKXHUUETKXA" Name="18 - Ti voglio tante bene.flac" />
+     <File Size="20166161" TTH="36APLPEV3R4HGRODAKVZUBF44K5U4VWJVMJSIHQ" Name="19 - Chitarra romana.flac" />
+     <File Size="16405247" TTH="UKWC7EIYIZREGWTGZDDCWOCNKD4Z2RQ2ZWVM6VY" Name="20 - non ti scordar di me.flac" />
+     <File Size="17594906" TTH="ECPX4CWG462BU54HD4BDJOANUKVOU4LLVLQRFNQ" Name="21 - La mia canzone al vento.flac" />
+    </Directory>
+    <Directory Name="The Pavarotti Edition - CD11 Bonus - The 1964 EP" >
+     <File Size="24778484" TTH="XXROHQTJI5DIWYTFALS3JTCWNDCHBHV7HCNJKXY" Name="01 - Che gelida manina.flac" />
+     <File Size="14945094" TTH="YDWQ4OE3Z6XF75FF6KLIWKCVJU66NPG4CZY4FJY" Name="02 - E lucevan le stelle.flac" />
+     <File Size="9842493" TTH="5K2F4IT5BXVZKKLACET6YVRFQIG4CWD3WN5SONY" Name="03 - Questa o quella.flac" />
+     <File Size="10362524" TTH="CZ47XO3S4LBKAINJI4MXRRHLMFO3ZU4ZJOSNUDA" Name="04 - La donna e mobile.flac" />
+     <File Size="11626733" TTH="XTRETQOVBNQWANV27CCG7R2JCOTCCK6CFYIFUVQ" Name="05 - Parmi veder le lagrime.flac" />
+    </Directory>
+    <Directory Name="The Pavarotti Edition - CD6 Puccini and Verismo" >
+     <File Size="13668156" TTH="ZW3PZJ2LJCRKTR53LWFPMRGOXPUXWKAKQWKG6PQ" Name="01 - Viva il vino spumeggiante.flac" />
+     <File Size="20738002" TTH="7J3GIQA36HOJPLHP5CTTAHMUM7Z74DXSIPWVGWY" Name="02 - A voi tutti salute!.flac" />
+     <File Size="27326484" TTH="DO2QF2KXL4FQRGLT475IA7LKUK4MPYOCUXC3GHY" Name="03 - Mamma, quel vino e generoso.flac" />
+     <File Size="7433050" TTH="RKGENANLFPKSKC3DYCW4JF5CI565UNQIIFGYAKY" Name="04 - Ma se vi talenta... tra voi belle.flac" />
+     <File Size="18115380" TTH="5VULCFVOE5UJAYTIWYLQUWGJOBJAN34VOBVBD4Y" Name="05 - Cortese damigella.flac" />
+     <File Size="10907261" TTH="XFUPUXXO7TEDDCZZ6LWTMJ3AY3VNEMB32T3NHFY" Name="06 - Donna non vidi mai.flac" />
+     <File Size="41604472" TTH="YZX4IW7YFIVHN5BYAUY4G2UMX4F47C4SDKWIJEY" Name="07 - Oh, saro la piu bella!.flac" />
+     <File Size="18401869" TTH="HI72PXXQFGMFHKJSLHAPINFTTNIT6X7XYR65RDY" Name="08 - Presto in fila!.flac" />
+     <File Size="19346298" TTH="WN6HIADVDW5XGAG7JQZOXBOGQMHNICQXIQIYAUI" Name="09 - Recitar! Vesti la giubba.flac" />
+     <File Size="32114243" TTH="Z7XRBCU6IPT5GDHFQXADZFGVTG35OB3426MRIOA" Name="10 - No, Pagliaccio non son.flac" />
+     <File Size="24771882" TTH="XT7TSKDFYMMPGFJCBSLSVZDXRVNLV2S4BS36NIY" Name="11 - Colpito qui m'avete... Un di del azzurro spazio.flac" />
+     <File Size="11437645" TTH="KIPJQSOWVH4SF5MNKPMONLVARXS4YZQ5IPAE6CQ" Name="12 - Si, fui soldato... Passa la vita mia....flac" />
+     <File Size="14876212" TTH="DWG66QQRZXVRIS3P4XV5UMDYSXL4Q7NAG33C5PA" Name="13 - Come un bel di di maggio.flac" />
+     <File Size="18501295" TTH="NPYGDXOTBO7F5YTAJSSUQYJKV6VXRSVYDOJJMBQ" Name="14 - Vicino a te s'acqueta.flac" />
+     <File Size="19043345" TTH="SCAFNGZKY4BOBJOK6XUUGVM75UY5LTNC3VTKSJY" Name="15 - La nostra morte F il trionfo dell'amor.flac" />
+     <File Size="14575100" TTH="747RCPDGPLE453UT3XSCX74YQJYQBMY47NTNHZQ" Name="16 - Recondita armonia.flac" />
+     <File Size="25274139" TTH="HWPRHCHOPDAW37KQP632FD6ZNFR323XCMQ42LQA" Name="17 - Mario! Mario! Mario!.flac" />
+     <File Size="36187752" TTH="SO2ZJ4LEUTK74LJ76X4LLZMH43AA5KROK7RGC5I" Name="18 - Or lasciami al lavoro.flac" />
+     <File Size="14844566" TTH="7YIQ2PAUCPX7FQ5ZGRQTYUHWR544RWXYLASREMA" Name="19 - E lucevan le stelle.flac" />
+    </Directory>
+    <Directory Name="The Pavarotti Edition - CD7 Arias 1" >
+     <File Size="10559557" TTH="57DMTISD34QTP5JD3WRJN2JIXNU2VS6IJ5CQZJQ" Name="01 - Gia il sole dal Gange.flac" />
+     <File Size="17209636" TTH="SNFSAOFX2FVWKL6IHFJD2PTPFF7UZOVJMEFIGBA" Name="02 - Alma del core.flac" />
+     <File Size="22275180" TTH="JXTP2H2HAAHXEWPC7ALSXXLFNS56DQZZ57XSEYQ" Name="03 - Per la gloria d'adorarvi.flac" />
+     <File Size="15910640" TTH="T6RA24FLFTB3ANMCZDXDBRRW3KBH5EDOYIS2FTY" Name="04 - Care selve.flac" />
+     <File Size="18151666" TTH="6FNMISZB3O7UGFQPYAWDN7MHCSLWZGED47RK6NA" Name="05 - Tre giorni son che Nina.flac" />
+     <File Size="15116542" TTH="4I7ATSQRUF4UUGTUHRBLTXWMDSBY2EPAY62GS6Y" Name="06 - Caro mio ben.flac" />
+     <File Size="23030900" TTH="IFEYDKWALK3DK6UYZGHGX4WMTG5XMHRURQEEBEI" Name="07 - Che faro senza Euridice.flac" />
+     <File Size="28362765" TTH="UQMIJU6U46373P2NW4MWDWQ4OBSCRHAVO3ZXDRY" Name="08 - Fuor del mar.flac" />
+     <File Size="15980811" TTH="CS5E6TCQQUMLLMQRV62XPI53HJPRBOXXAJ7K2KQ" Name="09 - Accogli, oh re del mar.flac" />
+     <File Size="14532072" TTH="XG2DMVCBTTGVBVUN2NCWJUKWRWQ7RID2WMT4L3Y" Name="10 - Popoli! A voi l'ultima legge.flac" />
+     <File Size="15891429" TTH="OOF57VE75IIIGZJ2GU26VREKAIYNQGJZE5Q3XZA" Name="11 - Torna la pace al core.flac" />
+     <File Size="21448629" TTH="MSGRVRWQV7ZNDTB2OG2T4NNPVFBUKEFGUOBPI3A" Name="12 - Dalla sua pace.flac" />
+     <File Size="21810773" TTH="2E2RTHQ6BSZRM3STN2IXS2QM7WALBCE4UJI4O4A" Name="13 - Un aura amorosa.flac" />
+     <File Size="20821380" TTH="PLB5QFVAYUOSYNLOIH3DAZ3GJT6HY6DNTSARUSI" Name="14 - Qual giglio candido.flac" />
+     <File Size="37184117" TTH="NGSN3ZFM5K7CRDJCBOCOZ6U2JG4G6IIR7VZNOWQ" Name="15 - Pieta, Signore.flac" />
+     <File Size="26540916" TTH="OAKWOUVMVWYY2PLVVXLE4VESNWWQIHC5JP3KNBY" Name="16 - Cuius animam.flac" />
+     <File Size="49714346" TTH="KTWWUUQH6XYXTZ7Z2ZIAA65RV7ARIKB7TITTF3Y" Name="17 - Non mi lasciare... O muto asil.flac" />
+    </Directory>
+    <Directory Name="The Pavarotti Edition - CD8 Arias 2" >
+     <File Size="16925443" TTH="UJKHA2EZQLGJCMGQVY5HNDZYS4SYKFYMDHAGNJQ" Name="01 - M'appari.flac" />
+     <File Size="26084515" TTH="K5WOLYWVBFUIRDUZUKBQOW2ID4A6R4QZNF3TDPI" Name="02 - Quel trouble inconnu me penetre.flac" />
+     <File Size="16278384" TTH="BCZWXYLWIA7XTBPKOG2GV34VOIUELG57CAF3YCI" Name="03 - Mi batte il cuor... O paradiso.flac" />
+     <File Size="11946176" TTH="3JG3H5FV5KYRZGJGIX2R5PJ2FBML3L5YEI6VPAY" Name="04 - Dai campi, dai prati.flac" />
+     <File Size="11454909" TTH="KJ4S2O7OF7EHNLJTXJ4BV777YODIRPMNTS5MYMI" Name="05 - Lontano, lontano.flac" />
+     <File Size="16947507" TTH="TI2ULEB75XOGGZ5CHW523GJO57SUEM2O6JP7J3Y" Name="06 - Ogni mortal mister.flac" />
+     <File Size="21497462" TTH="2UELIIVG4QZLAAKBVBCMTBM3QK7JK65J2HZISBI" Name="07 - Cielo e mar!.flac" />
+     <File Size="34880107" TTH="TLTZVZ5UCQEHOLZPYT6QJVRL42M2A2RXWPHPAIQ" Name="08 - Ma chi vien....flac" />
+     <File Size="20100109" TTH="XET3NJCKDUWRBX6DSFUTMUK6FBWDT4DZ3CAMWKQ" Name="09 - La fleur que tu m'vais jetTe.flac" />
+    </Directory>
+    <Directory Name="The Pavarotti Edition - CD9 Italian Songs" />
+   </Directory>
+   <Directory Name="The Pavarotti Edition 10+1 CD pack 1 of 2 [FLAC]" >
+    <Directory Name="The Pavarotti Edition - CD1 Donizetti Arias" />
+    <Directory Name="The Pavarotti Edition - CD2 Bellini,Donizetti,Verdi" />
+    <Directory Name="The Pavarotti Edition - CD3 Verdi 1" />
+    <Directory Name="The Pavarotti Edition - CD4 Verdi 2" />
+    <Directory Name="The Pavarotti Edition - CD5 Puccini" />
+   </Directory>
+   <Directory Name="Рахманинов" />
+  </Directory>
+  <Directory Name="Soft" />
+ </Directory>
 </FileListing>

@@ -88,14 +88,18 @@ void ClientConnection::slot_command_received(QByteArray data)
                     size = 0; // unknown file size
 
                 if(filename == "files.xml.bz2")
-                    emit slot_send_filelist(true);
+                    emit slot_send_filelist(true, false);
                 else if(filename == "files.xml")
-                    emit slot_send_filelist(false);
+                    emit slot_send_filelist(false, false);
+            }
+            else if(list.at(1) == "list")
+            {
+                emit slot_send_filelist(false, true);
             }
         }
     }
 }
-void ClientConnection::slot_send_filelist(bool isBZ2)
+void ClientConnection::slot_send_filelist(bool isBZ2, bool isList)
 {
     QString filename;
     if(isBZ2)
@@ -107,7 +111,10 @@ void ClientConnection::slot_send_filelist(bool isBZ2)
     if(!file.open(QIODevice::ReadOnly)) return;
 
     QByteArray response;
-    response.append(QString("$ADCSND file files.xml.bz2 0 %1|").arg(file.size()));
+
+    if(!isList) response.append(QString("$ADCSND file files.xml.bz2 0 %1|").arg(file.size()));
+    else response.append(QString("$ADCSND list / 0 %1|").arg(file.size()));
+
     emit signal_tcp_write(response);
 
     QByteArray data = file.readAll();

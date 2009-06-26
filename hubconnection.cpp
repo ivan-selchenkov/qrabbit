@@ -76,7 +76,7 @@ void HubConnection::slot_command_received(QByteArray current)
             if(current.contains("EXTENDEDPROTOCOL"))
             {
                 m_isExtended = true;
-                result.append("$Supports UserCommand NoGetINFO NoHello UserIP2 TTHSearch ZPipe0 GetZBlock |$Supports OpPlus NoGetINFO NoHello UserIP2|");
+                result.append("$Supports UserCommand NoGetINFO NoHello UserIP2 TTHSearch ZPipe0|");
                 lock = list.at(1);
                 lock = lock.remove(0, 16);
             }
@@ -108,7 +108,7 @@ void HubConnection::slot_command_received(QByteArray current)
             result.clear();
             result.append("$MyINFO $ALL ");
             result.append(userName);
-            result.append(QString(" <Rabbit++ V:%1,M:A,H:1/0/0,S:%2>$ $1000%4$%3$%5$|").arg(VERSION).arg(slotsNumber).arg(email).arg((char)0x11).arg(sharesize));
+            result.append(QString(" <Rabbit++ V:%1,M:A,H:1/0/0,S:%2>$ $1000%4$%3$%5$|").arg(VERSION).arg(slotsNumber).arg(email).arg((char)0x1).arg(sharesize));
             emit signal_tcp_write(result);
             isHello = true;
         }        
@@ -209,7 +209,7 @@ void HubConnection::slot_set_sharesize(quint64 size)
         result.clear();
         result.append("$MyINFO $ALL ");
         result.append(userName);
-        result.append(QString(" <Rabbit++ V:%1,M:A,H:1/0/0,S:%2>$ $1000%4$%3$%5$|").arg(VERSION).arg(slotsNumber).arg(email).arg((char)0x11).arg(sharesize));
+        result.append(QString(" <Rabbit++ V:%1,M:A,H:1/0/0,S:%2>$ $1000%4$%3$%5$|").arg(VERSION).arg(slotsNumber).arg(email).arg((char)0x1).arg(sharesize));
         emit signal_tcp_write(result);
     }
 }

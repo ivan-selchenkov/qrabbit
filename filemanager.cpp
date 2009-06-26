@@ -4,10 +4,10 @@
 
 FileManager::FileManager(QObject* parent): QObject(parent), m_isFileListLoaded(false)
 {
-    folders.append(QDir("/home/ivan/Downloads"));
-    folders.append(QDir("/home/share"));
+    folders.append("/home/ivan/Downloads");
+    folders.append("/home/share/DC_SHARE");
 
-    ift = new InitFileTree(this, tree, folders);
+    ift = new InitFilesTree(this, folders);
 
     // Setting flag that file tree is ready for searching
     connect(ift, SIGNAL(signal_finished()), this, SLOT(slot_on_hashing_finished()));

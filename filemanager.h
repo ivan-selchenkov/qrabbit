@@ -3,7 +3,7 @@
 #include <QtCore>
 #include "fileinfo.h"
 #include "dirstree.h"
-#include "initfiletree.h"
+#include "initfilestree.h"
 #include "searchitem.h"
 #include "searchmanager.h"
 
@@ -18,9 +18,9 @@ public:
         return m_isFileListLoaded;
     }
 private:
-    InitFileTree* ift;
+    InitFilesTree* ift;
     QList<DirsTree> tree;
-    QList<QDir> folders;
+    QList<QString> folders;
 
     bool m_isFileListLoaded;
 public slots:

@@ -26,7 +26,7 @@ private:
 private slots:
     void slot_connected();
     void slot_disconnected();
-    void slot_send_filelist(bool isBZ2);
+    void slot_send_filelist(bool isBZ2, bool isList);
 public slots:
     void slot_command_received(QByteArray);
 signals:

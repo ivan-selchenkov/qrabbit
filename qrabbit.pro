@@ -2,7 +2,8 @@
 # Project created by QtCreator 2009-03-07T14:54:40
 # -------------------------------------------------
 QT += network \
-    xml
+    xml \
+    sql
 TARGET = qrabbit
 TEMPLATE = app
 SOURCES += main.cpp \
@@ -16,12 +17,12 @@ SOURCES += main.cpp \
     tth/hashfile.cpp \
     tth/hash.cpp \
     tth/base32.cpp \
-    initfiletree.cpp \
     searchmanager.cpp \
     hubtcpsocket.cpp \
     hubudpsocket.cpp \
     clientconnection.cpp \
-    clienttcpsocket.cpp
+    clienttcpsocket.cpp \
+    initfilestree.cpp
 HEADERS += mainwindow.h \
     hubconnection.h \
     global.h \
@@ -35,12 +36,12 @@ HEADERS += mainwindow.h \
     tth/base32.h \
     fileinfo.h \
     dirstree.h \
-    initfiletree.h \
     searchmanager.h \
     searchitem.h \
     hubtcpsocket.h \
     hubudpsocket.h \
     clientconnection.h \
-    clienttcpsocket.h
+    clienttcpsocket.h \
+    initfilestree.h
 FORMS += mainwindow.ui
 LIBS += -lbz2
