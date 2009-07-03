@@ -5,7 +5,7 @@
 FileManager::FileManager(QObject* parent): QObject(parent), m_isFileListLoaded(false)
 {
     folders.append("/home/ivan/Downloads");
-    folders.append("/home/share/DC_SHARE");
+    //folders.append("/home/share/DC_SHARE");
 
     ift = new InitFilesTree(this, folders);
 

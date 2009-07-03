@@ -9,6 +9,10 @@ int main(int argc, char *argv[])
     QCoreApplication::setOrganizationDomain("crazyrabbit.com");
     QCoreApplication::setApplicationName("QRabbitDC++");
 
+    QTextCodec *codec = QTextCodec::codecForName("UTF8");
+    QTextCodec::setCodecForTr(codec);
+    QTextCodec::setCodecForCStrings(codec);
+    QTextCodec::setCodecForLocale(codec);
 
     MainWindow w;
     w.show();

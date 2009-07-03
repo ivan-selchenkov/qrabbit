@@ -8,12 +8,12 @@ InitFilesTree::InitFilesTree(QObject* parent, QList<QString> _folders): QThread(
 
     QSqlDatabase db = QSqlDatabase::database();
     if(!db.isValid()) db = dbConnect();
-    // CREATE TABLE "files" ("id" INTEGER PRIMARY KEY  NOT NULL ,"filename" TEXT,"TTH" TEXT,"directory_id" INTEGER,"isActual" INTEGER DEFAULT 1 ,"filesize" INTEGER NOT NULL  DEFAULT 0 )
-    // CREATE TABLE "directories" ("id" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , "name" TEXT, "pathRel" TEXT, "pathAbs" TEXT, "parent_id" INTEGER, "isActual" INTEGER DEFAULT 1)
+    // CREATE TABLE "files" ("id" INTEGER PRIMARY KEY  NOT NULL ,"filename" TEXT, "filename_up" TEXT, "TTH" TEXT,"directory_id" INTEGER,"isActual" INTEGER DEFAULT 1 ,"filesize" INTEGER NOT NULL  DEFAULT 0 )
+    // CREATE TABLE "directories" ("id" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , "name" TEXT, "name_up" TEXT, "pathRel" TEXT, "pathAbs" TEXT, "parent_id" INTEGER, "isActual" INTEGER DEFAULT 1)
 
     // CREATE INDEX "TTH" ON "files" ("TTH" ASC)
-    // CREATE INDEX "dirname" ON "directories" ("name" ASC)
-    // CREATE INDEX "filename" ON "files" ("filename" ASC)
+    // CREATE INDEX "dirname" ON "directories" ("name_up" ASC)
+    // CREATE INDEX "filename" ON "files" ("filename_up" ASC)
 
     // REINDEX "TTH"
     // REINDEX "dirname"
@@ -183,8 +183,9 @@ void InitFilesTree::scanFolder(QDir& parent /* current directory */, QDir & top 
     else
     {
         query.clear();
-        query.prepare("INSERT INTO directories(name, pathRel, pathAbs, parent_id, isActual) VALUES(:name, :pathRel, :pathAbs, :parent_id, :isActual)");
+        query.prepare("INSERT INTO directories(name, name_up, pathRel, pathAbs, parent_id, isActual) VALUES(:name, :name_up, :pathRel, :pathAbs, :parent_id, :isActual)");
         query.bindValue(":name", parent.dirName());
+        query.bindValue(":name_up", parent.dirName().toUpper());
         QString rel = top.relativeFilePath(parent.absolutePath());
         query.bindValue(":pathRel", rel);
         query.bindValue(":pathAbs", parent.absolutePath());
@@ -239,8 +240,9 @@ void InitFilesTree::scanFolder(QDir& parent /* current directory */, QDir & top 
         else
         {
             query.clear();
-            query.prepare("INSERT INTO files(filename, directory_id, isActual, filesize) VALUES(:filename, :directory_id, :isActual, :filesize)");
+            query.prepare("INSERT INTO files(filename, filename_up, directory_id, isActual, filesize) VALUES(:filename, :filename_up, :directory_id, :isActual, :filesize)");
             query.bindValue(":filename", file);
+            query.bindValue(":filename_up", file.toUpper());
             query.bindValue(":directory_id", next_parent_id);
             query.bindValue(":isActual", 1);
             query.bindValue(":filesize", QFileInfo(parent.absoluteFilePath(file)).size());
@@ -266,12 +268,12 @@ void InitFilesTree::scanFolder(QDir& parent /* current directory */, QDir & top 
 QSqlDatabase InitFilesTree::dbConnect()
 {
     bool isExists;
-    // CREATE TABLE "files" ("id" INTEGER PRIMARY KEY  NOT NULL ,"filename" TEXT,"TTH" TEXT,"directory_id" INTEGER,"isActual" INTEGER DEFAULT 1 ,"filesize" INTEGER NOT NULL  DEFAULT 0 )
-    // CREATE TABLE "directories" ("id" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , "name" TEXT, "pathRel" TEXT, "pathAbs" TEXT, "parent_id" INTEGER, "isActual" INTEGER DEFAULT 1)
+    // CREATE TABLE "files" ("id" INTEGER PRIMARY KEY  NOT NULL ,"filename" TEXT, "filename_up" TEXT, "TTH" TEXT,"directory_id" INTEGER,"isActual" INTEGER DEFAULT 1 ,"filesize" INTEGER NOT NULL  DEFAULT 0 )
+    // CREATE TABLE "directories" ("id" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , "name" TEXT, "name_up" TEXT, "pathRel" TEXT, "pathAbs" TEXT, "parent_id" INTEGER, "isActual" INTEGER DEFAULT 1)
 
     // CREATE INDEX "TTH" ON "files" ("TTH" ASC)
-    // CREATE INDEX "dirname" ON "directories" ("name" ASC)
-    // CREATE INDEX "filename" ON "files" ("filename" ASC)
+    // CREATE INDEX "dirname" ON "directories" ("name_up" ASC)
+    // CREATE INDEX "filename" ON "files" ("filename_up" ASC)
 
     if(QFileInfo("files.sqlite").exists())
        isExists = true;
@@ -289,19 +291,19 @@ QSqlDatabase InitFilesTree::dbConnect()
     QSqlQuery query;
     if(!isExists)
     {
-        query.prepare("CREATE TABLE \"files\" (\"id\" INTEGER PRIMARY KEY  NOT NULL ,\"filename\" TEXT,\"TTH\" TEXT,\"directory_id\" INTEGER,\"isActual\" INTEGER DEFAULT 1 ,\"filesize\" INTEGER NOT NULL  DEFAULT 0 )");
+        query.prepare("CREATE TABLE \"files\" (\"id\" INTEGER PRIMARY KEY  NOT NULL ,\"filename\" TEXT, \"filename_up\" TEXT, \"TTH\" TEXT,\"directory_id\" INTEGER,\"isActual\" INTEGER DEFAULT 1 ,\"filesize\" INTEGER NOT NULL  DEFAULT 0 )");
         execQuery(query);
 
-        query.prepare("CREATE TABLE \"directories\" (\"id\" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , \"name\" TEXT, \"pathRel\" TEXT, \"pathAbs\" TEXT, \"parent_id\" INTEGER, \"isActual\" INTEGER DEFAULT 1)");
+        query.prepare("CREATE TABLE \"directories\" (\"id\" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , \"name\" TEXT, \"name_up\" TEXT, \"pathRel\" TEXT, \"pathAbs\" TEXT, \"parent_id\" INTEGER, \"isActual\" INTEGER DEFAULT 1)");
         execQuery(query);
 
         query.prepare("CREATE INDEX \"TTH\" ON \"files\" (\"TTH\" ASC)");
         execQuery(query);
 
-        query.prepare("CREATE INDEX \"dirname\" ON \"directories\" (\"name\" ASC)");
+        query.prepare("CREATE INDEX \"dirname\" ON \"directories\" (\"name_up\" ASC)");
         execQuery(query);
 
-        query.prepare("CREATE INDEX \"filename\" ON \"files\" (\"filename\" ASC)");
+        query.prepare("CREATE INDEX \"filename\" ON \"files\" (\"filename_up\" ASC)");
         execQuery(query);
     }
     return db;
