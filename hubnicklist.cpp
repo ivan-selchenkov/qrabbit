@@ -2,6 +2,9 @@
 #include <QStringList>
 #include <QTime>
 
+HubNickList::HubNickList(QString username) : m_username(username) {
+    isMy = false;
+}
 void HubNickList::slot_quit(QString data)
 {
     UserInfo user;
@@ -69,9 +72,6 @@ void HubNickList::slot_myinfo(QString data)
         isMy = true;
         sortAndUpdate(); // List is complete, updating
     }
-}
-HubNickList::HubNickList(QString username) : m_username(username) {
-    isMy = false;
 }
 bool HubNickList::LessThan(const UserInfo &s1, const UserInfo &s2)
 {

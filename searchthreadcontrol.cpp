@@ -16,4 +16,6 @@ void SearchThreadControl::run()
             this, SIGNAL(signal_outcome_search(FileInfo,SearchItem)), Qt::QueuedConnection);
 
     SearchThreadControl::exec();
+
+    qDebug() << "SearchThreadControl::~run()";
 }

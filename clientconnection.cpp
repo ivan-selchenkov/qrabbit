@@ -4,23 +4,41 @@
 #include <QTimer>
 #include <stdlib.h>
 
-ClientConnection::ClientConnection(QObject* parent, QString user, QString addr, QByteArray dCommand): QObject(parent)
+ClientConnection::ClientConnection(QObject* parent, QString user, QString addr, QByteArray dCommand, bool isActive):
+        QObject(parent), username(user), delayCommand(dCommand)
 {
-    username = user;
-    QStringList split = addr.split(":");
-    if(split.size() < 2) return;
-    host = split.at(0);
-    QString s_port = split.at(1);
-    s_port = s_port.remove(QRegExp("[A-Za-z]"));
-    port = s_port.toUInt();
+    clienttcpsocket = new ClientTcpSocket(this, isActive);
 
-    delayCommand = dCommand;
+    connect(clienttcpsocket, SIGNAL(signal_command_received(QByteArray)),
+            this, SLOT(slot_command_received(QByteArray)));
+    connect(clienttcpsocket, SIGNAL(signal_connected()),
+            this, SLOT(slot_connected()));
+    connect(clienttcpsocket, SIGNAL(signal_disconnected()), SLOT(deleteLater()));
 
-    clienttcpsocket = new ClientTcpSocket(this);
-    connect(clienttcpsocket, SIGNAL(signal_command_received(QByteArray)), this, SLOT(slot_command_received(QByteArray)));
-    connect(this, SIGNAL(signal_tcp_write(QByteArray)), clienttcpsocket, SLOT(slot_write(QByteArray)));
-    connect(clienttcpsocket, SIGNAL(signal_connected()), this, SLOT(slot_connected()));
-    clienttcpsocket->connectToHost(host, port);
+
+    connect(this, SIGNAL(signal_tcp_write(QByteArray)),
+            clienttcpsocket, SLOT(slot_write(QByteArray)));
+
+    connect(this, SIGNAL(signal_hub_tcp_write(QByteArray)), (HubConnection*)parent, SIGNAL(signal_tcp_write(QByteArray)));
+
+
+    if(isActive)
+    {
+        QStringList split = addr.split(":");
+        if(split.size() < 2) return;
+        host = split.at(0);
+        QString s_port = split.at(1);
+        s_port = s_port.remove(QRegExp("[A-Za-z]"));
+        port = s_port.toUInt();
+        clienttcpsocket->connectToHost(host, port);
+    }
+    else
+    {
+        clienttcpsocket->open(addr, port);
+        QByteArray result;
+        result.append(QString("$ConnectToMe %1 %2:%3|").arg(user).arg(addr).arg(port));
+        signal_hub_tcp_write(result);
+    }
 
     m_isExtended = false;
 }
@@ -47,7 +65,7 @@ void ClientConnection::slot_command_received(QByteArray data)
         list = data.split(' '); // Делим строку на части по пробелу
         if(list.size() < 1) return;
 
-        if(list.at(0) == "$ConnectToMe")
+        if(list.at(0) == "$ConnectToMe" || list.at(0) == "$MyNick" /* if other client passive */ )
         {
             qDebug() << clienttcpsocket->isOpen();
             response.clear();
@@ -60,7 +78,6 @@ void ClientConnection::slot_command_received(QByteArray data)
             if(data.contains("EXTENDEDPROTOCOL"))
             {
                 m_isExtended = true;
-                response.append("$Supports MiniSlots ADCGet TTHL TTHF XmlBZList |");
                 lock = list.at(1);
                 lock = lock.remove(0, 16);
             }
@@ -68,11 +85,12 @@ void ClientConnection::slot_command_received(QByteArray data)
                 lock = list.at(1);
 
             // !!!!!!!!! If I'm not want to download !!!!!!!!
+            response.append("$Supports MiniSlots ADCGet TTHL TTHF XmlBZList |");
             response.append(QString("$Direction Upload 12395|"));
-
             response.append("$Key ");
             response.append(generateKey(list.at(1)));
             response.append('|');
+
             emit signal_tcp_write(response);
         }
         else if(list.at(0) == "$ADCGET" && list.size() >= 5)

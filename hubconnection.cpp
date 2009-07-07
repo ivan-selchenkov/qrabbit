@@ -15,6 +15,7 @@ HubConnection::HubConnection(QObject* parent, QString str_Host, quint16 n_Port):
     isHello = false;
     userName = "Washik";
     password = "vanqn1982";
+    localHost = "192.168.1.2";
     Host = str_Host;
     Port = n_Port;
     slotsNumber = 10;
@@ -186,6 +187,7 @@ void HubConnection::slot_command_received(QByteArray current)
         }
         else if(list.at(0) == "$ConnectToMe")
         {
+            qDebug()<<"[DATA] "+current;
             QString address;
             QString username;
 
@@ -194,15 +196,24 @@ void HubConnection::slot_command_received(QByteArray current)
                 //username = decode(changeKeysStC(list.at(2)));
                 username = list.at(2);
                 address = list.at(3);
-                emit slot_new_client(username, address);
+                newClient(username, address, true);
             }
             else // old protocol
             {
                 //username = decode(changeKeysStC(list.at(1)));
                 username = list.at(1);
                 address = list.at(2);
-                emit slot_new_client(username, address);
+                newClient(username, address, true);
             }
+        }
+        else if(list.at(0) == "$RevConnectToMe")
+        {
+            if(list.size() < 1)
+                return;
+            QString username = list.at(1);
+            newClient(username, localHost, false);
+            qDebug()<<"[DATA] "+current;
+
         }
     } else {
         tempstr = decode(changeKeysStC(current));
@@ -223,11 +234,20 @@ void HubConnection::slot_set_sharesize(quint64 size)
         emit signal_tcp_write(result);
     }
 }
-void HubConnection::slot_new_client(QString username, QString address)
+void HubConnection::newClient(QString username, QString address, bool isActive)
 {
     QByteArray data;
-    data.append(QString("$ConnectToMe %1 %2|").arg(username).arg(address));
-    ClientConnection* client = new ClientConnection(this, username, address, data);
+    if(isActive)
+        data.append(QString("$ConnectToMe %1 %2|").arg(username).arg(address));
+    else
+    {
+        data.append(QString("$RevConnectToMe %1|").arg(username));
+        for(int i=0; i<client_list.size(); i++)
+        {
+            if(client_list.at(i)->username == username) return;
+        }
+    }
+    ClientConnection* client = new ClientConnection(this, username, address, data, isActive);
     client_list.append(client);
 }
 void HubConnection::searchMessage(QString search)
@@ -284,6 +304,7 @@ void HubConnection::slot_search_result(FileInfo file_info, SearchItem search_ite
 //note that port only needs to specified if it's not 411
 //There is also a SR command for answering active-mode queries via UDP.
 
+    qDebug() << "Search data:" << search_item.data;
 
     if(file_info.isDir) {
         answer = QString("$SR %1 %2").arg(userName).arg(file_info.relativePath.replace("/", "\\"));

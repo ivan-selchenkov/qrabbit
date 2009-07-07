@@ -1,9 +1,48 @@
 #include "clienttcpsocket.h"
 
-ClientTcpSocket::ClientTcpSocket(QObject* parent): QObject(parent), socket(new QTcpSocket(parent))
+ClientTcpSocket::ClientTcpSocket(QObject* parent, bool issocket): QObject(parent), isSocket(issocket)
 {
+    if(isSocket)
+    {
+        socket = new QTcpSocket(parent);
+        connect(socket, SIGNAL(connected()), SLOT(slot_connected()));
+        connect(socket, SIGNAL(readyRead()), SLOT(slot_ready_read()));
+        connect(socket, SIGNAL(error(QAbstractSocket::SocketError)), SLOT(displayError(QAbstractSocket::SocketError)));
+        connect(socket, SIGNAL(disconnected()), SIGNAL(signal_disconnected()));
+        connect(socket, SIGNAL(disconnected()), SLOT(deleteLater()));
+    }
+    else
+    {
+        server = new QTcpServer(parent);
+        connect(server, SIGNAL(newConnection()), this, SLOT(slot_new_connection()));
+    }
+}
+void ClientTcpSocket::slot_new_connection()
+{
+    qDebug() << "slot_new_connection()";
+    socket = server->nextPendingConnection();
     connect(socket, SIGNAL(connected()), SLOT(slot_connected()));
     connect(socket, SIGNAL(readyRead()), SLOT(slot_ready_read()));
+    connect(socket, SIGNAL(error(QAbstractSocket::SocketError)), SLOT(displayError(QAbstractSocket::SocketError)));
+    connect(socket, SIGNAL(disconnected()), SIGNAL(signal_disconnected()));
+    connect(socket, SIGNAL(disconnected()), SLOT(deleteLater()));
+}
+bool ClientTcpSocket::open(QString& host, quint16 & port)
+{
+    server->setMaxPendingConnections (1);
+    if (!server->listen(QHostAddress(host))) {
+         qDebug() << "Unable to start the server: " << server->errorString();
+        return false;
+    }
+    else
+    {
+        port = server->serverPort();
+    }
+    return true;
+}
+void ClientTcpSocket::displayError(QAbstractSocket::SocketError socketError)
+{            
+    qDebug() << "ClientTcpSocket" << "The following error occurred: %1."<<socket->errorString();
 }
 void ClientTcpSocket::slot_connected()
 {
@@ -12,15 +51,17 @@ void ClientTcpSocket::slot_connected()
 }
 void ClientTcpSocket::slot_ready_read()
 {
+    qDebug() << "slot_ready_read()";
     QByteArray b;
     forever {
         if(socket->bytesAvailable() <= 0) // Если ничего нет, выходим
             break;
         b = socket->readAll();// Читаем всё что есть
         m_mutex.lock();
-            buffer.append(b);
+        buffer.append(b);
         m_mutex.unlock();
-        QTimer::singleShot(0, this, SLOT(slot_split_buffer()));
+        if(b.size() > 1)
+            slot_split_buffer();
     }
 }
 void ClientTcpSocket::slot_split_buffer()
@@ -68,7 +109,8 @@ void ClientTcpSocket::slot_write(QByteArray data)
 {
     qDebug() << "{TCP CLIENT OUT}" <<data;
     write_mutex.lock();
-    socket->write(data);
+    qint64 i = socket->write(data);
+    qDebug() << "Last size: " << i << "bytes";
     write_mutex.unlock();
 }
 void ClientTcpSocket::slot_disconnected()

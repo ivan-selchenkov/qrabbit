@@ -28,6 +28,8 @@ public:
     QString userName;
     QString password;
     QString Host;
+    QString localHost;
+
     quint16 Port;
     quint16 slotsNumber;
     QString email;
@@ -44,8 +46,6 @@ public:
     void SendMessage(QString);
     void SendSearch(QString);
 public slots:
-    void slot_new_client(QString, QString);
-
     void slotConnect();
     void slotConnected();
 
@@ -73,6 +73,7 @@ private:
     QByteArray generateKey(const QByteArray&);
     bool m_isExtended;
     void searchMessage(QString);
+    void newClient(QString, QString, bool);
 signals:
     void signal_tcp_write(QByteArray);
     void signal_udp_write(QByteArray, QString, quint16);
@@ -80,7 +81,7 @@ signals:
     void signalConnected();
     void signalDisconnected();
     void signalRedirect(QString strHost, quint16 nPort);
-    void signalDisplayMessage(QString&);
+    void signalDisplayMessage(QString);
 
     // Сигналы для списка пользователей
     void signalNickList(QByteArray);

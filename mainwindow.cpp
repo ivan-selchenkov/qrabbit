@@ -16,6 +16,9 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
+    stc->exit();
+    stc->wait();
+    delete stc;
     delete ui;
 }
 
@@ -36,8 +39,8 @@ void MainWindow::on_btnStart_clicked()
         hub->slot_set_sharesize(settings.value("sharesize").toULongLong());
     }
     hub->slotConnect();
-    connect(hub, SIGNAL(signalDisplayMessage(QString&)),
-            this, SLOT(slotDisplayMessages(QString&)));
+    connect(hub, SIGNAL(signalDisplayMessage(QString)),
+            this, SLOT(slotDisplayMessages(QString)));
 
     // connecting hubconnection to filemanager to analize search request
     connect(stc, SIGNAL(signal_outcome_search(FileInfo,SearchItem)),

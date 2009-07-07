@@ -49,7 +49,7 @@ void SearchManager::slot_search(SearchItem si)
         if(!query.exec()) {
             qDebug() << "ERROR SearchManager::slot_search():" << query.lastError().driverText() << query.lastError().databaseText() << query.executedQuery();
             return;
-        }
+        }        
         while(query.next())
         {
             FileInfo fi;

@@ -8,12 +8,13 @@ class ClientConnection: public QObject
 {
     Q_OBJECT
 public:
-    ClientConnection(QObject* parent, QString username, QString address, QByteArray delayCommand);
+    ClientConnection(QObject* parent, QString username, QString address, QByteArray delayCommand, bool isActive);
     ~ClientConnection();
+
+    QString username;
 private:
     ClientTcpSocket* clienttcpsocket;
 
-    QString username;
     QString host;
     quint16 port;
 
@@ -31,6 +32,7 @@ public slots:
     void slot_command_received(QByteArray);
 signals:
     void signal_tcp_write(QByteArray);
+    void signal_hub_tcp_write(QByteArray);
 };
 
 #endif // CLIENTCONNECTION_H

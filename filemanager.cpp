@@ -36,7 +36,7 @@ FileManager::~FileManager()
 //! Hash is finished and file tree ready to search
 void FileManager::slot_on_hashing_finished()
 {
-    m_isFileListLoaded = true;
+
 }
 void FileManager::slot_on_search_result(FileInfo fi, SearchItem search_item)
 {

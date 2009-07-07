@@ -13,10 +13,6 @@ class FileManager: public QObject
 public:
     FileManager(QObject* parent);
     ~FileManager();
-    bool isFileListLoaded()
-    {
-        return m_isFileListLoaded;
-    }
 private:
     InitFilesTree* ift;
     QList<QString> folders;

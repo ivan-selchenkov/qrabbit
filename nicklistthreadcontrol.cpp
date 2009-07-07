@@ -1,4 +1,5 @@
 #include "nicklistthreadcontrol.h"
+#include <QtCore>
 
 NicklistThreadControl::NicklistThreadControl(QObject* parent, QString user): QThread(parent), username(user)
 {
@@ -20,6 +21,7 @@ void NicklistThreadControl::run()
 
     exec();
     delete nicklist;
+    qDebug() << "NicklistThreadControl::~run()";
 }
 int NicklistThreadControl::size()
 {
