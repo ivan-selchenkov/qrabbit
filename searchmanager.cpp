@@ -98,9 +98,9 @@ void SearchManager::searchFiles(SearchItem& si)
     str = "SELECT files.filename, files.filesize, files.TTH, directories.pathRel FROM files INNER JOIN directories ON files.directory_id = directories.id WHERE (";
 
     for(int i=0; i<list.size(); i++)
-        str.append(QString("files.filename_up LIKE :exp%1 OR ").arg(i));
+        str.append(QString("files.filename_up LIKE :exp%1 AND ").arg(i));
 
-    str.remove(-4,4);
+    str.remove(-5,5);
 
     str.append(") AND files.type = :type");
 
@@ -112,7 +112,8 @@ void SearchManager::searchFiles(SearchItem& si)
     query.bindValue(":type", si.type);
 
     if(!query.exec()) {
-        qDebug() << "ERROR SearchManager::slot_search():" << query.lastError().driverText() << query.lastError().databaseText() << query.executedQuery();
+        qDebug() << "ERROR SearchManager::slot_search():" << query.lastError().driverText() << query.executedQuery();
+        qDebug() << "ERROR DATA: " << si.data;
         return;
     }
     while(query.next())
@@ -145,9 +146,9 @@ void SearchManager::searchFolder(SearchItem & si)
 
     str = "SELECT pathRel FROM directories WHERE ";
     for(int i=0; i<list.size(); i++)
-        str.append(QString("name_up LIKE :exp%1 OR ").arg(i));
+        str.append(QString("name_up LIKE :exp%1 AND ").arg(i));
 
-    str.remove(-4,4);
+    str.remove(-5,5);
 
     query.prepare(str);
 
@@ -156,7 +157,8 @@ void SearchManager::searchFolder(SearchItem & si)
 
 
     if(!query.exec()) {
-        qDebug() << "ERROR SearchManager::slot_search():" << query.lastError().driverText() << query.lastError().databaseText() << query.executedQuery();
+        qDebug() << "ERROR SearchManager::slot_search():" << query.lastError().driverText() << query.executedQuery();
+        qDebug() << "ERROR DATA: " << si.data;
         return;
     }
     while(query.next())

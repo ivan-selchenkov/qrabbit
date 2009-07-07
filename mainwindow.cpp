@@ -29,8 +29,8 @@ void MainWindow::on_btnStart_clicked()
 
     HubConnection* hub;
 
-//    hub = new HubConnection(this, "dc.wideix.ru", 411); // dc.wideix.ru warez.gtk.su
-    hub = new HubConnection(this, "192.168.1.2", 411); // dc.wideix.ru warez.gtk.su
+    hub = new HubConnection(this, "dc.wideix.ru", 411); // dc.wideix.ru warez.gtk.su
+//    hub = new HubConnection(this, "192.168.1.2", 411); // dc.wideix.ru warez.gtk.su
     if(settings.contains("Sharesize"))
     {
         hub->slot_set_sharesize(settings.value("sharesize").toULongLong());

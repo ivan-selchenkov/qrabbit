@@ -258,9 +258,8 @@ void HubConnection::searchMessage(QString search)
 
     search_item.data = split_s.at(4);
 
-    qRegisterMetaType<SearchItem>("SearchItem");
-
-    emit signal_search_request(search_item);
+    if(search_item.data.size() >= 3)
+        emit signal_search_request(search_item);
 
 }
 void HubConnection::slot_search_result(FileInfo file_info, SearchItem search_item)
