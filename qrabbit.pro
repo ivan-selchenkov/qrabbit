@@ -23,7 +23,8 @@ SOURCES += main.cpp \
     clientconnection.cpp \
     clienttcpsocket.cpp \
     initfilestree.cpp \
-    searchthreadcontrol.cpp
+    searchthreadcontrol.cpp \
+    nicklistthreadcontrol.cpp
 HEADERS += mainwindow.h \
     hubconnection.h \
     global.h \
@@ -44,6 +45,8 @@ HEADERS += mainwindow.h \
     clientconnection.h \
     clienttcpsocket.h \
     initfilestree.h \
-    searchthreadcontrol.h
+    searchthreadcontrol.h \
+    nicklistthreadcontrol.h \
+    userinfo.h
 FORMS += mainwindow.ui
 LIBS += -lbz2

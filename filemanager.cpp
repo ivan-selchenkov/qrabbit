@@ -21,7 +21,7 @@ FileManager::~FileManager()
 {
     qDebug() << "~FileManager()";
 
-    ift->terminate(); // terminating hashing process
+    ift->exit(); // terminating hashing process
     ift->wait(); // waiting while terminating...
     delete ift;
 

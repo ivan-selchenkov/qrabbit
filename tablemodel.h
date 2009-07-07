@@ -2,16 +2,16 @@
 #define TABLEMODEL_H
 
 #include <QtGui>
-#include "hubnicklist.h"
+#include "nicklistthreadcontrol.h"
 
 struct UserInfo;
 
 class TableModel : public QAbstractTableModel {
 private:
     QHash<QModelIndex, QVariant> m_hash;
-    QList<UserInfo>* list;
+    NicklistThreadControl* nicklistControl;
 public:
-    TableModel(QList<UserInfo>*, QObject* pobj = 0);
+    TableModel(NicklistThreadControl*, QObject* pobj = 0);
     QVariant data(const QModelIndex& index, int nRole) const;
     int rowCount(const QModelIndex&) const;
     int columnCount(const QModelIndex&) const;

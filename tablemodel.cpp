@@ -1,9 +1,8 @@
 #include "tablemodel.h"
 #include <math.h>
 
-TableModel::TableModel(QList<UserInfo>* _list, QObject* pobj) : QAbstractTableModel(pobj)
+TableModel::TableModel(NicklistThreadControl* nlc, QObject* pobj) : QAbstractTableModel(pobj), nicklistControl(nlc)
 {
-    list = _list;
 }
 
 QVariant TableModel::data(const QModelIndex& index, int nRole) const
@@ -12,26 +11,27 @@ QVariant TableModel::data(const QModelIndex& index, int nRole) const
     if(!index.isValid()) {
         return QVariant();
     }
+    UserInfo user = nicklistControl->at(index.row());
     switch(index.column())
     {
         case 0: // ник
-            str = list->at(index.row()).username;
+            str = user.username;
             break;
         case 1: // Шара
-            str = QString("%1 Gb").arg((double)(list->at(index.row()).sharesize / powl(1024,3)), 0, 'f', 2);
+            str = QString("%1 Gb").arg((double)(user.sharesize / powl(1024,3)), 0, 'f', 2);
             break;
         case 2: // Описание
-            str = list->at(index.row()).description;
+            str = user.description;
             break;
         case 3: // Client
-            str = list->at(index.row()).client;
+            str = user.client;
             break;
     }
     return (nRole == Qt::DisplayRole || nRole == Qt::EditRole) ? m_hash.value(index, QVariant(str)) : QVariant();
 }
 int TableModel::rowCount(const QModelIndex&) const
 {
-    return list->size();
+    return nicklistControl->size();
 }
 int TableModel::columnCount(const QModelIndex&) const
 {

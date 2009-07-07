@@ -2,69 +2,33 @@
 #define HUBNICKLIST_H
 #include <QObject>
 #include <QTimer>
-#include "hubconnection.h"
-
-struct UserInfo;
-
-class HubConnection;
+#include <QMutex>
+#include "userinfo.h"
 
 class HubNickList: public QObject
 {
     Q_OBJECT
 public:
-    HubNickList(QString username, HubConnection* parent = 0);
+    HubNickList(QString username);
     QList<UserInfo> list;
     static bool LessThan(const UserInfo &s1, const UserInfo &s2);
+
+    int size();
+    UserInfo at(int i);
 public slots:
-    void slotMyInfo(QString data);
-    void slotQuitMessage(QString);
-private slots:
-    void slotSortAndUpdate();
+    void slot_myinfo(QString data);
+    void slot_quit(QString);
 signals:
-    void signalListChanged();
-    void signalListAboutToBeChanged();
+    void signal_list_changed();
+    void signal_list_about_to_be_changed();
 private:
     QTimer *timer;
     QMutex m_mutex;
-    HubConnection* hub;
+    //HubConnection* hub;
     QString m_username;
     bool isMy;
+
+    void sortAndUpdate();
 };
 
-struct UserInfo
-{
-    QString username;   // имя пользователя
-    QString description; // описание
-    QString client;
-    QString mode;
-    QString email;
-    QString connection;
-    QChar status;
-
-    quint64 sharesize; // размер шары
-
-    bool operator== ( const UserInfo & other ) const
-    {
-        return (this->username == other.username);
-    }
-    bool operator== ( const QString & other ) const
-    {
-        return (this->username == other);
-    }
-    UserInfo& operator= (const UserInfo & other)
-    {
-        username = other.username;   // имя пользователя
-        description = other.description; // описание
-        client = other.client;
-        mode = other.mode;
-        email = other.email;
-        connection = other.connection;
-        status = other.status;
-        sharesize = other.sharesize;
-        return *this;
-    }
-    QString toString(){
-        return QString("User: %1, Desc: %2, Client: %3, Email: %4, Con: %5, Share: %6").arg(username).arg(description).arg(client).arg(email).arg(connection).arg(sharesize);
-    }
-};
 #endif // HUBNICKLIST_H

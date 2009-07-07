@@ -1,9 +1,8 @@
 #include "hubnicklist.h"
-#include "hubconnection.h"
 #include <QStringList>
 #include <QTime>
 
-void HubNickList::slotQuitMessage(QString data)
+void HubNickList::slot_quit(QString data)
 {
     UserInfo user;
     user.username = data;
@@ -11,9 +10,9 @@ void HubNickList::slotQuitMessage(QString data)
     m_mutex.lock(); // Locking to remove
         list.removeOne(user);
     m_mutex.unlock(); // Unlocking after remove
-    slotSortAndUpdate(); // List is complete, updating
+    sortAndUpdate(); // List is complete, updating
 }
-void HubNickList::slotMyInfo(QString data)
+void HubNickList::slot_myinfo(QString data)
 {
     QStringList split;
     QStringList split_exp;
@@ -68,22 +67,35 @@ void HubNickList::slotMyInfo(QString data)
     if(isMy == true || user.username == m_username) // Last MyINFO is my
     {
         isMy = true;
-        slotSortAndUpdate(); // List is complete, updating
+        sortAndUpdate(); // List is complete, updating
     }
 }
-HubNickList::HubNickList(QString username, HubConnection* parent) : QObject(parent), m_username(username) {
-    hub = parent;
+HubNickList::HubNickList(QString username) : m_username(username) {
     isMy = false;
 }
 bool HubNickList::LessThan(const UserInfo &s1, const UserInfo &s2)
 {
     return s1.username.toLower() < s2.username.toLower();
 }
-void HubNickList::slotSortAndUpdate()
+void HubNickList::sortAndUpdate()
 {
-    emit signalListAboutToBeChanged();
+    emit signal_list_about_to_be_changed();
         m_mutex.lock();
             qSort(list.begin(), list.end(), HubNickList::LessThan);
         m_mutex.unlock();
-    emit signalListChanged();
+    emit signal_list_changed();
+}
+int HubNickList::size()
+{
+    m_mutex.lock();
+    int s = list.size();
+    m_mutex.unlock();
+    return s;
+}
+UserInfo HubNickList::at(int i)
+{
+    m_mutex.lock();
+    UserInfo s = list.at(i);
+    m_mutex.unlock();
+    return s;
 }

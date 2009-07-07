@@ -20,17 +20,19 @@ HubConnection::HubConnection(QObject* parent, QString str_Host, quint16 n_Port):
     slotsNumber = 10;
     email = "rabbit@ya.ru";
     encoding = (char*)"windows-1251";
-    nicklist = new HubNickList(userName, this);
-    model = new TableModel(&(nicklist->list), this);
+    nicklistControl = new NicklistThreadControl(this, userName);
+    model = new TableModel(nicklistControl, this);
 
-    connect(nicklist, SIGNAL(signalListAboutToBeChanged()), this, SIGNAL(signalListAboutChanged()));
-    connect(nicklist, SIGNAL(signalListChanged()), this, SIGNAL(signalListChanged()));
+    connect(nicklistControl, SIGNAL(signal_list_about_to_be_changed()), this, SIGNAL(signalListAboutChanged()));
+    connect(nicklistControl, SIGNAL(signal_list_changed()), this, SIGNAL(signalListChanged()));
 
     connect(this, SIGNAL(signalListAboutChanged()), model, SIGNAL(layoutAboutToBeChanged()));
     connect(this, SIGNAL(signalListChanged()), model, SIGNAL(layoutChanged()));
 
-    connect(this, SIGNAL(signalMyINFO(QString)), nicklist, SLOT(slotMyInfo(QString)));
-    connect(this, SIGNAL(signalQuit(QString)), nicklist, SLOT(slotQuitMessage(QString)));
+    connect(this, SIGNAL(signalMyINFO(QString)), nicklistControl, SIGNAL(signal_myinfo(QString)));
+    connect(this, SIGNAL(signalQuit(QString)), nicklistControl, SIGNAL(signal_quit(QString)));
+
+    nicklistControl->start(QThread::LowestPriority);
 
     //connect(this, SIGNAL(signalSearchMessage(QString)), this, SLOT(slot_search_message(QString)));
 
@@ -45,6 +47,14 @@ HubConnection::HubConnection(QObject* parent, QString str_Host, quint16 n_Port):
     hubudpsocket = new HubUdpSocket(this);
     connect(this, SIGNAL(signal_udp_write(QByteArray,QString,quint16)), hubudpsocket, SLOT(slot_write(QByteArray,QString,quint16)));
 }
+HubConnection::~HubConnection()
+{
+    nicklistControl->exit();
+    nicklistControl->wait();
+    delete nicklistControl;
+
+}
+
 void HubConnection::slotConnect()
 {
     hubtcpsocket->connectToHost(Host, Port);

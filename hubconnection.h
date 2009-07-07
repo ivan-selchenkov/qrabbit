@@ -5,13 +5,13 @@
 #include <QUdpSocket>
 #include <QMutex>
 #include <QList>
-#include "hubnicklist.h"
 #include "tablemodel.h"
 #include "searchitem.h"
 #include "fileinfo.h"
 #include "hubtcpsocket.h"
 #include "hubudpsocket.h"
 #include "clientconnection.h"
+#include "nicklistthreadcontrol.h"
 
 class HubNickList;
 class TableModel;
@@ -23,6 +23,8 @@ class HubConnection: public QObject
 public:
     TableModel* model;
     HubConnection(QObject* parent, QString, quint16);
+    ~HubConnection();
+
     QString userName;
     QString password;
     QString Host;
@@ -32,7 +34,7 @@ public:
     char* encoding;
     QString hubTopic;
     QString hubName;
-    HubNickList* nicklist;
+    NicklistThreadControl* nicklistControl;
     bool isConnected();
     QByteArray changeKeysStC(QByteArray);
     QByteArray changeKeysCtS(QByteArray);
