@@ -1,5 +1,6 @@
 #include <QtGui/QApplication>
 #include "mainwindow.h"
+#include "searchthreadcontrol.h"
 
 int main(int argc, char *argv[])
 {
@@ -13,6 +14,9 @@ int main(int argc, char *argv[])
     QTextCodec::setCodecForTr(codec);
     QTextCodec::setCodecForCStrings(codec);
     QTextCodec::setCodecForLocale(codec);
+
+    qRegisterMetaType<FileInfo>("FileInfo");
+    qRegisterMetaType<SearchItem>("SearchItem");
 
     MainWindow w;
     w.show();

@@ -47,15 +47,16 @@ void FileManager::slot_on_search_result(FileInfo fi, SearchItem search_item)
 void FileManager::slot_on_search_request(SearchItem search_item)
 {
 
-    if(!m_isFileListLoaded) return; // file tree is not ready
+/*    if(!m_isFileListLoaded) return; // file tree is not ready
 
-    SearchManager* sm = new SearchManager(this, tree, search_item);
+    SearchManager* sm = new SearchManager(this, search_item);
 
     qRegisterMetaType<FileInfo>("FileInfo");
     qRegisterMetaType<SearchItem>("SearchItem");
 
     connect(sm, SIGNAL(signal_search_result(FileInfo,SearchItem)), this, SLOT(slot_on_search_result(FileInfo,SearchItem)));
     QThreadPool::globalInstance()->start(sm);
+    */
 }
 
 

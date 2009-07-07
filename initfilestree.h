@@ -22,6 +22,7 @@ private:
     void scan();
     void scanFolder(QDir& parent, QDir& top, int parent_id);
     void calculateTTH();
+    int getType(QString);
 
     void saveXML();
     //! Recursive function use for fill QDomElement el

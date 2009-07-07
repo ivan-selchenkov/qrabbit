@@ -19,7 +19,6 @@ public:
     }
 private:
     InitFilesTree* ift;
-    QList<DirsTree> tree;
     QList<QString> folders;
 
     bool m_isFileListLoaded;

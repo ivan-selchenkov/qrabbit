@@ -22,7 +22,8 @@ SOURCES += main.cpp \
     hubudpsocket.cpp \
     clientconnection.cpp \
     clienttcpsocket.cpp \
-    initfilestree.cpp
+    initfilestree.cpp \
+    searchthreadcontrol.cpp
 HEADERS += mainwindow.h \
     hubconnection.h \
     global.h \
@@ -42,6 +43,7 @@ HEADERS += mainwindow.h \
     hubudpsocket.h \
     clientconnection.h \
     clienttcpsocket.h \
-    initfilestree.h
+    initfilestree.h \
+    searchthreadcontrol.h
 FORMS += mainwindow.ui
 LIBS += -lbz2

@@ -1,96 +1,170 @@
 #include "searchmanager.h"
 
-SearchManager::SearchManager(QObject* parent, QList<DirsTree> & _t, SearchItem _search_item): QObject(parent), tree(_t)
+SearchManager::SearchManager()
 {
-    search_item = _search_item;
-    list = _search_item.data.split(QRegExp("\\W+"), QString::SkipEmptyParts);
-    QString pattern;
-    foreach(QString str, list)
-        pattern.append(str + "|");
-    if(pattern.size() > 0)
-        pattern.remove(-1,1);
-    exp.setPattern(QString("(%1)").arg(pattern));
-    exp.setCaseSensitivity(Qt::CaseInsensitive);
-    //qDebug() << "SearchManager(" << search_item.data << ")";
 }
 SearchManager::~SearchManager()
 {
-    //qDebug() << "~SearchManager()";
+    qDebug() << "~SearchManager()";
 }
-void SearchManager::run()
+void SearchManager::dbConnect(QSqlDatabase& db)
 {
-    //qDebug() << "SearchManager->run()";
-    int i;
+    db = QSqlDatabase::database("SearchThreadControl", true);
 
-    for(i=0; i<tree.size(); i++)
-        searchDirectory(tree[i]); // searching in subdirectories
-}
-void SearchManager::searchDirectory(DirsTree &realTree)
-{
-    QString cur;
-    bool send;
-
-    for(int i=0; i<realTree.childDirs.size(); i++)        
-        searchDirectory(realTree.childDirs[i]); // searching in subdirectories
-
-    if(search_item.type == SearchItem::FOLDER)
+    if(!db.isValid())
     {
-        FileInfo fi;
-        fi.dir = realTree.current;
-        fi.isDir = true;
-        fi.relativePath = realTree.relativePath;
+        db = QSqlDatabase::addDatabase("QSQLITE", "SearchThreadControl");
 
-        qRegisterMetaType<FileInfo>("FileInfo");
-        qRegisterMetaType<SearchItem>("SearchItem");
-        emit signal_search_result(fi, search_item);
+        db.setDatabaseName("files.sqlite");
+        if(!db.open())
+            qDebug() << "Error opening database in SearchThreadControl";
+    }
+}
+
+void SearchManager::slot_search(SearchItem si)
+{
+    // Searching directories
+    QSqlDatabase db = QSqlDatabase::database("SearchThreadControl", true);
+    if(!db.isValid())
+    {
+        db = QSqlDatabase::addDatabase("QSQLITE", "SearchThreadControl");
+
+        db.setDatabaseName("files.sqlite");
+        if(!db.open())
+            qDebug() << "Error opening database in SearchThreadControl";
+    }
+
+    QSqlQuery query(db);
+    QString tth = si.data;
+
+    switch(si.type)
+    {
+    case SearchItem::TTH:
+        tth.remove(0,4);
+
+        query.clear();
+        query.prepare("SELECT files.filename, files.filesize, directories.pathRel FROM files INNER JOIN directories ON files.directory_id = directories.id WHERE files.TTH = :tth");
+        query.bindValue(":tth", tth);
+
+        if(!query.exec()) {
+            qDebug() << "ERROR SearchManager::slot_search():" << query.lastError().driverText() << query.lastError().databaseText() << query.executedQuery();
+            return;
+        }
+        while(query.next())
+        {
+            FileInfo fi;
+            QDir dir = query.value(2).toString();
+            fi.relativePath = dir.filePath(query.value(0).toString());
+            fi.size = query.value(1).toULongLong();
+            fi.TTH = tth;
+            fi.isDir = false;
+            emit signal_search_result(fi, si);
+        }
+        break;
+    case SearchItem::FOLDER:
+        searchFolder(si);
+        break;
+    case SearchItem::AUDIO:
+    case SearchItem::ARCHIVE:
+    case SearchItem::BIN:
+    case SearchItem::DOCUMENT:
+    case SearchItem::IMAGE:
+    case SearchItem::ISO:
+    case SearchItem::VIDEO:
+        searchFiles(si);
+        break;
+    case SearchItem::ANY:
+        searchFolder(si);
+        searchFiles(si);
+        break;
+    }
+}
+void SearchManager::searchFiles(SearchItem& si)
+{
+    QSqlDatabase db = QSqlDatabase::database("SearchThreadControl", true);
+    if(!db.isValid())
+    {
+        db = QSqlDatabase::addDatabase("QSQLITE", "SearchThreadControl");
+
+        db.setDatabaseName("files.sqlite");
+        if(!db.open())
+            qDebug() << "Error opening database in SearchThreadControl";
+    }
+
+    QSqlQuery query(db);
+    QString str = si.data.toUpper();
+    QStringList list = str.split(QRegExp("\\W+"), QString::SkipEmptyParts);
+
+    str = "SELECT files.filename, files.filesize, files.TTH, directories.pathRel FROM files INNER JOIN directories ON files.directory_id = directories.id WHERE (";
+
+    for(int i=0; i<list.size(); i++)
+        str.append(QString("files.filename_up LIKE :exp%1 OR ").arg(i));
+
+    str.remove(-4,4);
+
+    str.append(") AND files.type = :type");
+
+    query.prepare(str);
+
+    for(int i=0; i < list.size(); i++)
+        query.bindValue(QString(":exp%1").arg(i), QString("%%1%").arg(list.at(i)));
+
+    query.bindValue(":type", si.type);
+
+    if(!query.exec()) {
+        qDebug() << "ERROR SearchManager::slot_search():" << query.lastError().driverText() << query.lastError().databaseText() << query.executedQuery();
         return;
     }
-
-    for(int i=0; i<realTree.files.size(); i++) // analyzing file
+    while(query.next())
     {
-        send = false;
-        switch(search_item.type) // checking file type
-        {
-            case SearchItem::TTH:
-                if(realTree.files[i].TTH == list.at(1))
-                    send = true;
-            case SearchItem::AUDIO:
-                if(realTree.files[i].filename.contains(QRegExp("\.(aac|aif|flac|iff|m3u|mid|midi|mp3|mpa|ogg|ra|ram|wav|wma)$", Qt::CaseInsensitive)))
-                    if(realTree.files[i].filename.contains(exp)) send = true;
-            break;
-            case SearchItem::ARCHIVE:
-                if(realTree.files[i].filename.contains(QRegExp("\.(7z|deb|gz|pkg|rar|sea|sit|sitx|zip)$", Qt::CaseInsensitive)))
-                    if(realTree.files[i].filename.contains(exp)) send = true;
-            break;
-            case SearchItem::BIN: // executable
-                if(realTree.files[i].filename.contains(QRegExp("\.(app|bat|cgi|com|exe|jar)$", Qt::CaseInsensitive)))
-                    if(realTree.files[i].filename.contains(exp)) send = true;
-            break;
-            case SearchItem::DOCUMENT:
-                if(realTree.files[i].filename.contains(QRegExp("\.(doc|docx|rtf|txt|odt|ods|odp|xls)$", Qt::CaseInsensitive)))
-                    if(realTree.files[i].filename.contains(exp)) send = true;
-            break;
-            case SearchItem::IMAGE:
-                if(realTree.files[i].filename.contains(QRegExp("\.(3dm|3dmf|ai|blend|bmp|cpt|cr2|drw|dwg|dxf|eps|gif|indd|jpg|mng|pct|pdf|png|ps|psd|svg|tif)$", Qt::CaseInsensitive)))
-                    if(realTree.files[i].filename.contains(exp)) send = true;
-            break;
-            case SearchItem::ISO:
-                if(realTree.files[i].filename.contains(QRegExp("\.(000|iso|dmg|nrg|toast|vcd)$", Qt::CaseInsensitive)))
-                    if(realTree.files[i].filename.contains(exp)) send = true;
-            break;
-            case SearchItem::VIDEO:
-                if(realTree.files[i].filename.contains(QRegExp("\.(3g2|3gp|asf|asx|avi|flv|mkv|mov|mp4|mpg|qt|rm|swf|vob|wmv)$", Qt::CaseInsensitive)))
-                    if(realTree.files[i].filename.contains(exp)) send = true;
-            break;
-            default:
-                if(realTree.files[i].filename.contains(exp)) send = true;
-            break;
-        }
-        if(send) // if filename is suitable
-        {
-            qRegisterMetaType<FileInfo>("FileInfo");
-            qRegisterMetaType<SearchItem>("SearchItem");
-            emit signal_search_result(realTree.files[i], search_item);
-        }
+        FileInfo fi;
+        QDir dir = query.value(3).toString();
+        fi.relativePath = dir.filePath(query.value(0).toString());
+        fi.size = query.value(1).toULongLong();
+        fi.TTH = query.value(2).toString();
+        fi.isDir = false;
+        emit signal_search_result(fi, si);
     }
+}
+
+void SearchManager::searchFolder(SearchItem & si)
+{
+    QSqlDatabase db = QSqlDatabase::database("SearchThreadControl", true);
+    if(!db.isValid())
+    {
+        db = QSqlDatabase::addDatabase("QSQLITE", "SearchThreadControl");
+
+        db.setDatabaseName("files.sqlite");
+        if(!db.open())
+            qDebug() << "Error opening database in SearchThreadControl";
+    }
+
+    QSqlQuery query(db);
+    QString str = si.data.toUpper();
+    QStringList list = str.split(QRegExp("\\W+"), QString::SkipEmptyParts);
+
+    str = "SELECT pathRel FROM directories WHERE ";
+    for(int i=0; i<list.size(); i++)
+        str.append(QString("name_up LIKE :exp%1 OR ").arg(i));
+
+    str.remove(-4,4);
+
+    query.prepare(str);
+
+    for(int i=0; i < list.size(); i++)
+        query.bindValue(QString(":exp%1").arg(i), QString("%%1%").arg(list.at(i)));
+
+
+    if(!query.exec()) {
+        qDebug() << "ERROR SearchManager::slot_search():" << query.lastError().driverText() << query.lastError().databaseText() << query.executedQuery();
+        return;
+    }
+    while(query.next())
+    {
+        FileInfo fi;
+        fi.relativePath = query.value(0).toString();
+        fi.isDir = true;
+        emit signal_search_result(fi, si);
+    }
+
 }

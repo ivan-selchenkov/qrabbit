@@ -6,6 +6,7 @@
 #include "hubconnection.h"
 #include "filemanager.h"
 #include "fileinfo.h"
+#include "searchthreadcontrol.h"
 
 namespace Ui
 {
@@ -21,6 +22,8 @@ public:
     ~MainWindow();
 private:
     FileManager* filemanager;
+    SearchThreadControl* stc;
+
     Ui::MainWindowClass *ui;
     QList<HubConnection*> hubs;
     QSettings settings;

@@ -1,6 +1,7 @@
 #include "initfilestree.h"
 #include "tth/hashfile.h"
 #include <bzlib.h>
+#include "searchitem.h"
 
 InitFilesTree::InitFilesTree(QObject* parent, QList<QString> _folders): QThread(parent)
 {
@@ -203,6 +204,7 @@ void InitFilesTree::scanFolder(QDir& parent /* current directory */, QDir & top 
     "id" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL ,
     "filename" TEXT,
     "TTH" TEXT,
+    "type" INTEGER,
     "directory_id" INTEGER,
     "isActual" INTEGER DEFAULT 1,
     "filesize" INTEGER NOT NULL  DEFAULT 0)
@@ -240,9 +242,10 @@ void InitFilesTree::scanFolder(QDir& parent /* current directory */, QDir & top 
         else
         {
             query.clear();
-            query.prepare("INSERT INTO files(filename, filename_up, directory_id, isActual, filesize) VALUES(:filename, :filename_up, :directory_id, :isActual, :filesize)");
+            query.prepare("INSERT INTO files(filename, filename_up, type, directory_id, isActual, filesize) VALUES(:filename, :filename_up, :type, :directory_id, :isActual, :filesize)");
             query.bindValue(":filename", file);
             query.bindValue(":filename_up", file.toUpper());
+            query.bindValue(":type", getType(file));
             query.bindValue(":directory_id", next_parent_id);
             query.bindValue(":isActual", 1);
             query.bindValue(":filesize", QFileInfo(parent.absoluteFilePath(file)).size());
@@ -265,10 +268,29 @@ void InitFilesTree::scanFolder(QDir& parent /* current directory */, QDir & top 
         scanFolder(next, top, next_parent_id);
     }
 }
+int InitFilesTree::getType(QString filename)
+{
+    if(filename.contains(QRegExp("\.(aac|aif|flac|iff|m3u|mid|midi|mp3|mpa|ogg|ra|ram|wav|wma)$", Qt::CaseInsensitive)))
+        return SearchItem::AUDIO;
+    else if(filename.contains(QRegExp("\.(7z|deb|gz|pkg|rar|sea|sit|sitx|zip)$", Qt::CaseInsensitive)))
+        return SearchItem::ARCHIVE;
+    else if(filename.contains(QRegExp("\.(app|bat|cgi|com|exe|jar)$", Qt::CaseInsensitive)))
+        return SearchItem::BIN;
+    else if(filename.contains(QRegExp("\.(doc|docx|rtf|txt|odt|ods|odp|xls)$", Qt::CaseInsensitive)))
+        return SearchItem::DOCUMENT;
+    else if(filename.contains(QRegExp("\.(3dm|3dmf|ai|blend|bmp|cpt|cr2|drw|dwg|dxf|eps|gif|indd|jpg|mng|pct|pdf|png|ps|psd|svg|tif)$", Qt::CaseInsensitive)))
+        return SearchItem::IMAGE;
+    else if(filename.contains(QRegExp("\.(000|iso|dmg|nrg|toast|vcd)$", Qt::CaseInsensitive)))
+        return SearchItem::ISO;
+    else if(filename.contains(QRegExp("\.(3g2|3gp|asf|asx|avi|flv|mkv|mov|mp4|mpg|qt|rm|swf|vob|wmv)$", Qt::CaseInsensitive)))
+        return SearchItem::VIDEO;
+    else
+        return SearchItem::ANY;
+}
 QSqlDatabase InitFilesTree::dbConnect()
 {
     bool isExists;
-    // CREATE TABLE "files" ("id" INTEGER PRIMARY KEY  NOT NULL ,"filename" TEXT, "filename_up" TEXT, "TTH" TEXT,"directory_id" INTEGER,"isActual" INTEGER DEFAULT 1 ,"filesize" INTEGER NOT NULL  DEFAULT 0 )
+    // CREATE TABLE "files" ("id" INTEGER PRIMARY KEY  NOT NULL ,"filename" TEXT, "filename_up" TEXT, "TTH" TEXT, "type" INTEGER, "directory_id" INTEGER,"isActual" INTEGER DEFAULT 1 ,"filesize" INTEGER NOT NULL  DEFAULT 0 )
     // CREATE TABLE "directories" ("id" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , "name" TEXT, "name_up" TEXT, "pathRel" TEXT, "pathAbs" TEXT, "parent_id" INTEGER, "isActual" INTEGER DEFAULT 1)
 
     // CREATE INDEX "TTH" ON "files" ("TTH" ASC)
@@ -291,7 +313,7 @@ QSqlDatabase InitFilesTree::dbConnect()
     QSqlQuery query;
     if(!isExists)
     {
-        query.prepare("CREATE TABLE \"files\" (\"id\" INTEGER PRIMARY KEY  NOT NULL ,\"filename\" TEXT, \"filename_up\" TEXT, \"TTH\" TEXT,\"directory_id\" INTEGER,\"isActual\" INTEGER DEFAULT 1 ,\"filesize\" INTEGER NOT NULL  DEFAULT 0 )");
+        query.prepare("CREATE TABLE \"files\" (\"id\" INTEGER PRIMARY KEY  NOT NULL ,\"filename\" TEXT, \"filename_up\" TEXT, \"TTH\" TEXT, \"type\" INTEGER, \"directory_id\" INTEGER,\"isActual\" INTEGER DEFAULT 1 ,\"filesize\" INTEGER NOT NULL  DEFAULT 0 )");
         execQuery(query);
 
         query.prepare("CREATE TABLE \"directories\" (\"id\" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , \"name\" TEXT, \"name_up\" TEXT, \"pathRel\" TEXT, \"pathAbs\" TEXT, \"parent_id\" INTEGER, \"isActual\" INTEGER DEFAULT 1)");

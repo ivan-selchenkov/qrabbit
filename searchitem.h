@@ -1,6 +1,8 @@
 #ifndef SEARCHITEM_H
 #define SEARCHITEM_H
 
+#include <QString>
+
 struct SearchItem
 {
     QString host;

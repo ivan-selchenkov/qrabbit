@@ -222,7 +222,7 @@ void HubConnection::slot_new_client(QString username, QString address)
 }
 void HubConnection::searchMessage(QString search)
 {
-    qDebug() << search;
+    //qDebug() << search;
 
     SearchItem search_item;
 
@@ -287,7 +287,7 @@ void HubConnection::slot_search_result(FileInfo file_info, SearchItem search_ite
     }
 
 
-    answer.append(" 1/1"); qDebug()<<"set correct slot number HubConnection::slot_search_result()";
+    answer.append(" 1/1"); //qDebug()<<"set correct slot number HubConnection::slot_search_result()";
 
     answer.append((char)0x05);
 

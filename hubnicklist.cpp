@@ -9,11 +9,7 @@ void HubNickList::slotQuitMessage(QString data)
     user.username = data;
 
     m_mutex.lock(); // Locking to remove
-        if(list.removeOne(user)) {
-            qDebug() << QString("Removed: %1").arg(data);
-        }
-        else
-            qDebug() << QString("Is not removed: %1").arg(data);
+        list.removeOne(user);
     m_mutex.unlock(); // Unlocking after remove
     slotSortAndUpdate(); // List is complete, updating
 }
@@ -63,12 +59,10 @@ void HubNickList::slotMyInfo(QString data)
         if(it == list.end()) // Element is not in the list yet
         {
             list << user;
-            qDebug() << QString("Hello %1").arg(user.username);
         }
         else
         {
             (*it) = user; // Updating present user
-            qDebug() << QString("Update %1").arg(user.username);
         }
     m_mutex.unlock();
     if(isMy == true || user.username == m_username) // Last MyINFO is my
@@ -92,5 +86,4 @@ void HubNickList::slotSortAndUpdate()
             qSort(list.begin(), list.end(), HubNickList::LessThan);
         m_mutex.unlock();
     emit signalListChanged();
-    qDebug() << QString("Sorted, list size is %1").arg(list.size());
 }
