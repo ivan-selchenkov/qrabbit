@@ -3,67 +3,62 @@
 #include <QTextCodec>
 #include <QStringList>
 #include "searchitem.h"
+#include <iconv.h>
+#include <string.h>
+#include <limits.h>
 
-HubConnection::HubConnection(QObject* parent, QString str_Host, quint16 n_Port): QObject(parent)
+HubConnection::HubConnection(QString str_Host, quint16 n_Port)
 {
-    //connect(this, SIGNAL(signalParseList()), SLOT(slotParseList()));
-    //connect(this, SIGNAL(signalStartSend()), SLOT(slotStartSend()));
-
     isListParsing = false; // Метка что анализатор не запущен
     isSending = false; // Метка что отправка не запущена
     isSendingUdp = false;
     isHello = false;
-    userName = "Washik";
-    password = "vanqn1982";
-    localHost = "192.168.1.2";
-    Host = str_Host;
-    Port = n_Port;
-    slotsNumber = 10;
-    email = "rabbit@ya.ru";
-    encoding = (char*)"windows-1251";
-    nicklistControl = new NicklistThreadControl(this, userName);
-    model = new TableModel(nicklistControl, this);
-
-    connect(nicklistControl, SIGNAL(signal_list_about_to_be_changed()), this, SIGNAL(signalListAboutChanged()));
-    connect(nicklistControl, SIGNAL(signal_list_changed()), this, SIGNAL(signalListChanged()));
-
-    connect(this, SIGNAL(signalListAboutChanged()), model, SIGNAL(layoutAboutToBeChanged()));
-    connect(this, SIGNAL(signalListChanged()), model, SIGNAL(layoutChanged()));
-
-    connect(this, SIGNAL(signalMyINFO(QString)), nicklistControl, SIGNAL(signal_myinfo(QString)));
-    connect(this, SIGNAL(signalQuit(QString)), nicklistControl, SIGNAL(signal_quit(QString)));
-
-    nicklistControl->start(QThread::LowestPriority);
-
-    //connect(this, SIGNAL(signalSearchMessage(QString)), this, SLOT(slot_search_message(QString)));
-
-    connect(this, SIGNAL(signalStartSendUdp()), this, SLOT(slotStartSendUdp()));
-    codec = QTextCodec::codecForName(encoding); // кодек для перекодировки сообщений
     m_isExtended = false;
 
-    hubtcpsocket = new HubTcpSocket(this);
-    connect(hubtcpsocket, SIGNAL(signal_command_received(QByteArray)), this, SLOT(slot_command_received(QByteArray)));
-    connect(this, SIGNAL(signal_tcp_write(QByteArray)), hubtcpsocket, SLOT(slot_write(QByteArray)));
+    Host = str_Host;
+    Port = n_Port;
+    qDebug() << "   HubConnection()";
+}
+bool HubConnection::init()
+{
+    if(userName.isEmpty()) return false;
+    //password = "vanqn1982";
+    if(localHost.isEmpty()) return false;;
+    if(slotsNumber <= 0 && slotsNumber > 100) slotsNumber = 10;
+    if(email.isEmpty()) email = "rabbit@ya.ru";
+    if(encoding.isEmpty()) return false; // (char*)"windows-1251";
 
+
+    // codec for encoding messages
+    //codecParent = new QTextCodec();
+    //codec = codecParent->codecForName((char*)encoding.constData());
+
+    // hub tcp read/write control
+    hubtcpsocket = new HubTcpSocket(this);
+    // incoming command
+    connect(hubtcpsocket, SIGNAL(signal_command_received(QByteArray)),
+            this, SLOT(slot_command_received(QByteArray)));
+    // outcoming data
+    connect(this, SIGNAL(signal_tcp_write(QByteArray)),
+            hubtcpsocket, SLOT(slot_write(QByteArray)));
+
+    // hub/client udp write control
     hubudpsocket = new HubUdpSocket(this);
-    connect(this, SIGNAL(signal_udp_write(QByteArray,QString,quint16)), hubudpsocket, SLOT(slot_write(QByteArray,QString,quint16)));
+    connect(this, SIGNAL(signal_udp_write(QByteArray,QString,quint16)),
+            hubudpsocket, SLOT(slot_write(QByteArray,QString,quint16)));
+    qDebug() << "   HubConnection::init()";
 }
 HubConnection::~HubConnection()
 {
-    nicklistControl->exit();
-    nicklistControl->wait();
-    delete nicklistControl;
-
+    qDebug() << "~HubConnection()";
 }
 
-void HubConnection::slotConnect()
+void HubConnection::connectToHub()
 {
+    qDebug() << Host << ":" << Port;
     hubtcpsocket->connectToHost(Host, Port);
 }
-void HubConnection::slotConnected()
-{
-    qDebug() << "[INFO] Received the connected() signal";
-}
+
 bool HubConnection::isExtended()
 {
     return m_isExtended;
@@ -76,7 +71,7 @@ void HubConnection::slot_command_received(QByteArray current)
     QString tempstr;
     QByteArray lock;
 
-    if(current.isEmpty()) return; // Если пустая строка идем к следующей
+    if(current.isEmpty()) return;
 
     qDebug()<<"[DATA] "+current;
     if(current.at(0) == '$') {
@@ -165,7 +160,7 @@ void HubConnection::slot_command_received(QByteArray current)
             else
             {
                 tempstr = "Redirect to " + list.at(1);                
-                emit signalDisplayMessage(tempstr);
+                emit signal_hub_message(tempstr);
                 QStringList t_str = tempstr.split(":");
                 if(t_str.size() == 2)
                 {
@@ -217,7 +212,7 @@ void HubConnection::slot_command_received(QByteArray current)
         }
     } else {
         tempstr = decode(changeKeysStC(current));
-        emit signalDisplayMessage(tempstr);
+        emit signal_hub_message(tempstr);
     }
 }
 void HubConnection::slot_set_sharesize(quint64 size)
@@ -412,9 +407,37 @@ QByteArray HubConnection::changeKeysCtS(QByteArray ar) // from server to client
 }
 QByteArray HubConnection::encode(QString str)  // coding text from client to server encoding
 {
-    return codec->fromUnicode(str);
+
+    QByteArray result;
+    result.append(str);
+    return  result; //QTextCodec::codecForName((char*)encoding.constData())->fromUnicode(str); //QTextCodec(codec->fromUnicode(str);
 }
 QString HubConnection::decode(QByteArray ar)  // coding text from server to utf-8
 {
-    return codec->toUnicode(ar);
+//    iconv_t iconv_open(const char *tocode, const char *fromcode);
+    QString str;
+    iconv_t cd;
+    size_t ret;
+
+    char* data = ar.data();
+    size_t insize = (size_t)ar.size();
+
+    char* out = new char[(insize + 1) * MB_LEN_MAX];
+    char* result = out;
+    size_t outsize = (insize + 1) * MB_LEN_MAX - 1;
+    size_t outsizeleft = outsize;
+
+    QByteArray ascii = encoding.toAscii();
+
+    cd = iconv_open("utf8", ascii.constData());
+
+    ret = iconv(cd, &data, &insize, &out, &outsizeleft);
+    iconv_close(cd);
+    if(ret == (size_t)(-1))
+    {
+        qDebug() << "iconv error";
+        return QString();
+    }
+    str = QString::fromUtf8(result, (int) outsize - outsizeleft);
+    return str;
 }

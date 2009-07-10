@@ -3,7 +3,7 @@
 
 #include <QtGui/QMainWindow>
 #include <QSettings>
-#include "hubconnection.h"
+#include "hubthreadcontrol.h"
 #include "filemanager.h"
 #include "fileinfo.h"
 #include "searchthreadcontrol.h"
@@ -23,9 +23,8 @@ public:
 private:
     FileManager* filemanager;
     SearchThreadControl* stc;
-
+    QList<HubThreadControl*> hubs;
     Ui::MainWindowClass *ui;
-    QList<HubConnection*> hubs;
     QSettings settings;
 public slots:
     void slotDisplayMessages(QString);

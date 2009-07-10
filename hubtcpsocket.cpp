@@ -1,29 +1,51 @@
 #include "hubtcpsocket.h"
+#include <QHostAddress>
 
-HubTcpSocket::HubTcpSocket(QObject* parent): QObject(parent), socket(new QTcpSocket(parent))
+HubTcpSocket::HubTcpSocket(QObject* parent): QObject(parent)
 {
-    //connect(socket, SIGNAL(connected()), SLOT(slotConnected()));
-    connect(socket, SIGNAL(readyRead()), this, SLOT(slot_ready_read()));
+    socket = new QTcpSocket(parent);
+
+    connect(socket, SIGNAL(error(QAbstractSocket::SocketError)),
+            this, SLOT(error(QAbstractSocket::SocketError)));
+
+    connect(socket, SIGNAL(readyRead()),
+            this, SLOT(slot_ready_read()));
 }
+HubTcpSocket::~HubTcpSocket()
+{
+    socket->close();
+}
+
+void HubTcpSocket::error(QAbstractSocket::SocketError socketError)
+{
+    switch(socketError)
+    {
+        case QAbstractSocket::ConnectionRefusedError:
+            qDebug() << "The connection was refused by the peer (or timed out).";
+            break;
+        default:
+            qDebug() << "socket error" << socketError;
+            break;
+    }
+}
+
 void HubTcpSocket::slot_ready_read()
 {
     QByteArray b;
     forever {
-        if(socket->bytesAvailable() <= 0) // Если ничего нет, выходим
+        if(socket->bytesAvailable() <= 0) // data is empty - exiting
             break;
-        b = socket->readAll();// Читаем всё что есть
-        m_mutex.lock();
-            buffer.append(b);
-        m_mutex.unlock();
-        QTimer::singleShot(0, this, SLOT(slot_split_buffer()));
+
+        b = socket->readAll();
+        buffer.append(b);
+        splitBuffer();
     }
 }
-void HubTcpSocket::slot_split_buffer()
+void HubTcpSocket::splitBuffer()
 {
     QList<QByteArray> list_array;
     QString str;
 
-    m_mutex.lock();
     list_array = buffer.split('|');
     if(list_array.size() > 1)
     {
@@ -38,22 +60,15 @@ void HubTcpSocket::slot_split_buffer()
             buffer.clear();
         }
     }
-    m_mutex.unlock();
-
-    signal_mutex.lock();
     foreach(QByteArray ba, list_array)
     {
         if(ba.size() > 0)
             emit signal_command_received(ba);
     }
-    signal_mutex.unlock();
 }
 void HubTcpSocket::connectToHost(QString host, quint16 port)
 {
-    m_host = host;
-    m_port = port;
-
-    socket->connectToHost(m_host, port);
+    socket->connectToHost(host, port);
 }
 void HubTcpSocket::close()
 {
@@ -62,8 +77,5 @@ void HubTcpSocket::close()
 void HubTcpSocket::slot_write(QByteArray data)
 {
     qDebug() << "{TCP HUB OUT}" << data;
-
-    write_mutex.lock();
     socket->write(data);
-    write_mutex.unlock();
 }

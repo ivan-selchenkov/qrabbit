@@ -15,7 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
 }
 
 MainWindow::~MainWindow()
-{
+{    
     stc->exit();
     stc->wait();
     delete stc;
@@ -30,27 +30,29 @@ void MainWindow::on_btnStart_clicked()
 {
 //    connect(s, SIGNAL(progressInfo(int)), this, SLOT(on_progress_info(int)));
 
-    HubConnection* hub;
+    HubThreadControl* hub;
 
-    hub = new HubConnection(this, "dc.wideix.ru", 411); // dc.wideix.ru warez.gtk.su
-//    hub = new HubConnection(this, "192.168.1.2", 411); // dc.wideix.ru warez.gtk.su
+    hub = new HubThreadControl("dc.wideix.ru", 411, "Washik", "vanqn1982", "192.168.1.2", 10, "rabbit@ya.ru", "cp1251"); // dc.wideix.ru warez.gtk.su
+    //hub = new HubThreadControl("localhost", 411, "Washik", "vanqn1982", "192.168.1.2", 10, "rabbit@ya.ru", "windows-1251"); // dc.wideix.ru warez.gtk.su
+
     if(settings.contains("Sharesize"))
-    {
-        hub->slot_set_sharesize(settings.value("sharesize").toULongLong());
-    }
-    hub->slotConnect();
-    connect(hub, SIGNAL(signalDisplayMessage(QString)),
+        hub->setSharesize(settings.value("sharesize").toULongLong());
+
+    connect(hub, SIGNAL(signal_hub_message(QString)),
             this, SLOT(slotDisplayMessages(QString)));
+
+    connect(hub, SIGNAL(signal_search_request(SearchItem)),
+            stc, SIGNAL(signal_income_search(SearchItem)));
 
     // connecting hubconnection to filemanager to analize search request
     connect(stc, SIGNAL(signal_outcome_search(FileInfo,SearchItem)),
-            hub, SLOT(slot_search_result(FileInfo,SearchItem)), Qt::AutoConnection);
+            hub, SIGNAL(signal_search_result(FileInfo,SearchItem)));
 
-    connect(hub, SIGNAL(signal_search_request(SearchItem)),
-            stc, SIGNAL(signal_income_search(SearchItem)), Qt::AutoConnection);
 
     connect(filemanager, SIGNAL(signal_new_sharesize(quint64)),
-            hub, SLOT(slot_new_sharesize(quint64)));
+            hub, SIGNAL(signal_sharesize(quint64)));
+
+    hub->start();
 
 
     ui->tableView->setModel(hub->model);
@@ -71,14 +73,14 @@ void MainWindow::slotDisplayMessages(QString str)
 
 void MainWindow::on_lineEdit_returnPressed()
 {
-    QString str = ui->lineEdit->text();
-    if(str != "") {
-        ui->lineEdit->clear();
-        if(hubs[0]->isConnected())
-        {
-            hubs[0]->SendMessage(str);
-        }
-    }
+//    QString str = ui->lineEdit->text();
+//    if(str != "") {
+//        ui->lineEdit->clear();
+//        if(hubs[0]->isConnected())
+//        {
+//            hubs[0]->SendMessage(str);
+//        }
+//    }
 }
 
 void MainWindow::on_lineSearch_returnPressed()

@@ -22,8 +22,11 @@ class HubConnection: public QObject
     Q_OBJECT
 public:
     TableModel* model;
-    HubConnection(QObject* parent, QString, quint16);
+    HubConnection(QString, quint16);
     ~HubConnection();
+
+    bool init();
+    void connectToHub();
 
     QString userName;
     QString password;
@@ -33,10 +36,9 @@ public:
     quint16 Port;
     quint16 slotsNumber;
     QString email;
-    char* encoding;
+    QString encoding;
     QString hubTopic;
     QString hubName;
-    NicklistThreadControl* nicklistControl;
     bool isConnected();
     QByteArray changeKeysStC(QByteArray);
     QByteArray changeKeysCtS(QByteArray);
@@ -45,10 +47,8 @@ public:
     bool isExtended();
     void SendMessage(QString);
     void SendSearch(QString);
+    quint64 sharesize;
 public slots:
-    void slotConnect();
-    void slotConnected();
-
     void slot_search_result(FileInfo, SearchItem);
 
     void slot_command_received(QByteArray);
@@ -58,7 +58,6 @@ private:
     HubTcpSocket* hubtcpsocket;
     HubUdpSocket* hubudpsocket;
     QList<ClientConnection*> client_list;
-    quint64 sharesize;
 
     QByteArray buffer;
     QMutex m_mutex;
@@ -69,6 +68,7 @@ private:
 
     bool isHello;
     QTextCodec *codec;
+    QTextCodec *codecParent;
 
     QByteArray generateKey(const QByteArray&);
     bool m_isExtended;
@@ -81,15 +81,13 @@ signals:
     void signalConnected();
     void signalDisconnected();
     void signalRedirect(QString strHost, quint16 nPort);
-    void signalDisplayMessage(QString);
+    void signal_hub_message(QString);
 
     // Сигналы для списка пользователей
     void signalNickList(QByteArray);
     void signalHello(QByteArray);
     void signalQuit(QString);
     void signalMyINFO(QString data);
-    void signalListChanged();
-    void signalListAboutChanged();
 
     void signal_search_request(SearchItem);
 };
