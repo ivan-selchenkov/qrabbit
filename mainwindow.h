@@ -4,7 +4,8 @@
 #include <QtGui/QMainWindow>
 #include <QSettings>
 #include "hubthreadcontrol.h"
-#include "filemanager.h"
+//#include "filemanager.h"
+#include "initfilestree.h"
 #include "fileinfo.h"
 #include "searchthreadcontrol.h"
 
@@ -21,11 +22,13 @@ public:
     MainWindow(QWidget *parent = 0);
     ~MainWindow();
 private:
-    FileManager* filemanager;
+//    FileManager* filemanager;
+    InitFilesTree* ift;
     SearchThreadControl* stc;
     QList<HubThreadControl*> hubs;
     Ui::MainWindowClass *ui;
     QSettings settings;
+    QList<QString> folders;
 public slots:
     void slotDisplayMessages(QString);
     void on_info(QString);

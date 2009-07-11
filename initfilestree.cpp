@@ -34,6 +34,7 @@ InitFilesTree::~InitFilesTree()
 {
     QSqlDatabase db = QSqlDatabase::database();
     db.close();
+    qDebug() << "~InitFilesTree()";
 }
 void InitFilesTree::run()
 {

@@ -47,6 +47,7 @@ bool HubConnection::init()
     connect(this, SIGNAL(signal_udp_write(QByteArray,QString,quint16)),
             hubudpsocket, SLOT(slot_write(QByteArray,QString,quint16)));
     qDebug() << "   HubConnection::init()";
+    return true;
 }
 HubConnection::~HubConnection()
 {
@@ -73,7 +74,7 @@ void HubConnection::slot_command_received(QByteArray current)
 
     if(current.isEmpty()) return;
 
-    qDebug()<<"[DATA] "+current;
+    qDebug()<<"[DATA] "+decode(changeKeysStC(current));
     if(current.at(0) == '$') {
         list = current.split(' '); // Делим строку на части по пробелу
         // Анализируем первую часть
@@ -340,7 +341,7 @@ void HubConnection::slot_search_result(FileInfo file_info, SearchItem search_ite
     else
         emit signal_udp_write(udp.data, udp.host, udp.port);
 }
-void HubConnection::SendMessage(QString message)
+void HubConnection::slot_send_message(QString message)
 {
     QByteArray send_array;
     message = QString("<%1> %2").arg(userName, message);
@@ -407,10 +408,33 @@ QByteArray HubConnection::changeKeysCtS(QByteArray ar) // from server to client
 }
 QByteArray HubConnection::encode(QString str)  // coding text from client to server encoding
 {
-
     QByteArray result;
-    result.append(str);
-    return  result; //QTextCodec::codecForName((char*)encoding.constData())->fromUnicode(str); //QTextCodec(codec->fromUnicode(str);
+    QByteArray ar = str.toUtf8();
+
+    iconv_t cd;
+    size_t ret;
+
+    char* data = ar.data();
+    size_t insize = (size_t)ar.size();
+
+    char* out = new char[(insize + 1) * MB_LEN_MAX];
+    char* presult = out;
+    size_t outsize = (insize + 1) * MB_LEN_MAX - 1;
+    size_t outsizeleft = outsize;
+
+    QByteArray ascii = encoding.toAscii();
+
+    cd = iconv_open(ascii.constData(), "utf8");
+
+    ret = iconv(cd, &data, &insize, &out, &outsizeleft);
+    iconv_close(cd);
+    if(ret == (size_t)(-1))
+    {
+        qDebug() << "iconv error";
+        return QByteArray();
+    }
+    result = QByteArray::fromRawData(presult, (int) outsize - outsizeleft);
+    return  result;
 }
 QString HubConnection::decode(QByteArray ar)  // coding text from server to utf-8
 {

@@ -12,6 +12,7 @@ public:
     ~HubThreadControl();
 
     void setSharesize(quint64);
+    void sendMessage(QString);
     //void setSlotsNumber(int i);
 
     TableModel* model;
@@ -39,6 +40,7 @@ signals:
     // incoming signals for HubConnection
     void signal_sharesize(quint64);
     void signal_search_result(FileInfo,SearchItem);
+    void signal_send_message(QString);
 };
 
 #endif // HUBTHREADCONTROL_H

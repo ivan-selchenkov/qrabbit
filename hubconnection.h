@@ -21,7 +21,6 @@ class HubConnection: public QObject
 {
     Q_OBJECT
 public:
-    TableModel* model;
     HubConnection(QString, quint16);
     ~HubConnection();
 
@@ -45,30 +44,25 @@ public:
     QString decode(QByteArray);
     QByteArray encode(QString);
     bool isExtended();
-    void SendMessage(QString);
     void SendSearch(QString);
     quint64 sharesize;
 public slots:
     void slot_search_result(FileInfo, SearchItem);
-
     void slot_command_received(QByteArray);
-
     void slot_set_sharesize(quint64);
+    void slot_send_message(QString);
 private:
     HubTcpSocket* hubtcpsocket;
     HubUdpSocket* hubudpsocket;
     QList<ClientConnection*> client_list;
 
     QByteArray buffer;
-    QMutex m_mutex;
 
     bool isListParsing;
     bool isSending;
     bool isSendingUdp;
 
     bool isHello;
-    QTextCodec *codec;
-    QTextCodec *codecParent;
 
     QByteArray generateKey(const QByteArray&);
     bool m_isExtended;

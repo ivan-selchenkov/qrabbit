@@ -26,11 +26,15 @@ HubThreadControl::~HubThreadControl()
     nicklistControl->exit();
     nicklistControl->wait();
     delete nicklistControl;
-qDebug() << "~HubThreadControl()";
+    qDebug() << "~HubThreadControl()";
 }
 void HubThreadControl::setSharesize(quint64 size)
 {
     emit signal_sharesize(size);
+}
+void HubThreadControl::sendMessage(QString str)
+{
+    emit signal_send_message(str);
 }
 void HubThreadControl::run()
 {
@@ -48,6 +52,9 @@ void HubThreadControl::run()
     // search result
     connect(this, SIGNAL(signal_search_result(FileInfo,SearchItem)),
             hub, SLOT(slot_search_result(FileInfo,SearchItem)));
+    // sending raw message
+    connect(this, SIGNAL(signal_send_message(QString)),
+            hub, SLOT(slot_send_message(QString)));
 
     connect(hub, SIGNAL(signalMyINFO(QString)),
             nicklistControl, SIGNAL(signal_myinfo(QString)));

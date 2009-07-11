@@ -24,9 +24,9 @@ private:
     QTcpServer* server;
     bool isSocket;
 
-    QMutex m_mutex;
-    QMutex signal_mutex;
-    QMutex write_mutex;
+//    QMutex m_mutex;
+//    QMutex signal_mutex;
+//    QMutex write_mutex;
 
     QByteArray buffer;
 

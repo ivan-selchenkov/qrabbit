@@ -57,9 +57,9 @@ void ClientTcpSocket::slot_ready_read()
         if(socket->bytesAvailable() <= 0) // Если ничего нет, выходим
             break;
         b = socket->readAll();// Читаем всё что есть
-        m_mutex.lock();
+//        m_mutex.lock();
         buffer.append(b);
-        m_mutex.unlock();
+//        m_mutex.unlock();
         if(b.size() > 1)
             slot_split_buffer();
     }
@@ -69,7 +69,7 @@ void ClientTcpSocket::slot_split_buffer()
     QList<QByteArray> list_array;
     QString str;
 
-    m_mutex.lock();
+//    m_mutex.lock();
     list_array = buffer.split('|');
     if(list_array.size() > 1)
     {
@@ -84,15 +84,15 @@ void ClientTcpSocket::slot_split_buffer()
             buffer.clear();
         }
     }
-    m_mutex.unlock();
+//    m_mutex.unlock();
 
-    signal_mutex.lock();
+//    signal_mutex.lock();
     foreach(QByteArray ba, list_array)
     {
         if(ba.size() > 0)
             emit signal_command_received(ba);
     }
-    signal_mutex.unlock();
+//    signal_mutex.unlock();
 }
 void ClientTcpSocket::connectToHost(QString host, quint16 port)
 {
@@ -108,10 +108,10 @@ void ClientTcpSocket::close()
 void ClientTcpSocket::slot_write(QByteArray data)
 {
     qDebug() << "{TCP CLIENT OUT}" <<data;
-    write_mutex.lock();
+//    write_mutex.lock();
     qint64 i = socket->write(data);
     qDebug() << "Last size: " << i << "bytes";
-    write_mutex.unlock();
+//    write_mutex.unlock();
 }
 void ClientTcpSocket::slot_disconnected()
 {

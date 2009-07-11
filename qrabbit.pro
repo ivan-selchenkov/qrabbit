@@ -11,7 +11,6 @@ SOURCES += main.cpp \
     hubconnection.cpp \
     hubnicklist.cpp \
     tablemodel.cpp \
-    filemanager.cpp \
     tth/tiger_data.c \
     tth/tiger.c \
     tth/hashfile.cpp \
@@ -31,7 +30,6 @@ HEADERS += mainwindow.h \
     global.h \
     hubnicklist.h \
     tablemodel.h \
-    filemanager.h \
     tth/tiger.h \
     tth/hashfile.h \
     tth/hash.h \
