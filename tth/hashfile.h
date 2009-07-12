@@ -19,12 +19,16 @@ private:
     void HashLeaves(char* hash, int size, char* result);
     //! 24 bytes hash data
     char* hashdata;
+    //char* interleaves;
+    QByteArray inter;
+    QString tth;
+    QString GetTTHString();
 public:
     //! Calculating tth for file
-    QString Go(QString filename);
+    void Go(QString filename);
     //! Getting QByteArray tth
-    QByteArray GetTTH();
+    QString GetTTH();
     //! Getting base32 QString tth
-    QString GetTTHString();
+    QByteArray getInterleaves();
 };
 #endif // HASHFILE_H

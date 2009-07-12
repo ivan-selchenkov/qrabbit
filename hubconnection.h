@@ -68,6 +68,8 @@ private:
     bool m_isExtended;
     void searchMessage(QString);
     void newClient(QString, QString, bool);
+private slots:
+    void slot_client_destroyed(QObject*);
 signals:
     void signal_tcp_write(QByteArray);
     void signal_udp_write(QByteArray, QString, quint16);

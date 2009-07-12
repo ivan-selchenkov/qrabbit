@@ -2,6 +2,7 @@
 #include "hubconnection.cpp"
 #include <QStringList>
 #include <QTimer>
+#include <QtSql>
 #include <stdlib.h>
 
 ClientConnection::ClientConnection(QObject* parent, QString user, QString addr, QByteArray dCommand, bool isActive):
@@ -15,6 +16,7 @@ ClientConnection::ClientConnection(QObject* parent, QString user, QString addr, 
             this, SLOT(slot_connected()));
     connect(clienttcpsocket, SIGNAL(signal_disconnected()), SLOT(deleteLater()));
 
+    connect(clienttcpsocket, SIGNAL(destroyed()), this, SLOT(deleteLater()));
 
     connect(this, SIGNAL(signal_tcp_write(QByteArray)),
             clienttcpsocket, SLOT(slot_write(QByteArray)));
@@ -46,6 +48,7 @@ ClientConnection::~ClientConnection()
 {
     clienttcpsocket->close();
     delete clienttcpsocket;
+    if(uploadFileTTH.isOpen()) uploadFileTTH.close();
 }
 void ClientConnection::slot_connected()
 {
@@ -95,7 +98,7 @@ void ClientConnection::slot_command_received(QByteArray data)
         }
         else if(list.at(0) == "$ADCGET" && list.size() >= 5)
         {
-            if(list.at(1) == "file")
+            if(list.at(1) == "file" && (list.at(2) == "files.xml.bz2" || list.at(2) == "files.xml"))
             {
                 QString filename = list.at(2);
                 quint64 start_pos = list.at(3).toULongLong();
@@ -106,18 +109,150 @@ void ClientConnection::slot_command_received(QByteArray data)
                     size = 0; // unknown file size
 
                 if(filename == "files.xml.bz2")
-                    emit slot_send_filelist(true, false);
+                    sendFilelist(true, false);
                 else if(filename == "files.xml")
-                    emit slot_send_filelist(false, false);
+                    sendFilelist(false, false);
+            }
+            //$ADCGET file TTH/YBV3TWWYW7ZWN3UWXFI4RJV6G54DTY62GE4VPNA 0 65536|
+            else if(list.at(1) == "file")
+            {
+                QString tth = list.at(2);
+                if(tth.contains("TTH/")) // TTH
+                {
+                    tth.remove(0,4);
+                }
+                else // filename
+                {
+                }
+                quint64 start = list.at(3).toULongLong();
+                quint64 len = list.at(4).toULongLong();
+                if(len == 0) return;
+                QString flags;
+                if(list.size() == 6)
+                    flags = list.at(5);
+                sendFile(tth, start, len, flags);
             }
             else if(list.at(1) == "list")
             {
-                emit slot_send_filelist(false, true);
+                sendFilelist(false, true);
+            }
+            // $ADCGET tthl TTH/5BBA6CQAVIKAV3UWXFI4RJV6G54DTY62GE4VPNA 0 -1
+            else if(list.at(1) == "tthl")
+            {
+                QString tth = list.at(2);
+                tth.remove(0,4);
+
+                quint64 start = list.at(3).toULongLong();
+                quint64 len = list.at(4).toULongLong();
+
+                QString flags;
+                if(list.size() == 6)
+                    flags = list.at(5);
+
+                sendTthl(tth, start, len, flags);
             }
         }
     }
 }
-void ClientConnection::slot_send_filelist(bool isBZ2, bool isList)
+void ClientConnection::sendFile(QString tth, quint64 start, quint64 len, QString flags)
+{
+    if(uploadTTH != tth)
+    {        
+        QSqlDatabase db = QSqlDatabase::database("upload"+username, true);
+        if(!db.isValid())
+        {
+            db = QSqlDatabase::addDatabase("QSQLITE", "upload"+username);
+
+            db.setDatabaseName("files.sqlite");
+            if(!db.open())
+                qDebug() << "Error opening database in SendTTHL";
+        }
+
+        QSqlQuery query(db);
+        query.prepare("SELECT files.filename, directories.pathAbs FROM files INNER JOIN directories ON files.directory_id = directories.id WHERE files.TTH=:tth");
+        query.bindValue(":tth", tth);
+
+        if(!query.exec()) {
+            qDebug() << query.lastError();
+            qDebug() << query.lastQuery();
+            return;
+        }
+        // checking is file in db?
+        if(query.next())
+        {
+            if(uploadFileTTH.isOpen()) uploadFileTTH.close();
+            uploadFileTTH.setFileName(QDir(query.value(1).toString()).absoluteFilePath(query.value(0).toString()));
+        }
+        else
+            return;
+        uploadTTH = tth;
+    }
+    if(!uploadFileTTH.isOpen()) {
+        if(!uploadFileTTH.open(QIODevice::ReadOnly))
+        {
+            qDebug() << "error opening upload file" << uploadFileTTH.fileName();
+            return;
+        }
+    }
+
+    if((start + len) > uploadFileTTH.size()) return;
+
+    QByteArray response;
+
+    response.append(QString("$ADCSND file TTH/%1 %2 %3|").arg(tth).arg(start).arg(len));
+    emit signal_tcp_write(response);
+
+    uploadFileTTH.seek(start);
+    response.clear();
+    response = uploadFileTTH.read(len);
+
+    emit signal_tcp_write(response);
+
+}
+void ClientConnection::sendTthl(QString tth, quint64 start, quint64 len, QString flags)
+{
+    // Searching directories
+    QByteArray tthl;
+    QSqlDatabase db = QSqlDatabase::database("upload"+username, true);
+    if(!db.isValid())
+    {
+        db = QSqlDatabase::addDatabase("QSQLITE", "upload"+username);
+
+        db.setDatabaseName("files.sqlite");
+        if(!db.open())
+            qDebug() << "Error opening database in SendTTHL";
+    }
+
+    QSqlQuery query(db);
+    query.prepare("SELECT interleaves FROM files WHERE TTH = :tth");
+    query.bindValue(":tth", tth);
+
+    if(!query.exec()) {
+        qDebug() << query.lastError();
+        qDebug() << query.lastQuery();
+        return;
+    }
+    // checking is tthl in db?
+    if(query.next())
+    {
+        tthl = query.value(0).toByteArray();
+    }
+    else
+    {
+        return;
+    }
+
+    QByteArray response;
+    if(len == 0) len = tthl.size() - start;
+
+    response.append(QString("$ADCSND tthl TTH/%1 %2 %3|").arg(tth).arg(start).arg(len));
+    emit signal_tcp_write(response);
+
+    QByteArray res = tthl.mid(start, len);
+
+    emit signal_tcp_write(tthl);
+}
+void ClientConnection::sendFilelist(bool isBZ2, bool isList)
 {
     QString filename;
     if(isBZ2)

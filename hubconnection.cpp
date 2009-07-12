@@ -42,6 +42,8 @@ bool HubConnection::init()
     connect(this, SIGNAL(signal_tcp_write(QByteArray)),
             hubtcpsocket, SLOT(slot_write(QByteArray)));
 
+    connect(hubtcpsocket, SIGNAL(destroyed()), this, SLOT(deleteLater()));
+
     // hub/client udp write control
     hubudpsocket = new HubUdpSocket(this);
     connect(this, SIGNAL(signal_udp_write(QByteArray,QString,quint16)),
@@ -189,15 +191,15 @@ void HubConnection::slot_command_received(QByteArray current)
 
             if(list.size() == 4) // new protocol
             {
-                //username = decode(changeKeysStC(list.at(2)));
-                username = list.at(2);
+                username = decode(changeKeysStC(list.at(2)));
+                //username = list.at(2);
                 address = list.at(3);
                 newClient(username, address, true);
             }
             else // old protocol
             {
-                //username = decode(changeKeysStC(list.at(1)));
-                username = list.at(1);
+                username = decode(changeKeysStC(list.at(1)));
+                //username = list.at(1);
                 address = list.at(2);
                 newClient(username, address, true);
             }
@@ -244,8 +246,19 @@ void HubConnection::newClient(QString username, QString address, bool isActive)
         }
     }
     ClientConnection* client = new ClientConnection(this, username, address, data, isActive);
+
+    connect(client, SIGNAL(destroyed(QObject*)),
+            this, SLOT(slot_client_destroyed(QObject*)));
+
     client_list.append(client);
 }
+void HubConnection::slot_client_destroyed(QObject* client)
+{
+    ClientConnection* cclient = (ClientConnection*)client;
+    qDebug() << "destroying client: "<< cclient->username;
+    client_list.removeOne(cclient);
+}
+
 void HubConnection::searchMessage(QString search)
 {
     //qDebug() << search;

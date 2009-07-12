@@ -84,15 +84,11 @@ void ClientTcpSocket::slot_split_buffer()
             buffer.clear();
         }
     }
-//    m_mutex.unlock();
-
-//    signal_mutex.lock();
     foreach(QByteArray ba, list_array)
     {
         if(ba.size() > 0)
             emit signal_command_received(ba);
     }
-//    signal_mutex.unlock();
 }
 void ClientTcpSocket::connectToHost(QString host, quint16 port)
 {
@@ -103,15 +99,13 @@ void ClientTcpSocket::connectToHost(QString host, quint16 port)
 }
 void ClientTcpSocket::close()
 {
-    socket->close();
 }
 void ClientTcpSocket::slot_write(QByteArray data)
 {
-    qDebug() << "{TCP CLIENT OUT}" <<data;
-//    write_mutex.lock();
+    if(data.at(0) == '$')
+        qDebug() << "{TCP CLIENT OUT}" <<data;
     qint64 i = socket->write(data);
     qDebug() << "Last size: " << i << "bytes";
-//    write_mutex.unlock();
 }
 void ClientTcpSocket::slot_disconnected()
 {

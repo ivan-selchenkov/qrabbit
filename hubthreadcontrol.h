@@ -13,16 +13,16 @@ public:
 
     void setSharesize(quint64);
     void sendMessage(QString);
+    QString getName() { return hostname; };
     //void setSlotsNumber(int i);
 
     TableModel* model;
+    QString hostname;
+    quint16 port;
 protected:
     void run();
 private:
     HubConnection *hub;
-
-    QString hostname;
-    quint16 port;
 
     QString username;
     QString password;
@@ -30,8 +30,10 @@ private:
     int slotsNumber;
     QString email;
     QString encoding;
+    quint64 sharesize;
 
     NicklistThreadControl* nicklistControl;
+    bool isHubDeleted;
 signals:
     // outcome signals
     void signal_hub_message(QString);
@@ -41,6 +43,9 @@ signals:
     void signal_sharesize(quint64);
     void signal_search_result(FileInfo,SearchItem);
     void signal_send_message(QString);
+
+private slots:
+    void slot_destroying();
 };
 
 #endif // HUBTHREADCONTROL_H

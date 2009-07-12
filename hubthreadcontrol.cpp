@@ -19,7 +19,11 @@ HubThreadControl::HubThreadControl(QString m_hostname, quint16 m_port, QString m
    // Starting hublist thread
     nicklistControl->start(QThread::LowestPriority);
 
+    sharesize = 0;
+
     qDebug() << "HubThreadControl()";
+
+    isHubDeleted = false;
 }
 HubThreadControl::~HubThreadControl()
 {
@@ -30,6 +34,7 @@ HubThreadControl::~HubThreadControl()
 }
 void HubThreadControl::setSharesize(quint64 size)
 {
+    sharesize = size;
     emit signal_sharesize(size);
 }
 void HubThreadControl::sendMessage(QString str)
@@ -61,16 +66,30 @@ void HubThreadControl::run()
     connect(hub, SIGNAL(signalQuit(QString)),
             nicklistControl, SIGNAL(signal_quit(QString)));
 
+    connect(hub, SIGNAL(destroyed()), this, SLOT(slot_destroying()));
+
     hub->userName = username;
     hub->password = password;
     hub->localHost = localhost;
     hub->slotsNumber = slotsNumber;
     hub->email = email;
     hub->encoding = encoding;
-    hub->sharesize = 10737418240;
+    hub->sharesize = sharesize;
     hub->init();
 
     hub->connectToHub();
 
     exec();
+
+    if(!isHubDeleted) delete hub;
+
+    qDebug() << "HubThreadControl::~run()";
+
+}
+void HubThreadControl::slot_destroying()
+{
+    isHubDeleted = true;
+    exit();
+    wait();
+    emit deleteLater();
 }

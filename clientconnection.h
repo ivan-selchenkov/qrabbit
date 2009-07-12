@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include "clienttcpsocket.h"
+#include <QFile>
 
 class ClientConnection: public QObject
 {
@@ -23,11 +24,16 @@ private:
     bool m_isExtended;
 
     QByteArray generateKey(const QByteArray&);
+    void sendFilelist(bool isBZ2, bool isList);
+    void sendTthl(QString tth, quint64 start, quint64 len, QString flags);
+    void sendFile(QString tth, quint64 start, quint64 len, QString flags);
 
+    QFile uploadFileTTH;
+    QString uploadFileName;
+    QString uploadTTH;
 private slots:
     void slot_connected();
     void slot_disconnected();
-    void slot_send_filelist(bool isBZ2, bool isList);
 public slots:
     void slot_command_received(QByteArray);
 signals:

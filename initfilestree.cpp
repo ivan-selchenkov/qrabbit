@@ -9,7 +9,7 @@ InitFilesTree::InitFilesTree(QObject* parent, QList<QString> _folders): QThread(
 
     QSqlDatabase db = QSqlDatabase::database();
     if(!db.isValid()) db = dbConnect();
-    // CREATE TABLE "files" ("id" INTEGER PRIMARY KEY  NOT NULL ,"filename" TEXT, "filename_up" TEXT, "TTH" TEXT,"directory_id" INTEGER,"isActual" INTEGER DEFAULT 1 ,"filesize" INTEGER NOT NULL  DEFAULT 0 )
+    // CREATE TABLE "files" ("id" INTEGER PRIMARY KEY  NOT NULL ,"filename" TEXT, "filename_up" TEXT, "TTH" TEXT,"directory_id" INTEGER,"isActual" INTEGER DEFAULT 1 ,"filesize" INTEGER NOT NULL  DEFAULT 0, "interleaves" BLOB )
     // CREATE TABLE "directories" ("id" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , "name" TEXT, "name_up" TEXT, "pathRel" TEXT, "pathAbs" TEXT, "parent_id" INTEGER, "isActual" INTEGER DEFAULT 1)
 
     // CREATE INDEX "TTH" ON "files" ("TTH" ASC)
@@ -124,6 +124,7 @@ void InitFilesTree::calculateTTH()
     int id;
     quint64 filesize;
     QString TTH;
+    QByteArray leaves;
     QDir dir;
     while(query.next())
     {
@@ -134,15 +135,19 @@ void InitFilesTree::calculateTTH()
         dir.setPath(directory);
         qDebug() << "Hashing: " << filename;
         filedir = QFileInfo(dir, filename).absoluteFilePath();
-        TTH = hf.Go(filedir);
+        hf.Go(filedir);
+        TTH = hf.GetTTH();
+        leaves = hf.getInterleaves();
+
         hashedCount += filesize;
 
         emit signal_hashing_progress(100 * hashedCount / totalCount);
 
         query_update.clear();
-        query_update.prepare("UPDATE files SET TTH = :TTH WHERE id = :id");
+        query_update.prepare("UPDATE files SET TTH = :TTH, interleaves = :interleaves WHERE id = :id");
         query_update.bindValue(":TTH", TTH);
         query_update.bindValue(":id", id);
+        query_update.bindValue(":interleaves", leaves);
 
         if(!query_update.exec()) {
             qDebug() << query_update.lastQuery();
@@ -291,7 +296,7 @@ int InitFilesTree::getType(QString filename)
 QSqlDatabase InitFilesTree::dbConnect()
 {
     bool isExists;
-    // CREATE TABLE "files" ("id" INTEGER PRIMARY KEY  NOT NULL ,"filename" TEXT, "filename_up" TEXT, "TTH" TEXT, "type" INTEGER, "directory_id" INTEGER,"isActual" INTEGER DEFAULT 1 ,"filesize" INTEGER NOT NULL  DEFAULT 0 )
+    // CREATE TABLE "files" ("id" INTEGER PRIMARY KEY  NOT NULL ,"filename" TEXT, "filename_up" TEXT, "TTH" TEXT, "type" INTEGER, "directory_id" INTEGER,"isActual" INTEGER DEFAULT 1 ,"filesize" INTEGER NOT NULL  DEFAULT 0, "interleaves" BLOB )
     // CREATE TABLE "directories" ("id" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , "name" TEXT, "name_up" TEXT, "pathRel" TEXT, "pathAbs" TEXT, "parent_id" INTEGER, "isActual" INTEGER DEFAULT 1)
 
     // CREATE INDEX "TTH" ON "files" ("TTH" ASC)
@@ -314,7 +319,7 @@ QSqlDatabase InitFilesTree::dbConnect()
     QSqlQuery query;
     if(!isExists)
     {
-        query.prepare("CREATE TABLE \"files\" (\"id\" INTEGER PRIMARY KEY  NOT NULL ,\"filename\" TEXT, \"filename_up\" TEXT, \"TTH\" TEXT, \"type\" INTEGER, \"directory_id\" INTEGER,\"isActual\" INTEGER DEFAULT 1 ,\"filesize\" INTEGER NOT NULL  DEFAULT 0 )");
+        query.prepare("CREATE TABLE \"files\" (\"id\" INTEGER PRIMARY KEY  NOT NULL ,\"filename\" TEXT, \"filename_up\" TEXT, \"TTH\" TEXT, \"type\" INTEGER, \"directory_id\" INTEGER,\"isActual\" INTEGER DEFAULT 1 ,\"filesize\" INTEGER NOT NULL  DEFAULT 0, \"interleaves\" BLOB )");
         execQuery(query);
 
         query.prepare("CREATE TABLE \"directories\" (\"id\" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , \"name\" TEXT, \"name_up\" TEXT, \"pathRel\" TEXT, \"pathAbs\" TEXT, \"parent_id\" INTEGER, \"isActual\" INTEGER DEFAULT 1)");

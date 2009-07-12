@@ -4,7 +4,7 @@
 #include <fstream>
 using namespace std;
 
-QString HashFile::Go(QString filename)
+void HashFile::Go(QString filename)
 {
     char* buffer = new char[BLOCK_SIZE];
     char* result = new char[24];
@@ -16,7 +16,7 @@ QString HashFile::Go(QString filename)
 
     //qDebug() << filename;
 
-    if(!qfile.isOpen()) return QString();
+    if(!qfile.isOpen()) return; // QString();
 
     qint64 size_to_read = qfile.size();
 
@@ -39,17 +39,23 @@ QString HashFile::Go(QString filename)
         il_pos += 24;
         read_size = (size_to_read > BLOCK_SIZE) ? BLOCK_SIZE : size_to_read;
     }
-    if(il_pos > 24) HashInternals(interleaves, blocks * 24, result);
-    else memcpy(result, interleaves, 24);
+    inter.clear();
+    if(il_pos > 24) {
+        inter.append(interleaves, blocks * 24);
+        HashInternals(interleaves, blocks * 24, result);
+    }
+    else
+    {
+        inter.append(interleaves, 24);
+        memcpy(result, interleaves, 24);
+    }
     delete[] buffer;
     hashdata = result;
     //hash_size = 24;
     qfile.close();
-    QString out = GetTTHString();
+    tth = GetTTHString();
     delete[] hashdata;
-
-    return out;
-
+//    return out;
 }
 void HashFile::HashBlock(char* buffer, int size, char* result)
 { 
@@ -180,15 +186,17 @@ void HashFile::HashLeaves(char* hash, int size, char* result)
     if(ih) { delete[] ih;  ih = 0; }
 }
 
-QByteArray HashFile::GetTTH()
+QString HashFile::GetTTH()
 {
-    //if(!HashData.isEmpty()) return HashData.at(0);
-    //else return QByteArray();
-    return QByteArray();
+    return tth;
 }
 QString HashFile::GetTTHString()
 {
     QString res;
     Base32 b;
     return b.ToBase32String(QByteArray(hashdata, 24));
+}
+QByteArray HashFile::getInterleaves()
+{
+    return inter;
 }

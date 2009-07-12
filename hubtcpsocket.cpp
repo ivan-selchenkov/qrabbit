@@ -10,10 +10,12 @@ HubTcpSocket::HubTcpSocket(QObject* parent): QObject(parent)
 
     connect(socket, SIGNAL(readyRead()),
             this, SLOT(slot_ready_read()));
+
+    connect(socket, SIGNAL(disconnected()), this, SLOT(deleteLater()));
 }
 HubTcpSocket::~HubTcpSocket()
 {
-    socket->close();
+    socket->close();    
 }
 
 void HubTcpSocket::error(QAbstractSocket::SocketError socketError)
@@ -27,6 +29,7 @@ void HubTcpSocket::error(QAbstractSocket::SocketError socketError)
             qDebug() << "socket error" << socketError;
             break;
     }
+    emit deleteLater();
 }
 
 void HubTcpSocket::slot_ready_read()

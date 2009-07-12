@@ -18,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
 //    connect(ift, SIGNAL(signal_finished()), this, SLOT(slot_on_hashing_finished()));
     // Sending hashing progress in percents
     connect(ift, SIGNAL(signal_hashing_progress(int)), this, SLOT(slot_on_progress_info(int)));
-    connect(ift, SIGNAL(signal_new_sharesize(quint64)), this, SIGNAL(slot_new_sharesize(quint64)));
+    connect(ift, SIGNAL(signal_new_sharesize(quint64)), this, SLOT(slot_new_sharesize(quint64)));
 
     ift->start(QThread::LowPriority);
 
@@ -28,7 +28,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {    
-    ift->exit(); // terminating hashing process
+    ift->terminate(); // terminating hashing process
     ift->wait(); // waiting while terminating...
     delete ift;
 
@@ -55,8 +55,9 @@ void MainWindow::on_btnStart_clicked()
 
     HubThreadControl* hub;
 
-    hub = new HubThreadControl("dc.wideix.ru", 411, "Washik", "vanqn1982", "192.168.1.2", 10, "rabbit@ya.ru", "cp1251"); // dc.wideix.ru warez.gtk.su
-    //hub = new HubThreadControl("localhost", 411, "Washik", "vanqn1982", "192.168.1.2", 10, "rabbit@ya.ru", "cp1251"); // dc.wideix.ru warez.gtk.su
+    //hub = new HubThreadControl("dc.xoxloma.net", 411, "Washik", "vanqn1982", "10.5.2.51", 10, "rabbit@ya.ru", "cp1251"); // dc.wideix.ru warez.gtk.su
+    //hub = new HubThreadControl("dc.wideix.ru", 411, "Washik", "vanqn1982", "10.5.2.51", 10, "rabbit@ya.ru", "cp1251"); // dc.wideix.ru warez.gtk.su
+    hub = new HubThreadControl("localhost", 411, "Washik", "vanqn1982", "192.168.1.2", 10, "rabbit@ya.ru", "cp1251"); // dc.wideix.ru warez.gtk.su
 
     if(settings.contains("Sharesize"))
         hub->setSharesize(settings.value("sharesize").toULongLong());
@@ -75,6 +76,8 @@ void MainWindow::on_btnStart_clicked()
     connect(ift, SIGNAL(signal_new_sharesize(quint64)),
             hub, SIGNAL(signal_sharesize(quint64)));
 
+    connect(hub,SIGNAL(destroyed(QObject*)), this, SLOT(slot_hub_destroyed(QObject*)));
+
     hub->start();
 
 
@@ -84,6 +87,12 @@ void MainWindow::on_btnStart_clicked()
     ui->tableView->setColumnWidth (2, 200 ); // Desc size
 
     hubs.append(hub);
+}
+void MainWindow::slot_hub_destroyed(QObject* obj)
+{
+    HubThreadControl* hub = (HubThreadControl*) obj;
+    qDebug() << "Hub destroyed...";
+    hubs.removeOne(hub);
 }
 void MainWindow::slot_new_sharesize(quint64 size)
 {

@@ -40,6 +40,8 @@ private slots:
     void on_lineSearch_returnPressed();
     void on_lineEdit_returnPressed();
     void on_btnStart_clicked();
+
+    void slot_hub_destroyed(QObject*);
 };
 
 #endif // MAINWINDOW_H
